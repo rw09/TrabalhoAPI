@@ -217,21 +217,23 @@ function criarDialog(time) {
 //////////////////////////// testando pegar elementos
 
 
-function mostrarDetalhesTime(id, liga) {
+function mostrarDetalhesTime(id, pais) { //depois trocar, agora coloquei pais nos times, nao precisa mais pegar pela liga
 
     //depois melhorar
-    if(liga != undefined) {
-        if(liga === 'Bundesliga') {
-            paisEscolhido = 'Alemanha'
-        } else if(liga === 'Premier League') {
-            paisEscolhido = 'Inglaterra'
-        } else if(liga === 'Brasileirão') {
-            paisEscolhido = 'Brasil'
-        }
+    // if(liga != undefined) {
+    //     if(liga === 'Bundesliga') {
+    //         paisEscolhido = 'Alemanha'
+    //     } else if(liga === 'Premier League') {
+    //         paisEscolhido = 'Inglaterra'
+    //     } else if(liga === 'Brasileirão') {
+    //         paisEscolhido = 'Brasil'
+    //     }  else if(liga === 'La Liga') {
+    //         paisEscolhido = 'Espanha'
+    //     }
         
         
-    }
-    fetch(`http://localhost:3000/api/times/${paisEscolhido}/${id}`)
+    //}
+    fetch(`http://localhost:3000/api/times/${pais}/${id}`)
         .then(response => response.json())
         .then(function(data) {
             criarNovoDialog(data)
@@ -497,7 +499,7 @@ function mostrarListaTodosTimes(data) {
         cardTimeConteudo.appendChild(nome)
         
         cardTime.addEventListener('click', function() {
-            mostrarDetalhesTime(time.id, time.liga)
+            mostrarDetalhesTime(time.id, time.pais)
         })
 
         listaDeTimes.appendChild(cardTime)
