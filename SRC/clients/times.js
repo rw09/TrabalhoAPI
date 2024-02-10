@@ -369,6 +369,24 @@ function criarNovoDialog(time) {
         console.log(data.campeonatos)
         console.log(data.copas)
 
+        data.campeonatos.forEach(campeonato => {
+            let img1 = document.createElement('img')
+            let img2 = document.createElement('img')
+            img1.src = campeonato.logo
+            img2.src = campeonato.trofeu
+            dialog.appendChild(img1)
+            dialog.appendChild(img2)
+        });
+
+        data.copas.forEach(copa => {
+            let img1 = document.createElement('img')
+            let img2 = document.createElement('img')
+            img1.src = copa.logo
+            img2.src = copa.trofeu
+            dialog.appendChild(img1)
+            dialog.appendChild(img2)
+        });
+
         let img = document.createElement('img')
         img.src = data.bandeira
         dialog.appendChild(img)
