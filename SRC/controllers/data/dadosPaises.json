@@ -8,30 +8,30 @@
             "campeonatos": [
                 {
                     "nome": "Bundesliga",
-                    "logo": "",
-                    "trofeu": ""
+                    "logo": "../img/competicoes/Alemanha/Bundesliga.png",
+                    "trofeu": "../img/trofeus/Alemanha/Bundesliga.png"
                 },
                 {
-                    "nome": "2 Bundesliga",
-                    "logo": "",
-                    "trofeu": ""
+                    "nome": "2. Bundesliga",
+                    "logo": "../img/competicoes/Alemanha/2-Bundesliga.png",
+                    "trofeu": "../img/trofeus/Alemanha/2-Bundesliga.png"
                 },
                 {
                     "nome": "3 Liga",
-                    "logo": "",
-                    "trofeu": ""
+                    "logo": "../img/competicoes/Alemanha/3-Liga.png",
+                    "trofeu": "../img/trofeus/Alemanha/3-Liga.png"
                 }
             ],
             "copas": [
                 {
                     "nome": "DFB-Pokal",
-                    "logo": "",
-                    "trofeu": ""
+                    "logo": "../img/competicoes/Alemanha/DFB-Pokal.png",
+                    "trofeu": "../img/trofeus/Alemanha/DFB-Pokal.png"
                 },
                 {
                     "nome": "DFL-Supercup",
-                    "logo": "",
-                    "trofeu": ""
+                    "logo": "../img/competicoes/Alemanha/DFL-Supercup.png",
+                    "trofeu": "../img/trofeus/Alemanha/DFL-Supercup.png"
                 }
             ]
         },
@@ -43,25 +43,25 @@
             "campeonatos": [
                 {
                     "nome": "La Liga",
-                    "logo": "",
-                    "trofeu": ""
+                    "logo": "../img/competicoes/Espanha/LaLiga.png",
+                    "trofeu": "../img/trofeus/Espanha/LaLiga.png"
                 },
                 {
-                    "nome": "Segunda División",
-                    "logo": "",
-                    "trofeu": ""
+                    "nome": "La Liga 2",
+                    "logo": "../img/competicoes/Espanha/LaLiga-2.png",
+                    "trofeu": "../img/trofeus/Espanha/LaLiga-2.png"
                 }
             ],
             "copas": [
                 {
                     "nome": "Copa del Rey",
-                    "logo": "",
-                    "trofeu": ""
+                    "logo": "../img/competicoes/Espanha/CopaDelRey.png",
+                    "trofeu": "../img/trofeus/Espanha/CopaDelRey.png"
                 },
                 {
                     "nome": "Supercopa de España",
-                    "logo": "",
-                    "trofeu": ""
+                    "logo": "../img/competicoes/Espanha/Supercopa-Espana.png",
+                    "trofeu": "../img/trofeus/Espanha/Supercopa-Espana.png"
                 }
             ]
         },
