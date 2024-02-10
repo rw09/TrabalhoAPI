@@ -12,6 +12,8 @@ Descrição: FIFA 22
 
 Bandeira Pais: flagpedia
 
+https://sortitoutsi.net/football-manager-2024/team/915/fc-bayern
+
 
 
 fazer um fetch das competições para buscar.
