@@ -348,6 +348,13 @@ function criarNovoDialog(time) {
     titulos.forEach(titulo => {
         console.log(titulo.competicao)
         console.log(titulo.edicoes.toString().replaceAll(',', ', '))
+
+        let nomeTitulo = document.createElement('h2')
+        nomeTitulo.innerHTML = `${titulo.competicao} (${titulo.edicoes.length})`
+        let tituloEdicoes = document.createElement('p')
+        tituloEdicoes.innerHTML = titulo.edicoes.toString().replaceAll(',', ', ')
+        dialog.appendChild(nomeTitulo)
+        dialog.appendChild(tituloEdicoes)
     });
 
     console.log('dados pais')
