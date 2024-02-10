@@ -341,6 +341,14 @@ function criarNovoDialog(time) {
 
     document.body.appendChild(dialog)
 
+    console.log(time.titulos)
+
+    let titulos = time.titulos
+
+    titulos.forEach(titulo => {
+        console.log(titulo.competicao)
+        console.log(titulo.edicoes.toString().replaceAll(',', ', '))
+    });
 
     console.log('dados pais')
     console.log(time.pais)
@@ -351,13 +359,17 @@ function criarNovoDialog(time) {
     .then(response => response.json())
     .then(function(data) {
         console.log('pais11:')
-        console.log(data.campeonatos)
+        //console.log(data.campeonatos)
 
         let img = document.createElement('img')
         img.src = data.bandeira
         dialog.appendChild(img)
     })
     .catch(error => console.error("Erro:", error))
+
+
+
+
 
     dialog.showModal()
 }
