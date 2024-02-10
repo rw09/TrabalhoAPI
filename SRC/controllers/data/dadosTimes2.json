@@ -3,7 +3,7 @@
         {
             "id": 1,
             "nome": "Bayern München",
-            "nome_completo": "FC Bayern München AG",
+            "nome_completo": "Fussball Club Bayern München AG",
             "fundacao": "27/02/1900",
             "cores": [ "#dc052d", "#ffffff" ],
             "escudo": "../img/escudos/Alemanha/small/Bayern.png",
@@ -152,5 +152,67 @@
                 }
             ]
         }
+    ],
+    "TimesEspanha": [
+        {
+            "id": 1,
+            "nome": "Real Madrid",
+            "nome_completo": "Real Madrid Club de Fútbol",
+            "fundacao": "06/03/1902",
+            "cores": [ "#ffffff", "#004995", "f7bd02" ],
+            "escudo": "../img/escudos/Espanha/small/RealMadrid.png",
+            "apelido": "Los Merengues",
+            "presidente": "Florentino Pérez",
+            "uniforme": [
+                { "modelo": "Home", "img": "../img/uniformes/Espanha/RealMadrid/1.png" },
+                { "modelo": "Away", "img": "../img/uniformes/Espanha/RealMadrid/2.png" },
+                { "modelo": "Third", "img": "../img/uniformes/Espanha/RealMadrid/3.png" },
+                { "modelo": "GK", "img": "../img/uniformes/Espanha/RealMadrid/gk.png" }
+            ],
+            "marca_uniforme": "Adidas",
+            "pais": "Espanha",
+            "liga": "La Liga",
+            "cidade": "Madri",
+            "estado": "Comunidade de Madri",
+            "website": "www.realmadrid.com",
+            "email": "mensajes@realmadrid.com",
+            "resumo": "Fundado em 1902, o clube venceu sua primeira copa espanhola três anos depois, provando ser uma das equipes mais fortes da Espanha já naquela época. O clube conquistou o campeonato nacional 35 vezes e também tem 20 títulos da copa do país. Inicialmente chamado de Madrid CF, o clube adotou o nome atual quando recebeu o título de 'Real' em 1920. Em 2014, o Real Madrid se tornou o primeiro clube a conquistar a UEFA Champions League pela décima vez. O feito ficou conhecido como 'La Décima'.",
+            "estadio": {
+                "nome": "Santiago Bernabéu",
+                "inauguracao": 1947,
+                "capacidade": 83186,
+                "foto": "../img/estadios/Espanha/SantiagoBernabeu.jpg"
+            },
+            "titulos": [
+                {
+                    "competicao": "La Liga",
+                    "edicoes": [ "1931-32", "1932-33", "1953-54", "1954-55", "1956-57", "1957-58", "1960-61", "1961-62", "1962-63", "1963-64", "1964-65", "1966-67", "1967-68", "1968-69", "1971-72", "1974-75", "1975-76", "1977-78", "1978-79", "1979-80", "1985-86", "1986-87", "1987-88", "1988-89", "1989-90", "1994-95", "1996-97", "2000-01", "2002-03", "2006-07", "2007-08", "2011-12", "2016-17", "2019-20", "2021-22" ]
+                },
+                {
+                    "competicao": "Copa del Rey",
+                    "edicoes": [ "1905", "1906", "1907", "1908", "1917", "1934", "1936", "1946", "1947", "1961-62", "1969-70", "1973-74", "1974-75", "1979-80", "1981-82", "1988-89", "1992-93", "2010-11", "2013-14", "2022-23" ]
+                },
+                {
+                    "competicao": "Supercopa de España",
+                    "edicoes": [ "1988", "1989", "1990", "1993", "1997", "2001", "2003", "2008", "2012", "2017", "2019-20", "2021-22", "2023-24" ]
+                },
+                {
+                    "competicao": "UEFA Champions League",
+                    "edicoes": [ "1955-56", "1956-57", "1957-58", "1958-59", "1959-60", "1965-66", "1997-98", "1999-2000", "2001-02", "2013-14", "2015-16", "2016-17", "2017-18", "2021-22" ]
+                },
+                {
+                    "competicao": "UEFA Europa League",
+                    "edicoes": [ "1984-85", "1985-86" ]
+                },
+                {
+                    "competicao": "UEFA Super Cup",
+                    "edicoes": [ "2002", "2014", "2016", "2017", "2022" ]
+                },
+                {
+                    "competicao": "FIFA Club World Cup",
+                    "edicoes": [ "1960", "1998", "2002", "2014", "2016", "2017", "2018", "2022" ]
+                }
+            ]
+       }
     ]
 }
