@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Futebol Clube</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+        /* * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        } */
+
+         /* header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            background-color: goldenrod;
+            padding: 10px 15px;
+            border-bottom: 2px solid rgb(167, 125, 21);
+            z-index: 10;
+            color: #06203F;
+        } */
+
+        header div:first-child {
+            font-family: "Squada One", sans-serif;
+        }
+
+        /* main {
+            padding-top: 85px;
+        } */
+
+        /* main > section {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 30px;
+        } */
+
+        .card {
+            display: grid;
+            flex-direction: column;
+            /* grid-template-rows: 60px 120px 100px; */
+            grid-template-rows: 175px 105px;
+            align-items: center;
+            align-content: center;
+            justify-items: center;
+            height: 285px;
+            padding: 20px 10px;
+            background-color: rgb(235, 232, 232);
+            border: 1px solid black;
+            border: 15px solid white;
+            box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.75);
+            font-family: 'Mina', sans-serif;
+            border-radius: 2px;
+        }
+
+        /* .card img {
+            padding-top: 50px;
+        } */
+
+        .card h2 {
+            text-align: center;
+            line-height: 33px;
+            /* padding-bottom: 10px; */
+        }
+
+
+        .card:hover {
+            background-color: ghostwhite;
+            opacity: 0.75;
+            cursor: pointer;
+            /* box-shadow: 2px 2px 5px gray; */
+            /* scale: 1.05; */
+            
+        }
+
+        dialog {
+            margin: auto;
+            background-color: white;
+            width: 100vw;
+            /* height: 800px; */
+        }
+
+        /* dialog .cabeçalho {
+            display: flex;
+            height: 15%;
+        }
+
+        dialog .cabeçalho img {
+            width: 30%;
+        } */
+    </style>
+</head>
+<body>
+    <!-- <div class="p-4 border border-black w-56">
+        <div class="grid grid-rows-[80px 175px 105px] justify-items-center h-72 bg-[#ebe8e8] py-5 px-2.5 border border-black hover:bg-[ghostwhite] hover:cursor-pointer hover:opacity-75">
+            <img src="../img/ligas/Bundesliga.png">
+            <img src="../img/escudos/Alemanha/small/Bayern.png">
+            <h1>Bayern Munchen</h1>
+        </div>
+    </div> -->
+
+    <!-- <div class="grid grid-cols-5 gap-x-6 gap-y-10 p-8">
+        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
+            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
+                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
+                <img src="../img/escudos/Alemanha/small/Augsburg.png">
+                <h1>Augsburg</h1>
+            </div>
+        </div>
+        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
+            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
+                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
+                <img src="../img/escudos/Alemanha/small/Leverkusen.png">
+                <h1>Bayer Leverkusen</h1>
+            </div>
+        </div>
+        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
+            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
+                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
+                <img src="../img/escudos/Alemanha/small/Bayern.png">
+                <h1>Bayern München</h1>
+            </div>
+        </div>
+        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
+            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
+                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
+                <img src="../img/escudos/Alemanha/small/Bochum.png">
+                <h1>Bochum</h1>
+            </div>
+        </div>
+        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
+            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
+                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
+                <img src="../img/escudos/Alemanha/small/Dortmund.png">
+                <h1>Borussia Dortmund</h1>
+            </div>
+        </div>
+        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
+            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
+                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
+                <img src="../img/escudos/Alemanha/small/Monchengladbach.png">
+                <h1>Borussia Mönchengladbach</h1>
+            </div>
+        </div>
+        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
+            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
+                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
+                <img src="../img/escudos/Alemanha/small/Darmstadt.png">
+                <h1>Darmstadt 98</h1>
+            </div>
+        </div>
+        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
+            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
+                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
+                <img src="../img/escudos/Alemanha/small/EintrachtFrankfurt.png">
+                <h1>Eintracht Frankfurt</h1>
+            </div>
+        </div>
+        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
+            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
+                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
+                <img src="../img/escudos/Alemanha/small/Freiburg.png">
+                <h1>Freiburg</h1>
+            </div>
+        </div>
+        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
+            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
+                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
+                <img src="../img/escudos/Alemanha/small/Bayern.png">
+                <h1>Bayern Munchen</h1>
+            </div>
+        </div>
+    </div> -->
+
+    <header class="flex justify-between items-center fixed w-full bg-[goldenrod] py-2.5 px-3.5 z-10 border-b-2 border-[#a77d15] text-[#06203F]">
+        <div class="flex items-center gap-2.5">
+            <a href="../img/logo4.png" target="_blank"><img src="../img/logo4.png" alt="Logo do Site" width="60px"></a>
+            <h1 class="font-bold text-3xl">API Futebol Clube</h1>
+        </div>
+        <div>
+            <img id="bandeira" src="../img/bandeiras/small/Alemanha.png" style="position: absolute; right: 185px; top:35px; width: 24px;">
+            <select name="" id="selectPais" style="width: 200px; padding-left: 35px; padding-top: 5px; padding-bottom: 5px;" onchange="trocarPais(this)">
+                <option value="Todos">Todos os Times</option>
+                <option value="Alemanha">Alemanha</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Espanha">Espanha</option>
+                <option value="Franca">França</option>
+                <option value="Inglaterra">Inglaterra</option>
+                <option value="Italia">Itália</option>
+            </select>
+        </div>
+    </header>
+    <main id="main" class="pt-[85px]">
+        <!-- <section id="listaDeTimes"></section> -->
+    </main>
+
+
+    <dialog>
+        <div>
+            <h1 id="textoDialog"></h1>
+            <button onclick="fecharDialogAdd()">x</button>
+        </div>
+    </dialog>
+    <script src="../clients/times.js"></script>
+
+    <script>
+        let paisEscolhido = sessionStorage.getItem('paisEscolhido') ? sessionStorage.getItem('paisEscolhido') : 'Alemanha';
+        let bandeira = document.getElementById('bandeira')
+
+
+        document.onload = carregarPais()
+
+
+        function carregarPais() {
+
+            let selectPais = document.getElementById('selectPais')
+        
+            selectPais.value = paisEscolhido
+            bandeira.src=`../img/bandeiras/small/${paisEscolhido}.png`
+
+        }
+
+        function trocarPais(event) {
+
+            bandeira.src=`../img/bandeiras/small/${event.value}.png`
+
+            paisEscolhido = event.value
+
+            sessionStorage.setItem('paisEscolhido', paisEscolhido)
+            console.log(sessionStorage.getItem('paisEscolhido'))
+
+            let listaDeTimes = document.getElementById('listaDeTimes')
+            listaDeTimes.remove()
+
+            carregarListaTimes()
+            // window.refresh
+        }
+        
+    </script>
+</body>
+</html>

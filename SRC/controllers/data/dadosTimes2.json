@@ -1,0 +1,59 @@
+{
+    "TimesAlemanha": [
+        {
+            "id": 1,
+            "nome": "Bayern München",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": "27/02/1900",
+            "cores": [ "#dc052d", "#ffffff" ],
+            "escudo": "../img/escudos/Alemanha/small/Bayern.png",
+            "uniforme": [
+                { "modelo": "Home", "img": "../img/uniformes/Alemanha/Bayern/1.png" },
+                { "modelo": "Away", "img": "../img/uniformes/Alemanha/Bayern/2.png" },
+                { "modelo": "Third", "img": "../img/uniformes/Alemanha/Bayern/3.png" },
+                { "modelo": "GK", "img": "../img/uniformes/Alemanha/Bayern/gk.png" }
+            ],
+            "pais": "Alemanha",
+            "liga": "Bundesliga",
+            "cidade": "Munique",
+            "website": "www.fcbayern.com",
+            "resumo": "Fundado em 1900 depois de uma reunião em um restaurante no centro de Munique, o Bayern de Munique assimilou o Münchener Sport-Club em 1906 e adotou a camisa branca com o calção vermelho. O clube conquistou o campeonato nacional 31 vezes e também tem 20 títulos da copa do país. O FC Bayern München não estava entre os integrantes fundadores da Bundesliga em 1963. Eles conseguiram a promoção para a liga em 1965. Após o título da UEFA Champions League em 1976, o FC Bayern München se tornou o terceiro clube a ganhar a competição três vezes seguidas.",
+            "estadio": {
+                "nome": "Allianz Arena",
+                "inauguracao": 2005,
+                "capacidade": 75024,
+                "foto": "../img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ "1932", "1968-69", "1971-72", "1972-73", "1973-74", "1979-80", "1980-81", "1984-85", "1985-86", "1986-87", "1988-89", "1989-90", "1993-94", "1996-97", "1998-99", "1999-00", "2000-01", "2002-03", "2004-05", "2005-06", "2007-08", "2009-10", "2012-13", "2013-14", "2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22", "2022-23" ]
+                },
+                {
+                    "competicao": "DFB Pokal",
+                    "anos": [ "1956-57", "1965-66", "1966-67", "1968-69", "1970-71", "1981-82", "1983-84", "1985-86", "1997-98", "1999-00", "2002-03", "2004-05", "2005-06", "2007-08", "2009-10", "2012-13", "2013-14", "2015-16", "2018-19", "2019-20" ]
+                },
+                {
+                    "competicao": "DFL-Supercup",
+                    "anos": [ "1987", "1990", "2010", "2012", "2016", "2017", "2018", "2020", "2021", "2022" ]
+                },
+                {
+                    "competicao": "UEFA Champions League",
+                    "anos": [ "1973-74", "1974-75", "1975-76", "2000-01", "2012-13", "2019-20" ]
+                },
+                {
+                    "competicao": "UEFA Europa League",
+                    "anos": [ "1995-96" ]
+                },
+                {
+                    "competicao": "UEFA Super Cup",
+                    "anos": [ "2013", "2020" ]
+                },
+                {
+                    "competicao": "FIFA Club World Cup",
+                    "anos": [ "1796", "2001", "2013", "2020" ]
+                }
+            ]
+       }
+    ]
+}

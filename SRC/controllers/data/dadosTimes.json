@@ -1,0 +1,707 @@
+{
+    "TimesAlemanha": [
+        {
+            "id": 1,
+            "nome": "Bayern München",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Alemanha/small/Bayern.png",
+            "uniforme": [
+                ".SRC/img/uniformes/Alemanha/Bayern/1.png",
+                ".SRC/img/uniformes/Alemanha/Bayern/2.png",
+                ".SRC/img/uniformes/Alemanha/Bayern/3.png",
+                ".SRC/img/uniformes/Alemanha/Bayern/gk.png"
+            ],
+            "liga": "Bundesliga",
+            "cidade": "Munique",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Allianz Arena",
+                "construcao": 2005,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Campeonato Alemão",
+                    "anos": [ "1932", "1968-69", "1971-72", "1972-73", "1973-74", "1979-80", "1980-81", "1984-85", "1985-86", "1986-87", "1988-89", "1989-90", "1993-94", "1996-97", "1998-99", "1999-00", "2000-01", "2002-03", "2004-05", "2005-06", "2007-08", "2009-10", "2012-13", "2013-14", "2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22", "2022-23" ]
+                },
+                {
+                    "competicao": "Copa da Alemanha",
+                    "anos": [ "1956-57", "1965-66", "1966-67", "1968-69", "1970-71", "1981-82", "1983-84", "1985-86", "1997-98", "1999-00", "2002-03", "2004-05", "2005-06", "2007-08", "2009-10", "2012-13", "2013-14", "2015-16", "2018-19", "2019-20" ]
+                },
+                {
+                    "competicao": "Champions League",
+                    "anos": [ "1973-74", "1974-75", "1975-76", "2000-01", "2012-13", "2019-20" ]
+                },
+                {
+                    "competicao": "Europa League",
+                    "anos": [ "1995-96" ]
+                },
+                {
+                    "competicao": "Supercopa da UEFA",
+                    "anos": [ "2013", "2020" ]
+                },
+                {
+                    "competicao": "Mundial de Clubes",
+                    "anos": [ "1796", "2001", "2013", "2020" ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "nome": "Borussia Dortmund",
+            "nome_completo": "Borussia Dortmund GmbH & Co. KGaA",
+            "fundacao": 1909,
+            "cores": ["#ffd900", "#000000"],
+            "escudo": "../img/escudos/Alemanha/small/Dortmund.png",
+            "uniforme": "",
+            "liga": "Bundesliga",
+            "cidade": "Dortmund",
+            "website": "www.bvb.de",
+            "descricao": "",
+            "estadio": {
+                "nome": "Signal Iduna Park",
+                "construcao": 2004,
+                "capacidade": 81365,
+                "foto": ".SRC/img/estadios/Alemanha/SignalIdunaPark.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "nome": "Augsburg",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Alemanha/small/Augsburg.png",
+            "uniforme": "",
+            "liga": "Bundesliga",
+            "cidade": "Munique",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Allianz Arena",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "nome": "Bayer Leverkusen",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Alemanha/small/Leverkusen.png",
+            "uniforme": "",
+            "liga": "Bundesliga",
+            "cidade": "Munique",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Allianz Arena",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "nome": "Werder Bremen",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Alemanha/small/WerderBremen.png",
+            "uniforme": "",
+            "liga": "Bundesliga",
+            "cidade": "Munique",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Allianz Arena",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "nome": "Köln",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Alemanha/small/Koln.png",
+            "uniforme": "",
+            "liga": "Bundesliga",
+            "cidade": "Munique",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Allianz Arena",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "nome": "Stuttgart",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Alemanha/small/Stuttgart.png",
+            "uniforme": "",
+            "liga": "Bundesliga",
+            "cidade": "Stuttgart",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Allianz Arena",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "nome": "Wolfsburg",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Alemanha/small/Wolfsburg.png",
+            "uniforme": "",
+            "liga": "Bundesliga",
+            "cidade": "Munique",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Allianz Arena",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "nome": "RB Leipzig",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Alemanha/small/RBLeipzig.png",
+            "uniforme": "",
+            "liga": "Bundesliga",
+            "cidade": "Leipzig",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Allianz Arena",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "nome": "Eintracht Frankfurt",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Alemanha/small/EintrachtFrankfurt.png",
+            "uniforme": "",
+            "liga": "Bundesliga",
+            "cidade": "Frankfurt",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Allianz Arena",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "nome": "Freiburg",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Alemanha/small/Freiburg.png",
+            "uniforme": "",
+            "liga": "Bundesliga",
+            "cidade": "Freiburg",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Allianz Arena",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "nome": "Hoffenheim",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Alemanha/small/Hoffenheim.png",
+            "uniforme": "",
+            "liga": "Bundesliga",
+            "cidade": "Munique",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Allianz Arena",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "nome": "Union Berlin",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Alemanha/small/UnionBerlin.png",
+            "uniforme": "",
+            "liga": "Bundesliga",
+            "cidade": "Berlim",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Allianz Arena",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "nome": "Borussia Mönchengladbach",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Alemanha/small/Monchengladbach.png",
+            "uniforme": "",
+            "liga": "Bundesliga",
+            "cidade": "Mönchengladbach",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Allianz Arena",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "nome": "Mainz 05",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Alemanha/small/Mainz05.png",
+            "uniforme": "",
+            "liga": "Bundesliga",
+            "cidade": "Mainz",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Allianz Arena",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "nome": "Bochum",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Alemanha/small/Bochum.png",
+            "uniforme": "",
+            "liga": "Bundesliga",
+            "cidade": "Munique",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Allianz Arena",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "nome": "Heidenheim",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Alemanha/small/Heidenheim.png",
+            "uniforme": "",
+            "liga": "Bundesliga",
+            "cidade": "Munique",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Allianz Arena",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "nome": "Darmstadt 98",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Alemanha/small/Darmstadt.png",
+            "uniforme": "",
+            "liga": "Bundesliga",
+            "cidade": "Munique",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Allianz Arena",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        }
+    ],
+
+    "TimesInglaterra": [
+        {
+            "id": 1,
+            "nome": "Chelsea",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Inglaterra/small/Chelsea.png",
+            "uniforme": "",
+            "liga": "Premier League",
+            "cidade": "Londres",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Stamford Bridge",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        }
+     ],
+    
+    "TimesBrasil": [
+        {
+            "id": 1,
+            "nome": "Grêmio",
+            "nome_completo": "Grêmio Football Porto-Alegrense",
+            "fundacao": 1903,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Brasil/small/Gremio.png",
+            "uniforme": "",
+            "liga": "Brasileirão",
+            "cidade": "Porto Alegre",
+            "website": "www.gremio.net",
+            "descricao": "",
+            "estadio": {
+                "nome": "Arena do Grêmio",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        }
+     ],
+    
+     "TimesEspanha": [
+        {
+             "id": 1,
+             "nome": "Real Madrid",
+             "nome_completo": "FC Bayern München AG",
+             "fundacao": 1900,
+             "cores": ["#dc052d", "#ffffff"],
+             "escudo": "../img/escudos/Espanha/small/RealMadrid.png",
+             "uniforme": "",
+             "pais_id": 1,
+             "cidade": "Londres",
+             "website": "www.fcbayern.com",
+             "descricao": "",
+             "estadio": {
+                 "nome": "Stamford Bridge",
+                 "construcao": 2004,
+                 "capacidade": 75024,
+                 "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+             },
+             "titulos": [
+                 {
+                     "competicao": "Bundesliga",
+                     "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                 },
+                 {
+                     "competicao": "dfb pokal",
+                     "anos": [ 2009, 2015 ]
+                 }
+             ]
+         }
+    ],
+    
+    "TimesItalia": [
+        {
+            "id": 1,
+            "nome": "Milan",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Italia/small/Milan.png",
+            "uniforme": "",
+            "pais_id": 1,
+            "cidade": "Londres",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Stamford Bridge",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        }
+    ],
+    
+    "TimesFranca": [
+        {
+            "id": 1,
+            "nome": "PSG",
+            "nome_completo": "FC Bayern München AG",
+            "fundacao": 1900,
+            "cores": ["#dc052d", "#ffffff"],
+            "escudo": "../img/escudos/Franca/small/PSG.png",
+            "uniforme": "",
+            "pais_id": 1,
+            "cidade": "Londres",
+            "website": "www.fcbayern.com",
+            "descricao": "",
+            "estadio": {
+                "nome": "Stamford Bridge",
+                "construcao": 2004,
+                "capacidade": 75024,
+                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
+            },
+            "titulos": [
+                {
+                    "competicao": "Bundesliga",
+                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
+                },
+                {
+                    "competicao": "dfb pokal",
+                    "anos": [ 2009, 2015 ]
+                }
+            ]
+        }
+    ]
+}

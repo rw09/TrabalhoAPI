@@ -1,0 +1,23 @@
+SWAGGER UI EXPRESS
+
+REPOSITORIO: JAVASCRIPT STUDIES
+
+Logo Pequeno: sofifa
+Uniformes: sofifa
+
+Logo Grande: Bundesliga / https://www.logofootball.net/
+Estadio: Bundesliga
+
+Descrição: FIFA 22
+
+Bandeira Pais: flagpedia
+
+
+
+fazer um fetch das competições para buscar.
+
+-na hora do cadastro, carregar as opções do select de titulo?
+-ou deixar todas as competições que o time ja jogou? (deixar em branco?) acho que essa primeiro, e depois a de cima para o portfólio
+
+
+-cadastrar torneios mais pra frente (portfolio)
