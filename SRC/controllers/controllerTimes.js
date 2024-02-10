@@ -1,7 +1,7 @@
 const express = require('express')
 const server = express()
-// const dados = require('./data/dadosTimes.json')
-const dados = require('./data/dadosTimes2.json')
+const dados = require('./data/dadosTimes.json')
+// const dados = require('./data/dadosTimes2.json')
 const fs = require('fs')
 
 
