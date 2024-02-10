@@ -366,7 +366,8 @@ function criarNovoDialog(time) {
     .then(response => response.json())
     .then(function(data) {
         console.log('pais11:')
-        //console.log(data.campeonatos)
+        console.log(data.campeonatos)
+        console.log(data.copas)
 
         let img = document.createElement('img')
         img.src = data.bandeira
@@ -376,7 +377,51 @@ function criarNovoDialog(time) {
 
 
 
+    let info = document.createElement('div')
+    let infoConteudo = document.createElement('p')
+    
+    
+    infoConteudo.innerHTML = '<b>Nome Completo:</b> ' + time.nome_completo + '<br>'
 
+    infoConteudo.innerHTML += '<b>Fundação:</b> ' + time.fundacao + '<br>'
+
+    infoConteudo.innerHTML += '<b>Cidade:</b> ' + time.cidade + '<br>'
+
+    infoConteudo.innerHTML += '<b>Estado:</b> ' + time.estado + '<br>'
+
+    infoConteudo.innerHTML += '<b>País:</b> ' + time.pais + '<br>'
+
+    infoConteudo.innerHTML += '<b>Liga:</b> ' + time.liga + '<br>'
+
+    infoConteudo.innerHTML += '<b>Presidente:</b> ' + time.presidente + '<br>'
+
+    infoConteudo.innerHTML += '<b>Website:</b> ' + time.website + '<br>'
+
+    infoConteudo.innerHTML += '<b>E-mail:</b> ' + time.email + '<br>'
+
+    infoConteudo.innerHTML += '<b>Marca Uniforme:</b> ' + time.marca_uniforme + '<br>'
+
+
+    infoConteudo.innerHTML += '<br><br><br>' + time.resumo
+
+    info.appendChild(infoConteudo)
+    dialog.appendChild(info)
+
+
+    fetch(`http://localhost:3000/api/paises/${time.pais}/${time.liga}`)
+    .then(response => response.json())
+    .then(function(data) {
+        console.log('liga')
+        console.log(data)
+
+        let logoLiga = document.createElement('img')
+        logoLiga.src = data.logo
+        dialog.appendChild(logoLiga)
+        
+    })
+    .catch(error => console.error("Erro:", error))
+
+    
 
     dialog.showModal()
 }
