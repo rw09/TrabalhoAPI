@@ -5,140 +5,32 @@
             "continente": "Europa",
             "nome": "Alemanha",
             "bandeira": "../img/bandeiras/big/de.png",
-            "campeonatos": [
-                {
-                    "nome": "Bundesliga",
-                    "logo": "../img/competicoes/Alemanha/Bundesliga.png",
-                    "trofeu": "../img/trofeus/Alemanha/Bundesliga.png"
-                },
-                {
-                    "nome": "2. Bundesliga",
-                    "logo": "../img/competicoes/Alemanha/2-Bundesliga.png",
-                    "trofeu": "../img/trofeus/Alemanha/2-Bundesliga.png"
-                },
-                {
-                    "nome": "3 Liga",
-                    "logo": "../img/competicoes/Alemanha/3-Liga.png",
-                    "trofeu": "../img/trofeus/Alemanha/3-Liga.png"
-                }
-            ],
-            "copas": [
-                {
-                    "nome": "DFB-Pokal",
-                    "logo": "../img/competicoes/Alemanha/DFB-Pokal.png",
-                    "trofeu": "../img/trofeus/Alemanha/DFB-Pokal.png"
-                },
-                {
-                    "nome": "DFL-Supercup",
-                    "logo": "../img/competicoes/Alemanha/DFL-Supercup.png",
-                    "trofeu": "../img/trofeus/Alemanha/DFL-Supercup.png"
-                }
-            ]
+            "campeonatos": [ "Bundesliga", "2. Bundesliga", "3 Liga" ],
+            "copas": [ "DFB-Pokal", "DFL-Supercup" ]
         },
         {
             "id": 2,
             "continente": "Europa",
             "nome": "Espanha",
             "bandeira": "../img/bandeiras/big/es.png",
-            "campeonatos": [
-                {
-                    "nome": "La Liga",
-                    "logo": "../img/competicoes/Espanha/LaLiga.png",
-                    "trofeu": "../img/trofeus/Espanha/LaLiga.png"
-                },
-                {
-                    "nome": "La Liga 2",
-                    "logo": "../img/competicoes/Espanha/LaLiga-2.png",
-                    "trofeu": "../img/trofeus/Espanha/LaLiga-2.png"
-                }
-            ],
-            "copas": [
-                {
-                    "nome": "Copa del Rey",
-                    "logo": "../img/competicoes/Espanha/CopaDelRey.png",
-                    "trofeu": "../img/trofeus/Espanha/CopaDelRey.png"
-                },
-                {
-                    "nome": "Supercopa de España",
-                    "logo": "../img/competicoes/Espanha/Supercopa-Espana.png",
-                    "trofeu": "../img/trofeus/Espanha/Supercopa-Espana.png"
-                }
-            ]
+            "campeonatos": [ "La Liga", "La Liga 2" ],
+            "copas": [ "Copa del Rey", "Supercopa de España" ]
         },
         {
             "id": 4,
             "continente": "Europa",
             "nome": "Inglaterra",
             "bandeira": "../img/bandeiras/big/gb-eng.png",
-            "campeonatos": [
-                {
-                    "nome": "Premier League",
-                    "logo": "",
-                    "trofeu": ""
-                },
-                {
-                    "nome": "EFL Championship",
-                    "logo": "",
-                    "trofeu": ""
-                },
-                {
-                    "nome": "EFL League One",
-                    "logo": "",
-                    "trofeu": ""
-                },
-                {
-                    "nome": "EFL League Two",
-                    "logo": "",
-                    "trofeu": ""
-                }
-            ],
-            "copas": [
-                {
-                    "nome": "FA Cup",
-                    "logo": "",
-                    "trofeu": ""
-                },
-                {
-                    "nome": "EFL Cup",
-                    "logo": "",
-                    "trofeu": ""
-                },
-                {
-                    "nome": "FA Community Shield",
-                    "logo": "",
-                    "trofeu": ""
-                }
-            ]
+            "campeonatos": [ "Premier League", "EFL Championship", "EFL League One", "EFL League Two" ],
+            "copas": [ "FA Cup", "EFL Cup", "FA Community Shield" ]
         },
         {
             "id": 5,
             "continente": "Europa",
             "nome": "Itália",
             "bandeira": "../img/bandeiras/big/it.png",
-            "campeonatos": [
-                {
-                    "nome": "Serie A",
-                    "logo": "",
-                    "trofeu": ""
-                },
-                {
-                    "nome": "Serie B",
-                    "logo": "",
-                    "trofeu": ""
-                }
-            ],
-            "copas": [
-                {
-                    "nome": "Coppa Italia",
-                    "logo": "",
-                    "trofeu": ""
-                },
-                {
-                    "nome": "Supercoppa Italiana",
-                    "logo": "",
-                    "trofeu": ""
-                }
-            ]
+            "campeonatos": [ "Serie A", "Serie B" ],
+            "copas": [ "Coppa Italia", "Supercoppa Italiana" ]
         }
     ]
 }
