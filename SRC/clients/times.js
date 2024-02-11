@@ -276,7 +276,7 @@ function criarDialog(time) {
     dialog.className = 'w-5/6'
         
     let cabecalho = document.createElement('div')
-    cabecalho.className = `h-64 w-full bg-[${time.cores[0]}] flex mb-6 shadow-md pr-5 sticky top-0`
+    cabecalho.className = `h-64 w-full bg-[${time.cores[0]}] flex mb-3 shadow-md pr-5 sticky top-0`
     cabecalho.id = 'cabecalho'
 
     let divEscudo = document.createElement('div')
@@ -309,17 +309,15 @@ function criarDialog(time) {
 
     dialog.appendChild(cabecalho)
 
-    //depois ver se faço abas, uma div com scroll(cabeçalho fixo) ou tudo com scroll
 
     let divConteudos = document.createElement('div')
     divConteudos.className = 'mt-5 mx-12 grid gap-4'
-    // divConteudos.id = 'conteudo'
 
      dialog.appendChild(divConteudos)
 
     let divResumo = document.createElement('div')
     // divResumo.className = 'm-4 px-8 pt-8 pb-16 border-2 border-gray-300'
-    divResumo.className = 'my-4 px-12 pt-8 pb-14 border-2 border-gray-200 bg-gray-100 shadow-md'
+    divResumo.className = 'my-4 px-12 pt-8 pb-12 border-2 border-gray-200 bg-gray-100 shadow-md'
     // divResumo.className = 'm-4 px-8 pt-8 pb-16 border-2 border-gray-300'
 
     let tituloResumo = document.createElement('h3')
@@ -410,7 +408,71 @@ function criarDialog(time) {
 
     divConteudos.appendChild(divEstadio)
 
+    let divTitulos = document.createElement('div')
+    divTitulos.className = 'my-4 px-12 pt-8 pb-8 border-2 border-gray-200 bg-gray-100 shadow-md'
 
+    let tituloTitulos = document.createElement('h3')
+    tituloTitulos.className = 'text-xl border-b-2 border-gray-300 mb-6 font-medium'
+    tituloTitulos.innerText = 'Títulos:'
+
+    divTitulos.appendChild(tituloTitulos)
+
+    let listaTitulos = document.createElement('div')
+    listaTitulos.className = 'grid items-center gap-3'
+
+    //deixar assim?
+    if(time.titulos.length === 0) {
+        let loading = document.createElement('img')
+        loading.src = '../img/loading.gif'
+        loading.className = 'text-center w-20'
+
+        listaTitulos.appendChild(loading)
+    }
+
+    
+    time.titulos.forEach(titulo => {
+        let divTitulo = document.createElement('div')
+        divTitulo.className = 'pt-4 pb-6 border-b border-gray-300'
+
+        fetch(`http://localhost:3000/api/competicoes/${titulo.competicao}`)
+        .then(response => response.json())
+        .then(function(data) {
+            console.log(data)
+
+            let divTituloImagensNome = document.createElement('div')
+            divTituloImagensNome.className = 'flex gap-2 h-16 pb-2'
+
+            divTitulo.appendChild(divTituloImagensNome)
+
+            let logo = document.createElement('img')
+            logo.src = data.logo
+
+            let trofeu = document.createElement('img')
+            trofeu.src = data.trofeu
+
+            divTituloImagensNome.appendChild(logo)
+            divTituloImagensNome.appendChild(trofeu)
+
+            let nomeCompeticao = document.createElement('h2')
+            nomeCompeticao.className = 'pt-4 font-semibold'
+            nomeCompeticao.innerText = `${titulo.competicao} (${titulo.edicoes.length})`
+    
+            let edicoes = document.createElement('p')
+            edicoes.innerText = titulo.edicoes.toString().replaceAll(',', ', ')
+    
+            divTituloImagensNome.appendChild(nomeCompeticao)
+            divTitulo.appendChild(edicoes)
+    
+            listaTitulos.appendChild(divTitulo)
+
+        })
+        .catch(error => console.error("Erro:", error))
+    });
+
+
+    divTitulos.appendChild(listaTitulos)
+    divConteudos.appendChild(divTitulos)
+    
     
     dialog.addEventListener("scroll", function() {
 
@@ -418,12 +480,12 @@ function criarDialog(time) {
 
         let cabecalho = dialog.children[0]
 
-        console.log(cabecalho)
+        // console.log(cabecalho)
 
         // console.log(dialog.scrollTop)
         // alert('deu')
 
-        if (dialog.scrollTop > 50) {
+        if (dialog.scrollTop > 20) {
             cabecalho.style.transition = "transform 0.2s ease";
             cabecalho.style.transform = "scaleY(0.5)"
             cabecalho.style.transformOrigin = "top";
