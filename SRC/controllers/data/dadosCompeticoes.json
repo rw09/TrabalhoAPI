@@ -1,0 +1,102 @@
+{
+    "Competicao": [
+        {
+            "id": "1",
+            "nome": "Bundesliga",
+            "logo": "../img/competicoes/Alemanha/Bundesliga.png",
+            "trofeu": "../img/trofeus/Alemanha/Bundesliga.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "2",
+            "nome": "2. Bundesliga",
+            "logo": "../img/competicoes/Alemanha/2-Bundesliga.png",
+            "trofeu": "../img/trofeus/Alemanha/2-Bundesliga.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "3",
+            "nome": "3 Liga",
+            "logo": "../img/competicoes/Alemanha/3-Liga.png",
+            "trofeu": "../img/trofeus/Alemanha/3-Liga.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "4",
+            "nome": "DFB-Pokal",
+            "logo": "../img/competicoes/Alemanha/DFB-Pokal.png",
+            "trofeu": "../img/trofeus/Alemanha/DFB-Pokal.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "5",
+            "nome": "DFL-Supercup",
+            "logo": "../img/competicoes/Alemanha/DFL-Supercup.png",
+            "trofeu": "../img/trofeus/Alemanha/DFL-Supercup.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "6",
+            "nome": "La Liga",
+            "logo": "../img/competicoes/Espanha/LaLiga.png",
+            "trofeu": "../img/trofeus/Espanha/LaLiga.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "7",
+            "nome": "La Liga 2",
+            "logo": "../img/competicoes/Espanha/LaLiga-2.png",
+            "trofeu": "../img/trofeus/Espanha/LaLiga-2.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "8",
+            "nome": "Copa del Rey",
+            "logo": "../img/competicoes/Espanha/CopaDelRey.png",
+            "trofeu": "../img/trofeus/Espanha/CopaDelRey.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "9",
+            "nome": "Supercopa de España",
+            "logo": "../img/competicoes/Espanha/Supercopa-Espana.png",
+            "trofeu": "../img/trofeus/Espanha/Supercopa-Espana.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "10",
+            "nome": "UEFA Champions League",
+            "logo": "../img/competicoes/Europa/ChampionsLeague.png",
+            "trofeu": "../img/trofeus/Europa/ChampionsLeague.png",
+            "nivel": "Continental"
+        },
+        {
+            "id": "11",
+            "nome": "UEFA Europa League",
+            "logo": "../img/competicoes/Europa/EuropaLeague.png",
+            "trofeu": "../img/trofeus/Europa/EuropaLeague.png",
+            "nivel": "Continental"
+        },
+        {
+            "id": "12",
+            "nome": "UEFA Super Cup",
+            "logo": "../img/competicoes/Europa/SuperCup.png",
+            "trofeu": "../img/trofeus/Europa/SuperCup.png",
+            "nivel": "Continental"
+        },
+        {
+            "id": "13",
+            "nome": "UEFA Conference League",
+            "logo": "../img/competicoes/Europa/ConferenceLeague.png",
+            "trofeu": "../img/trofeus/Europa/ConferenceLeague.png",
+            "nivel": "Continental"
+        },
+        {
+            "id": "14",
+            "nome": "FIFA Club World Cup",
+            "logo": "../img/competicoes/Mundial/FIFAClubWorldCup.png",
+            "trofeu": "../img/trofeus/Mundial/FIFAClubWorldCup.png",
+            "nivel": "Mundial"
+        }
+    ]
+}
