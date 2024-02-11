@@ -97,6 +97,55 @@
             "logo": "../img/competicoes/Mundial/FIFAClubWorldCup.png",
             "trofeu": "../img/trofeus/Mundial/FIFAClubWorldCup.png",
             "nivel": "Mundial"
+        },
+        {
+            "id": "15",
+            "nome": "Premier League",
+            "logo": "../img/competicoes/Inglaterra/PremierLeague.png",
+            "trofeu": "../img/trofeus/Inglaterra/PremierLeague.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "16",
+            "nome": "EFL Championship",
+            "logo": "../img/competicoes/Inglaterra/EFLChampionship.png",
+            "trofeu": "../img/trofeus/Inglaterra/EFLChampionship.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "17",
+            "nome": "EFL League One",
+            "logo": "../img/competicoes/Inglaterra/EFLLeagueOne.png",
+            "trofeu": "../img/trofeus/Inglaterra/EFLLeagueOne.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "18",
+            "nome": "EFL League Two",
+            "logo": "../img/competicoes/Inglaterra/EFLLeagueTwo.png",
+            "trofeu": "../img/trofeus/Inglaterra/EFLLeagueTwo.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "19",
+            "nome": "FA Cup",
+            "logo": "../img/competicoes/Inglaterra/FACup.png",
+            "trofeu": "../img/trofeus/Inglaterra/FACup.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "20",
+            "nome": "EFL Cup",
+            "logo": "../img/competicoes/Inglaterra/EFLCup.png",
+            "trofeu": "../img/trofeus/Inglaterra/EFLCup.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "21",
+            "nome": "FA Community Shield",
+            "logo": "../img/competicoes/Inglaterra/FACommunityShield.png",
+            "trofeu": "../img/trofeus/Inglaterra/FACommunityShield.png",
+            "nivel": "Nacional"
         }
     ]
 }
