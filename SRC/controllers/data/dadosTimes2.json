@@ -9,7 +9,7 @@
             "escudo": "../img/escudos/Alemanha/small/Bayern.png",
             "apelido": "Die Bayern",
             "presidente": "Karl Hopfner",
-            "uniforme": [
+            "uniformes": [
                 { "modelo": "Home", "img": "../img/uniformes/Alemanha/Bayern/1.png" },
                 { "modelo": "Away", "img": "../img/uniformes/Alemanha/Bayern/2.png" },
                 { "modelo": "Third", "img": "../img/uniformes/Alemanha/Bayern/3.png" },
@@ -69,7 +69,7 @@
             "escudo": "../img/escudos/Alemanha/small/Dortmund.png",
             "apelido": "Die Borussen",
             "presidente": "Hans-Joachim Watzke",
-            "uniforme": [
+            "uniformes": [
                 { "modelo": "Home", "img": "../img/uniformes/Alemanha/Dortmund/1.png" },
                 { "modelo": "Away", "img": "../img/uniformes/Alemanha/Dortmund/2.png" },
                 { "modelo": "Third", "img": "../img/uniformes/Alemanha/Dortmund/3.png" },
@@ -121,7 +121,7 @@
             "escudo": "../img/escudos/Alemanha/small/Leverkusen.png",
             "apelido": "Die Werkself",
             "presidente": "Wolfgang Halzhäuser",
-            "uniforme": [
+            "uniformes": [
                 { "modelo": "Home", "img": "../img/uniformes/Alemanha/Leverkusen/1.png" },
                 { "modelo": "Away", "img": "../img/uniformes/Alemanha/Leverkusen/2.png" },
                 { "modelo": "Third", "img": "../img/uniformes/Alemanha/Leverkusen/3.png" },
@@ -163,7 +163,7 @@
             "escudo": "../img/escudos/Espanha/small/RealMadrid.png",
             "apelido": "Los Merengues",
             "presidente": "Florentino Pérez",
-            "uniforme": [
+            "uniformes": [
                 { "modelo": "Home", "img": "../img/uniformes/Espanha/RealMadrid/1.png" },
                 { "modelo": "Away", "img": "../img/uniformes/Espanha/RealMadrid/2.png" },
                 { "modelo": "Third", "img": "../img/uniformes/Espanha/RealMadrid/3.png" },
