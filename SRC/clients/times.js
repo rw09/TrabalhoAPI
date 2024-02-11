@@ -273,9 +273,11 @@ function carregarDetalhesTime(id, pais) {
 function criarDialog(time) {
     
     let dialog = document.createElement('dialog')
-    
+    dialog.className = 'w-5/6'
+        
     let cabecalho = document.createElement('div')
-    cabecalho.className = `h-64 bg-[${time.cores[0]}] flex mb-6 shadow-md pr-10`
+    cabecalho.className = `h-64 w-full bg-[${time.cores[0]}] flex mb-6 shadow-md pr-5 sticky top-0`
+    cabecalho.id = 'cabecalho'
 
     let divEscudo = document.createElement('div')
     divEscudo.className = "flex justify-center items-center px-5 m-4 w-1/4"
@@ -292,7 +294,7 @@ function criarDialog(time) {
     divNomeApelido.className = "flex w-full flex-col justify-center items-center gap-8 pr-5"
 
     let nomeTime = document.createElement('h1')
-    nomeTime.className = `text-5xl font-bold text-[${time.cores[1]}]`
+    nomeTime.className = `text-5xl font-bold text-center text-[${time.cores[1]}]`
     nomeTime.innerText = time.nome_completo
 
     divNomeApelido.appendChild(nomeTime)
@@ -309,9 +311,15 @@ function criarDialog(time) {
 
     //depois ver se faço abas, uma div com scroll(cabeçalho fixo) ou tudo com scroll
 
+    let divConteudos = document.createElement('div')
+    divConteudos.className = 'mt-5 mx-12 grid gap-4'
+    // divConteudos.id = 'conteudo'
+
+     dialog.appendChild(divConteudos)
+
     let divResumo = document.createElement('div')
     // divResumo.className = 'm-4 px-8 pt-8 pb-16 border-2 border-gray-300'
-    divResumo.className = 'my-4 px-12 pt-8 pb-14 border-b-2 border-t-2 border-gray-200 bg-gray-100'
+    divResumo.className = 'my-4 px-12 pt-8 pb-14 border-2 border-gray-200 bg-gray-100 shadow-md'
     // divResumo.className = 'm-4 px-8 pt-8 pb-16 border-2 border-gray-300'
 
     let tituloResumo = document.createElement('h3')
@@ -326,11 +334,11 @@ function criarDialog(time) {
 
     divResumo.appendChild(resumo)
 
-    dialog.appendChild(divResumo)
+    divConteudos.appendChild(divResumo)
 
 
     let divUniformes = document.createElement('div')
-    divUniformes.className = 'my-4 px-12 pt-8 pb-14 border-b-2 border-t-2 border-gray-200 bg-gray-100'
+    divUniformes.className = 'my-4 px-12 pt-8 pb-14 border-2 border-gray-200 bg-gray-100 shadow-md'
 
     let tituloUniformes = document.createElement('h3')
     tituloUniformes.className = 'text-xl border-b-2 border-gray-300 mb-6 font-medium'
@@ -358,11 +366,11 @@ function criarDialog(time) {
 
     divUniformes.appendChild(divImagensUniformes)
 
-    dialog.appendChild(divUniformes)
+    divConteudos.appendChild(divUniformes)
 
 
     let divEstadio = document.createElement('div')
-    divEstadio.className = 'my-4 px-12 pt-8 pb-14 border-b-2 border-t-2 border-gray-200 bg-gray-100'
+    divEstadio.className = 'my-4 px-12 pt-8 pb-8 border-2 border-gray-200 bg-gray-100 shadow-md'
 
     let tituloEstadio = document.createElement('h3')
     tituloEstadio.className = 'text-xl border-b-2 border-gray-300 mb-6 font-medium'
@@ -400,162 +408,41 @@ function criarDialog(time) {
 
     divEstadio.appendChild(divInfoEstadio)
 
-    dialog.appendChild(divEstadio)
+    divConteudos.appendChild(divEstadio)
 
 
-
-
-    let corpo = document.createElement('div')
-    corpo.style.display = 'flex'
-    // corpo.style.height = '320px'
-    corpo.style.backgroundColor = '#f5a000'
-    corpo.style.color = '#ffffff'
-    // corpo.innerText = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam eos, harum modi alias accusamus odio, voluptatibus iusto eius sequi porro excepturi reiciendis animi, voluptates dicta! Non sapiente voluptatum numquam ex? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam eos, harum modi alias accusamus odio, voluptatibus iusto eius sequi porro excepturi reiciendis animi, voluptates dicta! Non sapiente voluptatum numquam ex? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam eos, harum modi alias accusamus odio, voluptatibus iusto eius sequi porro excepturi reiciendis animi, voluptates dicta! Non sapiente voluptatum numquam ex?"
-    // cabecalho.className = 'cabeçalho'
-    // cabecalho.style.backgroundColor = time.cores[0]
-    // cabecalho.style.color = time.cores[1]
-    // let logoCard = document.createElement('div')
-    // logoCard.style.backgroundColor = '#ffffff'
-    // let logo = document.createElement('img')
-    // logo.src = time.escudo.replace('small', 'big')
-    // logoCard.appendChild(logo)
-    // header.appendChild(logoCard)
     
-    dialog.appendChild(corpo)
+    dialog.addEventListener("scroll", function() {
 
+        // let cabecalho = document.getElementById("cabecalho");
 
-    console.log('aqui')
-    console.log(time['uniforme'])
+        let cabecalho = dialog.children[0]
 
-    let uniformes = time['uniformes']
+        console.log(cabecalho)
 
-    console.log(uniformes)
+        // console.log(dialog.scrollTop)
+        // alert('deu')
 
-    uniformes.forEach(uniforme => {
-        let img = document.createElement('img')
-        img.src = uniforme.img
-        let modelo = document.createElement('h5')
-        modelo.innerText = uniforme.modelo
-        corpo.appendChild(modelo)
-        corpo.appendChild(img)
+        if (dialog.scrollTop > 50) {
+            cabecalho.style.transition = "transform 0.2s ease";
+            cabecalho.style.transform = "scaleY(0.5)"
+            cabecalho.style.transformOrigin = "top";
+
+            for (let i = 0; i < cabecalho.children.length; i++) {
+                cabecalho.children[i].style.transition = "transform 0.2s ease";
+                cabecalho.children[i].style.transform = "scaleX(0.5)";
+            }
+        } else {
+            cabecalho.style.transform = "scaleY(1)"
+
+            for (let i = 0; i < cabecalho.children.length; i++) {
+                cabecalho.children[i].style.transform = "scaleX(1)";
+            }
+        }
     });
-
-    let estadioNome = document.createElement('h1')
-    estadioNome.innerHTML = `Estádio: ${time['estadio'].nome}`
-
-    corpo.appendChild(estadioNome)
-
-
-    // let fotoEstadio = document.createElement('img')
-    // fotoEstadio.src = time['estadio'].foto
-
-    // corpo.appendChild(fotoEstadio)
-
-
-    console.log(time.titulos)
 
 
     document.body.appendChild(dialog)
-
-    console.log(time.titulos)
-
-    let titulos = time.titulos
-
-    titulos.forEach(titulo => {
-        console.log(titulo.competicao)
-        console.log(titulo.edicoes.toString().replaceAll(',', ', '))
-
-        let nomeTitulo = document.createElement('h2')
-        nomeTitulo.innerHTML = `${titulo.competicao} (${titulo.edicoes.length})`
-        let tituloEdicoes = document.createElement('p')
-        tituloEdicoes.innerHTML = titulo.edicoes.toString().replaceAll(',', ', ')
-        dialog.appendChild(nomeTitulo)
-        dialog.appendChild(tituloEdicoes)
-    });
-
-    console.log('dados pais')
-    console.log(time.pais)
-
-    console.log(`http://localhost:3000/api/paises/${time.pais}`)
-
-    fetch(`http://localhost:3000/api/paises/${time.pais}`)
-    .then(response => response.json())
-    .then(function(data) {
-        console.log('pais11:')
-        console.log(data.campeonatos)
-        console.log(data.copas)
-
-        data.campeonatos.forEach(campeonato => {
-            let img1 = document.createElement('img')
-            let img2 = document.createElement('img')
-            img1.src = campeonato.logo
-            img2.src = campeonato.trofeu
-            dialog.appendChild(img1)
-            dialog.appendChild(img2)
-        });
-
-        data.copas.forEach(copa => {
-            let img1 = document.createElement('img')
-            let img2 = document.createElement('img')
-            img1.src = copa.logo
-            img2.src = copa.trofeu
-            dialog.appendChild(img1)
-            dialog.appendChild(img2)
-        });
-
-        let img = document.createElement('img')
-        img.src = data.bandeira
-        dialog.appendChild(img)
-    })
-    .catch(error => console.error("Erro:", error))
-
-
-
-    let info = document.createElement('div')
-    let infoConteudo = document.createElement('p')
-    
-    
-    infoConteudo.innerHTML = '<b>Nome Completo:</b> ' + time.nome_completo + '<br>'
-
-    infoConteudo.innerHTML += '<b>Fundação:</b> ' + time.fundacao + '<br>'
-
-    infoConteudo.innerHTML += '<b>Cidade:</b> ' + time.cidade + '<br>'
-
-    infoConteudo.innerHTML += '<b>Estado:</b> ' + time.estado + '<br>'
-
-    infoConteudo.innerHTML += '<b>País:</b> ' + time.pais + '<br>'
-
-    infoConteudo.innerHTML += '<b>Liga:</b> ' + time.liga + '<br>'
-
-    infoConteudo.innerHTML += '<b>Presidente:</b> ' + time.presidente + '<br>'
-
-    infoConteudo.innerHTML += '<b>Website:</b> ' + time.website + '<br>'
-
-    infoConteudo.innerHTML += '<b>E-mail:</b> ' + time.email + '<br>'
-
-    infoConteudo.innerHTML += '<b>Marca Uniforme:</b> ' + time.marca_uniforme + '<br>'
-
-
-    infoConteudo.innerHTML += '<br><br><br>' + time.resumo
-
-    info.appendChild(infoConteudo)
-    dialog.appendChild(info)
-
-
-    fetch(`http://localhost:3000/api/paises/${time.pais}/${time.liga}`)
-    .then(response => response.json())
-    .then(function(data) {
-        console.log('liga')
-        console.log(data)
-
-        let logoLiga = document.createElement('img')
-        logoLiga.src = data.logo
-        dialog.appendChild(logoLiga)
-        
-    })
-    .catch(error => console.error("Erro:", error))
-
-    
 
     dialog.showModal()
 }
@@ -775,3 +662,19 @@ function criarDialog(time) {
     dialog.showModal()
 }
 */
+
+// document.getElementById("conteudo").addEventListener("scroll", scrollFunction);
+
+    function scrollFunction() {
+        alert('scroll')
+        console.log('scroll')
+        var header = document.getElementById("cabecalho");
+
+        console.log(header)
+        // Verifica se a posição de rolagem vertical do conteúdo ultrapassou 50px
+        if (this.scrollTop > 50) {
+            header.style.fontSize = "14px"; // Tamanho de fonte reduzido
+        } else {
+            header.style.fontSize = "20px"; // Tamanho de fonte original
+        }
+    }
