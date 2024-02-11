@@ -3,7 +3,7 @@
         {
             "id": 1,
             "nome": "Bayern München",
-            "nome_completo": "Fussball Club Bayern München AG",
+            "nome_completo": "Fußball-Club Bayern München AG",
             "fundacao": "27/02/1900",
             "cores": [ "#dc052d", "#ffffff" ],
             "escudo": "../img/escudos/Alemanha/small/Bayern.png",
@@ -211,6 +211,76 @@
                 {
                     "competicao": "FIFA Club World Cup",
                     "edicoes": [ "1960", "1998", "2002", "2014", "2016", "2017", "2018", "2022" ]
+                }
+            ]
+       }
+    ],
+    "TimesInglaterra": [
+        {
+            "id": 1,
+            "nome": "Chelsea",
+            "nome_completo": "Chelsea Football Club",
+            "fundacao": "10/03/1905",
+            "cores": [ "#034694", "#ffffff" ],
+            "escudo": "../img/escudos/Inglaterra/small/Chelsea.png",
+            "apelido": "The Blues",
+            "presidente": "Todd Boehly",
+            "uniformes": [
+                { "modelo": "Home", "img": "../img/uniformes/Inglaterra/Chelsea/1.png" },
+                { "modelo": "Away", "img": "../img/uniformes/Inglaterra/Chelsea/2.png" },
+                { "modelo": "Third", "img": "../img/uniformes/Inglaterra/Chelsea/3.png" },
+                { "modelo": "GK", "img": "../img/uniformes/Inglaterra/Chelsea/gk.png" }
+            ],
+            "marca_uniforme": "Nike",
+            "pais": "Inglaterra",
+            "liga": "Premier League",
+            "cidade": "Londres",
+            "estado": "-",
+            "website": "http://www.chelseafc.com",
+            "email": "enquiries@chelseafc.com",
+            "resumo": "O Chelsea FC foi fundado em 1905 em um pub localizado em Fulham Road, Londres. O Clube conquistou o campeonato nacional 6 vezes e também tem 8 títulos da copa do país. O Chelsea teve uma sequência impressionante de invencibilidade em casa na primeira divisão do campeonato inglês: 86 jogos entre 2004 e 2008. O clube se tornou o primeiro detentor da UEFA Champions League a vencer a UEFA Europa League no ano seguinte, em 2013.",
+            "estadio": {
+                "nome": "Stamford Bridge",
+                "inauguracao": 1877,
+                "capacidade": 40343,
+                "foto": "../img/estadios/Inglaterra/StanfordBridge.jpg"
+            },
+            "titulos": [
+                {
+                    "competicao": "Premier League",
+                    "edicoes": [ "1954-55", "2004-05", "2005-06", "2009-10", "2014-15", "2016-17" ]
+                },
+                {
+                    "competicao": "EFL Championship",
+                    "edicoes": [ "1983-84", "1988-89" ]
+                },
+                {
+                    "competicao": "FA Cup",
+                    "edicoes": [ "1969-70", "1996-97", "1999-2000", "2006-07", "2008-09", "2009-10", "2011-12", "2017-18" ]
+                },
+                {
+                    "competicao": "EFL Cup",
+                    "edicoes": [ "1964-65", "1997-98", "2004-05", "2006-07", "2014-15" ]
+                },
+                {
+                    "competicao": "FA Community Shield",
+                    "edicoes": [ "1955", "2000", "2005", "2009" ]
+                },
+                {
+                    "competicao": "UEFA Champions League",
+                    "edicoes": [ "2011-12", "2020-21" ]
+                },
+                {
+                    "competicao": "UEFA Europa League",
+                    "edicoes": [ "2012-13", "2018-19" ]
+                },
+                {
+                    "competicao": "UEFA Super Cup",
+                    "edicoes": [ "1998", "2021" ]
+                },
+                {
+                    "competicao": "FIFA Club World Cup",
+                    "edicoes": [ "2021" ]
                 }
             ]
        }
