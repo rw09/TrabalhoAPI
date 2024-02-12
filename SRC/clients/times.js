@@ -313,12 +313,10 @@ function criarDialog(time) {
     let divConteudos = document.createElement('div')
     divConteudos.className = 'mt-5 mx-12 grid gap-4'
 
-     dialog.appendChild(divConteudos)
+    dialog.appendChild(divConteudos)
 
     let divResumo = document.createElement('div')
-    // divResumo.className = 'm-4 px-8 pt-8 pb-16 border-2 border-gray-300'
     divResumo.className = 'my-4 px-12 pt-8 pb-12 border-2 border-gray-200 bg-gray-100 shadow-md'
-    // divResumo.className = 'm-4 px-8 pt-8 pb-16 border-2 border-gray-300'
 
     let tituloResumo = document.createElement('h3')
     tituloResumo.className = 'text-xl border-b-2 border-gray-300 mb-6 font-medium'
@@ -333,6 +331,109 @@ function criarDialog(time) {
     divResumo.appendChild(resumo)
 
     divConteudos.appendChild(divResumo)
+
+    let divInfo = document.createElement('div')
+    divInfo.className = 'my-4 px-12 pt-8 pb-12 border-2 border-gray-200 bg-gray-100 shadow-md'
+
+    let tituloInfo = document.createElement('h3')
+    tituloInfo.className = 'text-xl border-b-2 border-gray-300 mb-6 font-medium'
+    tituloInfo.innerText = 'Info:'
+
+    divInfo.appendChild(tituloInfo)
+
+
+    let info = document.createElement('div')
+    info.className = 'grid grid-cols-2 gap-y-2 gap-x-8'
+
+    divInfo.appendChild(info)
+
+    let fundacao = document.createElement('h4')
+    fundacao.innerHTML = '<b>Fundação:</b> ' + time.fundacao
+    fundacao.className = 'bg-gray-200 p-2 pl-4'
+    info.appendChild(fundacao)
+
+    let divCores = document.createElement('div')
+    divCores.className = 'flex gap-x-2 justify-start items-center bg-gray-200 p-2 pl-4'
+    info.appendChild(divCores)
+
+    let coresTitulo = document.createElement('h4')
+    coresTitulo.innerHTML = '<b>Cores:</b> '
+    divCores.appendChild(coresTitulo)
+
+    time.cores.forEach(cor => {
+        let divCor = document.createElement('div')
+        divCor.className = `bg-[${cor}] border-black border-2 w-6 h-6`
+        divCores.appendChild(divCor)
+    });
+
+    let cidade = document.createElement('h4')
+    cidade.innerHTML = '<b>Cidade:</b> ' + time.cidade
+    cidade.className = 'bg-gray-200 p-2 pl-4'
+    info.appendChild(cidade)
+
+    let estado = document.createElement('h4')
+    estado.innerHTML = '<b>Estado:</b> ' + time.estado
+    estado.className = 'bg-gray-200 p-2 pl-4'
+    info.appendChild(estado)
+
+    let divPais = document.createElement('div')
+    divPais.className = 'flex gap-x-2 justify-start items-center bg-gray-200 p-2 pl-4'
+    info.appendChild(divPais)
+
+    let pais = document.createElement('h4')
+    pais.innerHTML = '<b>País:</b> ' + time.pais
+    divPais.appendChild(pais)
+
+    let bandeiraPais = document.createElement('img')
+    bandeiraPais.className = 'h-5'
+    bandeiraPais.src = `../img/bandeiras/small/${time.pais}.png`
+
+    divPais.appendChild(bandeiraPais)
+
+    let divLiga = document.createElement('div')
+    divLiga.className = 'flex gap-x-2 justify-start items-center bg-gray-200 p-2 pl-4'
+    info.appendChild(divLiga)
+
+    let liga = document.createElement('h4')
+    liga.innerHTML = '<b>Liga:</b> ' + time.liga
+    divLiga.appendChild(liga)
+
+    let logoLiga = document.createElement('img')
+    logoLiga.className = 'h-6'
+    let nomeLiga = time.liga.replace(" ", "")
+    logoLiga.src = `../img/competicoes/${time.pais}/${nomeLiga}.png`
+
+    divLiga.appendChild(logoLiga)
+    
+    let presidente = document.createElement('h4')
+    presidente.innerHTML = '<b>Presidente:</b> ' + time.presidente
+    presidente.className = 'bg-gray-200 p-2 pl-4'
+    info.appendChild(presidente)
+
+    let marcaUniforme = document.createElement('h4')
+    marcaUniforme.innerHTML = '<b>Marca do Uniforme:</b> ' + time.marca_uniforme
+    marcaUniforme.className = 'bg-gray-200 p-2 pl-4'
+    info.appendChild(marcaUniforme)
+
+    let website = document.createElement('h4')
+    // website.innerHTML = `<b>Website:</b> <a href=${time.website}>${time.website}</a>`
+    website.innerHTML = '<b>Website:</b> ' + time.website
+    website.className = 'bg-gray-200 p-2 pl-4'
+    info.appendChild(website)
+
+    let email = document.createElement('h4')
+    // email.innerHTML = `<b>E-mail:</b> <a href="mailto:${time.email}">${time.email}</a>`
+    email.innerHTML = '<b>E-mail:</b> ' + time.email
+    email.className = 'bg-gray-200 p-2 pl-4'
+    info.appendChild(email)
+
+    
+
+    
+    
+
+
+    divConteudos.appendChild(divInfo)
 
 
     let divUniformes = document.createElement('div')
@@ -739,4 +840,38 @@ function criarDialog(time) {
         } else {
             header.style.fontSize = "20px"; // Tamanho de fonte original
         }
+    }
+
+    document.getElementById('formCadastrarTime').addEventListener('submit', function (event){
+        event.preventDefault()
+        adicionarTime()
+    })
+
+
+    function adicionarTime() {
+        const id = document.getElementById('id').value
+        const nome = document.getElementById('nome').value
+        const pais = document.getElementById('pais').value
+        const email = document.getElementById('email').value
+        const fundacao = document.getElementById('fundacao').value
+    
+        fetch('http://localhost:3000/api/times', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                id: id,
+                nome: nome,
+                pais: pais,
+                email: email,
+                fundacao: fundacao
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            // loadClientesList()
+        })
+        .catch(error => console.error("Erro:", error))
     }
