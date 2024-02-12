@@ -174,6 +174,69 @@
             "logo": "../img/competicoes/Itália/SupercoppaItaliana.png",
             "trofeu": "../img/trofeus/Itália/SupercoppaItaliana.png",
             "nivel": "Nacional"
+        },
+        {
+            "id": "26",
+            "nome": "Brasileirão Série A",
+            "logo": "../img/competicoes/Brasil/BrasileirãoSérieA.png",
+            "trofeu": "../img/trofeus/Brasil/BrasileirãoSérieA.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "27",
+            "nome": "Brasileirão Série B",
+            "logo": "../img/competicoes/Brasil/BrasileirãoSérieB.png",
+            "trofeu": "../img/trofeus/Brasil/BrasileirãoSérieB.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "28",
+            "nome": "Brasileirão Série C",
+            "logo": "../img/competicoes/Brasil/BrasileirãoSérieC.png",
+            "trofeu": "../img/trofeus/Brasil/BrasileirãoSérieC.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "29",
+            "nome": "Brasileirão Série D",
+            "logo": "../img/competicoes/Brasil/BrasileirãoSérieD.png",
+            "trofeu": "../img/trofeus/Brasil/BrasileirãoSérieD.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "30",
+            "nome": "Copa do Brasil",
+            "logo": "../img/competicoes/Brasil/CopaDoBrasil.png",
+            "trofeu": "../img/trofeus/Brasil/CopaDoBrasil.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "31",
+            "nome": "Supercopa do Brasil",
+            "logo": "../img/competicoes/Brasil/SupercopaDoBrasil.png",
+            "trofeu": "../img/trofeus/Brasil/SupercopaDoBrasil.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "32",
+            "nome": "Copa Libertadores da América",
+            "logo": "../img/competicoes/América do Sul/Libertadores.png",
+            "trofeu": "../img/trofeus/América do Sul/Libertadores.png",
+            "nivel": "Continental"
+        },
+        {
+            "id": "33",
+            "nome": "Copa Sul-Americana",
+            "logo": "../img/competicoes/América do Sul/Sul-Americana.png",
+            "trofeu": "../img/trofeus/América do Sul/Sul-Americana.png",
+            "nivel": "Continental"
+        },
+        {
+            "id": "34",
+            "nome": "Recopa Sul-Americana",
+            "logo": "../img/competicoes/América do Sul/RecopaSul-Americana.png",
+            "trofeu": "../img/trofeus/América do Sul/RecopaSul-Americana.png",
+            "nivel": "Continental"
         }
     ]
 }
