@@ -15,6 +15,9 @@ Bandeira Pais: flagpedia
 https://sortitoutsi.net/football-manager-2024/team/915/fc-bayern
 
 
+Cores dos times: https://teamcolorcodes.com/napoli-color-codes/
+
+
 
 fazer um fetch das competições para buscar.
 
