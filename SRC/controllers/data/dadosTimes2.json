@@ -153,6 +153,122 @@
             ]
         }
     ],
+    "TimesBrasil": [
+        {
+            "id": 1,
+            "nome": "Grêmio",
+            "nome_completo": "Grêmio Foot-Ball Porto Alegrense",
+            "fundacao": "15/09/1903",
+            "cores": [ "#12A0D7", "#000000", "#ffffff" ],
+            "escudo": "../img/escudos/Brasil/small/Grêmio.png",
+            "apelido": "Imortal Tricolor",
+            "presidente": "Alberto Guerra",
+            "uniformes": [
+                { "modelo": "Home", "img": "../img/uniformes/Brasil/Grêmio/1.png" },
+                { "modelo": "Away", "img": "../img/uniformes/Brasil/Grêmio/2.png" },
+                { "modelo": "GK", "img": "../img/uniformes/Brasil/Grêmio/gk.png" }
+            ],
+            "marca_uniforme": "Umbro",
+            "pais": "Brasil",
+            "liga": "Brasileirão Série A",
+            "cidade": "Porto Alegre",
+            "estado": "Rio Grande do Sul",
+            "website": "www.gremio.net",
+            "email": "ouvidoria@gremio.net",
+            "resumo": "O Grêmio, é um dos clubes de futebol mais importantes do Brasil. Fundado em 15 de setembro de 1903, o Grêmio foi estabelecido por imigrantes alemães na cidade de Porto Alegre, no estado do Rio Grande do Sul. O Grêmio conquistou inúmeros títulos estaduais, sendo um dos clubes mais vitoriosos do Campeonato Gaúcho. Além disso, o Grêmio tem em sua galeria de troféus títulos importantes a nível nacional, incluindo várias conquistas do Campeonato Brasileiro e da Copa do Brasil. A nível internacional, o Grêmio é reconhecido por suas conquistas na Copa Libertadores da América, uma das competições mais prestigiadas do continente sul-americano. O clube venceu a Libertadores em diversas ocasiões, sendo um dos clubes brasileiros com mais títulos neste torneio.",
+            "estadio": {
+                "nome": "Arena do Grêmio",
+                "inauguracao": 2012,
+                "capacidade": 60540,
+                "foto": "../img/estadios/Brasil/ArenaDoGrêmio.jpg"
+            },
+            "titulos": [
+                {
+                    "competicao": "Brasileirão Série A",
+                    "edicoes": [ "1981", "1996" ]
+                },
+                {
+                    "competicao": "Brasileirão Série B",
+                    "edicoes": [ "2005" ]
+                },
+                {
+                    "competicao": "Copa do Brasil",
+                    "edicoes": [ "1989", "1994", "1997", "2001", "2016" ]
+                },
+                {
+                    "competicao": "Supercopa do Brasil",
+                    "edicoes": [ "1990" ]
+                },
+                {
+                    "competicao": "Copa Libertadores da América",
+                    "edicoes": [ "1983", "1995", "2017" ]
+                },
+                {
+                    "competicao": "Recopa Sul-Americana",
+                    "edicoes": [ "1996", "2018" ]
+                },
+                {
+                    "competicao": "FIFA Club World Cup",
+                    "edicoes": [ "1983" ]
+                }
+            ]
+       },
+       {
+            "id": 2,
+            "nome": "Internacional",
+            "nome_completo": "Sport Club Internacional",
+            "fundacao": "04/04/1909",
+            "cores": [ "#eb131d", "#ffffff" ],
+            "escudo": "../img/escudos/Brasil/small/Internacional.png",
+            "apelido": "Colorado - Clube do Povo",
+            "presidente": "Alessandro Barcellos",
+            "uniformes": [
+                { "modelo": "Home", "img": "../img/uniformes/Brasil/Internacional/1.png" },
+                { "modelo": "Away", "img": "../img/uniformes/Brasil/Internacional/2.png" },
+                { "modelo": "GK", "img": "../img/uniformes/Brasil/Internacional/gk.png" }
+            ],
+            "marca_uniforme": "Adidas",
+            "pais": "Brasil",
+            "liga": "Brasileirão Série A",
+            "cidade": "Porto Alegre",
+            "estado": "Rio Grande do Sul",
+            "website": "www.internacional.com.br",
+            "email": "aimprensa@internacional.com.br",
+            "resumo": "O Grêmio, é um dos clubes de futebol mais importantes do Brasil. Fundado em 15 de setembro de 1903, o Grêmio foi estabelecido por imigrantes alemães na cidade de Porto Alegre, no estado do Rio Grande do Sul. O Grêmio conquistou inúmeros títulos estaduais, sendo um dos clubes mais vitoriosos do Campeonato Gaúcho. Além disso, o Grêmio tem em sua galeria de troféus títulos importantes a nível nacional, incluindo várias conquistas do Campeonato Brasileiro e da Copa do Brasil. A nível internacional, o Grêmio é reconhecido por suas conquistas na Copa Libertadores da América, uma das competições mais prestigiadas do continente sul-americano. O clube venceu a Libertadores em diversas ocasiões, sendo um dos clubes brasileiros com mais títulos neste torneio.",
+            "estadio": {
+                "nome": "Beira-Rio",
+                "inauguracao": 1969,
+                "capacidade": 50842,
+                "foto": "../img/estadios/Brasil/BeiraRio.jpg"
+            },
+            "titulos": [
+                {
+                    "competicao": "Brasileirão Série A",
+                    "edicoes": [ "1975", "1976", "1979" ]
+                },
+                {
+                    "competicao": "Copa do Brasil",
+                    "edicoes": [ "1992" ]
+                },
+                {
+                    "competicao": "Copa Libertadores da América",
+                    "edicoes": [ "2006", "2010" ]
+                },
+                {
+                    "competicao": "Copa Sul-Americana",
+                    "edicoes": [ "2008" ]
+                },
+                {
+                    "competicao": "Recopa Sul-Americana",
+                    "edicoes": [ "2007", "2011" ]
+                },
+                {
+                    "competicao": "FIFA Club World Cup",
+                    "edicoes": [ "2006" ]
+                }
+            ]
+        }
+    ],
     "TimesEspanha": [
         {
             "id": 1,
