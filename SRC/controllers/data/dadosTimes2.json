@@ -284,5 +284,59 @@
                 }
             ]
        }
+    ],
+    "TimesItália": [
+        {
+            "id": 1,
+            "nome": "Napoli",
+            "nome_completo": "Società Sportiva Calcio Napoli",
+            "fundacao": "25/08/1926",
+            "cores": [ "#12A0D7", "#ffffff" ],
+            "escudo": "../img/escudos/Itália/small/Napoli.png",
+            "apelido": "Gli Azzurri",
+            "presidente": "Aurelio De Laurentiis",
+            "uniformes": [
+                { "modelo": "Home", "img": "../img/uniformes/Itália/Napoli/1.png" },
+                { "modelo": "Away", "img": "../img/uniformes/Itália/Napoli/2.png" },
+                { "modelo": "Third", "img": "../img/uniformes/Itália/Napoli/3.png" },
+                { "modelo": "GK", "img": "../img/uniformes/Itália/Napoli/gk.png" }
+            ],
+            "marca_uniforme": "EA7",
+            "pais": "Itália",
+            "liga": "Serie A",
+            "cidade": "Nápoles",
+            "estado": "Campânia",
+            "website": "http://www.sscnapoli.it",
+            "email": "infocalcio@sscn.it",
+            "resumo": "O Chelsea FC foi fundado em 1905 em um pub localizado em Fulham Road, Londres. O Clube conquistou o campeonato nacional 6 vezes e também tem 8 títulos da copa do país. O Chelsea teve uma sequência impressionante de invencibilidade em casa na primeira divisão do campeonato inglês: 86 jogos entre 2004 e 2008. O clube se tornou o primeiro detentor da UEFA Champions League a vencer a UEFA Europa League no ano seguinte, em 2013.",
+            "estadio": {
+                "nome": "Stadio Diego Armando Maradona",
+                "inauguracao": 1959,
+                "capacidade": 54726,
+                "foto": "../img/estadios/Itália/StadioDiegoArmandoMaradona.jpg"
+            },
+            "titulos": [
+                {
+                    "competicao": "Serie A",
+                    "edicoes": [ "1986-87", "1989-90", "2022-23" ]
+                },
+                {
+                    "competicao": "Serie B",
+                    "edicoes": [ "1949-50" ]
+                },
+                {
+                    "competicao": "Coppa Italia",
+                    "edicoes": [ "1961-62", "1975-76", "1986-87", "2011-12", "2013-14", "2019-20" ]
+                },
+                {
+                    "competicao": "Supercoppa Italiana",
+                    "edicoes": [ "1990", "2014" ]
+                },
+                {
+                    "competicao": "UEFA Europa League",
+                    "edicoes": [ "1988-89" ]
+                }
+            ]
+       }
     ]
 }
