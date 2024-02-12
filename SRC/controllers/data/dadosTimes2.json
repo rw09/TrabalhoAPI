@@ -159,7 +159,7 @@
             "nome": "Real Madrid",
             "nome_completo": "Real Madrid Club de Fútbol",
             "fundacao": "06/03/1902",
-            "cores": [ "#ffffff", "#004995", "f7bd02" ],
+            "cores": [ "#ffffff", "#004995", "#f7bd02" ],
             "escudo": "../img/escudos/Espanha/small/RealMadrid.png",
             "apelido": "Los Merengues",
             "presidente": "Florentino Pérez",
