@@ -146,6 +146,34 @@
             "logo": "../img/competicoes/Inglaterra/FACommunityShield.png",
             "trofeu": "../img/trofeus/Inglaterra/FACommunityShield.png",
             "nivel": "Nacional"
+        },
+        {
+            "id": "22",
+            "nome": "Serie A",
+            "logo": "../img/competicoes/Itália/SerieA.png",
+            "trofeu": "../img/trofeus/Itália/SerieA.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "23",
+            "nome": "Serie B",
+            "logo": "../img/competicoes/Itália/SerieB.png",
+            "trofeu": "../img/trofeus/Itália/SerieB.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "24",
+            "nome": "Coppa Italia",
+            "logo": "../img/competicoes/Itália/CoppaItalia.png",
+            "trofeu": "../img/trofeus/Itália/CoppaItalia.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "25",
+            "nome": "Supercoppa Italiana",
+            "logo": "../img/competicoes/Itália/SupercoppaItaliana.png",
+            "trofeu": "../img/trofeus/Itália/SupercoppaItaliana.png",
+            "nivel": "Nacional"
         }
     ]
 }
