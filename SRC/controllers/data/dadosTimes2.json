@@ -56,7 +56,7 @@
                 },
                 {
                     "competicao": "FIFA Club World Cup",
-                    "edicoes": [ "1796", "2001", "2013", "2020" ]
+                    "edicoes": [ "1976", "2001", "2013", "2020" ]
                 }
             ]
        },
@@ -352,7 +352,7 @@
             "liga": "Premier League",
             "cidade": "Londres",
             "estado": "-",
-            "website": "http://www.chelseafc.com",
+            "website": "www.chelseafc.com",
             "email": "enquiries@chelseafc.com",
             "resumo": "O Chelsea FC foi fundado em 1905 em um pub localizado em Fulham Road, Londres. O Clube conquistou o campeonato nacional 6 vezes e também tem 8 títulos da copa do país. O Chelsea teve uma sequência impressionante de invencibilidade em casa na primeira divisão do campeonato inglês: 86 jogos entre 2004 e 2008. O clube se tornou o primeiro detentor da UEFA Champions League a vencer a UEFA Europa League no ano seguinte, em 2013.",
             "estadio": {
@@ -424,7 +424,7 @@
             "estado": "Campânia",
             "website": "http://www.sscnapoli.it",
             "email": "infocalcio@sscn.it",
-            "resumo": "O Chelsea FC foi fundado em 1905 em um pub localizado em Fulham Road, Londres. O Clube conquistou o campeonato nacional 6 vezes e também tem 8 títulos da copa do país. O Chelsea teve uma sequência impressionante de invencibilidade em casa na primeira divisão do campeonato inglês: 86 jogos entre 2004 e 2008. O clube se tornou o primeiro detentor da UEFA Champions League a vencer a UEFA Europa League no ano seguinte, em 2013.",
+            "resumo": "O clube foi fundado em 1926 com o nome Associazione Calcio Napoli graças à iniciativa de empresários ricos da região. O clube conquistou o campeonato nacional 3 vezes e também tem 6 títulos da copa do país. Com o apelido de 'Partenopei' ('Napolitanos'), o Napoli ganhou se segundo título da liga em 1989-90 e após um período de declínio nos anos 90, voltou à primeira divisão em 2007. O clube conquistou o primeiro troféu europeu em 1989, ao vencer o Stuttgart na final da UEFA Europa League.",
             "estadio": {
                 "nome": "Stadio Diego Armando Maradona",
                 "inauguracao": 1959,
