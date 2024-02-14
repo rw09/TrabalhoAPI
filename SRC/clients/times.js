@@ -218,7 +218,7 @@ function mostrarListaTodosTimes(data) {
 
     let listaDeTimes = document.createElement('section')
     listaDeTimes.id = 'listaDeTimes'
-    listaDeTimes.className = 'grid grid-cols-5 gap-x-6 gap-y-10 p-8'
+    listaDeTimes.className = 'grid sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-6 gap-y-10 p-8'
 
     let main = document.getElementById('main')
 
@@ -227,10 +227,10 @@ function mostrarListaTodosTimes(data) {
 
     data.forEach(time => {
         let cardTime = document.createElement('div')
-        cardTime.className = 'group p-4 border border-black bg-white hover:cursor-pointer hover:shadow-xl hover:bg-[#ebe8e8] transition duration-300 ease-in-out'
+        cardTime.className = 'group p-4 border border-gray-500 bg-white hover:cursor-pointer hover:shadow-xl hover:bg-[#ebe8e8] transition duration-300 ease-in-out'
         
         let cardTimeConteudo = document.createElement('div')
-        cardTimeConteudo.className = "grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-80 group-hover:border-[#ebe8e8] transition ease-in-out duration-300"
+        cardTimeConteudo.className = "grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-gray-500 group-hover:opacity-80 group-hover:border-[#ebe8e8] transition ease-in-out duration-300"
         
         cardTime.appendChild(cardTimeConteudo)
 
@@ -276,11 +276,11 @@ function criarDialog(time) {
     dialog.className = 'w-5/6'
         
     let cabecalho = document.createElement('div')
-    cabecalho.className = `h-64 w-full bg-[${time.cores[0]}] flex mb-3 shadow-md pr-5 sticky top-0`
+    cabecalho.className = `h-64 w-full bg-[${time.cores[0]}] flex mb-3 shadow-md pr-8 sticky top-0`
     cabecalho.id = 'cabecalho'
 
     let divEscudo = document.createElement('div')
-    divEscudo.className = "flex justify-center items-center px-5 m-4 w-1/4"
+    divEscudo.className = "flex  items-center pl-8 pr-10 w-1/3"
 
     let escudo = document.createElement('img')
     // escudo.style.height = '90%'
@@ -288,10 +288,12 @@ function criarDialog(time) {
     escudo.src = time.escudo.replace('small', 'big')
     divEscudo.appendChild(escudo)
 
+    escudo.addEventListener('click', () => deletarTime(time.pais, time.id))
+
     cabecalho.appendChild(divEscudo)
 
     let divNomeApelido = document.createElement('div')
-    divNomeApelido.className = "flex w-full flex-col justify-center items-center gap-8 pr-5"
+    divNomeApelido.className = "flex w-full flex-col justify-center items-center gap-5 pr-6"
 
     let nomeTime = document.createElement('h1')
     nomeTime.className = `text-5xl font-bold text-center text-[${time.cores[1]}]`
@@ -300,7 +302,7 @@ function criarDialog(time) {
     divNomeApelido.appendChild(nomeTime)
 
     let apelido = document.createElement('h2')
-    apelido.className = `text-2xl font-bold text-[${time.cores[1]}]`
+    time.cores.length > 2 ? apelido.className = `text-2xl font-bold text-[${time.cores[2]}]` : apelido.className = `text-2xl font-bold text-[${time.cores[1]}]` 
     apelido.innerText = `"${time.apelido}"`
 
     divNomeApelido.appendChild(apelido)
@@ -400,7 +402,7 @@ function criarDialog(time) {
 
     let logoLiga = document.createElement('img')
     logoLiga.className = 'h-6'
-    let nomeLiga = time.liga.replace(" ", "")
+    let nomeLiga = time.liga.replaceAll(" ", "")
     logoLiga.src = `../img/competicoes/${time.pais}/${nomeLiga}.png`
 
     divLiga.appendChild(logoLiga)
@@ -613,235 +615,6 @@ function criarDialog(time) {
 
 
 
-
-
-
-
-
-
-
-
-//backup
-/* 
-function criarDialog(time) {
-    
-    let dialog = document.createElement('dialog')
-    let cabecalho = document.createElement('div')
-    cabecalho.style.height = '270px'
-    cabecalho.style.display = 'grid'
-    cabecalho.style.gridTemplateColumns = '270px 1fr'
-    cabecalho.style.gridTemplateRows = '120px 1fr 1fr'
-
-    let logoDiv = document.createElement('div')
-    logoDiv.style.backgroundColor = '#fff'
-    logoDiv.style.gridRow = '1 / span 3';
-    logoDiv.style.display = 'flex'
-    logoDiv.style.justifyContent = 'center'
-    logoDiv.style.alignItems = 'center'
-    // logoDiv.style.border = '2px solid black'
-
-    let logo = document.createElement('img')
-    logo.style.height = '90%'
-    logo.src = time.escudo.replace('small', 'big')
-    logoDiv.appendChild(logo)
-
-    cabecalho.appendChild(logoDiv)
-
-    let nomeDiv = document.createElement('div')
-    // nomeDiv.style.gridRow = '1 / span 2';
-    nomeDiv.style.backgroundColor = time.cores[0]
-    nomeDiv.style.color = time.cores[1]
-    // nomeDiv.style.textAlign = 'center'
-    nomeDiv.style.display = 'flex'
-    nomeDiv.style.justifyContent = 'center'
-    nomeDiv.style.alignItems = 'center'
-
-    let nome = document.createElement('h1')
-    nome.innerText = time.nome_completo
-
-    nomeDiv.appendChild(nome)
-
-    cabecalho.appendChild(nomeDiv)
-
-
-
-
-
-
-
-
-    let corpo = document.createElement('div')
-    corpo.style.display = 'flex'
-    // corpo.style.height = '320px'
-    corpo.style.backgroundColor = '#f5a000'
-    corpo.style.color = '#ffffff'
-    // corpo.innerText = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam eos, harum modi alias accusamus odio, voluptatibus iusto eius sequi porro excepturi reiciendis animi, voluptates dicta! Non sapiente voluptatum numquam ex? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam eos, harum modi alias accusamus odio, voluptatibus iusto eius sequi porro excepturi reiciendis animi, voluptates dicta! Non sapiente voluptatum numquam ex? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam eos, harum modi alias accusamus odio, voluptatibus iusto eius sequi porro excepturi reiciendis animi, voluptates dicta! Non sapiente voluptatum numquam ex?"
-    // cabecalho.className = 'cabeçalho'
-    // cabecalho.style.backgroundColor = time.cores[0]
-    // cabecalho.style.color = time.cores[1]
-    // let logoCard = document.createElement('div')
-    // logoCard.style.backgroundColor = '#ffffff'
-    // let logo = document.createElement('img')
-    // logo.src = time.escudo.replace('small', 'big')
-    // logoCard.appendChild(logo)
-    // header.appendChild(logoCard)
-    dialog.appendChild(cabecalho)
-    dialog.appendChild(corpo)
-
-
-    console.log('aqui')
-    console.log(time['uniforme'])
-
-    let uniformes = time['uniforme']
-
-    console.log(uniformes)
-
-    uniformes.forEach(uniforme => {
-        let img = document.createElement('img')
-        img.src = uniforme.img
-        let modelo = document.createElement('h5')
-        modelo.innerText = uniforme.modelo
-        corpo.appendChild(modelo)
-        corpo.appendChild(img)
-    });
-
-    let estadioNome = document.createElement('h1')
-    estadioNome.innerHTML = `Estádio: ${time['estadio'].nome}`
-
-    corpo.appendChild(estadioNome)
-
-
-    let fotoEstadio = document.createElement('img')
-    fotoEstadio.src = time['estadio'].foto
-
-    corpo.appendChild(fotoEstadio)
-
-
-    console.log(time.titulos)
-
-
-    document.body.appendChild(dialog)
-
-    console.log(time.titulos)
-
-    let titulos = time.titulos
-
-    titulos.forEach(titulo => {
-        console.log(titulo.competicao)
-        console.log(titulo.edicoes.toString().replaceAll(',', ', '))
-
-        let nomeTitulo = document.createElement('h2')
-        nomeTitulo.innerHTML = `${titulo.competicao} (${titulo.edicoes.length})`
-        let tituloEdicoes = document.createElement('p')
-        tituloEdicoes.innerHTML = titulo.edicoes.toString().replaceAll(',', ', ')
-        dialog.appendChild(nomeTitulo)
-        dialog.appendChild(tituloEdicoes)
-    });
-
-    console.log('dados pais')
-    console.log(time.pais)
-
-    console.log(`http://localhost:3000/api/paises/${time.pais}`)
-
-    fetch(`http://localhost:3000/api/paises/${time.pais}`)
-    .then(response => response.json())
-    .then(function(data) {
-        console.log('pais11:')
-        console.log(data.campeonatos)
-        console.log(data.copas)
-
-        data.campeonatos.forEach(campeonato => {
-            let img1 = document.createElement('img')
-            let img2 = document.createElement('img')
-            img1.src = campeonato.logo
-            img2.src = campeonato.trofeu
-            dialog.appendChild(img1)
-            dialog.appendChild(img2)
-        });
-
-        data.copas.forEach(copa => {
-            let img1 = document.createElement('img')
-            let img2 = document.createElement('img')
-            img1.src = copa.logo
-            img2.src = copa.trofeu
-            dialog.appendChild(img1)
-            dialog.appendChild(img2)
-        });
-
-        let img = document.createElement('img')
-        img.src = data.bandeira
-        dialog.appendChild(img)
-    })
-    .catch(error => console.error("Erro:", error))
-
-
-
-    let info = document.createElement('div')
-    let infoConteudo = document.createElement('p')
-    
-    
-    infoConteudo.innerHTML = '<b>Nome Completo:</b> ' + time.nome_completo + '<br>'
-
-    infoConteudo.innerHTML += '<b>Fundação:</b> ' + time.fundacao + '<br>'
-
-    infoConteudo.innerHTML += '<b>Cidade:</b> ' + time.cidade + '<br>'
-
-    infoConteudo.innerHTML += '<b>Estado:</b> ' + time.estado + '<br>'
-
-    infoConteudo.innerHTML += '<b>País:</b> ' + time.pais + '<br>'
-
-    infoConteudo.innerHTML += '<b>Liga:</b> ' + time.liga + '<br>'
-
-    infoConteudo.innerHTML += '<b>Presidente:</b> ' + time.presidente + '<br>'
-
-    infoConteudo.innerHTML += '<b>Website:</b> ' + time.website + '<br>'
-
-    infoConteudo.innerHTML += '<b>E-mail:</b> ' + time.email + '<br>'
-
-    infoConteudo.innerHTML += '<b>Marca Uniforme:</b> ' + time.marca_uniforme + '<br>'
-
-
-    infoConteudo.innerHTML += '<br><br><br>' + time.resumo
-
-    info.appendChild(infoConteudo)
-    dialog.appendChild(info)
-
-
-    fetch(`http://localhost:3000/api/paises/${time.pais}/${time.liga}`)
-    .then(response => response.json())
-    .then(function(data) {
-        console.log('liga')
-        console.log(data)
-
-        let logoLiga = document.createElement('img')
-        logoLiga.src = data.logo
-        dialog.appendChild(logoLiga)
-        
-    })
-    .catch(error => console.error("Erro:", error))
-
-    
-
-    dialog.showModal()
-}
-*/
-
-// document.getElementById("conteudo").addEventListener("scroll", scrollFunction);
-
-    function scrollFunction() {
-        alert('scroll')
-        console.log('scroll')
-        var header = document.getElementById("cabecalho");
-
-        console.log(header)
-        // Verifica se a posição de rolagem vertical do conteúdo ultrapassou 50px
-        if (this.scrollTop > 50) {
-            header.style.fontSize = "14px"; // Tamanho de fonte reduzido
-        } else {
-            header.style.fontSize = "20px"; // Tamanho de fonte original
-        }
-    }
-
     document.getElementById('formCadastrarTime').addEventListener('submit', function (event){
         event.preventDefault()
         adicionarTime()
@@ -854,24 +627,507 @@ function criarDialog(time) {
         const pais = document.getElementById('pais').value
         const email = document.getElementById('email').value
         const fundacao = document.getElementById('fundacao').value
+        
+        const inputFotoEscudo = document.getElementById('fotoEscudo');
+        const fotoEscudo = inputFotoEscudo.files[0];
+
+        const inputFotoEstadio = document.getElementById('fotoEstadio');
+        const fotoEstadio = inputFotoEstadio.files[0];
+
+        const formData = new FormData()
+
+        formData.append('fotoEscudo', fotoEscudo);
+        formData.append('fotoEstadio', fotoEstadio);
+        formData.append('id', id);
+        formData.append('nome', nome);
+        formData.append('pais', pais);
+        formData.append('email', email);
+        formData.append('fundacao', fundacao);
+
+        console.log(formData.get('nome'))
     
         fetch('http://localhost:3000/api/times', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                id: id,
-                nome: nome,
-                pais: pais,
-                email: email,
-                fundacao: fundacao
-            }),
+            body: formData
         })
         .then(response => response.json())
-        .then(data => {
-            console.log(data)
-            // loadClientesList()
-        })
+        // .then(data => {
+        //     console.log(data)
+        // })
         .catch(error => console.error("Erro:", error))
     }
+
+
+    function deletarTime(pais, id) {
+        fetch(`http://localhost:3000/api/times/${pais}/${id}`, {
+            method: 'DELETE',
+        })
+        .then(() => console.log('deu certo'))
+        .catch(error => console.error('Erro:', error))
+    }
+
+
+
+function criarDialogCadastro() {
+    let dialogCadastro = document.createElement('dialog')
+    dialogCadastro.className = 'h-full w-5/6'
+
+    let tituloCadastro = document.createElement('h1')
+    tituloCadastro.className = 'text-2xl font-bold text-center p-5 mt-8'
+    tituloCadastro.innerText = 'Cadastrar Time'
+
+    dialogCadastro.appendChild(tituloCadastro)
+
+    let form = document.createElement('form')
+    form.className = 'mt-5 mx-12 grid grid p-5'
+    // form.className = 'mt-5 mx-12 grid gap-8 grid p-5'
+    
+
+    dialogCadastro.appendChild(form)
+
+    let tituloInfo = document.createElement('h3')
+    tituloInfo.className = 'text-lg border-2 border-gray-300 font-medium bg-gray-200 pl-4 py-3'
+    // tituloInfo.className = 'text-lg border-b-2 border-gray-400 font-medium'
+    tituloInfo.innerText = 'Informações:'
+
+    form.appendChild(tituloInfo)
+
+
+    //INFO
+    let divInfo = document.createElement('div')
+    divInfo.className = 'grid grid-cols-2 gap-y-0 gap-x-0 px-8 pt-4 pb-8 bg-gray-100 shadow-md border-l-2 border-r-2 border-b-2 border-gray-200'
+    form.appendChild(divInfo)
+
+    //id
+    let divID = document.createElement('div')
+    divID.className = 'py-3 pl-5 pr-10 border-r border-gray-200 grid gap-0'
+
+    let labelID = document.createElement('label')
+    labelID.innerText = 'ID:'
+    divID.appendChild(labelID)
+
+    let inputID = document.createElement('input')
+    inputID.className = 'border border-gray-400 p-2'
+    inputID.type = 'number'
+    inputID.id = 'id'
+    inputID.setAttribute('required', true)
+    divID.appendChild(inputID)
+
+    divInfo.appendChild(divID)
+
+    //nome
+    let divNome = document.createElement('div')
+    divNome.className = 'py-3 pr-5 pl-10 border-l border-gray-200 grid gap-0'
+
+    let labelNome = document.createElement('label')
+    labelNome.innerText = 'Nome:'
+    divNome.appendChild(labelNome)
+
+    let inputNome = document.createElement('input')
+    inputNome.className = 'border border-gray-400 p-2'
+    inputNome.type = 'text'
+    inputNome.id = 'nomeTime'
+    inputNome.setAttribute('required', true)
+    divNome.appendChild(inputNome)
+
+    divInfo.appendChild(divNome)
+
+
+    //nome completo
+    let divNomeCompleto = document.createElement('div')
+    divNomeCompleto.className = 'py-3 pl-5 pr-10 border-r border-gray-200 grid gap-0'
+
+    let labelNomeCompleto = document.createElement('label')
+    labelNomeCompleto.innerText = 'Nome Completo:'
+    divNomeCompleto.appendChild(labelNomeCompleto)
+
+    let inputNomeCompleto = document.createElement('input')
+    inputNomeCompleto.className = 'border border-gray-400 p-2'
+    inputNomeCompleto.type = 'text'
+    inputNomeCompleto.id = 'nomeTimeCompleto'
+    inputNomeCompleto.setAttribute('required', true)
+    divNomeCompleto.appendChild(inputNomeCompleto)
+
+    divInfo.appendChild(divNomeCompleto)
+
+
+    //apelido
+    let divApelido = document.createElement('div')
+    divApelido.className = 'py-3 pr-5 pl-10 border-l border-gray-200 grid gap-0'
+
+    let labelApelido = document.createElement('label')
+    labelApelido.innerText = 'Apelido:'
+    divApelido.appendChild(labelApelido)
+
+    let inputApelido = document.createElement('input')
+    inputApelido.className = 'border border-gray-400 p-2'
+    inputApelido.type = 'text'
+    inputApelido.id = 'apelido'
+    // inputApelido.setAttribute('required', true)
+    divApelido.appendChild(inputApelido)
+
+    divInfo.appendChild(divApelido)
+
+
+    //presidente
+    let divPresidente = document.createElement('div')
+    divPresidente.className = 'py-3 pl-5 pr-10 border-r border-gray-200 grid gap-0'
+
+    let labelPresidente = document.createElement('label')
+    labelPresidente.innerText = 'Presidente:'
+    divPresidente.appendChild(labelPresidente)
+
+    let inputPresidente = document.createElement('input')
+    inputPresidente.className = 'border border-gray-400 p-2'
+    inputPresidente.type = 'text'
+    inputPresidente.id = 'presidente'
+    // inputPresidente.setAttribute('required', true)
+    divPresidente.appendChild(inputPresidente)
+
+    divInfo.appendChild(divPresidente)
+
+
+    //marca uniforme
+    let divMarcaUniforme = document.createElement('div')
+    divMarcaUniforme.className = 'py-3 pr-5 pl-10 border-l border-gray-200 grid gap-0'
+
+    let labelMarcaUniforme = document.createElement('label')
+    labelMarcaUniforme.innerText = 'Marca do Uniforme:'
+    divMarcaUniforme.appendChild(labelMarcaUniforme)
+
+    let inputMarcaUniforme = document.createElement('input')
+    inputMarcaUniforme.className = 'border border-gray-400 p-2'
+    inputMarcaUniforme.type = 'text'
+    inputMarcaUniforme.id = 'marcaUniforme'
+    // inputMarcaUniforme.setAttribute('required', true)
+    divMarcaUniforme.appendChild(inputMarcaUniforme)
+
+    divInfo.appendChild(divMarcaUniforme)
+
+
+    //website
+    let divWebsite = document.createElement('div')
+    divWebsite.className = 'py-3 pl-5 pr-10 border-r border-gray-200 grid gap-0'
+
+    let labelWebsite = document.createElement('label')
+    labelWebsite.innerText = 'Website:'
+    divWebsite.appendChild(labelWebsite)
+
+    let inputWebsite = document.createElement('input')
+    inputWebsite.className = 'border border-gray-400 p-2'
+    inputWebsite.type = 'text'
+    inputWebsite.id = 'website'
+    // inputWebsite.setAttribute('required', true)
+    divWebsite.appendChild(inputWebsite)
+
+    divInfo.appendChild(divWebsite)
+
+
+    //email
+    let divEmail = document.createElement('div')
+    divEmail.className = 'py-3 pr-5 pl-10 border-l border-gray-200 grid gap-0'
+
+    let labelEmail = document.createElement('label')
+    labelEmail.innerText = 'E-mail:'
+    divEmail.appendChild(labelEmail)
+
+    let inputEmail = document.createElement('input')
+    inputEmail.className = 'border border-gray-400 p-2'
+    inputEmail.type = 'text'
+    inputEmail.id = 'email'
+    // inputEmail.setAttribute('required', true)
+    divEmail.appendChild(inputEmail)
+
+    divInfo.appendChild(divEmail)
+
+
+    //cidade
+    let divCidade = document.createElement('div')
+    divCidade.className = 'pb-3 pl-5 pr-10 border-r border-gray-200 grid gap-0 pt-10'
+
+    let labelCidade = document.createElement('label')
+    labelCidade.innerText = 'Cidade:'
+    divCidade.appendChild(labelCidade)
+
+    let inputCidade = document.createElement('input')
+    inputCidade.className = 'border border-gray-400 p-2'
+    inputCidade.type = 'text'
+    inputCidade.id = 'cidade'
+    // inputCidade.setAttribute('required', true)
+    divCidade.appendChild(inputCidade)
+
+    divInfo.appendChild(divCidade)
+
+
+    //estado
+    let divEstado = document.createElement('div')
+    divEstado.className = 'pb-3 pr-5 pl-10 border-l border-gray-200 grid gap-0 pt-10'
+
+    let labelEstado = document.createElement('label')
+    labelEstado.innerText = 'Estado:'
+    divEstado.appendChild(labelEstado)
+
+    let inputEstado = document.createElement('input')
+    inputEstado.className = 'border border-gray-400 p-2'
+    inputEstado.type = 'text'
+    inputEstado.id = 'estado'
+    // inputCidade.setAttribute('required', true)
+    divEstado.appendChild(inputEstado)
+
+    divInfo.appendChild(divEstado)
+
+
+    //país
+    let divPais = document.createElement('div')
+    divPais.className = 'py-3 pl-5 pr-10 border-r border-gray-200 grid gap-0'
+
+    let labelPais = document.createElement('label')
+    labelPais.innerText = 'País:'
+    divPais.appendChild(labelPais)
+
+    let selectPais = document.createElement('select')
+    selectPais.className = 'border border-gray-400 p-2'
+    selectPais.id = 'pais'
+    selectPais.setAttribute('required', true)
+
+    selectPais.addEventListener('change', function() {
+        carregarLigas(selectPais.value)
+    })
+
+    divPais.appendChild(selectPais)
+
+    fetch(`http://localhost:3000/api/paises`)
+    .then(response => response.json())
+    .then(function(data) {
+        data.sort((a,b) => (a.nome > b.nome) ? 1 : ((b.nome > a.nome) ? -1 : 0))
+
+        data.forEach(pais => {
+            let option = document.createElement('option')
+            option.value = pais.nome
+            option.innerText = pais.nome
+            selectPais.appendChild(option)
+        });
+    })
+    .then(function () {
+        carregarLigas(selectPais.value)
+    })
+
+    divInfo.appendChild(divPais)
+
+
+    //liga
+    let divLiga = document.createElement('div')
+    divLiga.className = 'py-3 pr-5 pl-10 border-l border-gray-200 grid gap-0'
+
+    let labelLiga = document.createElement('label')
+    labelLiga.innerText = 'Liga:'
+    divLiga.appendChild(labelLiga)
+
+    let selectLiga = document.createElement('select')
+    selectLiga.className = 'border border-gray-400 p-2'
+    selectLiga.id = 'selectLiga'
+    selectLiga.setAttribute('required', true)
+    divLiga.appendChild(selectLiga)
+
+    divInfo.appendChild(divLiga)
+
+
+    //resumo
+    let divResumo = document.createElement('div')
+    divResumo.className = 'py-3 px-5 grid col-span-2 mt-10'
+
+    let labelResumo = document.createElement('label')
+    labelResumo.innerText = 'Resumo:'
+    divResumo.appendChild(labelResumo)
+
+    let textAreaResumo = document.createElement('textarea')
+    textAreaResumo.className = 'border border-gray-400 p-2 h-40'
+    textAreaResumo.id = 'resumo'
+    // textAreaResumo.setAttribute('required', true)
+    divResumo.appendChild(textAreaResumo)
+
+    divInfo.appendChild(divResumo)
+
+
+
+    //ESTADIO
+    let tituloEstadio = document.createElement('h3')
+    tituloEstadio.className = 'text-lg border-2 border-gray-300 font-medium bg-gray-200 pl-4 py-3 mt-10'
+    tituloEstadio.innerText = 'Estádio:'
+    form.appendChild(tituloEstadio)
+
+    let divEstadio = document.createElement('div')
+    divEstadio.className = 'grid grid-cols-2 gap-y-0 gap-x-0 px-8 pt-4 pb-8 bg-gray-100 shadow-md border-l-2 border-r-2 border-b-2 border-gray-200'
+    form.appendChild(divEstadio)
+
+    
+    //nome estádio
+    let divNomeEstadio = document.createElement('div')
+    divNomeEstadio.className = 'py-3 pl-5 pr-10 border-r border-gray-200 grid gap-0'
+
+    let labeNomeEstadio = document.createElement('label')
+    labeNomeEstadio.innerText = 'Nome:'
+    divNomeEstadio.appendChild(labeNomeEstadio)
+
+    let inputNomeEstadio = document.createElement('input')
+    inputNomeEstadio.className = 'border border-gray-400 p-2'
+    inputNomeEstadio.type = 'text'
+    inputNomeEstadio.id = 'nomeEstadio'
+    // inputNomeEstadio.setAttribute('required', true)
+    divNomeEstadio.appendChild(inputNomeEstadio)
+
+    divEstadio.appendChild(divNomeEstadio)
+
+
+    //foto estádio
+    let divFotoEstadio = document.createElement('div')
+    divFotoEstadio.className = 'py-3 pr-5 pl-10 border-l border-gray-200 row-span-6 grid gap-0'
+
+    let labelFotoEstadio = document.createElement('label')
+    labelFotoEstadio.innerText = 'Foto:'
+    divFotoEstadio.appendChild(labelFotoEstadio)
+
+    let fotoEstadio = document.createElement('img')
+    fotoEstadio.className = 'border border-gray-200 w-96 h-64'
+    // fotoEstadio.src = '../img/SemImagem.png'
+    fotoEstadio.id = 'imagem-fotoEstadio'
+
+    fotoEstadio.addEventListener("error", function() {
+        erroImagem(this)
+    })
+
+    divFotoEstadio.appendChild(fotoEstadio)
+
+    let inputFotoEstadio = document.createElement('input')
+    inputFotoEstadio.className = 'mt-4'
+    inputFotoEstadio.type = 'file'
+    inputFotoEstadio.id = 'fotoEstadio'
+    inputFotoEstadio.name = 'fotoEstadio'
+    // inputFotoEstadio.setAttribute('required', true)
+
+    inputFotoEstadio.addEventListener("change", function() {
+        carregarFoto(this)
+    })
+
+    divFotoEstadio.appendChild(inputFotoEstadio)
+
+    let divInputURL = document.createElement('div')
+    divInputURL.className = 'flex justify-between mt-2'
+
+    let inputURLEstadio = document.createElement('input')
+    inputURLEstadio.className = 'border border-gray-400 p-2 text-sm w-2/3'
+    inputURLEstadio.type = 'text'
+    inputURLEstadio.id = 'url-fotoEstadio'
+    inputURLEstadio.setAttribute("placeholder", "Escolha um arquivo ou cole aqui a URL da imagem")
+    // inputURLEstadio.setAttribute('required', true)
+    divInputURL.appendChild(inputURLEstadio)
+
+    let botaoCarregarURL = document.createElement('button')
+    botaoCarregarURL.className = 'p-2 text-xs border border-gray-300 bg-gray-200'
+    botaoCarregarURL.innerHTML = 'Carregar Imagem'
+    botaoCarregarURL.setAttribute("type", "button")
+
+    botaoCarregarURL.addEventListener("click", function() {
+        carregarURLFoto(inputURLEstadio)
+    })
+
+    divInputURL.appendChild(botaoCarregarURL)
+
+    divFotoEstadio.appendChild(divInputURL)
+
+    divEstadio.appendChild(divFotoEstadio)
+
+
+    //inauguração estádio
+    let divInauguracaoEstadio = document.createElement('div')
+    divInauguracaoEstadio.className = 'py-3 pl-5 pr-10 border-r border-gray-200 grid gap-0'
+
+    let labeInauguracaoEstadio = document.createElement('label')
+    labeInauguracaoEstadio.innerText = 'Inauguração:'
+    divInauguracaoEstadio.appendChild(labeInauguracaoEstadio)
+
+    let inputInauguracaoEstadio = document.createElement('input')
+    inputInauguracaoEstadio.className = 'border border-gray-400 p-2'
+    inputInauguracaoEstadio.type = 'text'
+    inputInauguracaoEstadio.id = 'inauguracaoEstadio'
+    // inputInauguracaoEstadio.setAttribute('required', true)
+    divInauguracaoEstadio.appendChild(inputInauguracaoEstadio)
+
+    divEstadio.appendChild(divInauguracaoEstadio)
+
+
+    //capacidade estádio
+    let divCapacidadeEstadio = document.createElement('div')
+    divCapacidadeEstadio.className = 'py-3 pl-5 pr-10 border-r border-gray-200 grid gap-0 pb-36'
+
+    let labeCapacidadeEstadio = document.createElement('label')
+    labeCapacidadeEstadio.innerText = 'Capacidade:'
+    divCapacidadeEstadio.appendChild(labeCapacidadeEstadio)
+
+    let inputCapacidadeEstadio = document.createElement('input')
+    inputCapacidadeEstadio.className = 'border border-gray-400 p-2'
+    inputCapacidadeEstadio.type = 'text'
+    inputCapacidadeEstadio.id = 'capacidadeEstadio'
+    // inputCapacidadeEstadio.setAttribute('required', true)
+    divCapacidadeEstadio.appendChild(inputCapacidadeEstadio)
+
+    divEstadio.appendChild(divCapacidadeEstadio)
+
+
+
+
+    document.body.appendChild(dialogCadastro)
+
+    dialogCadastro.showModal()
+}
+
+function carregarLigas(pais) {
+
+    let selectLiga = document.getElementById('selectLiga')
+    
+    selectLiga.innerHTML = '';
+
+    fetch(`http://localhost:3000/api/paises/ligas/${pais}`)
+        .then(response => response.json())
+        .then(function(data) {
+            data.forEach(liga => {
+                console.log(liga)
+                let option = document.createElement('option')
+                option.value = liga
+                option.innerText = liga
+                selectLiga.appendChild(option)
+            });
+        })
+        .catch(error => console.error("Erro:", error))
+}
+
+
+function carregarFoto(e) {
+    // alert(e.id)
+    // console.log(e.files)
+    let foto = document.getElementById(`imagem-${e.id}`)
+    foto.src = window.URL.createObjectURL(e.files[0]);
+
+    let url = document.getElementById(`url-${e.id}`)
+    url.value = null
+}
+
+
+function carregarURLFoto(e) {
+    let url = document.getElementById(e.id)
+    // console.log(url.value)
+    let foto = document.getElementById(`imagem-${e.id.replace("url-", "")}`)
+    // console.log(foto)
+    foto.src = url.value
+
+    //depois remover o arquivo selecionado do input
+    let inputFotoEstadio = document.getElementById('fotoEstadio')
+    inputFotoEstadio.value = []
+}
+
+function erroImagem (e) {
+    alert('Não Foi Possivel Carregar a Imagem')
+    e.src = '../img/SemImagem.png'
+    let url = document.getElementById(`url-${e.id.replace("imagem-", "")}`)
+    url.value = null
+}
