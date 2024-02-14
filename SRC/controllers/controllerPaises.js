@@ -6,6 +6,11 @@ const fs = require('fs')
 
 server.use(express.json())
 
+server.get('/paises', (req, res) => {
+
+    return res.json(dadosPaises.Pais)
+})
+
 
 server.get('/paises/:pais', (req, res) => {
 
@@ -14,6 +19,20 @@ server.get('/paises/:pais', (req, res) => {
     const dadosPais = dadosPaises.Pais.find(p => p.nome === nomePais)
 
     return res.json(dadosPais)
+})
+
+//Pegar todas as ligas do País
+server.get('/paises/ligas/:pais', (req, res) => {
+
+    const nomePais = req.params.pais
+
+    const dadosPais = dadosPaises.Pais.find(p => p.nome === nomePais)
+
+    const dadosLigas = dadosPais.campeonatos
+
+    console.log('aueeefsdfsdf')
+    console.log(dadosLigas)
+    return res.json(dadosLigas)
 })
 
 //Pegar a liga do time
