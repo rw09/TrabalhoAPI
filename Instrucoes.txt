@@ -26,3 +26,12 @@ fazer um fetch das competições para buscar.
 
 
 -cadastrar torneios mais pra frente (portfolio)
+
+
+ver salvar imagens nos diretorios:
+https://www.npmjs.com/package/multer
+https://www.npmjs.com/package/express-fileupload
+https://www.freecodecamp.org/news/simplify-your-file-upload-process-in-express-js/
+
+
+colocar "-" automatico nos campos que nao foram preenchidos? usando o setAtribbute value??
