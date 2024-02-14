@@ -31,6 +31,14 @@
             "bandeira": "../img/bandeiras/big/it.png",
             "campeonatos": [ "Serie A", "Serie B" ],
             "copas": [ "Coppa Italia", "Supercoppa Italiana" ]
+        },
+        {
+            "id": 6,
+            "continente": "América do Sul",
+            "nome": "Brasil",
+            "bandeira": "../img/bandeiras/big/br.png",
+            "campeonatos": [ "Brasileirão Série A", "Brasileirão Série B", "Brasileirão Série C", "Brasileirão Série D" ],
+            "copas": [ "Copa do Basil", "Supercopa do Brasil" ]
         }
     ]
 }
