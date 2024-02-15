@@ -218,7 +218,8 @@ function mostrarListaTodosTimes(data) {
 
     let listaDeTimes = document.createElement('section')
     listaDeTimes.id = 'listaDeTimes'
-    listaDeTimes.className = 'grid sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-6 gap-y-10 p-8'
+    // listaDeTimes.className = 'grid sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-6 gap-y-10 p-8'
+    listaDeTimes.className = 'grid sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 gap-y-10 p-8 bg-gray-50'
 
     let main = document.getElementById('main')
 
@@ -227,24 +228,50 @@ function mostrarListaTodosTimes(data) {
 
     data.forEach(time => {
         let cardTime = document.createElement('div')
-        cardTime.className = 'group p-4 border border-gray-500 bg-white hover:cursor-pointer hover:shadow-xl hover:bg-[#ebe8e8] transition duration-300 ease-in-out'
+        // cardTime.className = 'group p-4 border border-gray-500 bg-white hover:cursor-pointer hover:shadow-xl hover:bg-[#ebe8e8] transition duration-300 ease-in-out'
+        cardTime.className = 'group p-[18px] border-2 border-gray-300 bg-white  hover:cursor-pointer hover:shadow-xl hover:bg-[#ebe8e8] transition duration-300 ease-in-out'
         
         let cardTimeConteudo = document.createElement('div')
-        cardTimeConteudo.className = "grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-gray-500 group-hover:opacity-80 group-hover:border-[#ebe8e8] transition ease-in-out duration-300"
+        // cardTimeConteudo.className = "grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-gray-500 group-hover:opacity-80 group-hover:border-[#ebe8e8] transition ease-in-out duration-300"
+        cardTimeConteudo.className = "p-1 grid text-center justify-items-center items-center grid-rows-[40px_minmax(100px,_1fr)_80px] pt-5 pb-3 h-full bg-[#ebe8e8] border border-gray-300 group-hover:opacity-80 group-hover:border-[#ebe8e8] transition ease-in-out duration-300"
         
         cardTime.appendChild(cardTimeConteudo)
 
+        /*
         let logoLiga = document.createElement('img')
         logoLiga.src=`../img/ligas/${time.liga}.png`
         logoLiga.className = 'w-2/6'
       
         cardTimeConteudo.appendChild(logoLiga)
+        */
 
+        let divLogoLiga = document.createElement('div')
+        // divLogoLiga.className = 'grid grid-cols-2 items-center gap-1 mb-2'
+        divLogoLiga.className = 'grid grid-cols-2 items-center gap-1'
+
+        let imgBandeira = document.createElement('img')
+        imgBandeira.src = `../img/bandeiras/small/${time.pais}.png`
+        imgBandeira.className = 'h-5'
+
+        let imgLiga = document.createElement('img')
+        let nomeLiga = time.liga.replaceAll(" ", "")
+        imgLiga.src = `../img/competicoes/${time.pais}/${nomeLiga}.png`
+        imgLiga.className = 'h-7'
+
+        divLogoLiga.appendChild(imgBandeira)
+        divLogoLiga.appendChild(imgLiga)
+
+        cardTimeConteudo.appendChild(divLogoLiga)
+
+
+        
         let escudo = document.createElement('img')
         escudo.src = time.escudo
+        escudo.className = 'pt-5'
         cardTimeConteudo.appendChild(escudo)
 
         let nome = document.createElement('h2')
+        nome.className = 'font-semibold'
         nome.innerText = time.nome
         cardTimeConteudo.appendChild(nome)
         
@@ -1115,7 +1142,7 @@ function carregarFoto(e) {
 
 function carregarURLFoto(e) {
     let url = document.getElementById(e.id)
-    // console.log(url.value)
+    console.log(url.value)
     let foto = document.getElementById(`imagem-${e.id.replace("url-", "")}`)
     // console.log(foto)
     foto.src = url.value
@@ -1128,6 +1155,7 @@ function carregarURLFoto(e) {
 function erroImagem (e) {
     alert('Não Foi Possivel Carregar a Imagem')
     e.src = '../img/SemImagem.png'
+    // e.src = 'https://media.internacional.groundsportech.com/wp-content/uploads/2022/04/24142703/RaioX_GuriasColoradasVsFlamengo_BrasileiraoA12022_7Rodada_Palco_CristoRei_FotoFernandoCampos_Aimore_2404.jpg'
     let url = document.getElementById(`url-${e.id.replace("imagem-", "")}`)
     url.value = null
 }
