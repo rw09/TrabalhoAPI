@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Futebol Clube</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
@@ -101,87 +102,6 @@
     </style>
 </head>
 <body>
-    <!-- <div class="p-4 border border-black w-56">
-        <div class="grid grid-rows-[80px 175px 105px] justify-items-center h-72 bg-[#ebe8e8] py-5 px-2.5 border border-black hover:bg-[ghostwhite] hover:cursor-pointer hover:opacity-75">
-            <img src="../img/ligas/Bundesliga.png">
-            <img src="../img/escudos/Alemanha/small/Bayern.png">
-            <h1>Bayern Munchen</h1>
-        </div>
-    </div> -->
-
-    <!-- <div class="grid grid-cols-5 gap-x-6 gap-y-10 p-8">
-        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
-            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
-                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
-                <img src="../img/escudos/Alemanha/small/Augsburg.png">
-                <h1>Augsburg</h1>
-            </div>
-        </div>
-        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
-            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
-                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
-                <img src="../img/escudos/Alemanha/small/Leverkusen.png">
-                <h1>Bayer Leverkusen</h1>
-            </div>
-        </div>
-        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
-            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
-                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
-                <img src="../img/escudos/Alemanha/small/Bayern.png">
-                <h1>Bayern München</h1>
-            </div>
-        </div>
-        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
-            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
-                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
-                <img src="../img/escudos/Alemanha/small/Bochum.png">
-                <h1>Bochum</h1>
-            </div>
-        </div>
-        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
-            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
-                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
-                <img src="../img/escudos/Alemanha/small/Dortmund.png">
-                <h1>Borussia Dortmund</h1>
-            </div>
-        </div>
-        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
-            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
-                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
-                <img src="../img/escudos/Alemanha/small/Monchengladbach.png">
-                <h1>Borussia Mönchengladbach</h1>
-            </div>
-        </div>
-        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
-            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
-                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
-                <img src="../img/escudos/Alemanha/small/Darmstadt.png">
-                <h1>Darmstadt 98</h1>
-            </div>
-        </div>
-        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
-            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
-                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
-                <img src="../img/escudos/Alemanha/small/EintrachtFrankfurt.png">
-                <h1>Eintracht Frankfurt</h1>
-            </div>
-        </div>
-        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
-            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
-                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
-                <img src="../img/escudos/Alemanha/small/Freiburg.png">
-                <h1>Freiburg</h1>
-            </div>
-        </div>
-        <div class="group p-4 border border-black hover:shadow-md hover:bg-[ghostwhite] hover:cursor-pointer">
-            <div class="grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-black group-hover:opacity-75">
-                <img src="../img/ligas/Bundesliga.png" class="w-2/6">
-                <img src="../img/escudos/Alemanha/small/Bayern.png">
-                <h1>Bayern Munchen</h1>
-            </div>
-        </div>
-    </div> -->
-
     <header class="flex justify-between items-center fixed w-full bg-[goldenrod] py-2.5 px-3.5 z-10 border-b-2 border-[#a77d15] text-[#06203F]">
         <div class="flex items-center gap-2.5">
             <a href="../img/logo4.png" target="_blank"><img src="../img/logo4.png" alt="Logo do Site" width="60px"></a>
@@ -194,13 +114,14 @@
                 <option value="Alemanha">Alemanha</option>
                 <option value="Brasil">Brasil</option>
                 <option value="Espanha">Espanha</option>
-                <option value="Franca">França</option>
+                <option value="França">França</option>
                 <option value="Inglaterra">Inglaterra</option>
-                <option value="Italia">Itália</option>
+                <option value="Itália">Itália</option>
             </select>
         </div>
     </header>
     <main id="main" class="pt-[85px]">
+        <button class="mt-2" onclick="criarDialogCadastro()">Cadastrar</button>
         <!-- <section id="listaDeTimes"></section> -->
     </main>
 

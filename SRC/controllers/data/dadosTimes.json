@@ -1,707 +1,795 @@
 {
-    "TimesAlemanha": [
+  "TimesAlemanha": [
+    {
+      "id": 1,
+      "nome": "Bayern München",
+      "nome_completo": "Fußball-Club Bayern München AG",
+      "fundacao": "27/02/1900",
+      "cores": [
+        "#dc052d",
+        "#ffffff"
+      ],
+      "escudo": "../img/escudos/Alemanha/small/Bayern.png",
+      "apelido": "Die Bayern",
+      "presidente": "Karl Hopfner",
+      "uniformes": [
         {
-            "id": 1,
-            "nome": "Bayern München",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Alemanha/small/Bayern.png",
-            "uniforme": [
-                ".SRC/img/uniformes/Alemanha/Bayern/1.png",
-                ".SRC/img/uniformes/Alemanha/Bayern/2.png",
-                ".SRC/img/uniformes/Alemanha/Bayern/3.png",
-                ".SRC/img/uniformes/Alemanha/Bayern/gk.png"
-            ],
-            "liga": "Bundesliga",
-            "cidade": "Munique",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Allianz Arena",
-                "construcao": 2005,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Campeonato Alemão",
-                    "anos": [ "1932", "1968-69", "1971-72", "1972-73", "1973-74", "1979-80", "1980-81", "1984-85", "1985-86", "1986-87", "1988-89", "1989-90", "1993-94", "1996-97", "1998-99", "1999-00", "2000-01", "2002-03", "2004-05", "2005-06", "2007-08", "2009-10", "2012-13", "2013-14", "2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22", "2022-23" ]
-                },
-                {
-                    "competicao": "Copa da Alemanha",
-                    "anos": [ "1956-57", "1965-66", "1966-67", "1968-69", "1970-71", "1981-82", "1983-84", "1985-86", "1997-98", "1999-00", "2002-03", "2004-05", "2005-06", "2007-08", "2009-10", "2012-13", "2013-14", "2015-16", "2018-19", "2019-20" ]
-                },
-                {
-                    "competicao": "Champions League",
-                    "anos": [ "1973-74", "1974-75", "1975-76", "2000-01", "2012-13", "2019-20" ]
-                },
-                {
-                    "competicao": "Europa League",
-                    "anos": [ "1995-96" ]
-                },
-                {
-                    "competicao": "Supercopa da UEFA",
-                    "anos": [ "2013", "2020" ]
-                },
-                {
-                    "competicao": "Mundial de Clubes",
-                    "anos": [ "1796", "2001", "2013", "2020" ]
-                }
-            ]
+          "modelo": "Home",
+          "img": "../img/uniformes/Alemanha/Bayern/1.png"
         },
         {
-            "id": 2,
-            "nome": "Borussia Dortmund",
-            "nome_completo": "Borussia Dortmund GmbH & Co. KGaA",
-            "fundacao": 1909,
-            "cores": ["#ffd900", "#000000"],
-            "escudo": "../img/escudos/Alemanha/small/Dortmund.png",
-            "uniforme": "",
-            "liga": "Bundesliga",
-            "cidade": "Dortmund",
-            "website": "www.bvb.de",
-            "descricao": "",
-            "estadio": {
-                "nome": "Signal Iduna Park",
-                "construcao": 2004,
-                "capacidade": 81365,
-                "foto": ".SRC/img/estadios/Alemanha/SignalIdunaPark.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
+          "modelo": "Away",
+          "img": "../img/uniformes/Alemanha/Bayern/2.png"
         },
         {
-            "id": 3,
-            "nome": "Augsburg",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Alemanha/small/Augsburg.png",
-            "uniforme": "",
-            "liga": "Bundesliga",
-            "cidade": "Munique",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Allianz Arena",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
+          "modelo": "Third",
+          "img": "../img/uniformes/Alemanha/Bayern/3.png"
         },
         {
-            "id": 4,
-            "nome": "Bayer Leverkusen",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Alemanha/small/Leverkusen.png",
-            "uniforme": "",
-            "liga": "Bundesliga",
-            "cidade": "Munique",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Allianz Arena",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
-        },
-        {
-            "id": 5,
-            "nome": "Werder Bremen",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Alemanha/small/WerderBremen.png",
-            "uniforme": "",
-            "liga": "Bundesliga",
-            "cidade": "Munique",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Allianz Arena",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
-        },
-        {
-            "id": 6,
-            "nome": "Köln",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Alemanha/small/Koln.png",
-            "uniforme": "",
-            "liga": "Bundesliga",
-            "cidade": "Munique",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Allianz Arena",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
-        },
-        {
-            "id": 7,
-            "nome": "Stuttgart",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Alemanha/small/Stuttgart.png",
-            "uniforme": "",
-            "liga": "Bundesliga",
-            "cidade": "Stuttgart",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Allianz Arena",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
-        },
-        {
-            "id": 8,
-            "nome": "Wolfsburg",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Alemanha/small/Wolfsburg.png",
-            "uniforme": "",
-            "liga": "Bundesliga",
-            "cidade": "Munique",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Allianz Arena",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
-        },
-        {
-            "id": 9,
-            "nome": "RB Leipzig",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Alemanha/small/RBLeipzig.png",
-            "uniforme": "",
-            "liga": "Bundesliga",
-            "cidade": "Leipzig",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Allianz Arena",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
-        },
-        {
-            "id": 10,
-            "nome": "Eintracht Frankfurt",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Alemanha/small/EintrachtFrankfurt.png",
-            "uniforme": "",
-            "liga": "Bundesliga",
-            "cidade": "Frankfurt",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Allianz Arena",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
-        },
-        {
-            "id": 11,
-            "nome": "Freiburg",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Alemanha/small/Freiburg.png",
-            "uniforme": "",
-            "liga": "Bundesliga",
-            "cidade": "Freiburg",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Allianz Arena",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
-        },
-        {
-            "id": 12,
-            "nome": "Hoffenheim",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Alemanha/small/Hoffenheim.png",
-            "uniforme": "",
-            "liga": "Bundesliga",
-            "cidade": "Munique",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Allianz Arena",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
-        },
-        {
-            "id": 13,
-            "nome": "Union Berlin",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Alemanha/small/UnionBerlin.png",
-            "uniforme": "",
-            "liga": "Bundesliga",
-            "cidade": "Berlim",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Allianz Arena",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
-        },
-        {
-            "id": 14,
-            "nome": "Borussia Mönchengladbach",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Alemanha/small/Monchengladbach.png",
-            "uniforme": "",
-            "liga": "Bundesliga",
-            "cidade": "Mönchengladbach",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Allianz Arena",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
-        },
-        {
-            "id": 15,
-            "nome": "Mainz 05",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Alemanha/small/Mainz05.png",
-            "uniforme": "",
-            "liga": "Bundesliga",
-            "cidade": "Mainz",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Allianz Arena",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
-        },
-        {
-            "id": 16,
-            "nome": "Bochum",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Alemanha/small/Bochum.png",
-            "uniforme": "",
-            "liga": "Bundesliga",
-            "cidade": "Munique",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Allianz Arena",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
-        },
-        {
-            "id": 17,
-            "nome": "Heidenheim",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Alemanha/small/Heidenheim.png",
-            "uniforme": "",
-            "liga": "Bundesliga",
-            "cidade": "Munique",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Allianz Arena",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
-        },
-        {
-            "id": 18,
-            "nome": "Darmstadt 98",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Alemanha/small/Darmstadt.png",
-            "uniforme": "",
-            "liga": "Bundesliga",
-            "cidade": "Munique",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Allianz Arena",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
+          "modelo": "GK",
+          "img": "../img/uniformes/Alemanha/Bayern/gk.png"
         }
-    ],
-
-    "TimesInglaterra": [
+      ],
+      "marca_uniforme": "Adidas",
+      "pais": "Alemanha",
+      "liga": "Bundesliga",
+      "cidade": "Munique",
+      "estado": "Baviera",
+      "website": "www.fcbayern.com",
+      "email": "service@fcbayern.com",
+      "resumo": "Fundado em 1900 depois de uma reunião em um restaurante no centro de Munique, o Bayern de Munique assimilou o Münchener Sport-Club em 1906 e adotou a camisa branca com o calção vermelho. O clube conquistou o campeonato nacional 31 vezes e também tem 20 títulos da copa do país. O FC Bayern München não estava entre os integrantes fundadores da Bundesliga em 1963. Eles conseguiram a promoção para a liga em 1965. Após o título da UEFA Champions League em 1976, o FC Bayern München se tornou o terceiro clube a ganhar a competição três vezes seguidas.",
+      "estadio": {
+        "nome": "Allianz Arena",
+        "inauguracao": 2005,
+        "capacidade": 75024,
+        "foto": "../img/estadios/Alemanha/AllianzArena.png"
+      },
+      "titulos": [
         {
-            "id": 1,
-            "nome": "Chelsea",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Inglaterra/small/Chelsea.png",
-            "uniforme": "",
-            "liga": "Premier League",
-            "cidade": "Londres",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Stamford Bridge",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
+          "competicao": "Bundesliga",
+          "edicoes": [
+            "1932",
+            "1968-69",
+            "1971-72",
+            "1972-73",
+            "1973-74",
+            "1979-80",
+            "1980-81",
+            "1984-85",
+            "1985-86",
+            "1986-87",
+            "1988-89",
+            "1989-90",
+            "1993-94",
+            "1996-97",
+            "1998-99",
+            "1999-00",
+            "2000-01",
+            "2002-03",
+            "2004-05",
+            "2005-06",
+            "2007-08",
+            "2009-10",
+            "2012-13",
+            "2013-14",
+            "2014-15",
+            "2015-16",
+            "2016-17",
+            "2017-18",
+            "2018-19",
+            "2019-20",
+            "2020-21",
+            "2021-22",
+            "2022-23"
+          ]
+        },
+        {
+          "competicao": "DFB-Pokal",
+          "edicoes": [
+            "1956-57",
+            "1965-66",
+            "1966-67",
+            "1968-69",
+            "1970-71",
+            "1981-82",
+            "1983-84",
+            "1985-86",
+            "1997-98",
+            "1999-00",
+            "2002-03",
+            "2004-05",
+            "2005-06",
+            "2007-08",
+            "2009-10",
+            "2012-13",
+            "2013-14",
+            "2015-16",
+            "2018-19",
+            "2019-20"
+          ]
+        },
+        {
+          "competicao": "DFL-Supercup",
+          "edicoes": [
+            "1987",
+            "1990",
+            "2010",
+            "2012",
+            "2016",
+            "2017",
+            "2018",
+            "2020",
+            "2021",
+            "2022"
+          ]
+        },
+        {
+          "competicao": "UEFA Champions League",
+          "edicoes": [
+            "1973-74",
+            "1974-75",
+            "1975-76",
+            "2000-01",
+            "2012-13",
+            "2019-20"
+          ]
+        },
+        {
+          "competicao": "UEFA Europa League",
+          "edicoes": [
+            "1995-96"
+          ]
+        },
+        {
+          "competicao": "UEFA Super Cup",
+          "edicoes": [
+            "2013",
+            "2020"
+          ]
+        },
+        {
+          "competicao": "FIFA Club World Cup",
+          "edicoes": [
+            "1796",
+            "2001",
+            "2013",
+            "2020"
+          ]
         }
-     ],
-    
-    "TimesBrasil": [
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Bayer Leverkusen",
+      "nome_completo": "Bayer 04 Leverkusen Fußball GmbH",
+      "fundacao": "01/07/1904",
+      "cores": [
+        "#ff0000",
+        "#000000"
+      ],
+      "escudo": "../img/escudos/Alemanha/small/Leverkusen.png",
+      "apelido": "Die Werkself",
+      "presidente": "Wolfgang Halzhäuser",
+      "uniformes": [
         {
-            "id": 1,
-            "nome": "Grêmio",
-            "nome_completo": "Grêmio Football Porto-Alegrense",
-            "fundacao": 1903,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Brasil/small/Gremio.png",
-            "uniforme": "",
-            "liga": "Brasileirão",
-            "cidade": "Porto Alegre",
-            "website": "www.gremio.net",
-            "descricao": "",
-            "estadio": {
-                "nome": "Arena do Grêmio",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
+          "modelo": "Home",
+          "img": "../img/uniformes/Alemanha/Leverkusen/1.png"
+        },
+        {
+          "modelo": "Away",
+          "img": "../img/uniformes/Alemanha/Leverkusen/2.png"
+        },
+        {
+          "modelo": "Third",
+          "img": "../img/uniformes/Alemanha/Leverkusen/3.png"
+        },
+        {
+          "modelo": "GK",
+          "img": "../img/uniformes/Alemanha/Leverkusen/gk.png"
         }
-     ],
-    
-     "TimesEspanha": [
+      ],
+      "marca_uniforme": "Castore",
+      "pais": "Alemanha",
+      "liga": "Bundesliga",
+      "cidade": "Leverkusen",
+      "estado": "Renânia do Norte-Vestfália",
+      "website": "www.bayer04.de",
+      "email": "info@bayer04.de",
+      "resumo": "O Leverkusen conseguiu o acesso à Bundesliga em 1979 e venceu o primeiro título nacional em 1993 contra o time amador do Hertha Berlin na final. Venceu a copa do país 1 vez. O Bayer Leverkusen foi o primeiro clube de propriedade integral de uma empresa a jogar na Bundesliga. Em 1988, conquistou o título da UEFA Europa League, seu segundo troféu da história.",
+      "estadio": {
+        "nome": "BayArena",
+        "inauguracao": 1958,
+        "capacidade": 30210,
+        "foto": "../img/estadios/Alemanha/BayArena.png"
+      },
+      "titulos": [
         {
-             "id": 1,
-             "nome": "Real Madrid",
-             "nome_completo": "FC Bayern München AG",
-             "fundacao": 1900,
-             "cores": ["#dc052d", "#ffffff"],
-             "escudo": "../img/escudos/Espanha/small/RealMadrid.png",
-             "uniforme": "",
-             "pais_id": 1,
-             "cidade": "Londres",
-             "website": "www.fcbayern.com",
-             "descricao": "",
-             "estadio": {
-                 "nome": "Stamford Bridge",
-                 "construcao": 2004,
-                 "capacidade": 75024,
-                 "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-             },
-             "titulos": [
-                 {
-                     "competicao": "Bundesliga",
-                     "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                 },
-                 {
-                     "competicao": "dfb pokal",
-                     "anos": [ 2009, 2015 ]
-                 }
-             ]
-         }
-    ],
-    
-    "TimesItalia": [
+          "competicao": "DFB-Pokal",
+          "edicoes": [
+            "1992-93"
+          ]
+        },
         {
-            "id": 1,
-            "nome": "Milan",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Italia/small/Milan.png",
-            "uniforme": "",
-            "pais_id": 1,
-            "cidade": "Londres",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Stamford Bridge",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
+          "competicao": "UEFA Europa League",
+          "edicoes": [
+            "1987-88"
+          ]
         }
-    ],
-    
-    "TimesFranca": [
+      ]
+    }
+  ],
+  "TimesBrasil": [
+    {
+      "id": 1,
+      "nome": "Grêmio",
+      "nome_completo": "Grêmio Foot-Ball Porto Alegrense",
+      "fundacao": "15/09/1903",
+      "cores": [
+        "#12A0D7",
+        "#000000",
+        "#ffffff"
+      ],
+      "escudo": "../img/escudos/Brasil/small/Grêmio.png",
+      "apelido": "Imortal Tricolor",
+      "presidente": "Alberto Guerra",
+      "uniformes": [
         {
-            "id": 1,
-            "nome": "PSG",
-            "nome_completo": "FC Bayern München AG",
-            "fundacao": 1900,
-            "cores": ["#dc052d", "#ffffff"],
-            "escudo": "../img/escudos/Franca/small/PSG.png",
-            "uniforme": "",
-            "pais_id": 1,
-            "cidade": "Londres",
-            "website": "www.fcbayern.com",
-            "descricao": "",
-            "estadio": {
-                "nome": "Stamford Bridge",
-                "construcao": 2004,
-                "capacidade": 75024,
-                "foto": ".SRC/img/estadios/Alemanha/AllianzArena.png"
-            },
-            "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "anos": [ 2022, 2021, 2020, 2019, 2018, 2017 ]
-                },
-                {
-                    "competicao": "dfb pokal",
-                    "anos": [ 2009, 2015 ]
-                }
-            ]
+          "modelo": "Home",
+          "img": "../img/uniformes/Brasil/Grêmio/1.png"
+        },
+        {
+          "modelo": "Away",
+          "img": "../img/uniformes/Brasil/Grêmio/2.png"
+        },
+        {
+          "modelo": "GK",
+          "img": "../img/uniformes/Brasil/Grêmio/gk.png"
         }
-    ]
+      ],
+      "marca_uniforme": "Umbro",
+      "pais": "Brasil",
+      "liga": "Brasileirão Série A",
+      "cidade": "Porto Alegre",
+      "estado": "Rio Grande do Sul",
+      "website": "www.gremio.net",
+      "email": "ouvidoria@gremio.net",
+      "resumo": "O Grêmio, é um dos clubes de futebol mais importantes do Brasil. Fundado em 15 de setembro de 1903, o Grêmio foi estabelecido por imigrantes alemães na cidade de Porto Alegre, no estado do Rio Grande do Sul. O Grêmio conquistou inúmeros títulos estaduais, sendo um dos clubes mais vitoriosos do Campeonato Gaúcho. Além disso, o Grêmio tem em sua galeria de troféus títulos importantes a nível nacional, incluindo várias conquistas do Campeonato Brasileiro e da Copa do Brasil. A nível internacional, o Grêmio é reconhecido por suas conquistas na Copa Libertadores da América, uma das competições mais prestigiadas do continente sul-americano. O clube venceu a Libertadores em diversas ocasiões, sendo um dos clubes brasileiros com mais títulos neste torneio.",
+      "estadio": {
+        "nome": "Arena do Grêmio",
+        "inauguracao": 2012,
+        "capacidade": 60540,
+        "foto": "../img/estadios/Brasil/ArenaDoGrêmio.jpg"
+      },
+      "titulos": [
+        {
+          "competicao": "Brasileirão Série A",
+          "edicoes": [
+            "1981",
+            "1996"
+          ]
+        },
+        {
+          "competicao": "Brasileirão Série B",
+          "edicoes": [
+            "2005"
+          ]
+        },
+        {
+          "competicao": "Copa do Brasil",
+          "edicoes": [
+            "1989",
+            "1994",
+            "1997",
+            "2001",
+            "2016"
+          ]
+        },
+        {
+          "competicao": "Supercopa do Brasil",
+          "edicoes": [
+            "1990"
+          ]
+        },
+        {
+          "competicao": "Copa Libertadores da América",
+          "edicoes": [
+            "1983",
+            "1995",
+            "2017"
+          ]
+        },
+        {
+          "competicao": "Recopa Sul-Americana",
+          "edicoes": [
+            "1996",
+            "2018"
+          ]
+        },
+        {
+          "competicao": "FIFA Club World Cup",
+          "edicoes": [
+            "1983"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Internacional",
+      "nome_completo": "Sport Club Internacional",
+      "fundacao": "04/04/1909",
+      "cores": [
+        "#eb131d",
+        "#ffffff"
+      ],
+      "escudo": "../img/escudos/Brasil/small/Internacional.png",
+      "apelido": "Colorado - Clube do Povo",
+      "presidente": "Alessandro Barcellos",
+      "uniformes": [
+        {
+          "modelo": "Home",
+          "img": "../img/uniformes/Brasil/Internacional/1.png"
+        },
+        {
+          "modelo": "Away",
+          "img": "../img/uniformes/Brasil/Internacional/2.png"
+        },
+        {
+          "modelo": "GK",
+          "img": "../img/uniformes/Brasil/Internacional/gk.png"
+        }
+      ],
+      "marca_uniforme": "Adidas",
+      "pais": "Brasil",
+      "liga": "Brasileirão Série A",
+      "cidade": "Porto Alegre",
+      "estado": "Rio Grande do Sul",
+      "website": "www.internacional.com.br",
+      "email": "aimprensa@internacional.com.br",
+      "resumo": "O Grêmio, é um dos clubes de futebol mais importantes do Brasil. Fundado em 15 de setembro de 1903, o Grêmio foi estabelecido por imigrantes alemães na cidade de Porto Alegre, no estado do Rio Grande do Sul. O Grêmio conquistou inúmeros títulos estaduais, sendo um dos clubes mais vitoriosos do Campeonato Gaúcho. Além disso, o Grêmio tem em sua galeria de troféus títulos importantes a nível nacional, incluindo várias conquistas do Campeonato Brasileiro e da Copa do Brasil. A nível internacional, o Grêmio é reconhecido por suas conquistas na Copa Libertadores da América, uma das competições mais prestigiadas do continente sul-americano. O clube venceu a Libertadores em diversas ocasiões, sendo um dos clubes brasileiros com mais títulos neste torneio.",
+      "estadio": {
+        "nome": "Beira-Rio",
+        "inauguracao": 1969,
+        "capacidade": 50842,
+        "foto": "../img/estadios/Brasil/BeiraRio.jpg"
+      },
+      "titulos": [
+        {
+          "competicao": "Brasileirão Série A",
+          "edicoes": [
+            "1975",
+            "1976",
+            "1979"
+          ]
+        },
+        {
+          "competicao": "Copa do Brasil",
+          "edicoes": [
+            "1992"
+          ]
+        },
+        {
+          "competicao": "Copa Libertadores da América",
+          "edicoes": [
+            "2006",
+            "2010"
+          ]
+        },
+        {
+          "competicao": "Copa Sul-Americana",
+          "edicoes": [
+            "2008"
+          ]
+        },
+        {
+          "competicao": "Recopa Sul-Americana",
+          "edicoes": [
+            "2007",
+            "2011"
+          ]
+        },
+        {
+          "competicao": "FIFA Club World Cup",
+          "edicoes": [
+            "2006"
+          ]
+        }
+      ]
+    }
+  ],
+  "TimesEspanha": [
+    {
+      "id": 1,
+      "nome": "Real Madrid",
+      "nome_completo": "Real Madrid Club de Fútbol",
+      "fundacao": "06/03/1902",
+      "cores": [
+        "#ffffff",
+        "#004995",
+        "#f7bd02"
+      ],
+      "escudo": "../img/escudos/Espanha/small/RealMadrid.png",
+      "apelido": "Los Merengues",
+      "presidente": "Florentino Pérez",
+      "uniformes": [
+        {
+          "modelo": "Home",
+          "img": "../img/uniformes/Espanha/RealMadrid/1.png"
+        },
+        {
+          "modelo": "Away",
+          "img": "../img/uniformes/Espanha/RealMadrid/2.png"
+        },
+        {
+          "modelo": "Third",
+          "img": "../img/uniformes/Espanha/RealMadrid/3.png"
+        },
+        {
+          "modelo": "GK",
+          "img": "../img/uniformes/Espanha/RealMadrid/gk.png"
+        }
+      ],
+      "marca_uniforme": "Adidas",
+      "pais": "Espanha",
+      "liga": "La Liga",
+      "cidade": "Madri",
+      "estado": "Comunidade de Madri",
+      "website": "www.realmadrid.com",
+      "email": "mensajes@realmadrid.com",
+      "resumo": "Fundado em 1902, o clube venceu sua primeira copa espanhola três anos depois, provando ser uma das equipes mais fortes da Espanha já naquela época. O clube conquistou o campeonato nacional 35 vezes e também tem 20 títulos da copa do país. Inicialmente chamado de Madrid CF, o clube adotou o nome atual quando recebeu o título de 'Real' em 1920. Em 2014, o Real Madrid se tornou o primeiro clube a conquistar a UEFA Champions League pela décima vez. O feito ficou conhecido como 'La Décima'.",
+      "estadio": {
+        "nome": "Santiago Bernabéu",
+        "inauguracao": 1947,
+        "capacidade": 83186,
+        "foto": "../img/estadios/Espanha/SantiagoBernabeu.jpg"
+      },
+      "titulos": [
+        {
+          "competicao": "La Liga",
+          "edicoes": [
+            "1931-32",
+            "1932-33",
+            "1953-54",
+            "1954-55",
+            "1956-57",
+            "1957-58",
+            "1960-61",
+            "1961-62",
+            "1962-63",
+            "1963-64",
+            "1964-65",
+            "1966-67",
+            "1967-68",
+            "1968-69",
+            "1971-72",
+            "1974-75",
+            "1975-76",
+            "1977-78",
+            "1978-79",
+            "1979-80",
+            "1985-86",
+            "1986-87",
+            "1987-88",
+            "1988-89",
+            "1989-90",
+            "1994-95",
+            "1996-97",
+            "2000-01",
+            "2002-03",
+            "2006-07",
+            "2007-08",
+            "2011-12",
+            "2016-17",
+            "2019-20",
+            "2021-22"
+          ]
+        },
+        {
+          "competicao": "Copa del Rey",
+          "edicoes": [
+            "1905",
+            "1906",
+            "1907",
+            "1908",
+            "1917",
+            "1934",
+            "1936",
+            "1946",
+            "1947",
+            "1961-62",
+            "1969-70",
+            "1973-74",
+            "1974-75",
+            "1979-80",
+            "1981-82",
+            "1988-89",
+            "1992-93",
+            "2010-11",
+            "2013-14",
+            "2022-23"
+          ]
+        },
+        {
+          "competicao": "Supercopa de España",
+          "edicoes": [
+            "1988",
+            "1989",
+            "1990",
+            "1993",
+            "1997",
+            "2001",
+            "2003",
+            "2008",
+            "2012",
+            "2017",
+            "2019-20",
+            "2021-22",
+            "2023-24"
+          ]
+        },
+        {
+          "competicao": "UEFA Champions League",
+          "edicoes": [
+            "1955-56",
+            "1956-57",
+            "1957-58",
+            "1958-59",
+            "1959-60",
+            "1965-66",
+            "1997-98",
+            "1999-2000",
+            "2001-02",
+            "2013-14",
+            "2015-16",
+            "2016-17",
+            "2017-18",
+            "2021-22"
+          ]
+        },
+        {
+          "competicao": "UEFA Europa League",
+          "edicoes": [
+            "1984-85",
+            "1985-86"
+          ]
+        },
+        {
+          "competicao": "UEFA Super Cup",
+          "edicoes": [
+            "2002",
+            "2014",
+            "2016",
+            "2017",
+            "2022"
+          ]
+        },
+        {
+          "competicao": "FIFA Club World Cup",
+          "edicoes": [
+            "1960",
+            "1998",
+            "2002",
+            "2014",
+            "2016",
+            "2017",
+            "2018",
+            "2022"
+          ]
+        }
+      ]
+    }
+  ],
+  "TimesInglaterra": [
+    {
+      "id": 1,
+      "nome": "Chelsea",
+      "nome_completo": "Chelsea Football Club",
+      "fundacao": "10/03/1905",
+      "cores": [
+        "#034694",
+        "#ffffff"
+      ],
+      "escudo": "../img/escudos/Inglaterra/small/Chelsea.png",
+      "apelido": "The Blues",
+      "presidente": "Todd Boehly",
+      "uniformes": [
+        {
+          "modelo": "Home",
+          "img": "../img/uniformes/Inglaterra/Chelsea/1.png"
+        },
+        {
+          "modelo": "Away",
+          "img": "../img/uniformes/Inglaterra/Chelsea/2.png"
+        },
+        {
+          "modelo": "Third",
+          "img": "../img/uniformes/Inglaterra/Chelsea/3.png"
+        },
+        {
+          "modelo": "GK",
+          "img": "../img/uniformes/Inglaterra/Chelsea/gk.png"
+        }
+      ],
+      "marca_uniforme": "Nike",
+      "pais": "Inglaterra",
+      "liga": "Premier League",
+      "cidade": "Londres",
+      "estado": "-",
+      "website": "http://www.chelseafc.com",
+      "email": "enquiries@chelseafc.com",
+      "resumo": "O Chelsea FC foi fundado em 1905 em um pub localizado em Fulham Road, Londres. O Clube conquistou o campeonato nacional 6 vezes e também tem 8 títulos da copa do país. O Chelsea teve uma sequência impressionante de invencibilidade em casa na primeira divisão do campeonato inglês: 86 jogos entre 2004 e 2008. O clube se tornou o primeiro detentor da UEFA Champions League a vencer a UEFA Europa League no ano seguinte, em 2013.",
+      "estadio": {
+        "nome": "Stamford Bridge",
+        "inauguracao": 1877,
+        "capacidade": 40343,
+        "foto": "../img/estadios/Inglaterra/StanfordBridge.jpg"
+      },
+      "titulos": [
+        {
+          "competicao": "Premier League",
+          "edicoes": [
+            "1954-55",
+            "2004-05",
+            "2005-06",
+            "2009-10",
+            "2014-15",
+            "2016-17"
+          ]
+        },
+        {
+          "competicao": "EFL Championship",
+          "edicoes": [
+            "1983-84",
+            "1988-89"
+          ]
+        },
+        {
+          "competicao": "FA Cup",
+          "edicoes": [
+            "1969-70",
+            "1996-97",
+            "1999-2000",
+            "2006-07",
+            "2008-09",
+            "2009-10",
+            "2011-12",
+            "2017-18"
+          ]
+        },
+        {
+          "competicao": "EFL Cup",
+          "edicoes": [
+            "1964-65",
+            "1997-98",
+            "2004-05",
+            "2006-07",
+            "2014-15"
+          ]
+        },
+        {
+          "competicao": "FA Community Shield",
+          "edicoes": [
+            "1955",
+            "2000",
+            "2005",
+            "2009"
+          ]
+        },
+        {
+          "competicao": "UEFA Champions League",
+          "edicoes": [
+            "2011-12",
+            "2020-21"
+          ]
+        },
+        {
+          "competicao": "UEFA Europa League",
+          "edicoes": [
+            "2012-13",
+            "2018-19"
+          ]
+        },
+        {
+          "competicao": "UEFA Super Cup",
+          "edicoes": [
+            "1998",
+            "2021"
+          ]
+        },
+        {
+          "competicao": "FIFA Club World Cup",
+          "edicoes": [
+            "2021"
+          ]
+        }
+      ]
+    }
+  ],
+  "TimesItália": [
+    {
+      "id": 1,
+      "nome": "Napoli",
+      "nome_completo": "Società Sportiva Calcio Napoli",
+      "fundacao": "25/08/1926",
+      "cores": [
+        "#12A0D7",
+        "#ffffff"
+      ],
+      "escudo": "../img/escudos/Itália/small/Napoli.png",
+      "apelido": "Gli Azzurri",
+      "presidente": "Aurelio De Laurentiis",
+      "uniformes": [
+        {
+          "modelo": "Home",
+          "img": "../img/uniformes/Itália/Napoli/1.png"
+        },
+        {
+          "modelo": "Away",
+          "img": "../img/uniformes/Itália/Napoli/2.png"
+        },
+        {
+          "modelo": "Third",
+          "img": "../img/uniformes/Itália/Napoli/3.png"
+        },
+        {
+          "modelo": "GK",
+          "img": "../img/uniformes/Itália/Napoli/gk.png"
+        }
+      ],
+      "marca_uniforme": "EA7",
+      "pais": "Itália",
+      "liga": "Serie A",
+      "cidade": "Nápoles",
+      "estado": "Campânia",
+      "website": "http://www.sscnapoli.it",
+      "email": "infocalcio@sscn.it",
+      "resumo": "O clube foi fundado em 1926 com o nome Associazione Calcio Napoli graças à iniciativa de empresários ricos da região. O clube conquistou o campeonato nacional 3 vezes e também tem 6 títulos da copa do país. Com o apelido de 'Partenopei' ('Napolitanos'), o Napoli ganhou se segundo título da liga em 1989-90 e após um período de declínio nos anos 90, voltou à primeira divisão em 2007. O clube conquistou o primeiro troféu europeu em 1989, ao vencer o Stuttgart na final da UEFA Europa League.",
+      "estadio": {
+        "nome": "Stadio Diego Armando Maradona",
+        "inauguracao": 1959,
+        "capacidade": 54726,
+        "foto": "../img/estadios/Itália/StadioDiegoArmandoMaradona.jpg"
+      },
+      "titulos": [
+        {
+          "competicao": "Serie A",
+          "edicoes": [
+            "1986-87",
+            "1989-90",
+            "2022-23"
+          ]
+        },
+        {
+          "competicao": "Serie B",
+          "edicoes": [
+            "1949-50"
+          ]
+        },
+        {
+          "competicao": "Coppa Italia",
+          "edicoes": [
+            "1961-62",
+            "1975-76",
+            "1986-87",
+            "2011-12",
+            "2013-14",
+            "2019-20"
+          ]
+        },
+        {
+          "competicao": "Supercoppa Italiana",
+          "edicoes": [
+            "1990",
+            "2014"
+          ]
+        },
+        {
+          "competicao": "UEFA Europa League",
+          "edicoes": [
+            "1988-89"
+          ]
+        }
+      ]
+    }
+  ]
 }

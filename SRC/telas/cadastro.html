@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Cadastrar Time</title>
+</head>
+<body>
+    <form id="formCadastrarTime" class="grid w-11/12 bg-gray-300 p-5 mx-auto my-5" encType="multipart/form-data">
+        <h2 class="font-bold text-xl mx-auto mb-5">Cadastrar Time</h2>
+    
+        <label for="id" class="mt-4">ID:</label>
+        <input type="text" id="id" required>
+
+        <label for="nome" class="mt-4">Nome:</label>
+        <input type="text" id="nome" required>
+        
+        <label for="nomeCompleto" class="mt-4">Nome Completo:</label>
+        <input type="text" id="nomeCompleto" required>
+        
+        <label for="fundacao" class="mt-4">Data de Fundação:</label>
+        <input type="date" id="fundacao">
+        
+        <label for="telefoneCliente" class="mt-4">Cores:</label>
+        <input type="color" value="#e66465" id="telefoneCliente" required onchange="alert(this.value)">
+
+        <button class="rounded bg-white w-6 h-6" onclick="adicionarCor()">+</button>
+
+        <label for="idTime" class="mt-4">Escudo:</label>
+        <input type="text" id="idTime" required>
+
+        <label for="apelido" class="mt-4">Apelido:</label>
+        <input type="text" id="apelido"> 
+
+        <label for="presidente" class="mt-4">Presidente:</label>
+        <input type="text" id="presidente"> 
+
+        <label for="presidente" class="mt-4">Uniformes:</label>
+        <input type="text" id="presidente"> 
+
+        <label for="marcaUniforme" class="mt-4">Marca do Uniforme:</label>
+        <input type="text" id="marcaUniforme"> 
+
+        <label for="pais" class="mt-4">País:</label>
+        <input type="text" id="pais">
+        
+        <label for="liga" class="mt-4">Liga:</label>
+        <input type="text" id="liga">
+
+        <label for="cidade" class="mt-4">Cidade:</label>
+        <input type="text" id="cidade">
+
+        <label for="estado" class="mt-4">Estado:</label>
+        <input type="text" id="estado">
+
+        <label for="website" class="mt-4">Website:</label>
+        <input type="text" id="website">
+
+        <label for="email" class="mt-4">E-mail:</label>
+        <input type="text" id="email">
+
+        <label for="resumo" class="mt-4">Resumo:</label>
+        <input type="text" id="resumo">
+
+        <label for="nomeEstadio" class="mt-4">Nome do Estádio:</label>
+        <input type="text" id="nomeEstadio">
+
+        <label for="inauguracaoEstadio" class="mt-4">Ano de Inauguração do Estádio:</label>
+        <input type="text" id="inauguracaoEstadio">
+
+        <label for="capacidadeEstadio" class="mt-4">Capacidade do Estádio:</label>
+        <input type="text" id="capacidadeEstadio">
+
+        <label for="foto">Foto</label>
+        <input type="file" onchange="carregarFoto(this)" id="fotoEstadio" name="fotoEstadio">
+
+        <img src="../img/SemImagem.png" alt="" style="width:300px" id="imagem-fotoEstadio">
+
+
+        <label for="foto">Foto Escudo</label>
+        <input type="file" onchange="carregarFoto(this)" id="fotoEscudo" name="sampleFile">
+
+        <img src="../img/SemImagem.png" alt="" style="width:300px" id="imagem-fotoEscudo" onerror="erroImagem()">
+
+        <label for="foto">URL</label>
+        <input type="text" name="" id="urlImagem">
+        <button type="button" onclick="carregarURLFoto()" class="mt-8">Carregar Foto</button>
+    
+        <button type="button" onclick="adicionarTime()" class="mt-8">Adicionar</button>
+    </form>
+</main>
+
+    <script>
+        const carregarFoto = (e) => {
+            // alert(e.id)
+            // console.log(e.files)
+            let foto = document.getElementById(`imagem-${e.id}`)
+            foto.src = window.URL.createObjectURL(e.files[0]);
+        }
+
+        const carregarURLFoto = () => {
+            let url = document.getElementById('urlImagem')
+            let foto = document.getElementById(`imagem-fotoEscudo`)
+            foto.src = url.value
+        }
+
+        function erroImagem () {
+            alert('nao deu cara')
+            let foto = document.getElementById(`imagem-fotoEscudo`)
+            foto.src = 'https://www.zerozero.pt/img/logos/equipas/32150_imgbank_1683732611.png'
+        }
+    </script>
+
+<script src="../clients/times.js"></script>
+</body>
+</html>
