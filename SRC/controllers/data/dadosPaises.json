@@ -39,6 +39,14 @@
             "bandeira": "../img/bandeiras/big/br.png",
             "campeonatos": [ "Brasileirão Série A", "Brasileirão Série B", "Brasileirão Série C", "Brasileirão Série D" ],
             "copas": [ "Copa do Basil", "Supercopa do Brasil" ]
+        },
+        {
+            "id": 7,
+            "continente": "Europa",
+            "nome": "França",
+            "bandeira": "../img/bandeiras/big/fr.png",
+            "campeonatos": [ "Ligue 1", "Ligue 2" ],
+            "copas": [ "Coupe de France", "Trophée des Champions" ]
         }
     ]
 }
