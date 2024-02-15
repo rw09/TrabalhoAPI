@@ -237,6 +237,34 @@
             "logo": "../img/competicoes/América do Sul/RecopaSul-Americana.png",
             "trofeu": "../img/trofeus/América do Sul/RecopaSul-Americana.png",
             "nivel": "Continental"
+        },
+        {
+            "id": "35",
+            "nome": "Ligue 1",
+            "logo": "../img/competicoes/França/Ligue1.png",
+            "trofeu": "../img/trofeus/França/Ligue1.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "36",
+            "nome": "Ligue 2",
+            "logo": "../img/competicoes/França/Ligue2.png",
+            "trofeu": "../img/trofeus/França/Ligue2.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "37",
+            "nome": "Coupe de France",
+            "logo": "../img/competicoes/França/CoupeDeFrance.png",
+            "trofeu": "../img/trofeus/França/CoupeDeFrance.png",
+            "nivel": "Nacional"
+        },
+        {
+            "id": "38",
+            "nome": "Trophée des Champions",
+            "logo": "../img/competicoes/França/TrophéeDesChampions.png",
+            "trofeu": "../img/trofeus/França/TrophéeDesChampions.png",
+            "nivel": "Nacional"
         }
     ]
 }
