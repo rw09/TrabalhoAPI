@@ -652,27 +652,63 @@ function criarDialog(time) {
         console.log('adicionando time')
         const id = document.getElementById('id').value
         const nome = document.getElementById('nomeTime').value
-        const pais = document.getElementById('pais').value
+        const nomeCompleto = document.getElementById('nomeTimeCompleto').value
+        const apelido = document.getElementById('apelido').value
+        let fundacao = document.getElementById('fundacao').value
+        fundacao = fundacao.split('-').reverse().join('/')
+        const presidente = document.getElementById('presidente').value
+        const website = document.getElementById('website').value
         const email = document.getElementById('email').value
-        // const fundacao = document.getElementById('fundacao').value
-        
+        const cidade = document.getElementById('cidade').value
+        const estado = document.getElementById('estado').value
+        const pais = document.getElementById('pais').value
+        const liga = document.getElementById('selectLiga').value
+
         const inputFotoEscudo = document.getElementById('input-fotoEscudo');
         const fotoEscudo = inputFotoEscudo.files[0];
+
+        const resumo = document.getElementById('resumo').value
+
+        const nomeEstadio = document.getElementById('nomeEstadio').value
+        const inauguracaoEstadio = document.getElementById('inauguracaoEstadio').value
+        const capacidadeEstadio = document.getElementById('capacidadeEstadio').value
 
         const inputFotoEstadio = document.getElementById('input-fotoEstadio');
         const fotoEstadio = inputFotoEstadio.files[0];
 
+
+
+
         const formData = new FormData()
 
-        formData.append('fotoEscudo', fotoEscudo);
-        formData.append('fotoEstadio', fotoEstadio);
         formData.append('id', id);
         formData.append('nome', nome);
-        formData.append('pais', pais);
+        formData.append('nomeCompleto', nomeCompleto);
+        formData.append('apelido', apelido);
+        formData.append('fundacao', fundacao);
+        formData.append('presidente', presidente);
+        formData.append('website', website);
         formData.append('email', email);
-        // formData.append('fundacao', fundacao);
+        formData.append('cidade', cidade);
+        formData.append('estado', estado);
+        formData.append('pais', pais);
+        formData.append('liga', liga);
+
+        formData.append('fotoEscudo', fotoEscudo);
+
+        formData.append('resumo', resumo);
+
+        formData.append('nomeEstadio', nomeEstadio);
+        formData.append('inauguracaoEstadio', inauguracaoEstadio);
+        formData.append('capacidadeEstadio', capacidadeEstadio);
+
+        formData.append('fotoEstadio', fotoEstadio);
+
+        
+        
 
         console.log(formData.get('nome'))
+        console.log(formData)
     
         fetch('http://localhost:3000/api/times', {
             method: 'POST',
@@ -1682,6 +1718,7 @@ function carregarCompeticoes(pais, form) {
 
     if(divTituloAntiga) {
         divTituloAntiga.remove()
+        botaoCadastrar.remove()
     }
     if(divTituloConteudoAntiga) {
         divTituloConteudoAntiga.remove()

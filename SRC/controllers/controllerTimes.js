@@ -56,6 +56,8 @@ server.post('/times', function(req, res)  {
     
     const novoTime = req.body;
 
+    console.log(novoTime)
+
     let fotoEstadio;
     let uploadPath;
 
