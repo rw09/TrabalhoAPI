@@ -64,63 +64,67 @@ server.post('/times', function(req, res)  {
     
     let paisDoTime = 'Tokyio'
 
+    console.log(req.files)
 
-    if(req.files.fotoEscudo) {
+    if(req.files) {
         
-        if (!fs.existsSync(`src/img/escudos/${paisDoTime}/big`)) {
-            fs.mkdirSync(`src/img/escudos/${paisDoTime}/big`, { recursive: true });
-        }
+        if(req.files.fotoEscudo) {
+            
+            if (!fs.existsSync(`src/img/escudos/${paisDoTime}/big`)) {
+                fs.mkdirSync(`src/img/escudos/${paisDoTime}/big`, { recursive: true });
+            }
 
-        //temp
-        if (!fs.existsSync(`src/img/escudos/${paisDoTime}/small`)) {
-            fs.mkdirSync(`src/img/escudos/${paisDoTime}/small`, { recursive: true });
-        }
+            //temp
+            if (!fs.existsSync(`src/img/escudos/${paisDoTime}/small`)) {
+                fs.mkdirSync(`src/img/escudos/${paisDoTime}/small`, { recursive: true });
+            }
 
-        fotoEscudo = req.files.fotoEscudo;
-        uploadPath = `src/img/escudos/${paisDoTime}/big/${fotoEscudo.name}`
-
-        // Use the mv() method to place the file somewhere on your server
-        fotoEscudo.mv(uploadPath, function(err) {
-            if (err) {
-                return res.status(500).send(err);
-            } 
-        })
-
-        uploadPath = `src/img/escudos/${paisDoTime}/small/${fotoEscudo.name}`
-
-        // Use the mv() method to place the file somewhere on your server
-        fotoEscudo.mv(uploadPath, function(err) {
-            if (err) {
-                return res.status(500).send(err);
-            } 
-        })
-
-    } else {
-        fotoEscudo = req.body.fotoEscudo
-    }
-
-
-    // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
-    if(req.files.fotoEstadio) {
-        
-        if (!fs.existsSync(`src/img/estadios/${paisDoTime}`)) {
-            fs.mkdirSync(`src/img/estadios/${paisDoTime}`, { recursive: true });
-        }
-
-        fotoEstadio = req.files.fotoEstadio;
-        uploadPath = `src/img/estadios/${paisDoTime}/${fotoEstadio.name}`
+            fotoEscudo = req.files.fotoEscudo;
+            uploadPath = `src/img/escudos/${paisDoTime}/big/${fotoEscudo.name}`
 
             // Use the mv() method to place the file somewhere on your server
-        fotoEstadio.mv(uploadPath, function(err) {
-            if (err) {
-                return res.status(500).send(err);
-            } 
-            // else {
-            //     return res.send('File uploaded!');
-            // }
-        });
-    } else {
-        fotoEstadio = req.body.fotoEstadio
+            fotoEscudo.mv(uploadPath, function(err) {
+                if (err) {
+                    return res.status(500).send(err);
+                } 
+            })
+
+            uploadPath = `src/img/escudos/${paisDoTime}/small/${fotoEscudo.name}`
+
+            // Use the mv() method to place the file somewhere on your server
+            fotoEscudo.mv(uploadPath, function(err) {
+                if (err) {
+                    return res.status(500).send(err);
+                } 
+            })
+
+        } else {
+            fotoEscudo = req.body.fotoEscudo
+        }
+
+
+        // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
+        if(req.files.fotoEstadio) {
+            
+            if (!fs.existsSync(`src/img/estadios/${paisDoTime}`)) {
+                fs.mkdirSync(`src/img/estadios/${paisDoTime}`, { recursive: true });
+            }
+
+            fotoEstadio = req.files.fotoEstadio;
+            uploadPath = `src/img/estadios/${paisDoTime}/${fotoEstadio.name}`
+
+                // Use the mv() method to place the file somewhere on your server
+            fotoEstadio.mv(uploadPath, function(err) {
+                if (err) {
+                    return res.status(500).send(err);
+                } 
+                // else {
+                //     return res.send('File uploaded!');
+                // }
+            });
+        } else {
+            fotoEstadio = req.body.fotoEstadio
+        }
     }
 
     console.log(fotoEstadio)
