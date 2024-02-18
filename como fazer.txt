@@ -1,0 +1,17 @@
+
+
+pegar competições continentais:
+pega o continente do pais do time, e pega o dados competições de nivel continental (europa ou america do sul)
+
+
+
+seperar adicionar time, criarDialogCadastro em um timesCreate.js?
+separar editar time, criarDialogEducao em um timesEdit.js?
+separar mostrar detalhes time, criarDialog em um timesShow.js?
+separar mostrar lista de times em um timesIndex.js?
+
+
+formData dos titulos
+
+colocar todos num array e
+passar para a funcao adicionar time
