@@ -68,28 +68,28 @@
             "nome": "UEFA Champions League",
             "logo": "../img/competicoes/Europa/ChampionsLeague.png",
             "trofeu": "../img/trofeus/Europa/ChampionsLeague.png",
-            "nivel": "Continental"
+            "nivel": "Continental - Europa"
         },
         {
             "id": "11",
             "nome": "UEFA Europa League",
             "logo": "../img/competicoes/Europa/EuropaLeague.png",
             "trofeu": "../img/trofeus/Europa/EuropaLeague.png",
-            "nivel": "Continental"
+            "nivel": "Continental - Europa"
         },
         {
             "id": "12",
             "nome": "UEFA Super Cup",
             "logo": "../img/competicoes/Europa/SuperCup.png",
             "trofeu": "../img/trofeus/Europa/SuperCup.png",
-            "nivel": "Continental"
+            "nivel": "Continental - Europa"
         },
         {
             "id": "13",
             "nome": "UEFA Conference League",
             "logo": "../img/competicoes/Europa/ConferenceLeague.png",
             "trofeu": "../img/trofeus/Europa/ConferenceLeague.png",
-            "nivel": "Continental"
+            "nivel": "Continental - Europa"
         },
         {
             "id": "14",
@@ -222,21 +222,21 @@
             "nome": "Copa Libertadores da América",
             "logo": "../img/competicoes/América do Sul/Libertadores.png",
             "trofeu": "../img/trofeus/América do Sul/Libertadores.png",
-            "nivel": "Continental"
+            "nivel": "Continental - América do Sul"
         },
         {
             "id": "33",
             "nome": "Copa Sul-Americana",
             "logo": "../img/competicoes/América do Sul/Sul-Americana.png",
             "trofeu": "../img/trofeus/América do Sul/Sul-Americana.png",
-            "nivel": "Continental"
+            "nivel": "Continental - América do Sul"
         },
         {
             "id": "34",
             "nome": "Recopa Sul-Americana",
             "logo": "../img/competicoes/América do Sul/RecopaSul-Americana.png",
             "trofeu": "../img/trofeus/América do Sul/RecopaSul-Americana.png",
-            "nivel": "Continental"
+            "nivel": "Continental - América do Sul"
         },
         {
             "id": "35",
