@@ -642,23 +642,24 @@ function criarDialog(time) {
 
 
 
-    document.getElementById('formCadastrarTime').addEventListener('submit', function (event){
-        event.preventDefault()
-        adicionarTime()
-    })
+    // document.getElementById('formCadastroTime').addEventListener('submit', function (event){
+    //     event.preventDefault()
+    //     adicionarTime()
+    // })
 
 
     function adicionarTime() {
+        console.log('adicionando time')
         const id = document.getElementById('id').value
-        const nome = document.getElementById('nome').value
+        const nome = document.getElementById('nomeTime').value
         const pais = document.getElementById('pais').value
         const email = document.getElementById('email').value
-        const fundacao = document.getElementById('fundacao').value
+        // const fundacao = document.getElementById('fundacao').value
         
-        const inputFotoEscudo = document.getElementById('fotoEscudo');
+        const inputFotoEscudo = document.getElementById('input-fotoEscudo');
         const fotoEscudo = inputFotoEscudo.files[0];
 
-        const inputFotoEstadio = document.getElementById('fotoEstadio');
+        const inputFotoEstadio = document.getElementById('input-fotoEstadio');
         const fotoEstadio = inputFotoEstadio.files[0];
 
         const formData = new FormData()
@@ -669,7 +670,7 @@ function criarDialog(time) {
         formData.append('nome', nome);
         formData.append('pais', pais);
         formData.append('email', email);
-        formData.append('fundacao', fundacao);
+        // formData.append('fundacao', fundacao);
 
         console.log(formData.get('nome'))
     
@@ -712,6 +713,10 @@ function criarDialogCadastro() {
     form.className = 'mt-5 mx-12 grid grid p-5'
     form.id = 'formCadastroTime'
     // form.className = 'mt-5 mx-12 grid gap-8 grid p-5'
+    form.addEventListener('submit', function (event){
+        event.preventDefault()
+        adicionarTime()
+    })
     
 
     dialogCadastro.appendChild(form)
@@ -800,9 +805,27 @@ function criarDialogCadastro() {
     divInfo.appendChild(divApelido)
 
 
+    //fundacao
+    let divFundacao = document.createElement('div')
+    divFundacao.className = 'py-3 pl-5 pr-10 border-r border-gray-200 grid gap-0'
+
+    let labelFundacao = document.createElement('label')
+    labelFundacao.innerText = 'Fundação:'
+    divFundacao.appendChild(labelFundacao)
+
+    let inputFundacao = document.createElement('input')
+    inputFundacao.className = 'border border-gray-400 p-2'
+    inputFundacao.type = 'date'
+    inputFundacao.id = 'fundacao'
+    // inputFundacao.setAttribute('required', true)
+    divFundacao.appendChild(inputFundacao)
+
+    divInfo.appendChild(divFundacao)
+
+
     //presidente
     let divPresidente = document.createElement('div')
-    divPresidente.className = 'py-3 pl-5 pr-10 border-r border-gray-200 grid gap-0'
+    divPresidente.className = 'py-3 pr-5 pl-10 border-l border-gray-200 grid gap-0'
 
     let labelPresidente = document.createElement('label')
     labelPresidente.innerText = 'Presidente:'
@@ -816,25 +839,6 @@ function criarDialogCadastro() {
     divPresidente.appendChild(inputPresidente)
 
     divInfo.appendChild(divPresidente)
-
-
-    //marca uniforme
-    let divMarcaUniforme = document.createElement('div')
-    divMarcaUniforme.className = 'py-3 pr-5 pl-10 border-l border-gray-200 grid gap-0'
-
-    let labelMarcaUniforme = document.createElement('label')
-    labelMarcaUniforme.innerText = 'Marca do Uniforme:'
-    divMarcaUniforme.appendChild(labelMarcaUniforme)
-
-    let inputMarcaUniforme = document.createElement('input')
-    inputMarcaUniforme.className = 'border border-gray-400 p-2'
-    inputMarcaUniforme.type = 'text'
-    inputMarcaUniforme.id = 'marcaUniforme'
-    // inputMarcaUniforme.setAttribute('required', true)
-    divMarcaUniforme.appendChild(inputMarcaUniforme)
-
-    divInfo.appendChild(divMarcaUniforme)
-
 
     //website
     let divWebsite = document.createElement('div')
@@ -1289,6 +1293,24 @@ function criarDialogCadastro() {
     divUniformes.className = 'grid grid-cols-2 gap-y-0 gap-x-0 px-8 pt-4 pb-8 bg-gray-100 shadow-md border-l-2 border-r-2 border-b-2 border-gray-200'
     form.appendChild(divUniformes)
 
+    // //marca uniforme
+    // let divMarcaUniforme = document.createElement('div')
+    // divMarcaUniforme.className = 'py-3 pl-5 grid gap-0 col-span-2 mb-5'
+
+    // let labelMarcaUniforme = document.createElement('label')
+    // labelMarcaUniforme.innerText = 'Marca do Uniforme:'
+    // divMarcaUniforme.appendChild(labelMarcaUniforme)
+
+    // let inputMarcaUniforme = document.createElement('input')
+    // inputMarcaUniforme.className = 'border border-gray-400 p-2 w-1/3'
+    // inputMarcaUniforme.type = 'text'
+    // inputMarcaUniforme.id = 'marcaUniforme'
+    // // inputMarcaUniforme.setAttribute('required', true)
+    // divMarcaUniforme.appendChild(inputMarcaUniforme)
+
+    // divUniformes.appendChild(divMarcaUniforme)
+
+
     let divUniformeHome = document.createElement('div')
     divUniformeHome.className = 'py-3 pr-10 pl-5 border-r border-gray-200 row-span-4 grid gap-0'
 
@@ -1539,6 +1561,32 @@ function criarDialogCadastro() {
 
 
 
+    //marca uniforme
+    let divMarcaUniforme = document.createElement('div')
+    divMarcaUniforme.className = 'py-3 pl-5 grid gap-0 col-span-2 mt-6'
+
+    let labelMarcaUniforme = document.createElement('label')
+    labelMarcaUniforme.innerText = 'Marca do Uniforme:'
+    divMarcaUniforme.appendChild(labelMarcaUniforme)
+
+    let inputMarcaUniforme = document.createElement('input')
+    inputMarcaUniforme.className = 'border border-gray-400 p-2 w-2/5'
+    inputMarcaUniforme.type = 'text'
+    inputMarcaUniforme.id = 'marcaUniforme'
+    // inputMarcaUniforme.setAttribute('required', true)
+    divMarcaUniforme.appendChild(inputMarcaUniforme)
+
+    divUniformes.appendChild(divMarcaUniforme)
+
+
+
+
+
+
+
+
+
+
 
 
     // form.appendChild(divFotoEscudo)
@@ -1756,8 +1804,19 @@ function carregarCompeticoes(pais, form) {
         })
     })
 
+    //BOTAO CADASTRAR
+    let botaoCadastrar = document.createElement('button')
+    botaoCadastrar.setAttribute("type", "submit")
+    botaoCadastrar.className = 'px-10 py-3 bg-gray-200 hover:bg-gray-100 border-2 border-gray-300 text-2xl font-bold mt-10 w-1/2 mx-auto mb-5'
+    botaoCadastrar.innerHTML = 'Cadastrar'
+    // botaoCadastrar.addEventListener("click", function() {
+    //     adicionarTime()
+    // })
+       
+    form.appendChild(botaoCadastrar)
    
-    
+ 
+
 
     // dialogCadastro.appendChild(divTitulos)
 }
