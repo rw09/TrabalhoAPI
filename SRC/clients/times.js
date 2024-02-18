@@ -55,170 +55,15 @@ function mostrarListaTimes(data) {
 }
 
 
-/*
-function carregarDetalhesTime(id, liga) {
 
-    //depois melhorar
-    if(liga != undefined) {
-        if(liga === 'Bundesliga') {
-            paisEscolhido = 'Alemanha'
-        } else if(liga === 'Premier League') {
-            paisEscolhido = 'Inglaterra'
-        } else if(liga === 'Brasileirão') {
-            paisEscolhido = 'Brasil'
-        }
-        
-        
-    }
-    fetch(`http://localhost:3000/api/times/${paisEscolhido}/${id}`)
-        .then(response => response.json())
-        .then(function(data) {
-            criarDialog(data)
-        })
-        .catch(error => console.error("Erro:", error))
-}
-*/
-/*
-function criarDialog(time) {
-    let dialog = document.createElement('dialog')
-    let cabecalho = document.createElement('div')
-    cabecalho.style.height = '270px'
-    cabecalho.style.display = 'grid'
-    cabecalho.style.gridTemplateColumns = '270px 1fr'
-    cabecalho.style.gridTemplateRows = '120px 1fr 1fr'
 
-    let logoDiv = document.createElement('div')
-    logoDiv.style.backgroundColor = '#fff'
-    logoDiv.style.gridRow = '1 / span 3';
-    logoDiv.style.display = 'flex'
-    logoDiv.style.justifyContent = 'center'
-    logoDiv.style.alignItems = 'center'
-    // logoDiv.style.border = '2px solid black'
-
-    let logo = document.createElement('img')
-    logo.style.height = '90%'
-    logo.src = time.escudo.replace('small', 'big')
-    logoDiv.appendChild(logo)
-
-    cabecalho.appendChild(logoDiv)
-
-    let nomeDiv = document.createElement('div')
-    // nomeDiv.style.gridRow = '1 / span 2';
-    nomeDiv.style.backgroundColor = time.cores[0]
-    nomeDiv.style.color = time.cores[1]
-    // nomeDiv.style.textAlign = 'center'
-    nomeDiv.style.display = 'flex'
-    nomeDiv.style.justifyContent = 'center'
-    nomeDiv.style.alignItems = 'center'
-
-    let nome = document.createElement('h1')
-    nome.innerText = time.nome_completo
-
-    nomeDiv.appendChild(nome)
-
-    cabecalho.appendChild(nomeDiv)
-
-
-
-
-
-
-
-
-    let corpo = document.createElement('div')
-    corpo.style.height = '320px'
-    corpo.style.backgroundColor = '#f5a000'
-    corpo.style.color = '#ffffff'
-    corpo.innerText = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam eos, harum modi alias accusamus odio, voluptatibus iusto eius sequi porro excepturi reiciendis animi, voluptates dicta! Non sapiente voluptatum numquam ex? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam eos, harum modi alias accusamus odio, voluptatibus iusto eius sequi porro excepturi reiciendis animi, voluptates dicta! Non sapiente voluptatum numquam ex? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam eos, harum modi alias accusamus odio, voluptatibus iusto eius sequi porro excepturi reiciendis animi, voluptates dicta! Non sapiente voluptatum numquam ex?"
-    // cabecalho.className = 'cabeçalho'
-    // cabecalho.style.backgroundColor = time.cores[0]
-    // cabecalho.style.color = time.cores[1]
-    // let logoCard = document.createElement('div')
-    // logoCard.style.backgroundColor = '#ffffff'
-    // let logo = document.createElement('img')
-    // logo.src = time.escudo.replace('small', 'big')
-    // logoCard.appendChild(logo)
-    // header.appendChild(logoCard)
-    dialog.appendChild(cabecalho)
-    dialog.appendChild(corpo)
-
-    document.body.appendChild(dialog)
-
-    dialog.showModal()
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//backup pra quando mostrar todos, contem a bandeira e o logo da liga
+//Mostrar Todos os Times
 function mostrarListaTodosTimes(data) {
     
     data.sort((a,b) => (a.nome > b.nome) ? 1 : ((b.nome > a.nome) ? -1 : 0))
 
     let listaDeTimes = document.createElement('section')
     listaDeTimes.id = 'listaDeTimes'
-    // listaDeTimes.className = 'grid sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-6 gap-y-10 p-8'
     listaDeTimes.className = 'grid sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 gap-y-10 p-8 bg-gray-50'
 
     let main = document.getElementById('main')
@@ -228,25 +73,14 @@ function mostrarListaTodosTimes(data) {
 
     data.forEach(time => {
         let cardTime = document.createElement('div')
-        // cardTime.className = 'group p-4 border border-gray-500 bg-white hover:cursor-pointer hover:shadow-xl hover:bg-[#ebe8e8] transition duration-300 ease-in-out'
         cardTime.className = 'group p-[18px] border-2 border-gray-300 bg-white  hover:cursor-pointer hover:shadow-xl hover:bg-[#ebe8e8] transition duration-300 ease-in-out'
         
         let cardTimeConteudo = document.createElement('div')
-        // cardTimeConteudo.className = "grid grid-rows-[80px 175px 105px] gap-y-7 justify-items-center text-center h-full bg-[#ebe8e8] pt-5 pb-8 border border-gray-500 group-hover:opacity-80 group-hover:border-[#ebe8e8] transition ease-in-out duration-300"
         cardTimeConteudo.className = "p-1 grid text-center justify-items-center items-center grid-rows-[40px_minmax(100px,_1fr)_80px] pt-5 pb-3 h-full bg-[#ebe8e8] border border-gray-300 group-hover:opacity-80 group-hover:border-[#ebe8e8] transition ease-in-out duration-300"
         
         cardTime.appendChild(cardTimeConteudo)
 
-        /*
-        let logoLiga = document.createElement('img')
-        logoLiga.src=`../img/ligas/${time.liga}.png`
-        logoLiga.className = 'w-2/6'
-      
-        cardTimeConteudo.appendChild(logoLiga)
-        */
-
         let divLogoLiga = document.createElement('div')
-        // divLogoLiga.className = 'grid grid-cols-2 items-center gap-1 mb-2'
         divLogoLiga.className = 'grid grid-cols-2 items-center gap-1'
 
         let imgBandeira = document.createElement('img')
@@ -263,8 +97,7 @@ function mostrarListaTodosTimes(data) {
 
         cardTimeConteudo.appendChild(divLogoLiga)
 
-
-        
+       
         let escudo = document.createElement('img')
         escudo.src = time.escudo
         escudo.className = 'pt-5'
@@ -310,7 +143,6 @@ function criarDialog(time) {
     divEscudo.className = "flex  items-center pl-8 pr-10 w-1/3"
 
     let escudo = document.createElement('img')
-    // escudo.style.height = '90%'
     escudo.className = "h-5/6"
     escudo.src = time.escudo.replace('small', 'big')
     divEscudo.appendChild(escudo)
@@ -445,22 +277,14 @@ function criarDialog(time) {
     info.appendChild(marcaUniforme)
 
     let website = document.createElement('h4')
-    // website.innerHTML = `<b>Website:</b> <a href=${time.website}>${time.website}</a>`
     website.innerHTML = '<b>Website:</b> ' + time.website
     website.className = 'bg-gray-200 p-2 pl-4'
     info.appendChild(website)
 
     let email = document.createElement('h4')
-    // email.innerHTML = `<b>E-mail:</b> <a href="mailto:${time.email}">${time.email}</a>`
     email.innerHTML = '<b>E-mail:</b> ' + time.email
     email.className = 'bg-gray-200 p-2 pl-4'
     info.appendChild(email)
-
-    
-
-    
-    
-
 
     divConteudos.appendChild(divInfo)
 
@@ -567,7 +391,6 @@ function criarDialog(time) {
         fetch(`http://localhost:3000/api/competicoes/${titulo.competicao}`)
         .then(response => response.json())
         .then(function(data) {
-            console.log(data)
 
             let divTituloImagensNome = document.createElement('div')
             divTituloImagensNome.className = 'flex gap-2 h-16 pb-2'
@@ -606,14 +429,7 @@ function criarDialog(time) {
     
     dialog.addEventListener("scroll", function() {
 
-        // let cabecalho = document.getElementById("cabecalho");
-
         let cabecalho = dialog.children[0]
-
-        // console.log(cabecalho)
-
-        // console.log(dialog.scrollTop)
-        // alert('deu')
 
         if (dialog.scrollTop > 20) {
             cabecalho.style.transition = "transform 0.2s ease";
@@ -640,16 +456,8 @@ function criarDialog(time) {
 }
 
 
-
-
-    // document.getElementById('formCadastroTime').addEventListener('submit', function (event){
-    //     event.preventDefault()
-    //     adicionarTime()
-    // })
-
-
     function adicionarTime() {
-        console.log('adicionando time')
+
         const id = document.getElementById('id').value
         const nome = document.getElementById('nomeTime').value
         const nomeCompleto = document.getElementById('nomeTimeCompleto').value
@@ -667,14 +475,27 @@ function criarDialog(time) {
         const inputFotoEscudo = document.getElementById('input-fotoEscudo');
         const fotoEscudo = inputFotoEscudo.files[0];
 
+        const cor1 = document.getElementById('cor1').value
+        const cor2 = document.getElementById('cor2').value
+        const cor3 = document.getElementById('cor3').value
+
         const resumo = document.getElementById('resumo').value
 
         const nomeEstadio = document.getElementById('nomeEstadio').value
         const inauguracaoEstadio = document.getElementById('inauguracaoEstadio').value
         const capacidadeEstadio = document.getElementById('capacidadeEstadio').value
 
+
         const inputFotoEstadio = document.getElementById('input-fotoEstadio');
-        const fotoEstadio = inputFotoEstadio.files[0];
+        const urlFotoEstadio = document.getElementById('url-fotoEstadio').value;
+
+        let fotoEstadio = ''
+        
+        if(inputFotoEstadio.files[0]) {
+            fotoEstadio = inputFotoEstadio.files[0];
+        } else if(urlFotoEstadio) {
+            fotoEstadio = urlFotoEstadio
+        }
 
 
 
@@ -696,6 +517,10 @@ function criarDialog(time) {
 
         formData.append('fotoEscudo', fotoEscudo);
 
+        formData.append('cor1', cor1);
+        formData.append('cor2', cor2);
+        formData.append('cor3', cor3);
+
         formData.append('resumo', resumo);
 
         formData.append('nomeEstadio', nomeEstadio);
@@ -705,19 +530,15 @@ function criarDialog(time) {
         formData.append('fotoEstadio', fotoEstadio);
 
         
-        
-
-        console.log(formData.get('nome'))
-        console.log(formData)
-    
         fetch('http://localhost:3000/api/times', {
             method: 'POST',
             body: formData
         })
         .then(response => response.json())
-        // .then(data => {
-        //     console.log(data)
-        // })
+        .then(() =>{
+            let dialogCadastro = document.getElementById('dialogCadastro')
+            dialogCadastro.remove()
+        })
         .catch(error => console.error("Erro:", error))
     }
 
@@ -734,10 +555,10 @@ function criarDialog(time) {
 
 function criarDialogCadastro() {
     let paisDoTimeSerCriado = 'Alemanha'
-    console.log(paisDoTimeSerCriado)
 
     let dialogCadastro = document.createElement('dialog')
     dialogCadastro.className = 'h-full w-5/6'
+    dialogCadastro.id = 'dialogCadastro'
 
     let tituloCadastro = document.createElement('h1')
     tituloCadastro.className = 'text-2xl font-bold text-center p-5 mt-8'
@@ -748,7 +569,7 @@ function criarDialogCadastro() {
     let form = document.createElement('form')
     form.className = 'mt-5 mx-12 grid grid p-5'
     form.id = 'formCadastroTime'
-    // form.className = 'mt-5 mx-12 grid gap-8 grid p-5'
+
     form.addEventListener('submit', function (event){
         event.preventDefault()
         adicionarTime()
@@ -759,7 +580,6 @@ function criarDialogCadastro() {
 
     let tituloInfo = document.createElement('h3')
     tituloInfo.className = 'text-lg border-2 border-gray-300 font-medium bg-gray-200 pl-4 py-3'
-    // tituloInfo.className = 'text-lg border-b-2 border-gray-400 font-medium'
     tituloInfo.innerText = 'Informações:'
 
     form.appendChild(tituloInfo)
@@ -835,7 +655,6 @@ function criarDialogCadastro() {
     inputApelido.className = 'border border-gray-400 p-2'
     inputApelido.type = 'text'
     inputApelido.id = 'apelido'
-    // inputApelido.setAttribute('required', true)
     divApelido.appendChild(inputApelido)
 
     divInfo.appendChild(divApelido)
@@ -853,7 +672,6 @@ function criarDialogCadastro() {
     inputFundacao.className = 'border border-gray-400 p-2'
     inputFundacao.type = 'date'
     inputFundacao.id = 'fundacao'
-    // inputFundacao.setAttribute('required', true)
     divFundacao.appendChild(inputFundacao)
 
     divInfo.appendChild(divFundacao)
@@ -871,7 +689,6 @@ function criarDialogCadastro() {
     inputPresidente.className = 'border border-gray-400 p-2'
     inputPresidente.type = 'text'
     inputPresidente.id = 'presidente'
-    // inputPresidente.setAttribute('required', true)
     divPresidente.appendChild(inputPresidente)
 
     divInfo.appendChild(divPresidente)
@@ -888,7 +705,6 @@ function criarDialogCadastro() {
     inputWebsite.className = 'border border-gray-400 p-2'
     inputWebsite.type = 'text'
     inputWebsite.id = 'website'
-    // inputWebsite.setAttribute('required', true)
     divWebsite.appendChild(inputWebsite)
 
     divInfo.appendChild(divWebsite)
@@ -906,7 +722,6 @@ function criarDialogCadastro() {
     inputEmail.className = 'border border-gray-400 p-2'
     inputEmail.type = 'text'
     inputEmail.id = 'email'
-    // inputEmail.setAttribute('required', true)
     divEmail.appendChild(inputEmail)
 
     divInfo.appendChild(divEmail)
@@ -924,7 +739,6 @@ function criarDialogCadastro() {
     inputCidade.className = 'border border-gray-400 p-2'
     inputCidade.type = 'text'
     inputCidade.id = 'cidade'
-    // inputCidade.setAttribute('required', true)
     divCidade.appendChild(inputCidade)
 
     divInfo.appendChild(divCidade)
@@ -942,7 +756,6 @@ function criarDialogCadastro() {
     inputEstado.className = 'border border-gray-400 p-2'
     inputEstado.type = 'text'
     inputEstado.id = 'estado'
-    // inputCidade.setAttribute('required', true)
     divEstado.appendChild(inputEstado)
 
     divInfo.appendChild(divEstado)
@@ -965,13 +778,7 @@ function criarDialogCadastro() {
         //precisa? estou passando para a função
         paisDoTimeSerCriado = selectPais.value
 
-
-        //to aquiiii
-
-        //precisa chamar uma função para fazer o fetch
-        
         carregarLigas(selectPais.value)
-        // carregarCompeticoes(selectPais.value)
     })
 
     divPais.appendChild(selectPais)
@@ -1012,15 +819,9 @@ function criarDialogCadastro() {
     divInfo.appendChild(divLiga)
 
 
-    //AQUI
-    //let divEscudo = document.createElement('div')
-    //divEscudo.className = 'grid grid-cols-2 gap-y-0 gap-x-0 px-8 pt-4 pb-8 bg-gray-100 shadow-md border-l-2 border-r-2 border-b-2 border-gray-200'
-    
-
     //foto escudo
     let divFotoEscudo = document.createElement('div')
     divFotoEscudo.className = 'py-3 pr-10 pl-5 border-r border-gray-200 row-span-4 grid gap-0 pt-14'
-
 
     let labelEscudo = document.createElement('label')
     labelEscudo.innerText = 'Escudo:'
@@ -1043,7 +844,6 @@ function criarDialogCadastro() {
     inputFotoEscudo.type = 'file'
     inputFotoEscudo.id = 'input-fotoEscudo'
     inputFotoEscudo.name = 'fotoEscudo'
-    // inputFotoEscudo.setAttribute('required', true)
 
     inputFotoEscudo.addEventListener("change", function() {
         carregarFoto(this)
@@ -1059,7 +859,6 @@ function criarDialogCadastro() {
     inputURLEscudo.type = 'text'
     inputURLEscudo.id = 'url-fotoEscudo'
     inputURLEscudo.setAttribute("placeholder", "Escolha um arquivo ou cole aqui a URL da imagem")
-    // inputURLEstadio.setAttribute('required', true)
     divInputURLEscudo.appendChild(inputURLEscudo)
 
     let botaoCarregarURLEscudo = document.createElement('button')
@@ -1075,40 +874,10 @@ function criarDialogCadastro() {
 
     divFotoEscudo.appendChild(divInputURLEscudo)
 
-    //alterei aqui, 16/02 - 19:36 - tava form.appendChild...
     divInfo.appendChild(divFotoEscudo)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //cores do time
     let divCores = document.createElement('div')
     divCores.className = 'py-3 pl-10 pr-5 border-l border-gray-200 grid gap-0 pt-14 row-span-4 content-start'
 
@@ -1148,12 +917,6 @@ function criarDialogCadastro() {
     divInfo.appendChild(divCores)
 
 
-
-
-
-
-
-
     //resumo
     let divResumo = document.createElement('div')
     divResumo.className = 'py-3 px-5 grid col-span-2 mt-10'
@@ -1165,11 +928,9 @@ function criarDialogCadastro() {
     let textAreaResumo = document.createElement('textarea')
     textAreaResumo.className = 'border border-gray-400 p-2 h-48'
     textAreaResumo.id = 'resumo'
-    // textAreaResumo.setAttribute('required', true)
     divResumo.appendChild(textAreaResumo)
 
     divInfo.appendChild(divResumo)
-
 
 
     //ESTADIO
@@ -1195,7 +956,6 @@ function criarDialogCadastro() {
     inputNomeEstadio.className = 'border border-gray-400 p-2'
     inputNomeEstadio.type = 'text'
     inputNomeEstadio.id = 'nomeEstadio'
-    // inputNomeEstadio.setAttribute('required', true)
     divNomeEstadio.appendChild(inputNomeEstadio)
 
     divEstadio.appendChild(divNomeEstadio)
@@ -1225,7 +985,6 @@ function criarDialogCadastro() {
     inputFotoEstadio.type = 'file'
     inputFotoEstadio.id = 'input-fotoEstadio'
     inputFotoEstadio.name = 'fotoEstadio'
-    // inputFotoEstadio.setAttribute('required', true)
 
     inputFotoEstadio.addEventListener("change", function() {
         carregarFoto(this)
@@ -1272,7 +1031,6 @@ function criarDialogCadastro() {
     inputInauguracaoEstadio.className = 'border border-gray-400 p-2'
     inputInauguracaoEstadio.type = 'text'
     inputInauguracaoEstadio.id = 'inauguracaoEstadio'
-    // inputInauguracaoEstadio.setAttribute('required', true)
     divInauguracaoEstadio.appendChild(inputInauguracaoEstadio)
 
     divEstadio.appendChild(divInauguracaoEstadio)
@@ -1290,32 +1048,9 @@ function criarDialogCadastro() {
     inputCapacidadeEstadio.className = 'border border-gray-400 p-2'
     inputCapacidadeEstadio.type = 'text'
     inputCapacidadeEstadio.id = 'capacidadeEstadio'
-    // inputCapacidadeEstadio.setAttribute('required', true)
     divCapacidadeEstadio.appendChild(inputCapacidadeEstadio)
 
     divEstadio.appendChild(divCapacidadeEstadio)
-
-
-    // carregarCompeticoes(paisDoTimeSerCriado, form)
-    
-    /*
-    let divResumo = document.createElement('div')
-    divResumo.className = 'py-3 px-5 grid col-span-2 mt-10'
-
-    let labelResumo = document.createElement('label')
-    labelResumo.innerText = 'Resumo:'
-    divResumo.appendChild(labelResumo)
-
-    let textAreaResumo = document.createElement('textarea')
-    textAreaResumo.className = 'border border-gray-400 p-2 h-40'
-    textAreaResumo.id = 'resumo'
-    // textAreaResumo.setAttribute('required', true)
-    divResumo.appendChild(textAreaResumo)
-
-    divInfo.appendChild(divResumo)
-*/
-
-
 
 
     //UNIFORMES
@@ -1328,23 +1063,6 @@ function criarDialogCadastro() {
     let divUniformes = document.createElement('div')
     divUniformes.className = 'grid grid-cols-2 gap-y-0 gap-x-0 px-8 pt-4 pb-8 bg-gray-100 shadow-md border-l-2 border-r-2 border-b-2 border-gray-200'
     form.appendChild(divUniformes)
-
-    // //marca uniforme
-    // let divMarcaUniforme = document.createElement('div')
-    // divMarcaUniforme.className = 'py-3 pl-5 grid gap-0 col-span-2 mb-5'
-
-    // let labelMarcaUniforme = document.createElement('label')
-    // labelMarcaUniforme.innerText = 'Marca do Uniforme:'
-    // divMarcaUniforme.appendChild(labelMarcaUniforme)
-
-    // let inputMarcaUniforme = document.createElement('input')
-    // inputMarcaUniforme.className = 'border border-gray-400 p-2 w-1/3'
-    // inputMarcaUniforme.type = 'text'
-    // inputMarcaUniforme.id = 'marcaUniforme'
-    // // inputMarcaUniforme.setAttribute('required', true)
-    // divMarcaUniforme.appendChild(inputMarcaUniforme)
-
-    // divUniformes.appendChild(divMarcaUniforme)
 
 
     let divUniformeHome = document.createElement('div')
@@ -1373,7 +1091,6 @@ function criarDialogCadastro() {
     inputFotoUniformeHome.type = 'file'
     inputFotoUniformeHome.id = 'input-fotoUniformeHome'
     inputFotoUniformeHome.name = 'fotoUniformeHome'
-    // inputFotoEscudo.setAttribute('required', true)
 
     inputFotoUniformeHome.addEventListener("change", function() {
         carregarFoto(this)
@@ -1389,7 +1106,6 @@ function criarDialogCadastro() {
     inputURLUniformeHome.type = 'text'
     inputURLUniformeHome.id = 'url-fotoUniformeHome'
     inputURLUniformeHome.setAttribute("placeholder", "Escolha um arquivo ou cole aqui a URL da imagem")
-    // inputURLEstadio.setAttribute('required', true)
     divInputURLUniformeHome.appendChild(inputURLUniformeHome)
 
     let botaoCarregarURLUniformeHome = document.createElement('button')
@@ -1406,11 +1122,6 @@ function criarDialogCadastro() {
     divUniformeHome.appendChild(divInputURLUniformeHome)
 
 
-
-
-
-
-
     let divUniformeAway = document.createElement('div')
     divUniformeAway.className = 'py-3 pl-10 pr-5 border-l border-gray-200 row-span-4 grid gap-0'
 
@@ -1420,7 +1131,6 @@ function criarDialogCadastro() {
     
     let fotoUniformeAway = document.createElement('img')
     fotoUniformeAway.className = 'border border-gray-200 w-52 h-52'
-    // fotoEstadio.src = '../img/SemImagem.png'
     fotoUniformeAway.id = 'imagem-fotoUniformeAway'
 
     fotoUniformeAway.addEventListener("error", function() {
@@ -1437,7 +1147,6 @@ function criarDialogCadastro() {
     inputFotoUniformeAway.type = 'file'
     inputFotoUniformeAway.id = 'input-fotoUniformeAway'
     inputFotoUniformeAway.name = 'fotoUniformeAway'
-    // inputFotoEscudo.setAttribute('required', true)
 
     inputFotoUniformeAway.addEventListener("change", function() {
         carregarFoto(this)
@@ -1453,7 +1162,6 @@ function criarDialogCadastro() {
     inputURLUniformeAway.type = 'text'
     inputURLUniformeAway.id = 'url-fotoUniformeAway'
     inputURLUniformeAway.setAttribute("placeholder", "Escolha um arquivo ou cole aqui a URL da imagem")
-    // inputURLEstadio.setAttribute('required', true)
     divInputURLUniformeAway.appendChild(inputURLUniformeAway)
 
     let botaoCarregarURLUniformeAway = document.createElement('button')
@@ -1470,9 +1178,6 @@ function criarDialogCadastro() {
     divUniformeAway.appendChild(divInputURLUniformeAway)
 
 
-
-
-
     let divUniformeThird = document.createElement('div')
     divUniformeThird.className = 'py-3 pr-10 pl-5 border-r border-gray-200 row-span-4 grid gap-0 pt-10'
 
@@ -1482,7 +1187,6 @@ function criarDialogCadastro() {
     
     let fotoUniformeThird = document.createElement('img')
     fotoUniformeThird.className = 'border border-gray-200 w-52 h-52'
-    // fotoEstadio.src = '../img/SemImagem.png'
     fotoUniformeThird.id = 'imagem-fotoUniformeThird'
 
     fotoUniformeThird.addEventListener("error", function() {
@@ -1499,7 +1203,6 @@ function criarDialogCadastro() {
     inputFotoUniformeThird.type = 'file'
     inputFotoUniformeThird.id = 'input-fotoUniformeThird'
     inputFotoUniformeThird.name = 'fotoUniformeThird'
-    // inputFotoEscudo.setAttribute('required', true)
 
     inputFotoUniformeThird.addEventListener("change", function() {
         carregarFoto(this)
@@ -1515,7 +1218,6 @@ function criarDialogCadastro() {
     inputURLUniformeThird.type = 'text'
     inputURLUniformeThird.id = 'url-fotoUniformeThird'
     inputURLUniformeThird.setAttribute("placeholder", "Escolha um arquivo ou cole aqui a URL da imagem")
-    // inputURLEstadio.setAttribute('required', true)
     divInputURLUniformeThird.appendChild(inputURLUniformeThird)
 
     let botaoCarregarURLUniformeThird = document.createElement('button')
@@ -1532,9 +1234,6 @@ function criarDialogCadastro() {
     divUniformeThird.appendChild(divInputURLUniformeThird)
 
 
-
-
-
     let divUniformeGK = document.createElement('div')
     divUniformeGK.className = 'py-3 pl-10 pr-5 border-l border-gray-200 row-span-4 grid gap-0 pt-10'
 
@@ -1544,7 +1243,6 @@ function criarDialogCadastro() {
     
     let fotoUniformeGK = document.createElement('img')
     fotoUniformeGK.className = 'border border-gray-200 w-52 h-52'
-    // fotoEstadio.src = '../img/SemImagem.png'
     fotoUniformeGK.id = 'imagem-fotoUniformeGK'
 
     fotoUniformeGK.addEventListener("error", function() {
@@ -1561,7 +1259,6 @@ function criarDialogCadastro() {
     inputFotoUniformeGK.type = 'file'
     inputFotoUniformeGK.id = 'input-fotoUniformeGK'
     inputFotoUniformeGK.name = 'fotoUniformeGK'
-    // inputFotoEscudo.setAttribute('required', true)
 
     inputFotoUniformeGK.addEventListener("change", function() {
         carregarFoto(this)
@@ -1577,7 +1274,6 @@ function criarDialogCadastro() {
     inputURLUniformeGK.type = 'text'
     inputURLUniformeGK.id = 'url-fotoUniformeGK'
     inputURLUniformeGK.setAttribute("placeholder", "Escolha um arquivo ou cole aqui a URL da imagem")
-    // inputURLEstadio.setAttribute('required', true)
     divInputURLUniformeGK.appendChild(inputURLUniformeGK)
 
     let botaoCarregarURLUniformeGK = document.createElement('button')
@@ -1594,9 +1290,6 @@ function criarDialogCadastro() {
     divUniformeGK.appendChild(divInputURLUniformeGK)
 
 
-
-
-
     //marca uniforme
     let divMarcaUniforme = document.createElement('div')
     divMarcaUniforme.className = 'py-3 pl-5 grid gap-0 col-span-2 mt-6'
@@ -1609,28 +1302,11 @@ function criarDialogCadastro() {
     inputMarcaUniforme.className = 'border border-gray-400 p-2 w-2/5'
     inputMarcaUniforme.type = 'text'
     inputMarcaUniforme.id = 'marcaUniforme'
-    // inputMarcaUniforme.setAttribute('required', true)
     divMarcaUniforme.appendChild(inputMarcaUniforme)
 
     divUniformes.appendChild(divMarcaUniforme)
 
-
-
-
-
-
-
-
-
-
-
-
-    // form.appendChild(divFotoEscudo)
-
     form.appendChild(divUniformes)
-
-
-
 
     document.body.appendChild(dialogCadastro)
 
@@ -1642,39 +1318,29 @@ function criarDialogCadastro() {
 }
 
 function carregarLigas(pais) {
-console.log('carregando ligas')
+
     let selectLiga = document.getElementById('selectLiga')
-    console.log(selectLiga)
-    
     selectLiga.innerHTML = '';
 
     fetch(`http://localhost:3000/api/paises/ligas/${pais}`)
         .then(response => response.json())
         .then(function(data) {
             data.forEach(liga => {
-                console.log('ola')
-                console.log(liga)
                 let option = document.createElement('option')
                 option.value = liga
                 option.innerText = liga
-                console.log(option)
                 selectLiga.appendChild(option)
-                console.log(selectLiga)
             });
         })
         .then(function () {
-            console.log('carregando competicoes')
-            console.log(pais)
             carregarCompeticoes(pais)
-
         })
         .catch(error => console.error("Erro:", error))
 }
 
 
 function carregarFoto(e) {
-    alert(e.id)
-    console.log(e.files)
+
     let foto = document.getElementById(`imagem-${e.id.replace("input-", "")}`)
     foto.src = window.URL.createObjectURL(e.files[0]);
 
@@ -1683,20 +1349,12 @@ function carregarFoto(e) {
 }
 
 
-
-//ver se nao posso pegar o e
 function carregarURLFoto(e) {
-    alert(e.id + '\n\n' + `input-${e.id.replace("url-", "")}`)
-    console.log('uepa')
-    console.log(e)
+
     let url = document.getElementById(e.id)
-    console.log(url.value)
     let foto = document.getElementById(`imagem-${e.id.replace("url-", "")}`)
-    // console.log(foto)
     foto.src = url.value
 
-    //depois remover o arquivo selecionado do input
-    //fazer buscar o id
     let inputFoto = document.getElementById(`input-${e.id.replace("url-", "")}`)
     inputFoto.value = []
 }
@@ -1710,24 +1368,26 @@ function erroImagem (e) {
 }
 
 function carregarCompeticoes(pais, form) {
-    console.log('VEIOO carregando competicoes')
-    console.log(pais)
+
     let divTituloAntiga = document.getElementById('tituloTitulos')
     let divTituloConteudoAntiga = document.getElementById('divTitulosCadastro')
     
-
     if(divTituloAntiga) {
         divTituloAntiga.remove()
-        botaoCadastrar.remove()
     }
     if(divTituloConteudoAntiga) {
         divTituloConteudoAntiga.remove()
     }
 
+    let botao = document.getElementById('botaoCadastrar')
+
+    if(botao) {
+        botao.remove()
+    }
+
     //Títulos
     let tituloTitulos = document.createElement('h3')
     tituloTitulos.className = 'text-lg border-2 border-gray-300 font-medium bg-gray-200 pl-4 py-3 mt-10'
-    // tituloTitulos.className = 'text-lg border-b-2 border-gray-400 font-medium'
     tituloTitulos.innerText = 'Títulos:'
     tituloTitulos.id = 'tituloTitulos'
 
@@ -1737,21 +1397,26 @@ function carregarCompeticoes(pais, form) {
     
     form.appendChild(tituloTitulos)
 
-
     //TITULOS
     let divTitulos = document.createElement('div')
     divTitulos.className = 'grid grid-cols-2 gap-y-0 gap-x-0 px-8 pt-4 pb-8 bg-gray-100 shadow-md border-l-2 border-r-2 border-b-2 border-gray-200'
     divTitulos.id = 'divTitulosCadastro'
     form.appendChild(divTitulos)
 
+    //BOTAO CADASTRAR
+    let botaoCadastrar = document.createElement('button')
+    botaoCadastrar.setAttribute("type", "submit")
+    botaoCadastrar.className = 'px-10 py-3 bg-gray-200 hover:bg-gray-100 border-2 border-gray-300 text-2xl font-bold mt-10 w-1/2 mx-auto mb-5'
+    botaoCadastrar.innerHTML = 'Cadastrar'
+    botaoCadastrar.id = 'botaoCadastrar'
+      
+    form.appendChild(botaoCadastrar)
+
 
     fetch(`http://localhost:3000/api/paises/${pais}`)
     .then(response => response.json())
     .then(function(data) {
-        console.log('aaaaaaaaaaaaaaaaaaaaaaaeeeeeeeeeeeeeeeeeeeeeeeeeeeee')
-        console.log(data.campeonatos)
-
-        console.log('PQPQPQPQPQPQ' + data.continente)
+        
         let campeonatos = data.campeonatos
         let copas = data.copas
 
@@ -1768,7 +1433,6 @@ function carregarCompeticoes(pais, form) {
             textAreaCampeonato.className = 'border border-gray-400 p-2 h-32'
             textAreaCampeonato.id = `campeonato-${campeonato}`
             textAreaCampeonato.setAttribute('placeholder', 'Ex: 2001-02, 2005-08, 2010-11, 2021-22')
-            // textAreaResumo.setAttribute('required', true)
             divCampeonato.appendChild(textAreaCampeonato)
     
             divTitulos.appendChild(divCampeonato)    
@@ -1787,20 +1451,15 @@ function carregarCompeticoes(pais, form) {
             textAreaCopa.className = 'border border-gray-400 p-2 h-32'
             textAreaCopa.id = `copa-${copa}`
             textAreaCopa.setAttribute('placeholder', 'Ex: 2001-02, 2005-08, 2010-11, 2021-22')
-            // textAreaResumo.setAttribute('required', true)
             divCopa.appendChild(textAreaCopa)
     
             divTitulos.appendChild(divCopa)    
         });
         
-        // se time eh europeu, fazer o fetch passando europa
-        // se time eh sul americano, fazer o fetch passando america do sul
-        // continente neh, no server.get que a gente faz o includes()
+
         fetch(`http://localhost:3000/api/competicoes/continental/${data.continente}`)
         .then(response => response.json())
         .then(function(data) {
-            console.log('Competições continentais')
-            console.log(data)
 
             data.forEach(campeonato => {
                 let divCampeonato = document.createElement('div')
@@ -1815,7 +1474,6 @@ function carregarCompeticoes(pais, form) {
                 textAreaCampeonato.className = 'border border-gray-400 p-2 h-32'
                 textAreaCampeonato.id = campeonato.nome
                 textAreaCampeonato.setAttribute('placeholder', 'Ex: 2001-02, 2005-08, 2010-11, 2021-22')
-                // textAreaResumo.setAttribute('required', true)
                 divCampeonato.appendChild(textAreaCampeonato)
         
                 divTitulos.appendChild(divCampeonato)    
@@ -1834,26 +1492,11 @@ function carregarCompeticoes(pais, form) {
             textAreaCampeonato.className = 'border border-gray-400 p-2 h-32'
             textAreaCampeonato.id = 'FIFA Club World Cup'
             textAreaCampeonato.setAttribute('placeholder', 'Ex: 2001-02, 2005-08, 2010-11, 2021-22')
-            // textAreaResumo.setAttribute('required', true)
             divCampeonato.appendChild(textAreaCampeonato)
     
             divTitulos.appendChild(divCampeonato)   
         })
     })
 
-    //BOTAO CADASTRAR
-    let botaoCadastrar = document.createElement('button')
-    botaoCadastrar.setAttribute("type", "submit")
-    botaoCadastrar.className = 'px-10 py-3 bg-gray-200 hover:bg-gray-100 border-2 border-gray-300 text-2xl font-bold mt-10 w-1/2 mx-auto mb-5'
-    botaoCadastrar.innerHTML = 'Cadastrar'
-    // botaoCadastrar.addEventListener("click", function() {
-    //     adicionarTime()
-    // })
-       
-    form.appendChild(botaoCadastrar)
-   
- 
 
-
-    // dialogCadastro.appendChild(divTitulos)
 }
