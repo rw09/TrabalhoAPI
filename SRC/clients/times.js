@@ -473,11 +473,25 @@ function criarDialog(time) {
         const liga = document.getElementById('selectLiga').value
 
         const inputFotoEscudo = document.getElementById('input-fotoEscudo');
-        const fotoEscudo = inputFotoEscudo.files[0];
+        const urlFotoEscudo = document.getElementById('url-fotoEscudo').value;
+
+        let fotoEscudo = ''
+        
+        if(inputFotoEscudo.files[0]) {
+            fotoEscudo = inputFotoEscudo.files[0];
+        } else if(urlFotoEscudo) {
+            fotoEscudo = urlFotoEscudo
+        }
 
         const cor1 = document.getElementById('cor1').value
         const cor2 = document.getElementById('cor2').value
         const cor3 = document.getElementById('cor3').value
+
+        let cores = [ cor1, cor2 ]
+
+        if(cor3 !== '#F3F4F6') {
+            cores.push(cor3)
+        }
 
         const resumo = document.getElementById('resumo').value
 
@@ -517,9 +531,7 @@ function criarDialog(time) {
 
         formData.append('fotoEscudo', fotoEscudo);
 
-        formData.append('cor1', cor1);
-        formData.append('cor2', cor2);
-        formData.append('cor3', cor3);
+        formData.append('cores', cores);
 
         formData.append('resumo', resumo);
 

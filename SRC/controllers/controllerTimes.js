@@ -59,31 +59,73 @@ server.post('/times', function(req, res)  {
     console.log(novoTime)
 
     let fotoEstadio;
+    let fotoEscudo;
     let uploadPath;
-
+    
     let paisDoTime = 'Tokyio'
 
-    if (!fs.existsSync(`src/img/estadios/${paisDoTime}`)) {
-        fs.mkdirSync(`src/img/estadios/${paisDoTime}`, { recursive: true });
+
+    if(req.files.fotoEscudo) {
+        
+        if (!fs.existsSync(`src/img/escudos/${paisDoTime}/big`)) {
+            fs.mkdirSync(`src/img/escudos/${paisDoTime}/big`, { recursive: true });
+        }
+
+        //temp
+        if (!fs.existsSync(`src/img/escudos/${paisDoTime}/small`)) {
+            fs.mkdirSync(`src/img/escudos/${paisDoTime}/small`, { recursive: true });
+        }
+
+        fotoEscudo = req.files.fotoEscudo;
+        uploadPath = `src/img/escudos/${paisDoTime}/big/${fotoEscudo.name}`
+
+        // Use the mv() method to place the file somewhere on your server
+        fotoEscudo.mv(uploadPath, function(err) {
+            if (err) {
+                return res.status(500).send(err);
+            } 
+        })
+
+        uploadPath = `src/img/escudos/${paisDoTime}/small/${fotoEscudo.name}`
+
+        // Use the mv() method to place the file somewhere on your server
+        fotoEscudo.mv(uploadPath, function(err) {
+            if (err) {
+                return res.status(500).send(err);
+            } 
+        })
+
+    } else {
+        fotoEscudo = req.body.fotoEscudo
     }
 
+
     // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
-    fotoEstadio = req.files.fotoEstadio;
-    // uploadPath = path.join(__dirname, '..', 'hello', fotoEstadio.name)
-    // uploadPath = path.join(__dirname, '..', 'img', 'estadios', paisDoTime, fotoEstadio.name)
-    uploadPath = `src/img/estadios/${paisDoTime}/${fotoEstadio.name}`
+    if(req.files.fotoEstadio) {
+        
+        if (!fs.existsSync(`src/img/estadios/${paisDoTime}`)) {
+            fs.mkdirSync(`src/img/estadios/${paisDoTime}`, { recursive: true });
+        }
 
-    console.log(uploadPath)
+        fotoEstadio = req.files.fotoEstadio;
+        uploadPath = `src/img/estadios/${paisDoTime}/${fotoEstadio.name}`
 
-    // Use the mv() method to place the file somewhere on your server
-    fotoEstadio.mv(uploadPath, function(err) {
-        if (err)
-        return res.status(500).send(err);
+            // Use the mv() method to place the file somewhere on your server
+        fotoEstadio.mv(uploadPath, function(err) {
+            if (err) {
+                return res.status(500).send(err);
+            } 
+            // else {
+            //     return res.send('File uploaded!');
+            // }
+        });
+    } else {
+        fotoEstadio = req.body.fotoEstadio
+    }
 
-        res.send('File uploaded!');
-    });
+    console.log(fotoEstadio)
     
-    // res.status(200).json({ mensagem: "Time criado com sucesso" });
+    return  res.status(200).json({ mensagem: "Time criado com sucesso" });
 })
 
 
