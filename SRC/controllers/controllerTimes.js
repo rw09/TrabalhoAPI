@@ -56,15 +56,20 @@ server.post('/times', function(req, res)  {
     
     const novoTime = req.body;
 
-    console.log(novoTime)
+    // console.log(novoTime)
 
     let fotoEstadio;
     let fotoEscudo;
+    let fotoUniformeHome;
+    let fotoUniformeAway;
+    let fotoUniformeThird;
+    let fotoUniformeGK;
     let uploadPath;
     
-    let paisDoTime = 'Tokyio'
+    let paisDoTime = 'Auebas'
+    // let paisDoTime = novoTime.pais
 
-    console.log(req.files)
+    // console.log(req.files)
 
     if(req.files) {
         
@@ -80,7 +85,7 @@ server.post('/times', function(req, res)  {
             }
 
             fotoEscudo = req.files.fotoEscudo;
-            uploadPath = `src/img/escudos/${paisDoTime}/big/${fotoEscudo.name}`
+            uploadPath = `src/img/escudos/${paisDoTime}/big/${novoTime.nome}.png`
 
             // Use the mv() method to place the file somewhere on your server
             fotoEscudo.mv(uploadPath, function(err) {
@@ -89,7 +94,7 @@ server.post('/times', function(req, res)  {
                 } 
             })
 
-            uploadPath = `src/img/escudos/${paisDoTime}/small/${fotoEscudo.name}`
+            uploadPath = `src/img/escudos/${paisDoTime}/small/${novoTime.nome}.png`
 
             // Use the mv() method to place the file somewhere on your server
             fotoEscudo.mv(uploadPath, function(err) {
@@ -97,6 +102,8 @@ server.post('/times', function(req, res)  {
                     return res.status(500).send(err);
                 } 
             })
+
+            fotoEscudo = uploadPath.replace("src", "..")
 
         } else {
             fotoEscudo = req.body.fotoEscudo
@@ -105,53 +112,194 @@ server.post('/times', function(req, res)  {
 
         // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
         if(req.files.fotoEstadio) {
+
+            console.log(req.files.fotoEstadio)
+            console.log(fotoEstadio)
             
             if (!fs.existsSync(`src/img/estadios/${paisDoTime}`)) {
                 fs.mkdirSync(`src/img/estadios/${paisDoTime}`, { recursive: true });
             }
 
             fotoEstadio = req.files.fotoEstadio;
-            uploadPath = `src/img/estadios/${paisDoTime}/${fotoEstadio.name}`
+            uploadPath = `src/img/estadios/${paisDoTime}/${novoTime.nomeEstadio}.png`
+
+            console.log('********** UPILOADIPATI')
+            console.log(uploadPath)
+            console.log('********** foto estadio 2.name')
+            console.log(fotoEstadio.name)
 
                 // Use the mv() method to place the file somewhere on your server
             fotoEstadio.mv(uploadPath, function(err) {
                 if (err) {
                     return res.status(500).send(err);
                 } 
-                // else {
-                //     return res.send('File uploaded!');
-                // }
             });
+
+            fotoEstadio = uploadPath.replace("src", "..")
+            console.log('********** foto estadio 3 a vingança')
+            console.log(fotoEstadio)
         } else {
+            console.log('entrou aqui e nao devia ter entrado')
             fotoEstadio = req.body.fotoEstadio
+        }
+
+
+        if(req.files.fotoUniformeHome) {
+            
+            if (!fs.existsSync(`src/img/uniformes/${paisDoTime}/${novoTime.nome}`)) {
+                fs.mkdirSync(`src/img/uniformes/${paisDoTime}/${novoTime.nome}`, { recursive: true });
+            }
+
+            fotoUniformeHome = req.files.fotoUniformeHome;
+            uploadPath = `src/img/uniformes/${paisDoTime}/${novoTime.nome}/1.png`
+
+            fotoUniformeHome.mv(uploadPath, function(err) {
+                if (err) {
+                    return res.status(500).send(err);
+                } 
+            });
+
+            fotoUniformeHome = uploadPath.replace("src", "..")
+
+        } else {
+            fotoUniformeHome = req.body.fotoUniformeHome
+        }
+
+        if(req.files.fotoUniformeAway) {
+            
+            if (!fs.existsSync(`src/img/uniformes/${paisDoTime}/${novoTime.nome}`)) {
+                fs.mkdirSync(`src/img/uniformes/${paisDoTime}/${novoTime.nome}`, { recursive: true });
+            }
+
+            fotoUniformeAway = req.files.fotoUniformeAway;
+            uploadPath = `src/img/uniformes/${paisDoTime}/${novoTime.nome}/2.png`
+
+            fotoUniformeAway.mv(uploadPath, function(err) {
+                if (err) {
+                    return res.status(500).send(err);
+                } 
+            });
+
+            fotoUniformeAway = uploadPath.replace("src", "..")
+
+        } else {
+            fotoUniformeAway = req.body.fotoUniformeAway
+        }
+
+        if(req.files.fotoUniformeThird) {
+            
+            if (!fs.existsSync(`src/img/uniformes/${paisDoTime}/${novoTime.nome}`)) {
+                fs.mkdirSync(`src/img/uniformes/${paisDoTime}/${novoTime.nome}`, { recursive: true });
+            }
+
+            fotoUniformeThird = req.files.fotoUniformeThird;
+            uploadPath = `src/img/uniformes/${paisDoTime}/${novoTime.nome}/3.png`
+
+            fotoUniformeThird.mv(uploadPath, function(err) {
+                if (err) {
+                    return res.status(500).send(err);
+                } 
+            });
+
+            fotoUniformeThird = uploadPath.replace("src", "..")
+
+        } else {
+            fotoUniformeThird = req.body.fotoUniformeThird
+        }
+
+        if(req.files.fotoUniformeGK) {
+            
+            if (!fs.existsSync(`src/img/uniformes/${paisDoTime}/${novoTime.nome}`)) {
+                fs.mkdirSync(`src/img/uniformes/${paisDoTime}/${novoTime.nome}`, { recursive: true });
+            }
+
+            fotoUniformeGK = req.files.fotoUniformeGK;
+            uploadPath = `src/img/uniformes/${paisDoTime}/${novoTime.nome}/gk.png`
+
+            fotoUniformeGK.mv(uploadPath, function(err) {
+                if (err) {
+                    return res.status(500).send(err);
+                } 
+            });
+
+            fotoUniformeGK = uploadPath.replace("src", "..")
+
+        } else {
+            fotoUniformeGK = req.body.fotoUniformeGK
         }
     }
 
-    console.log(fotoEstadio)
+    novoTime.escudo = fotoEscudo
+
+    delete novoTime.fotoEscudo
+
+    let cores = [novoTime.cor1, novoTime.cor2]
+
+    if(novoTime.cor3 != '#f3f4f6') {
+        cores.push(novoTime.cor3)
+    }
+
+    novoTime.cores = cores
+
+    delete novoTime.cor1;
+    delete novoTime.cor2;
+    delete novoTime.cor3;
+
+
+    let uniformes = []
+    fotoUniformeHome ? uniformes.push({ modelo: 'Home', img: fotoUniformeHome }) : null
+    fotoUniformeAway ? uniformes.push({ modelo: 'Away', img: fotoUniformeAway }) : null
+    fotoUniformeThird ? uniformes.push({ "modelo": 'Third', "img": fotoUniformeThird }) : null
+    fotoUniformeGK ? uniformes.push({ "modelo": 'GK', "img": fotoUniformeGK }) : null
     
-    return  res.status(200).json({ mensagem: "Time criado com sucesso" });
+
+    novoTime.uniformes = uniformes
+
+    delete novoTime.fotoUniformeHome;
+    delete novoTime.fotoUniformeAway;
+    delete novoTime.fotoUniformeThird;
+    delete novoTime.fotoUniformeGK;
+
+    let estadio = {
+        "nome": novoTime.nomeEstadio,
+        "inauguracao": novoTime.inauguracaoEstadio,
+        "capacidade": novoTime.capacidadeEstadio,
+        "foto": fotoEstadio
+    }
+
+    novoTime.estadio = estadio
+
+    delete novoTime.nomeEstadio;
+    delete novoTime.inauguracaoEstadio;
+    delete novoTime.capacidadeEstadio;
+    delete novoTime.fotoEstadio;
+
+    
+    dados[`Times${novoTime.pais}`].push(novoTime)
+    salvarDados(dados)
+
+    return res.json(novoTime)
+    
+    // return  res.status(200).json({ mensagem: "Time criado com sucesso" });
 })
 
 
 server.delete("/times/:pais/:id", (req, res) => {
+ 
     const timeId = parseInt(req.params.id)
 
-    console.log('time idddd: ' + timeId)
     const paisTime = req.params.pais
 
     dados[`Times${paisTime}`] = dados[`Times${paisTime}`].filter(t => t.id !== timeId)
-    // dados.TimesAlemanha = dados.TimesAlemanha.filter(u => u.id !== timeId)
-
-    console.log(dados[`Times${paisTime}`])
-
+ 
     salvarDados(dados)
 
     return res.status(200).json({mensagem: "Time excluido com sucesso"})
 })
 
 function salvarDados(){
-    // fs.writeFileSync(__dirname + '/data/dadosTimes2.json', JSON.stringify(dados, null, 2))
-    fs.writeFileSync(__dirname + '/data/dadosTimes.json', JSON.stringify(dados, null, 2))
+    fs.writeFileSync(__dirname + '/data/dadosTimes2.json', JSON.stringify(dados, null, 2))
+    // fs.writeFileSync(__dirname + '/data/dadosTimes.json', JSON.stringify(dados, null, 2))
 }
 
 module.exports = {server, salvarDados}

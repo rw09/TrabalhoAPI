@@ -100,7 +100,7 @@ function mostrarListaTodosTimes(data) {
        
         let escudo = document.createElement('img')
         escudo.src = time.escudo
-        escudo.className = 'pt-5'
+        escudo.className = 'pt-5 max-h-40'
         cardTimeConteudo.appendChild(escudo)
 
         let nome = document.createElement('h2')
@@ -147,8 +147,6 @@ function criarDialog(time) {
     escudo.src = time.escudo.replace('small', 'big')
     divEscudo.appendChild(escudo)
 
-    escudo.addEventListener('click', () => deletarTime(time.pais, time.id))
-
     cabecalho.appendChild(divEscudo)
 
     let divNomeApelido = document.createElement('div')
@@ -176,22 +174,25 @@ function criarDialog(time) {
 
     dialog.appendChild(divConteudos)
 
-    let divResumo = document.createElement('div')
-    divResumo.className = 'my-4 px-12 pt-8 pb-12 border-2 border-gray-200 bg-gray-100 shadow-md'
+    if(time.resumo) {
 
-    let tituloResumo = document.createElement('h3')
-    tituloResumo.className = 'text-xl border-b-2 border-gray-300 mb-6 font-medium'
-    tituloResumo.innerText = 'Resumo:'
+        let divResumo = document.createElement('div')
+        divResumo.className = 'my-4 px-12 pt-8 pb-12 border-2 border-gray-200 bg-gray-100 shadow-md'
 
-    divResumo.appendChild(tituloResumo)
+        let tituloResumo = document.createElement('h3')
+        tituloResumo.className = 'text-xl border-b-2 border-gray-300 mb-6 font-medium'
+        tituloResumo.innerText = 'Resumo:'
 
-    let resumo = document.createElement('p')
-    resumo.className = 'text-lg'
-    resumo.innerText = time.resumo
+        divResumo.appendChild(tituloResumo)
 
-    divResumo.appendChild(resumo)
+        let resumo = document.createElement('p')
+        resumo.className = 'text-lg'
+        resumo.innerText = time.resumo
 
-    divConteudos.appendChild(divResumo)
+        divResumo.appendChild(resumo)
+
+        divConteudos.appendChild(divResumo)
+    }
 
     let divInfo = document.createElement('div')
     divInfo.className = 'my-4 px-12 pt-8 pb-12 border-2 border-gray-200 bg-gray-100 shadow-md'
@@ -289,36 +290,39 @@ function criarDialog(time) {
     divConteudos.appendChild(divInfo)
 
 
-    let divUniformes = document.createElement('div')
-    divUniformes.className = 'my-4 px-12 pt-8 pb-14 border-2 border-gray-200 bg-gray-100 shadow-md'
+    if(time.uniformes) {
+    
+        let divUniformes = document.createElement('div')
+        divUniformes.className = 'my-4 px-12 pt-8 pb-14 border-2 border-gray-200 bg-gray-100 shadow-md'
 
-    let tituloUniformes = document.createElement('h3')
-    tituloUniformes.className = 'text-xl border-b-2 border-gray-300 mb-6 font-medium'
-    tituloUniformes.innerText = 'Uniformes:'
+        let tituloUniformes = document.createElement('h3')
+        tituloUniformes.className = 'text-xl border-b-2 border-gray-300 mb-6 font-medium'
+        tituloUniformes.innerText = 'Uniformes:'
 
-    let divImagensUniformes = document.createElement('div')
-    divImagensUniformes.className = 'flex gap-12 justify-center'
+        let divImagensUniformes = document.createElement('div')
+        divImagensUniformes.className = 'flex gap-12 justify-center'
 
-    time.uniformes.forEach(uniforme => {
-        let div = document.createElement('div')
-        div.className = 'flex flex-col justify-center items-center gap-4'
-        let modelo = document.createElement('h3')
-        modelo.innerText = uniforme.modelo
-        let img = document.createElement('img')
-        img.src = uniforme.img
+        time.uniformes.forEach(uniforme => {
+            let div = document.createElement('div')
+            div.className = 'flex flex-col justify-center items-center gap-4'
+            let modelo = document.createElement('h3')
+            modelo.innerText = uniforme.modelo
+            let img = document.createElement('img')
+            img.src = uniforme.img
 
-        div.appendChild(modelo)
-        div.appendChild(img)
+            div.appendChild(modelo)
+            div.appendChild(img)
 
-        divImagensUniformes.appendChild(div)
-        
-    });
+            divImagensUniformes.appendChild(div)
+            
+        });
 
-    divUniformes.appendChild(tituloUniformes)
+        divUniformes.appendChild(tituloUniformes)
 
-    divUniformes.appendChild(divImagensUniformes)
+        divUniformes.appendChild(divImagensUniformes)
 
-    divConteudos.appendChild(divUniformes)
+        divConteudos.appendChild(divUniformes)
+    }
 
 
     let divEstadio = document.createElement('div')
@@ -375,7 +379,7 @@ function criarDialog(time) {
     listaTitulos.className = 'grid items-center gap-3'
 
     //deixar assim?
-    if(time.titulos.length === 0) {
+    if(time.titulos && time.titulos.length === 0) {
         let loading = document.createElement('img')
         loading.src = '../img/loading.gif'
         loading.className = 'text-center w-20'
@@ -383,45 +387,47 @@ function criarDialog(time) {
         listaTitulos.appendChild(loading)
     }
 
+    if(time.titulos && time.titulos.length) {
     
-    time.titulos.forEach(titulo => {
-        let divTitulo = document.createElement('div')
-        divTitulo.className = 'pt-4 pb-6 border-b border-gray-300'
+        time.titulos.forEach(titulo => {
+            let divTitulo = document.createElement('div')
+            divTitulo.className = 'pt-4 pb-6 border-b border-gray-300'
 
-        fetch(`http://localhost:3000/api/competicoes/${titulo.competicao}`)
-        .then(response => response.json())
-        .then(function(data) {
+            fetch(`http://localhost:3000/api/competicoes/${titulo.competicao}`)
+            .then(response => response.json())
+            .then(function(data) {
 
-            let divTituloImagensNome = document.createElement('div')
-            divTituloImagensNome.className = 'flex gap-2 h-16 pb-2'
+                let divTituloImagensNome = document.createElement('div')
+                divTituloImagensNome.className = 'flex gap-2 h-16 pb-2'
 
-            divTitulo.appendChild(divTituloImagensNome)
+                divTitulo.appendChild(divTituloImagensNome)
 
-            let logo = document.createElement('img')
-            logo.src = data.logo
+                let logo = document.createElement('img')
+                logo.src = data.logo
 
-            let trofeu = document.createElement('img')
-            trofeu.src = data.trofeu
+                let trofeu = document.createElement('img')
+                trofeu.src = data.trofeu
 
-            divTituloImagensNome.appendChild(logo)
-            divTituloImagensNome.appendChild(trofeu)
+                divTituloImagensNome.appendChild(logo)
+                divTituloImagensNome.appendChild(trofeu)
 
-            let nomeCompeticao = document.createElement('h2')
-            nomeCompeticao.className = 'pt-4 font-semibold'
-            nomeCompeticao.innerText = `${titulo.competicao} (${titulo.edicoes.length})`
-    
-            let edicoes = document.createElement('p')
-            edicoes.innerText = titulo.edicoes.toString().replaceAll(',', ', ')
-    
-            divTituloImagensNome.appendChild(nomeCompeticao)
-            divTitulo.appendChild(edicoes)
-    
-            listaTitulos.appendChild(divTitulo)
+                let nomeCompeticao = document.createElement('h2')
+                nomeCompeticao.className = 'pt-4 font-semibold'
+                nomeCompeticao.innerText = `${titulo.competicao} (${titulo.edicoes.length})`
+        
+                let edicoes = document.createElement('p')
+                edicoes.innerText = titulo.edicoes.toString().replaceAll(',', ', ')
+        
+                divTituloImagensNome.appendChild(nomeCompeticao)
+                divTitulo.appendChild(edicoes)
+        
+                listaTitulos.appendChild(divTitulo)
 
-        })
-        .catch(error => console.error("Erro:", error))
-    });
+            })
+            .catch(error => console.error("Erro:", error))
+        });
 
+    }
 
     divTitulos.appendChild(listaTitulos)
     divConteudos.appendChild(divTitulos)
@@ -460,7 +466,7 @@ function criarDialog(time) {
 
         const id = document.getElementById('id').value
         const nome = document.getElementById('nomeTime').value
-        const nomeCompleto = document.getElementById('nomeTimeCompleto').value
+        const nome_completo = document.getElementById('nomeTimeCompleto').value
         const apelido = document.getElementById('apelido').value
         let fundacao = document.getElementById('fundacao').value
         fundacao = fundacao.split('-').reverse().join('/')
@@ -487,11 +493,11 @@ function criarDialog(time) {
         const cor2 = document.getElementById('cor2').value
         const cor3 = document.getElementById('cor3').value
 
-        let cores = [ cor1, cor2 ]
+        // let cores = [ cor1, cor2 ]
 
-        if(cor3 !== '#F3F4F6') {
-            cores.push(cor3)
-        }
+        // if(cor3 !== '#F3F4F6') {
+        //     cores.push(cor3)
+        // }
 
         const resumo = document.getElementById('resumo').value
 
@@ -511,6 +517,52 @@ function criarDialog(time) {
             fotoEstadio = urlFotoEstadio
         }
 
+        
+        const inputFotoUniformeHome = document.getElementById('input-fotoUniformeHome');
+        const urlFotoUniformeHome = document.getElementById('url-fotoUniformeHome').value;
+
+        let fotoUniformeHome = ''
+        
+        if(inputFotoUniformeHome.files[0]) {
+            fotoUniformeHome = inputFotoUniformeHome.files[0];
+        } else if(urlFotoUniformeHome) {
+            fotoUniformeHome = urlFotoUniformeHome
+        }
+
+        const inputFotoUniformeAway = document.getElementById('input-fotoUniformeAway');
+        const urlFotoUniformeAway = document.getElementById('url-fotoUniformeAway').value;
+
+        let fotoUniformeAway = ''
+        
+        if(inputFotoUniformeAway.files[0]) {
+            fotoUniformeAway = inputFotoUniformeAway.files[0];
+        } else if(urlFotoUniformeAway) {
+            fotoUniformeAway = urlFotoUniformeAway
+        }
+
+        const inputFotoUniformeThird = document.getElementById('input-fotoUniformeThird');
+        const urlFotoUniformeThird = document.getElementById('url-fotoUniformeThird').value;
+
+        let fotoUniformeThird = ''
+        
+        if(inputFotoUniformeThird.files[0]) {
+            fotoUniformeThird = inputFotoUniformeThird.files[0];
+        } else if(urlFotoUniformeThird) {
+            fotoUniformeThird = urlFotoUniformeThird
+        }
+
+        const inputFotoUniformeGK = document.getElementById('input-fotoUniformeGK');
+        const urlFotoUniformeGK = document.getElementById('url-fotoUniformeGK').value;
+
+        let fotoUniformeGK = ''
+        
+        if(inputFotoUniformeGK.files[0]) {
+            fotoUniformeGK = inputFotoUniformeGK.files[0];
+        } else if(urlFotoUniformeGK) {
+            fotoUniformeGK = urlFotoUniformeGK
+        }
+
+        const marca_uniforme = document.getElementById('marcaUniforme').value
 
 
 
@@ -518,7 +570,7 @@ function criarDialog(time) {
 
         formData.append('id', id);
         formData.append('nome', nome);
-        formData.append('nomeCompleto', nomeCompleto);
+        formData.append('nome_completo', nome_completo);
         formData.append('apelido', apelido);
         formData.append('fundacao', fundacao);
         formData.append('presidente', presidente);
@@ -531,7 +583,10 @@ function criarDialog(time) {
 
         formData.append('fotoEscudo', fotoEscudo);
 
-        formData.append('cores', cores);
+        // formData.append('cores', cores);
+        formData.append('cor1', cor1);
+        formData.append('cor2', cor2);
+        formData.append('cor3', cor3);
 
         formData.append('resumo', resumo);
 
@@ -541,26 +596,25 @@ function criarDialog(time) {
 
         formData.append('fotoEstadio', fotoEstadio);
 
+        formData.append('fotoUniformeHome', fotoUniformeHome);
+        formData.append('fotoUniformeAway', fotoUniformeAway);
+        formData.append('fotoUniformeThird', fotoUniformeThird);
+        formData.append('fotoUniformeGK', fotoUniformeGK);
+
+        formData.append('marca_uniforme', marca_uniforme);
+
         
         fetch('http://localhost:3000/api/times', {
             method: 'POST',
             body: formData
         })
         .then(response => response.json())
-        .then(() =>{
+        .then(data => {
+            console.log(data)
             let dialogCadastro = document.getElementById('dialogCadastro')
-            dialogCadastro.remove()
+            // dialogCadastro.remove()
         })
         .catch(error => console.error("Erro:", error))
-    }
-
-
-    function deletarTime(pais, id) {
-        fetch(`http://localhost:3000/api/times/${pais}/${id}`, {
-            method: 'DELETE',
-        })
-        .then(() => console.log('deu certo'))
-        .catch(error => console.error('Erro:', error))
     }
 
 
