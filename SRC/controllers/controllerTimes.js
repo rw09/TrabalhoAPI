@@ -56,23 +56,33 @@ server.post('/times', function(req, res)  {
     
     const novoTime = req.body;
 
-    // console.log(novoTime)
-
-    let fotoEstadio;
-    let fotoEscudo;
-    let fotoUniformeHome;
-    let fotoUniformeAway;
-    let fotoUniformeThird;
-    let fotoUniformeGK;
-    let uploadPath;
+    novoTime.titulos = JSON.parse(novoTime.titulos)
     
-    let paisDoTime = 'Auebas'
-    // let paisDoTime = novoTime.pais
+    let novoTitulos = []
+    novoTime.titulos.forEach(titulo => {
+        titulo = JSON.parse(titulo)    
+        novoTitulos.push(titulo)
+    });
 
-    // console.log(req.files)
+    delete novoTime.titulos
+
+    novoTime.titulos = novoTitulos
+
+    let fotoEstadio = req.body.fotoEstadio;
+    let fotoEscudo = req.body.fotoEscudo;
+    let fotoUniformeHome = req.body.fotoUniformeHome;
+    let fotoUniformeAway = req.body.fotoUniformeAway;
+    let fotoUniformeThird = req.body.fotoUniformeThird;
+    let fotoUniformeGK = req.body.fotoUniformeGK;
+    let uploadPath;
+
+    // console.log(novoTime.fotoUniformeHome)
+    // return
+    // let paisDoTime = 'Auebas'
+    let paisDoTime = novoTime.pais
 
     if(req.files) {
-        
+        console.log('tem arquivos')
         if(req.files.fotoEscudo) {
             
             if (!fs.existsSync(`src/img/escudos/${paisDoTime}/big`)) {
@@ -228,9 +238,14 @@ server.post('/times', function(req, res)  {
             fotoUniformeGK = req.body.fotoUniformeGK
         }
     }
+    // else {
+    //     novoTime.escudo = req.body.fotoEscudo
+    //     novoTime.fotoEstadio = req.body.fotoEstadio
+
+    //     novoTime.fotoUniformeHome = req.body.fotoUniformeHome
+    // }
 
     novoTime.escudo = fotoEscudo
-
     delete novoTime.fotoEscudo
 
     let cores = [novoTime.cor1, novoTime.cor2]

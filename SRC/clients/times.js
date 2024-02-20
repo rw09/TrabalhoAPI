@@ -100,7 +100,7 @@ function mostrarListaTodosTimes(data) {
        
         let escudo = document.createElement('img')
         escudo.src = time.escudo
-        escudo.className = 'pt-5 max-h-40'
+        escudo.className = 'pt-5 max-h-[140px] max-w-[120px]'
         cardTimeConteudo.appendChild(escudo)
 
         let nome = document.createElement('h2')
@@ -290,7 +290,7 @@ function criarDialog(time) {
     divConteudos.appendChild(divInfo)
 
 
-    if(time.uniformes) {
+    if(time.uniformes && time.uniformes.length) {
     
         let divUniformes = document.createElement('div')
         divUniformes.className = 'my-4 px-12 pt-8 pb-14 border-2 border-gray-200 bg-gray-100 shadow-md'
@@ -324,47 +324,48 @@ function criarDialog(time) {
         divConteudos.appendChild(divUniformes)
     }
 
+    if(time.estadio.nome != '' && time.estadio.foto != '') {
+        let divEstadio = document.createElement('div')
+        divEstadio.className = 'my-4 px-12 pt-8 pb-8 border-2 border-gray-200 bg-gray-100 shadow-md'
 
-    let divEstadio = document.createElement('div')
-    divEstadio.className = 'my-4 px-12 pt-8 pb-8 border-2 border-gray-200 bg-gray-100 shadow-md'
+        let tituloEstadio = document.createElement('h3')
+        tituloEstadio.className = 'text-xl border-b-2 border-gray-300 mb-6 font-medium'
+        tituloEstadio.innerText = 'Estádio:'
 
-    let tituloEstadio = document.createElement('h3')
-    tituloEstadio.className = 'text-xl border-b-2 border-gray-300 mb-6 font-medium'
-    tituloEstadio.innerText = 'Estádio:'
+        let divInfoEstadio = document.createElement('div')
+        divInfoEstadio.className = 'flex flex-col gap-4 justify-center items-center'
 
-    let divInfoEstadio = document.createElement('div')
-    divInfoEstadio.className = 'flex flex-col gap-4 justify-center items-center'
+        let nomeEstadio = document.createElement('h3')
+        nomeEstadio.className = 'font-semibold'
+        nomeEstadio.innerText = time['estadio']['nome']
 
-    let nomeEstadio = document.createElement('h3')
-    nomeEstadio.className = 'font-semibold'
-    nomeEstadio.innerText = time['estadio']['nome']
+        let fotoEstadio = document.createElement('img')
+        fotoEstadio.className = 'w-1/2'
+        fotoEstadio.src = time.estadio.foto
 
-    let fotoEstadio = document.createElement('img')
-    fotoEstadio.className = 'w-1/2'
-    fotoEstadio.src = time.estadio.foto
+        divInfoEstadio.appendChild(nomeEstadio)
+        divInfoEstadio.appendChild(fotoEstadio)
 
-    divInfoEstadio.appendChild(nomeEstadio)
-    divInfoEstadio.appendChild(fotoEstadio)
+        divEstadio.appendChild(tituloEstadio)
 
-    divEstadio.appendChild(tituloEstadio)
+        let divInauguracaoCapacidadeEstadio = document.createElement('div')
+        divInauguracaoCapacidadeEstadio.className = 'flex justify-between w-2/4 px-8'
 
-    let divInauguracaoCapacidadeEstadio = document.createElement('div')
-    divInauguracaoCapacidadeEstadio.className = 'flex justify-between w-2/4 px-8'
+        let inauguracao = document.createElement('h3')
+        inauguracao.innerHTML = `<b>Inauguração:</b> ${time['estadio']['inauguracao']}`
 
-    let inauguracao = document.createElement('h3')
-    inauguracao.innerHTML = `<b>Inauguração:</b> ${time['estadio']['inauguracao']}`
+        let capacidade = document.createElement('h3')
+        capacidade.innerHTML = `<b>Capacidade:</b> ${time['estadio']['capacidade']}`
 
-    let capacidade = document.createElement('h3')
-    capacidade.innerHTML = `<b>Capacidade:</b> ${time['estadio']['capacidade']}`
+        divInauguracaoCapacidadeEstadio.appendChild(inauguracao)
+        divInauguracaoCapacidadeEstadio.appendChild(capacidade)
 
-    divInauguracaoCapacidadeEstadio.appendChild(inauguracao)
-    divInauguracaoCapacidadeEstadio.appendChild(capacidade)
+        divInfoEstadio.appendChild(divInauguracaoCapacidadeEstadio)
 
-    divInfoEstadio.appendChild(divInauguracaoCapacidadeEstadio)
+        divEstadio.appendChild(divInfoEstadio)
 
-    divEstadio.appendChild(divInfoEstadio)
-
-    divConteudos.appendChild(divEstadio)
+        divConteudos.appendChild(divEstadio)
+    }
 
     let divTitulos = document.createElement('div')
     divTitulos.className = 'my-4 px-12 pt-8 pb-8 border-2 border-gray-200 bg-gray-100 shadow-md'
@@ -380,15 +381,19 @@ function criarDialog(time) {
 
     //deixar assim?
     if(time.titulos && time.titulos.length === 0) {
-        let loading = document.createElement('img')
-        loading.src = '../img/loading.gif'
-        loading.className = 'text-center w-20'
-
-        listaTitulos.appendChild(loading)
+        // let loading = document.createElement('img')
+        // loading.src = '../img/loading.gif'
+        // loading.className = 'text-center w-20'
+        // listaTitulos.appendChild(loading)
+        let semTitulos = document.createElement('h2')
+        semTitulos.className = ''
+        semTitulos.innerText = 'Não possui título nacional, continental ou mundial'
+        listaTitulos.appendChild(semTitulos)
     }
 
     if(time.titulos && time.titulos.length) {
-    
+        // let titulos = JSON.parse(time.titulos)
+
         time.titulos.forEach(titulo => {
             let divTitulo = document.createElement('div')
             divTitulo.className = 'pt-4 pb-6 border-b border-gray-300'
@@ -426,7 +431,6 @@ function criarDialog(time) {
             })
             .catch(error => console.error("Erro:", error))
         });
-
     }
 
     divTitulos.appendChild(listaTitulos)
@@ -603,6 +607,35 @@ function criarDialog(time) {
 
         formData.append('marca_uniforme', marca_uniforme);
 
+        let divTitulos = document.getElementById('divTitulosCadastro')
+
+        let titulos = []
+
+        for (const child of divTitulos.children) {
+            let i = 1;
+
+            if(child.children[1].value) {
+                let anosTitulo = child.children[1].value.replaceAll(" ", "").split(",");
+
+                let anosTituloFiltrado = anosTitulo.filter(ano => ano != '')
+
+                anosTituloFiltrado.sort((a,b) => (a > b) ? 1 : ((b > a) ? -1 : 0))
+
+                let titulo = {
+                    "competicao": child.children[0].innerText.replace(":", ""),
+                    "edicoes": anosTituloFiltrado
+                }
+                titulos.push(JSON.stringify(titulo))
+                // console.log(JSON.stringify(titulo))
+                // formData.append(`titulo-${i}`, JSON.stringify(titulo))
+                i++
+            }
+        }
+
+        // console.log('todos os titulos')
+        console.log(titulos)
+        // return
+        formData.append('titulos', JSON.stringify(titulos))
         
         fetch('http://localhost:3000/api/times', {
             method: 'POST',
