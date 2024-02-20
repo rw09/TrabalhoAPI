@@ -38,7 +38,7 @@
             "nome": "Brasil",
             "bandeira": "../img/bandeiras/big/br.png",
             "campeonatos": [ "Brasileirão Série A", "Brasileirão Série B", "Brasileirão Série C", "Brasileirão Série D" ],
-            "copas": [ "Copa do Basil", "Supercopa do Brasil" ]
+            "copas": [ "Copa do Brasil", "Supercopa do Brasil" ]
         },
         {
             "id": 7,
