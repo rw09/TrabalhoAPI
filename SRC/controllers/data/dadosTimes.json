@@ -1,1427 +1,680 @@
 {
   "TimesAlemanha": [
-    {
-      "id": 1,
-      "nome": "Bayern München",
-      "nome_completo": "Fußball-Club Bayern München AG",
-      "fundacao": "27/02/1900",
-      "cores": [
-        "#dc052d",
-        "#ffffff"
-      ],
-      "escudo": "../img/escudos/Alemanha/small/Bayern.png",
-      "apelido": "Die Bayern",
-      "presidente": "Karl Hopfner",
-      "uniformes": [
-        {
-          "modelo": "Home",
-          "img": "../img/uniformes/Alemanha/Bayern/1.png"
-        },
-        {
-          "modelo": "Away",
-          "img": "../img/uniformes/Alemanha/Bayern/2.png"
-        },
-        {
-          "modelo": "Third",
-          "img": "../img/uniformes/Alemanha/Bayern/3.png"
-        },
-        {
-          "modelo": "GK",
-          "img": "../img/uniformes/Alemanha/Bayern/gk.png"
-        }
-      ],
-      "marca_uniforme": "Adidas",
-      "pais": "Alemanha",
-      "liga": "Bundesliga",
-      "cidade": "Munique",
-      "estado": "Baviera",
-      "website": "www.fcbayern.com",
-      "email": "service@fcbayern.com",
-      "resumo": "Fundado em 1900 depois de uma reunião em um restaurante no centro de Munique, o Bayern de Munique assimilou o Münchener Sport-Club em 1906 e adotou a camisa branca com o calção vermelho. O clube conquistou o campeonato nacional 31 vezes e também tem 20 títulos da copa do país. O FC Bayern München não estava entre os integrantes fundadores da Bundesliga em 1963. Eles conseguiram a promoção para a liga em 1965. Após o título da UEFA Champions League em 1976, o FC Bayern München se tornou o terceiro clube a ganhar a competição três vezes seguidas.",
-      "estadio": {
-        "nome": "Allianz Arena",
-        "inauguracao": 2005,
-        "capacidade": 75024,
-        "foto": "../img/estadios/Alemanha/AllianzArena.png"
+      {
+          "id": 1,
+          "nome": "Bayern München",
+          "nome_completo": "Fußball-Club Bayern München AG",
+          "fundacao": "27/02/1900",
+          "cores": [ "#dc052d", "#ffffff" ],
+          "escudo": "../img/escudos/Alemanha/small/Bayern.png",
+          "apelido": "Die Bayern",
+          "presidente": "Karl Hopfner",
+          "uniformes": [
+              { "modelo": "Home", "img": "../img/uniformes/Alemanha/Bayern/1.png" },
+              { "modelo": "Away", "img": "../img/uniformes/Alemanha/Bayern/2.png" },
+              { "modelo": "Third", "img": "../img/uniformes/Alemanha/Bayern/3.png" },
+              { "modelo": "GK", "img": "../img/uniformes/Alemanha/Bayern/gk.png" }
+          ],
+          "marca_uniforme": "Adidas",
+          "pais": "Alemanha",
+          "liga": "Bundesliga",
+          "cidade": "Munique",
+          "estado": "Baviera",
+          "website": "www.fcbayern.com",
+          "email": "service@fcbayern.com",
+          "resumo": "Fundado em 1900 depois de uma reunião em um restaurante no centro de Munique, o Bayern de Munique assimilou o Münchener Sport-Club em 1906 e adotou a camisa branca com o calção vermelho. O clube conquistou o campeonato nacional 31 vezes e também tem 20 títulos da copa do país. O FC Bayern München não estava entre os integrantes fundadores da Bundesliga em 1963. Eles conseguiram a promoção para a liga em 1965. Após o título da UEFA Champions League em 1976, o FC Bayern München se tornou o terceiro clube a ganhar a competição três vezes seguidas.",
+          "estadio": {
+              "nome": "Allianz Arena",
+              "inauguracao": 2005,
+              "capacidade": 75024,
+              "foto": "../img/estadios/Alemanha/AllianzArena.png"
+          },
+          "titulos": [
+              {
+                  "competicao": "Bundesliga",
+                  "edicoes": [ "1932", "1968-69", "1971-72", "1972-73", "1973-74", "1979-80", "1980-81", "1984-85", "1985-86", "1986-87", "1988-89", "1989-90", "1993-94", "1996-97", "1998-99", "1999-00", "2000-01", "2002-03", "2004-05", "2005-06", "2007-08", "2009-10", "2012-13", "2013-14", "2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22", "2022-23" ]
+              },
+              {
+                  "competicao": "DFB-Pokal",
+                  "edicoes": [ "1956-57", "1965-66", "1966-67", "1968-69", "1970-71", "1981-82", "1983-84", "1985-86", "1997-98", "1999-00", "2002-03", "2004-05", "2005-06", "2007-08", "2009-10", "2012-13", "2013-14", "2015-16", "2018-19", "2019-20" ]
+              },
+              {
+                  "competicao": "DFL-Supercup",
+                  "edicoes": [ "1987", "1990", "2010", "2012", "2016", "2017", "2018", "2020", "2021", "2022" ]
+              },
+              {
+                  "competicao": "UEFA Champions League",
+                  "edicoes": [ "1973-74", "1974-75", "1975-76", "2000-01", "2012-13", "2019-20" ]
+              },
+              {
+                  "competicao": "UEFA Europa League",
+                  "edicoes": [ "1995-96" ]
+              },
+              {
+                  "competicao": "UEFA Super Cup",
+                  "edicoes": [ "2013", "2020" ]
+              },
+              {
+                  "competicao": "FIFA Club World Cup",
+                  "edicoes": [ "1976", "2001", "2013", "2020" ]
+              }
+          ]
+     },
+     {
+          "id": 2,
+          "nome": "Borussia Dortmund",
+          "nome_completo": "Borussia Dortmund GmbH & Co. KGaA",
+          "fundacao": "19/12/1909",
+          "cores": [ "#ffd900", "#000000" ],
+          "escudo": "../img/escudos/Alemanha/small/Dortmund.png",
+          "apelido": "Die Borussen",
+          "presidente": "Hans-Joachim Watzke",
+          "uniformes": [
+              { "modelo": "Home", "img": "../img/uniformes/Alemanha/Dortmund/1.png" },
+              { "modelo": "Away", "img": "../img/uniformes/Alemanha/Dortmund/2.png" },
+              { "modelo": "Third", "img": "../img/uniformes/Alemanha/Dortmund/3.png" },
+              { "modelo": "GK", "img": "../img/uniformes/Alemanha/Dortmund/gk.png" }
+          ],
+          "marca_uniforme": "Puma",
+          "pais": "Alemanha",
+          "liga": "Bundesliga",
+          "cidade": "Dortmund",
+          "estado": "Renânia do Norte-Vestfália",
+          "website": "www.bvb.de",
+          "email": "service@bvb.de",
+          "resumo": "Fundado em 1909, o clube recebeu o nome da cervejaria Borussia localizada em Steiger Strasse e começou a jogar com camisas com listras azuis e brancas e calção preto. O clube conquistou o campeonato nacional 8 vezes e também tem 5 títulos da copa do país. Em 1963, o Borussia Dortmund foi o último campeão alemão antes da criação da Bundesliga, vencendo o 1. FC Köln por 3 a 1 na final em Stuttgart. O clube conquistou sua primeira UEFA Champions League em 1997, jogando a final na casa do riva, o Bayern de Munique.",
+          "estadio": {
+              "nome": "Signal Iduna Park",
+              "inauguracao": 2004,
+              "capacidade": 81365,
+              "foto": "../img/estadios/Alemanha/SignalIdunaPark.png"
+          },
+          "titulos": [
+              {
+                  "competicao": "Bundesliga",
+                  "edicoes": [ "1956", "1957", "1963", "1994-95", "1995-96", "2001-02", "2010-11", "2011-12" ]
+              },
+              {
+                  "competicao": "DFB-Pokal",
+                  "edicoes": [ "1964-65", "1988-89", "2011-12", "2016-17", "2020-21" ]
+              },
+              {
+                  "competicao": "DFL-Supercup",
+                  "edicoes": [ "1989", "1995", "1996", "2013", "2014", "2019" ]
+              },
+              {
+                  "competicao": "UEFA Champions League",
+                  "edicoes": [ "1996-97" ]
+              },
+              {
+                  "competicao": "FIFA Club World Cup",
+                  "edicoes": [ "1997" ]
+              }
+          ]
       },
-      "titulos": [
-        {
-          "competicao": "Bundesliga",
-          "edicoes": [
-            "1932",
-            "1968-69",
-            "1971-72",
-            "1972-73",
-            "1973-74",
-            "1979-80",
-            "1980-81",
-            "1984-85",
-            "1985-86",
-            "1986-87",
-            "1988-89",
-            "1989-90",
-            "1993-94",
-            "1996-97",
-            "1998-99",
-            "1999-00",
-            "2000-01",
-            "2002-03",
-            "2004-05",
-            "2005-06",
-            "2007-08",
-            "2009-10",
-            "2012-13",
-            "2013-14",
-            "2014-15",
-            "2015-16",
-            "2016-17",
-            "2017-18",
-            "2018-19",
-            "2019-20",
-            "2020-21",
-            "2021-22",
-            "2022-23"
+      {
+          "id": 3,
+          "nome": "Bayer Leverkusen",
+          "nome_completo": "Bayer 04 Leverkusen Fußball GmbH",
+          "fundacao": "01/07/1904",
+          "cores": [ "#ff0000", "#000000" ],
+          "escudo": "../img/escudos/Alemanha/small/Leverkusen.png",
+          "apelido": "Die Werkself",
+          "presidente": "Wolfgang Halzhäuser",
+          "uniformes": [
+              { "modelo": "Home", "img": "../img/uniformes/Alemanha/Leverkusen/1.png" },
+              { "modelo": "Away", "img": "../img/uniformes/Alemanha/Leverkusen/2.png" },
+              { "modelo": "Third", "img": "../img/uniformes/Alemanha/Leverkusen/3.png" },
+              { "modelo": "GK", "img": "../img/uniformes/Alemanha/Leverkusen/gk.png" }
+          ],
+          "marca_uniforme": "Castore",
+          "pais": "Alemanha",
+          "liga": "Bundesliga",
+          "cidade": "Leverkusen",
+          "estado": "Renânia do Norte-Vestfália",
+          "website": "www.bayer04.de",
+          "email": "info@bayer04.de",
+          "resumo": "O Leverkusen conseguiu o acesso à Bundesliga em 1979 e venceu o primeiro título nacional em 1993 contra o time amador do Hertha Berlin na final. Venceu a copa do país 1 vez. O Bayer Leverkusen foi o primeiro clube de propriedade integral de uma empresa a jogar na Bundesliga. Em 1988, conquistou o título da UEFA Europa League, seu segundo troféu da história.",
+          "estadio": {
+              "nome": "BayArena",
+              "inauguracao": 1958,
+              "capacidade": 30210,
+              "foto": "../img/estadios/Alemanha/BayArena.png"
+          },
+          "titulos": [
+              {
+                  "competicao": "DFB-Pokal",
+                  "edicoes": [ "1992-93" ]
+              },
+              {
+                  "competicao": "UEFA Europa League",
+                  "edicoes": [ "1987-88" ]
+              }
           ]
-        },
-        {
-          "competicao": "DFB-Pokal",
-          "edicoes": [
-            "1956-57",
-            "1965-66",
-            "1966-67",
-            "1968-69",
-            "1970-71",
-            "1981-82",
-            "1983-84",
-            "1985-86",
-            "1997-98",
-            "1999-00",
-            "2002-03",
-            "2004-05",
-            "2005-06",
-            "2007-08",
-            "2009-10",
-            "2012-13",
-            "2013-14",
-            "2015-16",
-            "2018-19",
-            "2019-20"
-          ]
-        },
-        {
-          "competicao": "DFL-Supercup",
-          "edicoes": [
-            "1987",
-            "1990",
-            "2010",
-            "2012",
-            "2016",
-            "2017",
-            "2018",
-            "2020",
-            "2021",
-            "2022"
-          ]
-        },
-        {
-          "competicao": "UEFA Champions League",
-          "edicoes": [
-            "1973-74",
-            "1974-75",
-            "1975-76",
-            "2000-01",
-            "2012-13",
-            "2019-20"
-          ]
-        },
-        {
-          "competicao": "UEFA Europa League",
-          "edicoes": [
-            "1995-96"
-          ]
-        },
-        {
-          "competicao": "UEFA Super Cup",
-          "edicoes": [
-            "2013",
-            "2020"
-          ]
-        },
-        {
-          "competicao": "FIFA Club World Cup",
-          "edicoes": [
-            "1976",
-            "2001",
-            "2013",
-            "2020"
-          ]
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "nome": "Borussia Dortmund",
-      "nome_completo": "Borussia Dortmund GmbH & Co. KGaA",
-      "fundacao": "19/12/1909",
-      "cores": [
-        "#ffd900",
-        "#000000"
-      ],
-      "escudo": "../img/escudos/Alemanha/small/Dortmund.png",
-      "apelido": "Die Borussen",
-      "presidente": "Hans-Joachim Watzke",
-      "uniformes": [
-        {
-          "modelo": "Home",
-          "img": "../img/uniformes/Alemanha/Dortmund/1.png"
-        },
-        {
-          "modelo": "Away",
-          "img": "../img/uniformes/Alemanha/Dortmund/2.png"
-        },
-        {
-          "modelo": "Third",
-          "img": "../img/uniformes/Alemanha/Dortmund/3.png"
-        },
-        {
-          "modelo": "GK",
-          "img": "../img/uniformes/Alemanha/Dortmund/gk.png"
-        }
-      ],
-      "marca_uniforme": "Puma",
-      "pais": "Alemanha",
-      "liga": "Bundesliga",
-      "cidade": "Dortmund",
-      "estado": "Renânia do Norte-Vestfália",
-      "website": "www.bvb.de",
-      "email": "service@bvb.de",
-      "resumo": "Fundado em 1909, o clube recebeu o nome da cervejaria Borussia localizada em Steiger Strasse e começou a jogar com camisas com listras azuis e brancas e calção preto. O clube conquistou o campeonato nacional 8 vezes e também tem 5 títulos da copa do país. Em 1963, o Borussia Dortmund foi o último campeão alemão antes da criação da Bundesliga, vencendo o 1. FC Köln por 3 a 1 na final em Stuttgart. O clube conquistou sua primeira UEFA Champions League em 1997, jogando a final na casa do riva, o Bayern de Munique.",
-      "estadio": {
-        "nome": "Signal Iduna Park",
-        "inauguracao": 2004,
-        "capacidade": 81365,
-        "foto": "../img/estadios/Alemanha/SignalIdunaPark.png"
       },
-      "titulos": [
-        {
-          "competicao": "Bundesliga",
-          "edicoes": [
-            "1956",
-            "1957",
-            "1963",
-            "1994-95",
-            "1995-96",
-            "2001-02",
-            "2010-11",
-            "2011-12"
+      {
+          "id": 4,
+          "nome": "Eintracht Frankfurt",
+          "nome_completo": "Eintracht Frankfurt Fußball A.G.",
+          "fundacao": "08/03/1899",
+          "cores": [ "#000000", "#ffffff", "#E1000F" ],
+          "escudo": "../img/escudos/Alemanha/small/EintrachtFrankfurt.png",
+          "apelido": "Die Adler",
+          "presidente": "Mathias Beck",
+          "uniformes": [
+              { "modelo": "Home", "img": "../img/uniformes/Alemanha/EintrachtFrankfurt/1.png" },
+              { "modelo": "Away", "img": "../img/uniformes/Alemanha/EintrachtFrankfurt/2.png" },
+              { "modelo": "Third", "img": "../img/uniformes/Alemanha/EintrachtFrankfurt/3.png" },
+              { "modelo": "GK", "img": "../img/uniformes/Alemanha/EintrachtFrankfurt/gk.png" }
+          ],
+          "marca_uniforme": "Nike",
+          "pais": "Alemanha",
+          "liga": "Bundesliga",
+          "cidade": "Frankfurt am Main",
+          "estado": "Hessen",
+          "website": "www.eintracht.de",
+          "email": "info@eintrachtfrankfurt.de",
+          "resumo": "O clube foi fundado em 1899 com o nome de Frankfurter Fußball-Club Victoria e, depois de várias fusões, adotou seu nome atual. O clube conquistou o campeonato nacional 1 vez e também tem 5 títulos da copa do país. Um clube de história gloriosa e membro fundador da Bundesliga, o Eintracht Frankfurt venceu vários títulos nacionais e internacionais. Um de seus últimos títulos foi a taça da UEFA Europa League em 2022.",
+          "estadio": {
+              "nome": "Deutsche Bank Park",
+              "inauguracao": 1925,
+              "capacidade": 51500,
+              "foto": "../img/estadios/Alemanha/DeutscheBankPark.png"
+          },
+          "titulos": [
+              {
+                  "competicao": "Bundesliga",
+                  "edicoes": [ "1959" ]
+              },
+              {
+                  "competicao": "2. Bundesliga",
+                  "edicoes": [ "1997-98" ]
+              },
+              {
+                  "competicao": "DFB-Pokal",
+                  "edicoes": [ "1973-74", "1974-75", "1980-81", "1987-88", "2017-18" ]
+              },
+              {
+                  "competicao": "UEFA Europa League",
+                  "edicoes": [ "1979-80", "2021-22" ]
+              }
           ]
-        },
-        {
-          "competicao": "DFB-Pokal",
-          "edicoes": [
-            "1964-65",
-            "1988-89",
-            "2011-12",
-            "2016-17",
-            "2020-21"
-          ]
-        },
-        {
-          "competicao": "DFL-Supercup",
-          "edicoes": [
-            "1989",
-            "1995",
-            "1996",
-            "2013",
-            "2014",
-            "2019"
-          ]
-        },
-        {
-          "competicao": "UEFA Champions League",
-          "edicoes": [
-            "1996-1997"
-          ]
-        },
-        {
-          "competicao": "FIFA Club World Cup",
-          "edicoes": [
-            "1997"
-          ]
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "nome": "Bayer Leverkusen",
-      "nome_completo": "Bayer 04 Leverkusen Fußball GmbH",
-      "fundacao": "01/07/1904",
-      "cores": [
-        "#ff0000",
-        "#000000"
-      ],
-      "escudo": "../img/escudos/Alemanha/small/Leverkusen.png",
-      "apelido": "Die Werkself",
-      "presidente": "Wolfgang Halzhäuser",
-      "uniformes": [
-        {
-          "modelo": "Home",
-          "img": "../img/uniformes/Alemanha/Leverkusen/1.png"
-        },
-        {
-          "modelo": "Away",
-          "img": "../img/uniformes/Alemanha/Leverkusen/2.png"
-        },
-        {
-          "modelo": "Third",
-          "img": "../img/uniformes/Alemanha/Leverkusen/3.png"
-        },
-        {
-          "modelo": "GK",
-          "img": "../img/uniformes/Alemanha/Leverkusen/gk.png"
-        }
-      ],
-      "marca_uniforme": "Castore",
-      "pais": "Alemanha",
-      "liga": "Bundesliga",
-      "cidade": "Leverkusen",
-      "estado": "Renânia do Norte-Vestfália",
-      "website": "www.bayer04.de",
-      "email": "info@bayer04.de",
-      "resumo": "O Leverkusen conseguiu o acesso à Bundesliga em 1979 e venceu o primeiro título nacional em 1993 contra o time amador do Hertha Berlin na final. Venceu a copa do país 1 vez. O Bayer Leverkusen foi o primeiro clube de propriedade integral de uma empresa a jogar na Bundesliga. Em 1988, conquistou o título da UEFA Europa League, seu segundo troféu da história.",
-      "estadio": {
-        "nome": "BayArena",
-        "inauguracao": 1958,
-        "capacidade": 30210,
-        "foto": "../img/estadios/Alemanha/BayArena.png"
-      },
-      "titulos": [
-        {
-          "competicao": "DFB-Pokal",
-          "edicoes": [
-            "1992-93"
-          ]
-        },
-        {
-          "competicao": "UEFA Europa League",
-          "edicoes": [
-            "1987-88"
-          ]
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "nome": "Eintracht Frankfurt",
-      "nome_completo": "Eintracht Frankfurt Fußball A.G.",
-      "fundacao": "08/03/1899",
-      "cores": [
-        "#000000",
-        "#ffffff",
-        "#E1000F"
-      ],
-      "escudo": "../img/escudos/Alemanha/small/EintrachtFrankfurt.png",
-      "apelido": "Die Adler",
-      "presidente": "Mathias Beck",
-      "uniformes": [
-        {
-          "modelo": "Home",
-          "img": "../img/uniformes/Alemanha/EintrachtFrankfurt/1.png"
-        },
-        {
-          "modelo": "Away",
-          "img": "../img/uniformes/Alemanha/EintrachtFrankfurt/2.png"
-        },
-        {
-          "modelo": "Third",
-          "img": "../img/uniformes/Alemanha/EintrachtFrankfurt/3.png"
-        },
-        {
-          "modelo": "GK",
-          "img": "../img/uniformes/Alemanha/EintrachtFrankfurt/gk.png"
-        }
-      ],
-      "marca_uniforme": "Nike",
-      "pais": "Alemanha",
-      "liga": "Bundesliga",
-      "cidade": "Frankfurt am Main",
-      "estado": "Hessen",
-      "website": "www.eintracht.de",
-      "email": "info@eintrachtfrankfurt.de",
-      "resumo": "O clube foi fundado em 1899 com o nome de Frankfurter Fußball-Club Victoria e, depois de várias fusões, adotou seu nome atual. O clube conquistou o campeonato nacional 1 vez e também tem 5 títulos da copa do país. Um clube de história gloriosa e membro fundador da Bundesliga, o Eintracht Frankfurt venceu vários títulos nacionais e internacionais. Um de seus últimos títulos foi a taça da UEFA Europa League em 2022.",
-      "estadio": {
-        "nome": "Deutsche Bank Park",
-        "inauguracao": 1925,
-        "capacidade": 51500,
-        "foto": "../img/estadios/Alemanha/DeutscheBankPark.png"
-      },
-      "titulos": [
-        {
-          "competicao": "Bundesliga",
-          "edicoes": [
-            "1959"
-          ]
-        },
-        {
-          "competicao": "2. Bundesliga",
-          "edicoes": [
-            "1997-98"
-          ]
-        },
-        {
-          "competicao": "DFB-Pokal",
-          "edicoes": [
-            "1973-74",
-            "1974-75",
-            "1980-81",
-            "1987-88",
-            "2017-18"
-          ]
-        },
-        {
-          "competicao": "UEFA Europa League",
-          "edicoes": [
-            "1979-80",
-            "2021-22"
-          ]
-        }
-      ]
-    }
+      }
   ],
   "TimesBrasil": [
-    {
-      "id": 1,
-      "nome": "Grêmio",
-      "nome_completo": "Grêmio Foot-Ball Porto Alegrense",
-      "fundacao": "15/09/1903",
-      "cores": [
-        "#12A0D7",
-        "#000000",
-        "#ffffff"
-      ],
-      "escudo": "../img/escudos/Brasil/small/Grêmio.png",
-      "apelido": "Imortal Tricolor",
-      "presidente": "Alberto Guerra",
-      "uniformes": [
-        {
-          "modelo": "Home",
-          "img": "../img/uniformes/Brasil/Grêmio/1.png"
-        },
-        {
-          "modelo": "Away",
-          "img": "../img/uniformes/Brasil/Grêmio/2.png"
-        },
-        {
-          "modelo": "GK",
-          "img": "../img/uniformes/Brasil/Grêmio/gk.png"
-        }
-      ],
-      "marca_uniforme": "Umbro",
-      "pais": "Brasil",
-      "liga": "Brasileirão Série A",
-      "cidade": "Porto Alegre",
-      "estado": "Rio Grande do Sul",
-      "website": "www.gremio.net",
-      "email": "ouvidoria@gremio.net",
-      "resumo": "O Grêmio, é um dos clubes de futebol mais importantes do Brasil. Fundado em 15 de setembro de 1903, o Grêmio foi estabelecido por imigrantes alemães na cidade de Porto Alegre, no estado do Rio Grande do Sul. O Grêmio conquistou inúmeros títulos estaduais, sendo um dos clubes mais vitoriosos do Campeonato Gaúcho. Além disso, o Grêmio tem em sua galeria de troféus títulos importantes a nível nacional, incluindo várias conquistas do Campeonato Brasileiro e da Copa do Brasil. A nível internacional, o Grêmio é reconhecido por suas conquistas na Copa Libertadores da América, uma das competições mais prestigiadas do continente sul-americano. O clube venceu a Libertadores em diversas ocasiões, sendo um dos clubes brasileiros com mais títulos neste torneio.",
-      "estadio": {
-        "nome": "Arena do Grêmio",
-        "inauguracao": 2012,
-        "capacidade": 60540,
-        "foto": "../img/estadios/Brasil/ArenaDoGrêmio.jpg"
-      },
-      "titulos": [
-        {
-          "competicao": "Brasileirão Série A",
-          "edicoes": [
-            "1981",
-            "1996"
+      {
+          "id": 5,
+          "nome": "Grêmio",
+          "nome_completo": "Grêmio Foot-Ball Porto Alegrense",
+          "fundacao": "15/09/1903",
+          "cores": [ "#12A0D7", "#000000", "#ffffff" ],
+          "escudo": "../img/escudos/Brasil/small/Grêmio.png",
+          "apelido": "Imortal Tricolor",
+          "presidente": "Alberto Guerra",
+          "uniformes": [
+              { "modelo": "Home", "img": "../img/uniformes/Brasil/Grêmio/1.png" },
+              { "modelo": "Away", "img": "../img/uniformes/Brasil/Grêmio/2.png" },
+              { "modelo": "GK", "img": "../img/uniformes/Brasil/Grêmio/gk.png" }
+          ],
+          "marca_uniforme": "Umbro",
+          "pais": "Brasil",
+          "liga": "Brasileirão Série A",
+          "cidade": "Porto Alegre",
+          "estado": "Rio Grande do Sul",
+          "website": "www.gremio.net",
+          "email": "ouvidoria@gremio.net",
+          "resumo": "O Grêmio, é um dos clubes de futebol mais importantes do Brasil. Fundado em 15 de setembro de 1903, o Grêmio foi estabelecido por imigrantes alemães na cidade de Porto Alegre, no estado do Rio Grande do Sul. O Grêmio conquistou inúmeros títulos estaduais, sendo um dos clubes mais vitoriosos do Campeonato Gaúcho. Além disso, o Grêmio tem em sua galeria de troféus títulos importantes a nível nacional, incluindo várias conquistas do Campeonato Brasileiro e da Copa do Brasil. A nível internacional, o Grêmio é reconhecido por suas conquistas na Copa Libertadores da América, uma das competições mais prestigiadas do continente sul-americano. O clube venceu a Libertadores em diversas ocasiões, sendo um dos clubes brasileiros com mais títulos neste torneio.",
+          "estadio": {
+              "nome": "Arena do Grêmio",
+              "inauguracao": 2012,
+              "capacidade": 60540,
+              "foto": "../img/estadios/Brasil/ArenaDoGrêmio.jpg"
+          },
+          "titulos": [
+              {
+                  "competicao": "Brasileirão Série A",
+                  "edicoes": [ "1981", "1996" ]
+              },
+              {
+                  "competicao": "Brasileirão Série B",
+                  "edicoes": [ "2005" ]
+              },
+              {
+                  "competicao": "Copa do Brasil",
+                  "edicoes": [ "1989", "1994", "1997", "2001", "2016" ]
+              },
+              {
+                  "competicao": "Supercopa do Brasil",
+                  "edicoes": [ "1990" ]
+              },
+              {
+                  "competicao": "Copa Libertadores da América",
+                  "edicoes": [ "1983", "1995", "2017" ]
+              },
+              {
+                  "competicao": "Recopa Sul-Americana",
+                  "edicoes": [ "1996", "2018" ]
+              },
+              {
+                  "competicao": "FIFA Club World Cup",
+                  "edicoes": [ "1983" ]
+              }
           ]
-        },
-        {
-          "competicao": "Brasileirão Série B",
-          "edicoes": [
-            "2005"
+     },
+     {
+          "id": 6,
+          "nome": "Internacional",
+          "nome_completo": "Sport Club Internacional",
+          "fundacao": "04/04/1909",
+          "cores": [ "#eb131d", "#ffffff" ],
+          "escudo": "../img/escudos/Brasil/small/Internacional.png",
+          "apelido": "Colorado - Clube do Povo",
+          "presidente": "Alessandro Barcellos",
+          "uniformes": [
+              { "modelo": "Home", "img": "../img/uniformes/Brasil/Internacional/1.png" },
+              { "modelo": "Away", "img": "../img/uniformes/Brasil/Internacional/2.png" },
+              { "modelo": "GK", "img": "../img/uniformes/Brasil/Internacional/gk.png" }
+          ],
+          "marca_uniforme": "Adidas",
+          "pais": "Brasil",
+          "liga": "Brasileirão Série A",
+          "cidade": "Porto Alegre",
+          "estado": "Rio Grande do Sul",
+          "website": "www.internacional.com.br",
+          "email": "aimprensa@internacional.com.br",
+          "resumo": "O Sport Club Internacional (Inter) foi fundado em 4 de abril de 1909, em Porto Alegre, Rio Grande do Sul, Brasil. O clube se estabeleceu como um dos principais clubes do Brasil, com uma história rica em conquistas. Ao longo de sua história, o Internacional conquistou diversos títulos importantes, incluindo o Campeonato Brasileiro em 1975, 1976, 1979 e 2021, a Copa Libertadores da América em 2006 e 2010, a Copa Sul-Americana em 2008 e o Mundial de Clubes da FIFA em 2006. Além disso, o clube é um dos mais bem-sucedidos do Campeonato Gaúcho, tendo vencido o título estadual diversas vezes. Essas conquistas solidificam a posição do Internacional como um dos clubes mais respeitados e bem-sucedidos do Brasil e da América do Sul.",
+          "estadio": {
+              "nome": "Beira-Rio",
+              "inauguracao": 1969,
+              "capacidade": 50842,
+              "foto": "../img/estadios/Brasil/BeiraRio.jpg"
+          },
+          "titulos": [
+              {
+                  "competicao": "Brasileirão Série A",
+                  "edicoes": [ "1975", "1976", "1979" ]
+              },
+              {
+                  "competicao": "Copa do Brasil",
+                  "edicoes": [ "1992" ]
+              },
+              {
+                  "competicao": "Copa Libertadores da América",
+                  "edicoes": [ "2006", "2010" ]
+              },
+              {
+                  "competicao": "Copa Sul-Americana",
+                  "edicoes": [ "2008" ]
+              },
+              {
+                  "competicao": "Recopa Sul-Americana",
+                  "edicoes": [ "2007", "2011" ]
+              },
+              {
+                  "competicao": "FIFA Club World Cup",
+                  "edicoes": [ "2006" ]
+              }
           ]
-        },
-        {
-          "competicao": "Copa do Brasil",
-          "edicoes": [
-            "1989",
-            "1994",
-            "1997",
-            "2001",
-            "2016"
-          ]
-        },
-        {
-          "competicao": "Supercopa do Brasil",
-          "edicoes": [
-            "1990"
-          ]
-        },
-        {
-          "competicao": "Copa Libertadores da América",
-          "edicoes": [
-            "1983",
-            "1995",
-            "2017"
-          ]
-        },
-        {
-          "competicao": "Recopa Sul-Americana",
-          "edicoes": [
-            "1996",
-            "2018"
-          ]
-        },
-        {
-          "competicao": "FIFA Club World Cup",
-          "edicoes": [
-            "1983"
-          ]
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "nome": "Internacional",
-      "nome_completo": "Sport Club Internacional",
-      "fundacao": "04/04/1909",
-      "cores": [
-        "#eb131d",
-        "#ffffff"
-      ],
-      "escudo": "../img/escudos/Brasil/small/Internacional.png",
-      "apelido": "Colorado - Clube do Povo",
-      "presidente": "Alessandro Barcellos",
-      "uniformes": [
-        {
-          "modelo": "Home",
-          "img": "../img/uniformes/Brasil/Internacional/1.png"
-        },
-        {
-          "modelo": "Away",
-          "img": "../img/uniformes/Brasil/Internacional/2.png"
-        },
-        {
-          "modelo": "GK",
-          "img": "../img/uniformes/Brasil/Internacional/gk.png"
-        }
-      ],
-      "marca_uniforme": "Adidas",
-      "pais": "Brasil",
-      "liga": "Brasileirão Série A",
-      "cidade": "Porto Alegre",
-      "estado": "Rio Grande do Sul",
-      "website": "www.internacional.com.br",
-      "email": "aimprensa@internacional.com.br",
-      "resumo": "O Sport Club Internacional (Inter) foi fundado em 4 de abril de 1909, em Porto Alegre, Rio Grande do Sul, Brasil. O clube se estabeleceu como um dos principais clubes do Brasil, com uma história rica em conquistas. Ao longo de sua história, o Internacional conquistou diversos títulos importantes, incluindo o Campeonato Brasileiro em 1975, 1976, 1979 e 2021, a Copa Libertadores da América em 2006 e 2010, a Copa Sul-Americana em 2008 e o Mundial de Clubes da FIFA em 2006. Além disso, o clube é um dos mais bem-sucedidos do Campeonato Gaúcho, tendo vencido o título estadual diversas vezes. Essas conquistas solidificam a posição do Internacional como um dos clubes mais respeitados e bem-sucedidos do Brasil e da América do Sul.",
-      "estadio": {
-        "nome": "Beira-Rio",
-        "inauguracao": 1969,
-        "capacidade": 50842,
-        "foto": "../img/estadios/Brasil/BeiraRio.jpg"
-      },
-      "titulos": [
-        {
-          "competicao": "Brasileirão Série A",
-          "edicoes": [
-            "1975",
-            "1976",
-            "1979"
-          ]
-        },
-        {
-          "competicao": "Copa do Brasil",
-          "edicoes": [
-            "1992"
-          ]
-        },
-        {
-          "competicao": "Copa Libertadores da América",
-          "edicoes": [
-            "2006",
-            "2010"
-          ]
-        },
-        {
-          "competicao": "Copa Sul-Americana",
-          "edicoes": [
-            "2008"
-          ]
-        },
-        {
-          "competicao": "Recopa Sul-Americana",
-          "edicoes": [
-            "2007",
-            "2011"
-          ]
-        },
-        {
-          "competicao": "FIFA Club World Cup",
-          "edicoes": [
-            "2006"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1001",
-      "nome": "Nome do Time",
-      "nomeCompleto": "Nome Completo",
-      "apelido": "",
-      "fundacao": "",
-      "presidente": "",
-      "website": "",
-      "email": "",
-      "cidade": "",
-      "estado": "",
-      "pais": "Brasil",
-      "liga": "Brasileirão Série A",
-      "resumo": "",
-      "marcaUniforme": "",
-      "fotoEscudo": "../img/escudos/Brasil/small/1.png",
-      "cores": [
-        "#ffffff",
-        "#000000",
-        "#f3f4f6"
-      ],
-      "uniformes": [],
-      "estadio": {
-        "nome": "",
-        "inauguracao": "",
-        "capacidade": "",
-        "foto": ""
       }
-    }
   ],
   "TimesEspanha": [
-    {
-      "id": 1,
-      "nome": "Real Madrid",
-      "nome_completo": "Real Madrid Club de Fútbol",
-      "fundacao": "06/03/1902",
-      "cores": [
-        "#ffffff",
-        "#004995",
-        "#f7bd02"
-      ],
-      "escudo": "../img/escudos/Espanha/small/RealMadrid.png",
-      "apelido": "Los Merengues",
-      "presidente": "Florentino Pérez",
-      "uniformes": [
-        {
-          "modelo": "Home",
-          "img": "../img/uniformes/Espanha/RealMadrid/1.png"
-        },
-        {
-          "modelo": "Away",
-          "img": "../img/uniformes/Espanha/RealMadrid/2.png"
-        },
-        {
-          "modelo": "Third",
-          "img": "../img/uniformes/Espanha/RealMadrid/3.png"
-        },
-        {
-          "modelo": "GK",
-          "img": "../img/uniformes/Espanha/RealMadrid/gk.png"
-        }
-      ],
-      "marca_uniforme": "Adidas",
-      "pais": "Espanha",
-      "liga": "La Liga",
-      "cidade": "Madri",
-      "estado": "Comunidade de Madri",
-      "website": "www.realmadrid.com",
-      "email": "mensajes@realmadrid.com",
-      "resumo": "Fundado em 1902, o clube venceu sua primeira copa espanhola três anos depois, provando ser uma das equipes mais fortes da Espanha já naquela época. O clube conquistou o campeonato nacional 35 vezes e também tem 20 títulos da copa do país. Inicialmente chamado de Madrid CF, o clube adotou o nome atual quando recebeu o título de 'Real' em 1920. Em 2014, o Real Madrid se tornou o primeiro clube a conquistar a UEFA Champions League pela décima vez. O feito ficou conhecido como 'La Décima'.",
-      "estadio": {
-        "nome": "Santiago Bernabéu",
-        "inauguracao": 1947,
-        "capacidade": 83186,
-        "foto": "../img/estadios/Espanha/SantiagoBernabeu.jpg"
-      },
-      "titulos": [
-        {
-          "competicao": "La Liga",
-          "edicoes": [
-            "1931-32",
-            "1932-33",
-            "1953-54",
-            "1954-55",
-            "1956-57",
-            "1957-58",
-            "1960-61",
-            "1961-62",
-            "1962-63",
-            "1963-64",
-            "1964-65",
-            "1966-67",
-            "1967-68",
-            "1968-69",
-            "1971-72",
-            "1974-75",
-            "1975-76",
-            "1977-78",
-            "1978-79",
-            "1979-80",
-            "1985-86",
-            "1986-87",
-            "1987-88",
-            "1988-89",
-            "1989-90",
-            "1994-95",
-            "1996-97",
-            "2000-01",
-            "2002-03",
-            "2006-07",
-            "2007-08",
-            "2011-12",
-            "2016-17",
-            "2019-20",
-            "2021-22"
+      {
+          "id": 7,
+          "nome": "Real Madrid",
+          "nome_completo": "Real Madrid Club de Fútbol",
+          "fundacao": "06/03/1902",
+          "cores": [ "#ffffff", "#004995", "#f7bd02" ],
+          "escudo": "../img/escudos/Espanha/small/RealMadrid.png",
+          "apelido": "Los Merengues",
+          "presidente": "Florentino Pérez",
+          "uniformes": [
+              { "modelo": "Home", "img": "../img/uniformes/Espanha/RealMadrid/1.png" },
+              { "modelo": "Away", "img": "../img/uniformes/Espanha/RealMadrid/2.png" },
+              { "modelo": "Third", "img": "../img/uniformes/Espanha/RealMadrid/3.png" },
+              { "modelo": "GK", "img": "../img/uniformes/Espanha/RealMadrid/gk.png" }
+          ],
+          "marca_uniforme": "Adidas",
+          "pais": "Espanha",
+          "liga": "La Liga",
+          "cidade": "Madri",
+          "estado": "Comunidade de Madri",
+          "website": "www.realmadrid.com",
+          "email": "mensajes@realmadrid.com",
+          "resumo": "Fundado em 1902, o clube venceu sua primeira copa espanhola três anos depois, provando ser uma das equipes mais fortes da Espanha já naquela época. O clube conquistou o campeonato nacional 35 vezes e também tem 20 títulos da copa do país. Inicialmente chamado de Madrid CF, o clube adotou o nome atual quando recebeu o título de 'Real' em 1920. Em 2014, o Real Madrid se tornou o primeiro clube a conquistar a UEFA Champions League pela décima vez. O feito ficou conhecido como 'La Décima'.",
+          "estadio": {
+              "nome": "Santiago Bernabéu",
+              "inauguracao": 1947,
+              "capacidade": 83186,
+              "foto": "../img/estadios/Espanha/SantiagoBernabeu.jpg"
+          },
+          "titulos": [
+              {
+                  "competicao": "La Liga",
+                  "edicoes": [ "1931-32", "1932-33", "1953-54", "1954-55", "1956-57", "1957-58", "1960-61", "1961-62", "1962-63", "1963-64", "1964-65", "1966-67", "1967-68", "1968-69", "1971-72", "1974-75", "1975-76", "1977-78", "1978-79", "1979-80", "1985-86", "1986-87", "1987-88", "1988-89", "1989-90", "1994-95", "1996-97", "2000-01", "2002-03", "2006-07", "2007-08", "2011-12", "2016-17", "2019-20", "2021-22" ]
+              },
+              {
+                  "competicao": "Copa del Rey",
+                  "edicoes": [ "1905", "1906", "1907", "1908", "1917", "1934", "1936", "1946", "1947", "1961-62", "1969-70", "1973-74", "1974-75", "1979-80", "1981-82", "1988-89", "1992-93", "2010-11", "2013-14", "2022-23" ]
+              },
+              {
+                  "competicao": "Supercopa de España",
+                  "edicoes": [ "1988", "1989", "1990", "1993", "1997", "2001", "2003", "2008", "2012", "2017", "2019-20", "2021-22", "2023-24" ]
+              },
+              {
+                  "competicao": "UEFA Champions League",
+                  "edicoes": [ "1955-56", "1956-57", "1957-58", "1958-59", "1959-60", "1965-66", "1997-98", "1999-2000", "2001-02", "2013-14", "2015-16", "2016-17", "2017-18", "2021-22" ]
+              },
+              {
+                  "competicao": "UEFA Europa League",
+                  "edicoes": [ "1984-85", "1985-86" ]
+              },
+              {
+                  "competicao": "UEFA Super Cup",
+                  "edicoes": [ "2002", "2014", "2016", "2017", "2022" ]
+              },
+              {
+                  "competicao": "FIFA Club World Cup",
+                  "edicoes": [ "1960", "1998", "2002", "2014", "2016", "2017", "2018", "2022" ]
+              }
           ]
-        },
-        {
-          "competicao": "Copa del Rey",
-          "edicoes": [
-            "1905",
-            "1906",
-            "1907",
-            "1908",
-            "1917",
-            "1934",
-            "1936",
-            "1946",
-            "1947",
-            "1961-62",
-            "1969-70",
-            "1973-74",
-            "1974-75",
-            "1979-80",
-            "1981-82",
-            "1988-89",
-            "1992-93",
-            "2010-11",
-            "2013-14",
-            "2022-23"
+     },
+     {
+          "id": 8,
+          "nome": "Barcelona",
+          "nome_completo": "Futbol Club Barcelona",
+          "fundacao": "29/11/1899",
+          "cores": [ "#013f7c", "#a7163a", "#EDBB00" ],
+          "escudo": "../img/escudos/Espanha/small/Barcelona.png",
+          "apelido": "Culés",
+          "presidente": "Joan Laporta",
+          "uniformes": [
+              { "modelo": "Home", "img": "../img/uniformes/Espanha/Barcelona/1.png" },
+              { "modelo": "Away", "img": "../img/uniformes/Espanha/Barcelona/2.png" },
+              { "modelo": "Third", "img": "../img/uniformes/Espanha/Barcelona/3.png" },
+              { "modelo": "GK", "img": "../img/uniformes/Espanha/Barcelona/gk.png" }
+          ],
+          "marca_uniforme": "Nike",
+          "pais": "Espanha",
+          "liga": "La Liga",
+          "cidade": "Barcelona",
+          "estado": "Cataluña",
+          "website": "www.fcbarcelona.com",
+          "email": "oab@fcbarcelona.cat",
+          "resumo": "Em 1899, o Barcelona foi fundado depois que um anúncio foi publicado em um jornal. Onze jogadores responderam à oferta e o clube foi criado. O clube conquistou o campeonato nacional 27 vezes e também tem 31 títulos da copa do país. O FC Barcelona venceu sua primeira liga na temporada 1928/29, a primeira edição da competição, com 25 pontos. A quinta UEFA Champions League veio em 2015, tornando-se o primeiro clube da história com duas tríplices coroas, vencendo a copa nacional, a liga e a UEFA Champions League na mesma temporada.",
+          "estadio": {
+              "nome": "Camp Nou",
+              "inauguracao": 1957,
+              "capacidade": 105000,
+              "foto": "../img/estadios/Espanha/CampNou.jpg"
+          },
+          "titulos": [
+              {
+                  "competicao": "La Liga",
+                  "edicoes": [ "1929", "1944-45", "1947-48", "1948-49", "1951-52", "1952-53", "1958-59", "1959-60", "1973-74", "1984-85", "1990-91", "1991-92", "1992-93", "1993-94", "1997-98", "1998-99", "2004-05", "2005-06", "2008-09", "2009-10", "2010-11", "2012-13", "2014-15", "2015-16", "2017-18", "2018-19", "2022-23" ]
+              },
+              {
+                  "competicao": "Copa del Rey",
+                  "edicoes": [ "1910", "1912", "1913", "1920", "1922", "1925", "1926", "1928", "1942", "1951", "1952", "1952-53", "1957", "1958-59", "1962-63", "1967-68", "1970-71", "1977-78", "1980-81", "1982-83", "1987-88", "1989-90", "1996-97", "1997-98", "2008-09", "2011-12", "2014-15", "2015-16", "2016-17", "2017-18", "2020-21" ]
+              },
+              {
+                  "competicao": "Supercopa de España",
+                  "edicoes": [ "1983", "1991", "1992", "1994", "1996", "2005", "2006", "2009", "2010", "2011", "2013", "2016", "2018", "2022-23" ]
+              },
+              {
+                  "competicao": "UEFA Champions League",
+                  "edicoes": [ "1991-92", "2005-06", "2008-09", "2010-11", "2014-15" ]
+              },
+              {
+                  "competicao": "UEFA Super Cup",
+                  "edicoes": [ "1992", "1997", "2009", "2011", "2015" ]
+              },
+              {
+                  "competicao": "FIFA Club World Cup",
+                  "edicoes": [ "2009", "2011", "2015" ]
+              }
           ]
-        },
-        {
-          "competicao": "Supercopa de España",
-          "edicoes": [
-            "1988",
-            "1989",
-            "1990",
-            "1993",
-            "1997",
-            "2001",
-            "2003",
-            "2008",
-            "2012",
-            "2017",
-            "2019-20",
-            "2021-22",
-            "2023-24"
-          ]
-        },
-        {
-          "competicao": "UEFA Champions League",
-          "edicoes": [
-            "1955-56",
-            "1956-57",
-            "1957-58",
-            "1958-59",
-            "1959-60",
-            "1965-66",
-            "1997-98",
-            "1999-2000",
-            "2001-02",
-            "2013-14",
-            "2015-16",
-            "2016-17",
-            "2017-18",
-            "2021-22"
-          ]
-        },
-        {
-          "competicao": "UEFA Europa League",
-          "edicoes": [
-            "1984-85",
-            "1985-86"
-          ]
-        },
-        {
-          "competicao": "UEFA Super Cup",
-          "edicoes": [
-            "2002",
-            "2014",
-            "2016",
-            "2017",
-            "2022"
-          ]
-        },
-        {
-          "competicao": "FIFA Club World Cup",
-          "edicoes": [
-            "1960",
-            "1998",
-            "2002",
-            "2014",
-            "2016",
-            "2017",
-            "2018",
-            "2022"
-          ]
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "nome": "Barcelona",
-      "nome_completo": "Futbol Club Barcelona",
-      "fundacao": "29/11/1899",
-      "cores": [
-        "#013f7c",
-        "#a7163a",
-        "#EDBB00"
-      ],
-      "escudo": "../img/escudos/Espanha/small/Barcelona.png",
-      "apelido": "Culés",
-      "presidente": "Joan Laporta",
-      "uniformes": [
-        {
-          "modelo": "Home",
-          "img": "../img/uniformes/Espanha/Barcelona/1.png"
-        },
-        {
-          "modelo": "Away",
-          "img": "../img/uniformes/Espanha/Barcelona/2.png"
-        },
-        {
-          "modelo": "Third",
-          "img": "../img/uniformes/Espanha/Barcelona/3.png"
-        },
-        {
-          "modelo": "GK",
-          "img": "../img/uniformes/Espanha/Barcelona/gk.png"
-        }
-      ],
-      "marca_uniforme": "Nike",
-      "pais": "Espanha",
-      "liga": "La Liga",
-      "cidade": "Barcelona",
-      "estado": "Cataluña",
-      "website": "www.fcbarcelona.com",
-      "email": "oab@fcbarcelona.cat",
-      "resumo": "Em 1899, o Barcelona foi fundado depois que um anúncio foi publicado em um jornal. Onze jogadores responderam à oferta e o clube foi criado. O clube conquistou o campeonato nacional 27 vezes e também tem 31 títulos da copa do país. O FC Barcelona venceu sua primeira liga na temporada 1928/29, a primeira edição da competição, com 25 pontos. A quinta UEFA Champions League veio em 2015, tornando-se o primeiro clube da história com duas tríplices coroas, vencendo a copa nacional, a liga e a UEFA Champions League na mesma temporada.",
-      "estadio": {
-        "nome": "Camp Nou",
-        "inauguracao": 1957,
-        "capacidade": 105000,
-        "foto": "../img/estadios/Espanha/CampNou.jpg"
-      },
-      "titulos": [
-        {
-          "competicao": "La Liga",
-          "edicoes": [
-            "1929",
-            "1944-45",
-            "1947-48",
-            "1948-49",
-            "1951-52",
-            "1952-53",
-            "1958-59",
-            "1959-60",
-            "1973-74",
-            "1984-85",
-            "1990-91",
-            "1991-92",
-            "1992-93",
-            "1993-94",
-            "1997-98",
-            "1998-99",
-            "2004-05",
-            "2005-06",
-            "2008-09",
-            "2009-10",
-            "2010-11",
-            "2012-13",
-            "2014-15",
-            "2015-16",
-            "2017-18",
-            "2018-19",
-            "2022-23"
-          ]
-        },
-        {
-          "competicao": "Copa del Rey",
-          "edicoes": [
-            "1910",
-            "1912",
-            "1913",
-            "1920",
-            "1922",
-            "1925",
-            "1926",
-            "1928",
-            "1942",
-            "1951",
-            "1952",
-            "1952-53",
-            "1957",
-            "1958-59",
-            "1962-63",
-            "1967-68",
-            "1970-71",
-            "1977-78",
-            "1980-81",
-            "1982-83",
-            "1987-88",
-            "1989-90",
-            "1996-97",
-            "1997-98",
-            "2008-09",
-            "2011-12",
-            "2014-15",
-            "2015-16",
-            "2016-17",
-            "2017-18",
-            "2020-21"
-          ]
-        },
-        {
-          "competicao": "Supercopa de España",
-          "edicoes": [
-            "1983",
-            "1991",
-            "1992",
-            "1994",
-            "1996",
-            "2005",
-            "2006",
-            "2009",
-            "2010",
-            "2011",
-            "2013",
-            "2016",
-            "2018",
-            "2022-23"
-          ]
-        },
-        {
-          "competicao": "UEFA Champions League",
-          "edicoes": [
-            "1991-92",
-            "2005-06",
-            "2008-09",
-            "2010-11",
-            "2014-15"
-          ]
-        },
-        {
-          "competicao": "UEFA Super Cup",
-          "edicoes": [
-            "1992",
-            "1997",
-            "2009",
-            "2011",
-            "2015"
-          ]
-        },
-        {
-          "competicao": "FIFA Club World Cup",
-          "edicoes": [
-            "2009",
-            "2011",
-            "2015"
-          ]
-        }
-      ]
-    }
+      }
   ],
   "TimesFrança": [
-    {
-      "id": 1,
-      "nome": "PSG",
-      "nome_completo": "Paris Saint-Germain Football Club",
-      "fundacao": "12/08/1970",
-      "cores": [
-        "#004170",
-        "#ffffff",
-        "#DA291C"
-      ],
-      "escudo": "../img/escudos/França/small/PSG.png",
-      "apelido": "Les Parisiens",
-      "presidente": "Nasser Al-Khelaïfi",
-      "uniformes": [
-        {
-          "modelo": "Home",
-          "img": "../img/uniformes/França/PSG/1.png"
-        },
-        {
-          "modelo": "Away",
-          "img": "../img/uniformes/França/PSG/2.png"
-        },
-        {
-          "modelo": "Third",
-          "img": "../img/uniformes/França/PSG/3.png"
-        },
-        {
-          "modelo": "GK",
-          "img": "../img/uniformes/França/PSG/gk.png"
-        }
-      ],
-      "marca_uniforme": "Nike",
-      "pais": "França",
-      "liga": "Ligue 1",
-      "cidade": "Paris",
-      "estado": "Ilha de França",
-      "website": "www.psg.fr",
-      "email": "psg@psg.tm.fr",
-      "resumo": "O clube foi criado em 1970 quando um grupo de empersários locais juntou forças com os diretores do Stade Sangermanois. O clube conquistou o campeonato nacional 11 vezes e também tem 14 títulos da copa do país. O Paris Saint-Germain usou a Torre Eiffel no escudo pela primeira vez em 1972. Suas cores vermelha e azul representam a cidade de Paris. O clube conquistou seu primeiro troféu europeu em 1996: a UEFA Cup Winner's Cup.",
-      "estadio": {
-        "nome": "Parc des Princes",
-        "inauguracao": 1970,
-        "capacidade": 48583,
-        "foto": "../img/estadios/França/ParcDesPrinces.jpg"
-      },
-      "titulos": [
-        {
-          "competicao": "Ligue 1",
-          "edicoes": [
-            "1985-86",
-            "1993-94",
-            "2012-13",
-            "2013-14",
-            "2014-15",
-            "2015-16",
-            "2017-18",
-            "2018-19",
-            "2019-20",
-            "2021-22",
-            "2022-23"
+      {
+          "id": 9,
+          "nome": "PSG",
+          "nome_completo": "Paris Saint-Germain Football Club",
+          "fundacao": "12/08/1970",
+          "cores": [ "#004170", "#ffffff", "#DA291C" ],
+          "escudo": "../img/escudos/França/small/PSG.png",
+          "apelido": "Les Parisiens",
+          "presidente": "Nasser Al-Khelaïfi",
+          "uniformes": [
+              { "modelo": "Home", "img": "../img/uniformes/França/PSG/1.png" },
+              { "modelo": "Away", "img": "../img/uniformes/França/PSG/2.png" },
+              { "modelo": "Third", "img": "../img/uniformes/França/PSG/3.png" },
+              { "modelo": "GK", "img": "../img/uniformes/França/PSG/gk.png" }
+          ],
+          "marca_uniforme": "Nike",
+          "pais": "França",
+          "liga": "Ligue 1",
+          "cidade": "Paris",
+          "estado": "Ilha de França",
+          "website": "www.psg.fr",
+          "email": "psg@psg.tm.fr",
+          "resumo": "O clube foi criado em 1970 quando um grupo de empersários locais juntou forças com os diretores do Stade Sangermanois. O clube conquistou o campeonato nacional 11 vezes e também tem 14 títulos da copa do país. O Paris Saint-Germain usou a Torre Eiffel no escudo pela primeira vez em 1972. Suas cores vermelha e azul representam a cidade de Paris. O clube conquistou seu primeiro troféu europeu em 1996: a UEFA Cup Winner's Cup.",
+          "estadio": {
+              "nome": "Parc des Princes",
+              "inauguracao": 1970,
+              "capacidade": 48583,
+              "foto": "../img/estadios/França/ParcDesPrinces.jpg"
+          },
+          "titulos": [
+              {
+                  "competicao": "Ligue 1",
+                  "edicoes": [ "1985-86", "1993-94", "2012-13", "2013-14", "2014-15", "2015-16", "2017-18", "2018-19", "2019-20", "2021-22", "2022-23" ]
+              },
+              {
+                  "competicao": "Ligue 2",
+                  "edicoes": [ "1970-71" ]
+              },
+              {
+                  "competicao": "Coupe de France",
+                  "edicoes": [ "1981-82", "1982-83", "1992-93", "1994-95", "1997-98", "2003-04", "2005-06", "2009-10", "2014-15", "2015-16", "2016-17", "2017-18", "2019-20", "2020-21" ]
+              },
+              {
+                  "competicao": "Trophée des Champions",
+                  "edicoes": [ "1995", "1998", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2022", "2023" ]
+              }
           ]
-        },
-        {
-          "competicao": "Ligue 2",
-          "edicoes": [
-            "1970-71"
-          ]
-        },
-        {
-          "competicao": "Coupe de France",
-          "edicoes": [
-            "1981-82",
-            "1982-83",
-            "1992-93",
-            "1994-95",
-            "1997-98",
-            "2003-04",
-            "2005-06",
-            "2009-10",
-            "2014-15",
-            "2015-16",
-            "2016-17",
-            "2017-18",
-            "2019-20",
-            "2020-21"
-          ]
-        },
-        {
-          "competicao": "Trophée des Champions",
-          "edicoes": [
-            "1995",
-            "1998",
-            "2013",
-            "2014",
-            "2015",
-            "2016",
-            "2017",
-            "2018",
-            "2019",
-            "2020",
-            "2022",
-            "2023"
-          ]
-        }
-      ]
-    }
+     }
   ],
   "TimesInglaterra": [
-    {
-      "id": 1,
-      "nome": "Chelsea",
-      "nome_completo": "Chelsea Football Club",
-      "fundacao": "10/03/1905",
-      "cores": [
-        "#034694",
-        "#ffffff"
-      ],
-      "escudo": "../img/escudos/Inglaterra/small/Chelsea.png",
-      "apelido": "The Blues",
-      "presidente": "Todd Boehly",
-      "uniformes": [
-        {
-          "modelo": "Home",
-          "img": "../img/uniformes/Inglaterra/Chelsea/1.png"
-        },
-        {
-          "modelo": "Away",
-          "img": "../img/uniformes/Inglaterra/Chelsea/2.png"
-        },
-        {
-          "modelo": "Third",
-          "img": "../img/uniformes/Inglaterra/Chelsea/3.png"
-        },
-        {
-          "modelo": "GK",
-          "img": "../img/uniformes/Inglaterra/Chelsea/gk.png"
-        }
-      ],
-      "marca_uniforme": "Nike",
-      "pais": "Inglaterra",
-      "liga": "Premier League",
-      "cidade": "Londres",
-      "estado": "-",
-      "website": "www.chelseafc.com",
-      "email": "enquiries@chelseafc.com",
-      "resumo": "O Chelsea FC foi fundado em 1905 em um pub localizado em Fulham Road, Londres. O Clube conquistou o campeonato nacional 6 vezes e também tem 8 títulos da copa do país. O Chelsea teve uma sequência impressionante de invencibilidade em casa na primeira divisão do campeonato inglês: 86 jogos entre 2004 e 2008. O clube se tornou o primeiro detentor da UEFA Champions League a vencer a UEFA Europa League no ano seguinte, em 2013.",
-      "estadio": {
-        "nome": "Stamford Bridge",
-        "inauguracao": 1877,
-        "capacidade": 40343,
-        "foto": "../img/estadios/Inglaterra/StanfordBridge.jpg"
-      },
-      "titulos": [
-        {
-          "competicao": "Premier League",
-          "edicoes": [
-            "1954-55",
-            "2004-05",
-            "2005-06",
-            "2009-10",
-            "2014-15",
-            "2016-17"
+      {
+          "id": 10,
+          "nome": "Chelsea",
+          "nome_completo": "Chelsea Football Club",
+          "fundacao": "10/03/1905",
+          "cores": [ "#034694", "#ffffff" ],
+          "escudo": "../img/escudos/Inglaterra/small/Chelsea.png",
+          "apelido": "The Blues",
+          "presidente": "Todd Boehly",
+          "uniformes": [
+              { "modelo": "Home", "img": "../img/uniformes/Inglaterra/Chelsea/1.png" },
+              { "modelo": "Away", "img": "../img/uniformes/Inglaterra/Chelsea/2.png" },
+              { "modelo": "Third", "img": "../img/uniformes/Inglaterra/Chelsea/3.png" },
+              { "modelo": "GK", "img": "../img/uniformes/Inglaterra/Chelsea/gk.png" }
+          ],
+          "marca_uniforme": "Nike",
+          "pais": "Inglaterra",
+          "liga": "Premier League",
+          "cidade": "Londres",
+          "estado": "-",
+          "website": "www.chelseafc.com",
+          "email": "enquiries@chelseafc.com",
+          "resumo": "O Chelsea FC foi fundado em 1905 em um pub localizado em Fulham Road, Londres. O Clube conquistou o campeonato nacional 6 vezes e também tem 8 títulos da copa do país. O Chelsea teve uma sequência impressionante de invencibilidade em casa na primeira divisão do campeonato inglês: 86 jogos entre 2004 e 2008. O clube se tornou o primeiro detentor da UEFA Champions League a vencer a UEFA Europa League no ano seguinte, em 2013.",
+          "estadio": {
+              "nome": "Stamford Bridge",
+              "inauguracao": 1877,
+              "capacidade": 40343,
+              "foto": "../img/estadios/Inglaterra/StanfordBridge.jpg"
+          },
+          "titulos": [
+              {
+                  "competicao": "Premier League",
+                  "edicoes": [ "1954-55", "2004-05", "2005-06", "2009-10", "2014-15", "2016-17" ]
+              },
+              {
+                  "competicao": "EFL Championship",
+                  "edicoes": [ "1983-84", "1988-89" ]
+              },
+              {
+                  "competicao": "FA Cup",
+                  "edicoes": [ "1969-70", "1996-97", "1999-2000", "2006-07", "2008-09", "2009-10", "2011-12", "2017-18" ]
+              },
+              {
+                  "competicao": "EFL Cup",
+                  "edicoes": [ "1964-65", "1997-98", "2004-05", "2006-07", "2014-15" ]
+              },
+              {
+                  "competicao": "FA Community Shield",
+                  "edicoes": [ "1955", "2000", "2005", "2009" ]
+              },
+              {
+                  "competicao": "UEFA Champions League",
+                  "edicoes": [ "2011-12", "2020-21" ]
+              },
+              {
+                  "competicao": "UEFA Europa League",
+                  "edicoes": [ "2012-13", "2018-19" ]
+              },
+              {
+                  "competicao": "UEFA Super Cup",
+                  "edicoes": [ "1998", "2021" ]
+              },
+              {
+                  "competicao": "FIFA Club World Cup",
+                  "edicoes": [ "2021" ]
+              }
           ]
-        },
-        {
-          "competicao": "EFL Championship",
-          "edicoes": [
-            "1983-84",
-            "1988-89"
+     },
+     {
+          "id": 11,
+          "nome": "Liverpool",
+          "nome_completo": "Liverpool Football Club",
+          "fundacao": "03/06/1892",
+          "cores": [ "#C8102E", "#ffffff" ],
+          "escudo": "../img/escudos/Inglaterra/small/Liverpool.png",
+          "apelido": "Reds",
+          "presidente": "Tom Werner",
+          "uniformes": [
+              { "modelo": "Home", "img": "../img/uniformes/Inglaterra/Liverpool/1.png" },
+              { "modelo": "Away", "img": "../img/uniformes/Inglaterra/Liverpool/2.png" },
+              { "modelo": "Third", "img": "../img/uniformes/Inglaterra/Liverpool/3.png" },
+              { "modelo": "GK", "img": "../img/uniformes/Inglaterra/Liverpool/gk.png" }
+          ],
+          "marca_uniforme": "Nike",
+          "pais": "Inglaterra",
+          "liga": "Premier League",
+          "cidade": "Liverpool",
+          "estado": "-",
+          "website": "www.liverpoolfc.com",
+          "email": "-",
+          "resumo": "O Liverpool FC foi criado no dia 15 de março de 1892, mas só em 3 de junho desse ano foi reconhecido formalmente. O clube conquistou o campeonato nacional 19 vezes e também tem 8 títulos da copa do país. Em sua primeira temporada no futebol profissional, o Liverpool conquistou o título da segunda divisão e terminou sua campanha invicto. Em 2020, foi coroado campeão da Inglaterra pela primeira vez em 30 anos ao erguer o troféu da Premier League.",
+          "estadio": {
+              "nome": "Anfield",
+              "inauguracao": 1884,
+              "capacidade": 60725,
+              "foto": "../img/estadios/Inglaterra/Anfield.jpg"
+          },
+          "titulos": [
+              {
+                  "competicao": "Premier League",
+                  "edicoes": [ "1900-01", "1905-06", "1921-22", "1922-23", "1946-47", "1963-64", "1965-66", "1972-73", "1975-76", "1976-77", "1978-79", "1979-80", "1981-82", "1982-83", "1983-84", "1985-86", "1987-88", "1989-90", "2019-20" ]
+              },
+              {
+                  "competicao": "EFL Championship",
+                  "edicoes": [ "1893-94", "1895-96", "1904-05", "1961-62" ]
+              },
+              {
+                  "competicao": "FA Cup",
+                  "edicoes": [ "1964-65", "1973-74", "1985-86", "1988-89", "1991-92", "2000-01", "2005-06", "2021-22" ]
+              },
+              {
+                  "competicao": "EFL Cup",
+                  "edicoes": [ "1980-81", "1981-82", "1982-83", "1983-84", "1994-95", "2000-01", "2002-03", "2011-12", "2021-22" ]
+              },
+              {
+                  "competicao": "FA Community Shield",
+                  "edicoes": [ "1964*", "1965*", "1966", "1974", "1976", "1977*", "1979", "1980", "1982", "1986*", "1988", "1989", "1990*", "2001", "2006", "2022" ]
+              },
+              {
+                  "competicao": "UEFA Champions League",
+                  "edicoes": [ "1976-77", "1977-78", "1980-81", "1983-84", "2004-05", "2018-19" ]
+              },
+              {
+                  "competicao": "UEFA Europa League",
+                  "edicoes": [ "1972-73", "1975-76", "2000-01" ]
+              },
+              {
+                  "competicao": "UEFA Super Cup",
+                  "edicoes": [ "1977", "2001", "2005", "2019" ]
+              },
+              {
+                  "competicao": "FIFA Club World Cup",
+                  "edicoes": [ "2019" ]
+              }
           ]
-        },
-        {
-          "competicao": "FA Cup",
-          "edicoes": [
-            "1969-70",
-            "1996-97",
-            "1999-2000",
-            "2006-07",
-            "2008-09",
-            "2009-10",
-            "2011-12",
-            "2017-18"
-          ]
-        },
-        {
-          "competicao": "EFL Cup",
-          "edicoes": [
-            "1964-65",
-            "1997-98",
-            "2004-05",
-            "2006-07",
-            "2014-15"
-          ]
-        },
-        {
-          "competicao": "FA Community Shield",
-          "edicoes": [
-            "1955",
-            "2000",
-            "2005",
-            "2009"
-          ]
-        },
-        {
-          "competicao": "UEFA Champions League",
-          "edicoes": [
-            "2011-12",
-            "2020-21"
-          ]
-        },
-        {
-          "competicao": "UEFA Europa League",
-          "edicoes": [
-            "2012-13",
-            "2018-19"
-          ]
-        },
-        {
-          "competicao": "UEFA Super Cup",
-          "edicoes": [
-            "1998",
-            "2021"
-          ]
-        },
-        {
-          "competicao": "FIFA Club World Cup",
-          "edicoes": [
-            "2021"
-          ]
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "nome": "Liverpool",
-      "nome_completo": "Liverpool Football Club",
-      "fundacao": "03/06/1892",
-      "cores": [
-        "#C8102E",
-        "#ffffff"
-      ],
-      "escudo": "../img/escudos/Inglaterra/small/Liverpool.png",
-      "apelido": "Reds",
-      "presidente": "Tom Werner",
-      "uniformes": [
-        {
-          "modelo": "Home",
-          "img": "../img/uniformes/Inglaterra/Liverpool/1.png"
-        },
-        {
-          "modelo": "Away",
-          "img": "../img/uniformes/Inglaterra/Liverpool/2.png"
-        },
-        {
-          "modelo": "Third",
-          "img": "../img/uniformes/Inglaterra/Liverpool/3.png"
-        },
-        {
-          "modelo": "GK",
-          "img": "../img/uniformes/Inglaterra/Liverpool/gk.png"
-        }
-      ],
-      "marca_uniforme": "Nike",
-      "pais": "Inglaterra",
-      "liga": "Premier League",
-      "cidade": "Liverpool",
-      "estado": "-",
-      "website": "www.liverpoolfc.com",
-      "email": "-",
-      "resumo": "O Liverpool FC foi criado no dia 15 de março de 1892, mas só em 3 de junho desse ano foi reconhecido formalmente. O clube conquistou o campeonato nacional 19 vezes e também tem 8 títulos da copa do país. Em sua primeira temporada no futebol profissional, o Liverpool conquistou o título da segunda divisão e terminou sua campanha invicto. Em 2020, foi coroado campeão da Inglaterra pela primeira vez em 30 anos ao erguer o troféu da Premier League.",
-      "estadio": {
-        "nome": "Anfield",
-        "inauguracao": 1884,
-        "capacidade": 60725,
-        "foto": "../img/estadios/Inglaterra/Anfield.jpg"
-      },
-      "titulos": [
-        {
-          "competicao": "Premier League",
-          "edicoes": [
-            "1900-01",
-            "1905-06",
-            "1921-22",
-            "1922-23",
-            "1946-47",
-            "1963-64",
-            "1965-66",
-            "1972-73",
-            "1975-76",
-            "1976-77",
-            "1978-79",
-            "1979-80",
-            "1981-82",
-            "1982-83",
-            "1983-84",
-            "1985-86",
-            "1987-88",
-            "1989-90",
-            "2019-20"
-          ]
-        },
-        {
-          "competicao": "EFL Championship",
-          "edicoes": [
-            "1893-94",
-            "1895-96",
-            "1904-05",
-            "1961-62"
-          ]
-        },
-        {
-          "competicao": "FA Cup",
-          "edicoes": [
-            "1964-65",
-            "1973-74",
-            "1985-86",
-            "1988-89",
-            "1991-92",
-            "2000-01",
-            "2005-06",
-            "2021-22"
-          ]
-        },
-        {
-          "competicao": "EFL Cup",
-          "edicoes": [
-            "1980-81",
-            "1981-82",
-            "1982-83",
-            "1983-84",
-            "1994-95",
-            "2000-01",
-            "2002-03",
-            "2011-12",
-            "2021-22"
-          ]
-        },
-        {
-          "competicao": "FA Community Shield",
-          "edicoes": [
-            "1964*",
-            "1965*",
-            "1966",
-            "1974",
-            "1976",
-            "1977*",
-            "1979",
-            "1980",
-            "1982",
-            "1986*",
-            "1988",
-            "1989",
-            "1990*",
-            "2001",
-            "2006",
-            "2022"
-          ]
-        },
-        {
-          "competicao": "UEFA Champions League",
-          "edicoes": [
-            "1976-77",
-            "1977-78",
-            "1980-81",
-            "1983-84",
-            "2004-05",
-            "2018-19"
-          ]
-        },
-        {
-          "competicao": "UEFA Europa League",
-          "edicoes": [
-            "1972-73",
-            "1975-76",
-            "2000-01"
-          ]
-        },
-        {
-          "competicao": "UEFA Super Cup",
-          "edicoes": [
-            "1977",
-            "2001",
-            "2005",
-            "2019"
-          ]
-        },
-        {
-          "competicao": "FIFA Club World Cup",
-          "edicoes": [
-            "2019"
-          ]
-        }
-      ]
-    }
+      }
   ],
   "TimesItália": [
-    {
-      "id": 1,
-      "nome": "Napoli",
-      "nome_completo": "Società Sportiva Calcio Napoli",
-      "fundacao": "25/08/1926",
-      "cores": [
-        "#12A0D7",
-        "#ffffff"
-      ],
-      "escudo": "../img/escudos/Itália/small/Napoli.png",
-      "apelido": "Gli Azzurri",
-      "presidente": "Aurelio De Laurentiis",
-      "uniformes": [
-        {
-          "modelo": "Home",
-          "img": "../img/uniformes/Itália/Napoli/1.png"
-        },
-        {
-          "modelo": "Away",
-          "img": "../img/uniformes/Itália/Napoli/2.png"
-        },
-        {
-          "modelo": "Third",
-          "img": "../img/uniformes/Itália/Napoli/3.png"
-        },
-        {
-          "modelo": "GK",
-          "img": "../img/uniformes/Itália/Napoli/gk.png"
-        }
-      ],
-      "marca_uniforme": "EA7",
-      "pais": "Itália",
-      "liga": "Serie A",
-      "cidade": "Nápoles",
-      "estado": "Campânia",
-      "website": "www.sscnapoli.it",
-      "email": "infocalcio@sscn.it",
-      "resumo": "O clube foi fundado em 1926 com o nome Associazione Calcio Napoli graças à iniciativa de empresários ricos da região. O clube conquistou o campeonato nacional 3 vezes e também tem 6 títulos da copa do país. Com o apelido de 'Partenopei' ('Napolitanos'), o Napoli ganhou se segundo título da liga em 1989-90 e após um período de declínio nos anos 90, voltou à primeira divisão em 2007. O clube conquistou o primeiro troféu europeu em 1989, ao vencer o Stuttgart na final da UEFA Europa League.",
-      "estadio": {
-        "nome": "Stadio Diego Armando Maradona",
-        "inauguracao": 1959,
-        "capacidade": 54726,
-        "foto": "../img/estadios/Itália/StadioDiegoArmandoMaradona.jpg"
-      },
-      "titulos": [
-        {
-          "competicao": "Serie A",
-          "edicoes": [
-            "1986-87",
-            "1989-90",
-            "2022-23"
+      {
+          "id": 12,
+          "nome": "Napoli",
+          "nome_completo": "Società Sportiva Calcio Napoli",
+          "fundacao": "25/08/1926",
+          "cores": [ "#12A0D7", "#ffffff" ],
+          "escudo": "../img/escudos/Itália/small/Napoli.png",
+          "apelido": "Gli Azzurri",
+          "presidente": "Aurelio De Laurentiis",
+          "uniformes": [
+              { "modelo": "Home", "img": "../img/uniformes/Itália/Napoli/1.png" },
+              { "modelo": "Away", "img": "../img/uniformes/Itália/Napoli/2.png" },
+              { "modelo": "Third", "img": "../img/uniformes/Itália/Napoli/3.png" },
+              { "modelo": "GK", "img": "../img/uniformes/Itália/Napoli/gk.png" }
+          ],
+          "marca_uniforme": "EA7",
+          "pais": "Itália",
+          "liga": "Serie A",
+          "cidade": "Nápoles",
+          "estado": "Campânia",
+          "website": "www.sscnapoli.it",
+          "email": "infocalcio@sscn.it",
+          "resumo": "O clube foi fundado em 1926 com o nome Associazione Calcio Napoli graças à iniciativa de empresários ricos da região. O clube conquistou o campeonato nacional 3 vezes e também tem 6 títulos da copa do país. Com o apelido de 'Partenopei' ('Napolitanos'), o Napoli ganhou se segundo título da liga em 1989-90 e após um período de declínio nos anos 90, voltou à primeira divisão em 2007. O clube conquistou o primeiro troféu europeu em 1989, ao vencer o Stuttgart na final da UEFA Europa League.",
+          "estadio": {
+              "nome": "Stadio Diego Armando Maradona",
+              "inauguracao": 1959,
+              "capacidade": 54726,
+              "foto": "../img/estadios/Itália/StadioDiegoArmandoMaradona.jpg"
+          },
+          "titulos": [
+              {
+                  "competicao": "Serie A",
+                  "edicoes": [ "1986-87", "1989-90", "2022-23" ]
+              },
+              {
+                  "competicao": "Serie B",
+                  "edicoes": [ "1949-50" ]
+              },
+              {
+                  "competicao": "Coppa Italia",
+                  "edicoes": [ "1961-62", "1975-76", "1986-87", "2011-12", "2013-14", "2019-20" ]
+              },
+              {
+                  "competicao": "Supercoppa Italiana",
+                  "edicoes": [ "1990", "2014" ]
+              },
+              {
+                  "competicao": "UEFA Europa League",
+                  "edicoes": [ "1988-89" ]
+              }
           ]
-        },
-        {
-          "competicao": "Serie B",
-          "edicoes": [
-            "1949-50"
-          ]
-        },
-        {
-          "competicao": "Coppa Italia",
-          "edicoes": [
-            "1961-62",
-            "1975-76",
-            "1986-87",
-            "2011-12",
-            "2013-14",
-            "2019-20"
-          ]
-        },
-        {
-          "competicao": "Supercoppa Italiana",
-          "edicoes": [
-            "1990",
-            "2014"
-          ]
-        },
-        {
-          "competicao": "UEFA Europa League",
-          "edicoes": [
-            "1988-89"
-          ]
-        }
-      ]
-    }
+     }
   ]
 }

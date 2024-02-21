@@ -194,7 +194,7 @@ function criarDialogEdicao(time) {
 
     let tituloCadastro = document.createElement('h1')
     tituloCadastro.className = 'text-2xl font-bold text-center p-5 mt-8'
-    tituloCadastro.innerText = 'Cadastrar Time'
+    tituloCadastro.innerText = 'Editar Time'
 
     dialogEdicao.appendChild(tituloCadastro)
 

@@ -239,7 +239,7 @@ function criarDialogCadastro() {
     divID.appendChild(labelID)
 
     let inputID = document.createElement('input')
-    inputID.className = 'border border-gray-400 p-2'
+    inputID.className = 'border border-gray-400 bg-gray-100 p-2'
     inputID.type = 'number'
     inputID.id = 'id'
     inputID.setAttribute('readonly', true)
@@ -261,6 +261,7 @@ function criarDialogCadastro() {
     inputNome.type = 'text'
     inputNome.id = 'nomeTime'
     inputNome.setAttribute('required', true)
+    inputNome.setAttribute('autofocus', true)
     divNome.appendChild(inputNome)
 
     divInfo.appendChild(divNome)

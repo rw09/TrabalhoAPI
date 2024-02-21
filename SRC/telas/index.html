@@ -12,128 +12,51 @@
         @import url('https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
 
-        /* * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        } */
-
-         /* header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            background-color: goldenrod;
-            padding: 10px 15px;
-            border-bottom: 2px solid rgb(167, 125, 21);
-            z-index: 10;
-            color: #06203F;
-        } */
 
         header div:first-child {
             font-family: "Squada One", sans-serif;
         }
-
-        /* main {
-            padding-top: 85px;
-        } */
-
-        /* main > section {
-            padding: 30px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-            gap: 30px;
-        } */
-
-        .card {
-            display: grid;
-            flex-direction: column;
-            /* grid-template-rows: 60px 120px 100px; */
-            grid-template-rows: 175px 105px;
-            align-items: center;
-            align-content: center;
-            justify-items: center;
-            height: 285px;
-            padding: 20px 10px;
-            background-color: rgb(235, 232, 232);
-            border: 1px solid black;
-            border: 15px solid white;
-            box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.75);
-            font-family: 'Mina', sans-serif;
-            border-radius: 2px;
-        }
-
-        /* .card img {
-            padding-top: 50px;
-        } */
-
-        .card h2 {
-            text-align: center;
-            line-height: 33px;
-            /* padding-bottom: 10px; */
-        }
-
-
-        .card:hover {
-            background-color: ghostwhite;
-            opacity: 0.75;
-            cursor: pointer;
-            /* box-shadow: 2px 2px 5px gray; */
-            /* scale: 1.05; */
-            
-        }
-
-        /* dialog { */
-            /* margin: auto; */
-            /* background-color: white; */
-            /* width: 100vw; */
-            /* height: 800px; */
-        /* } */
-
-        /* dialog .cabeçalho {
-            display: flex;
-            height: 15%;
-        }
-
-        dialog .cabeçalho img {
-            width: 30%;
-        } */
     </style>
 </head>
-<body>
+<body class="bg-gray-50">
     <!-- <header class="flex justify-between items-center fixed w-full bg-[goldenrod] py-2.5 px-3.5 z-10 border-b-2 border-[#a77d15] text-[#06203F]"> -->
-        <header class="flex justify-between items-center fixed w-full bg-[#edb141] py-2.5 px-3.5 z-10 border-b-2 border-[#a77d15] text-[#06203F] shadow-lg">
+        <header class="flex justify-between items-center fixed w-full bg-[#edb141] py-2.5 px-3.5 z-10 border-b-2 border-[#a77d15] text-[#06203F] shadow-md">
+            <!-- <header class="flex justify-between items-center fixed w-full bg-[#edb141] py-2.5 px-3.5 z-10 text-[#06203F] shadow-md"> -->
         <div class="flex items-center gap-2.5">
             <a href="../img/logo4.png" target="_blank"><img src="../img/logo4.png" alt="Logo do Site" width="60px"></a>
             <h1 class="font-bold text-3xl">API Futebol Clube</h1>
         </div>
+        <div class="flex gap-6 items-center pr-1">
+            <div>
+                <!-- <img id="bandeira" src="../img/bandeiras/small/Alemanha.png" style="position: absolute; right: 235px; top:35px; width: 24px;"> -->
+                <img id="bandeira" src="../img/bandeiras/small/Alemanha.png" class="absolute right-[235px] top-[35px] w-6">
+                <!-- <select name="" id="selectPais" style="width: 200px; padding-left: 35px; padding-top: 5px; padding-bottom: 5px;" onchange="trocarPais(this)"> -->
+                    <select name="" id="selectPais" class="w-[200px] pl-[35px] pt-[5px] pb-[5px] border border-gray-400" onchange="trocarPais(this)">
+                    <option value="Todos">Todos os Times</option>
+                    <option value="Alemanha">Alemanha</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Espanha">Espanha</option>
+                    <option value="França">França</option>
+                    <option value="Inglaterra">Inglaterra</option>
+                    <option value="Itália">Itália</option>
+                </select>
+            </div>
         <div>
-            <img id="bandeira" src="../img/bandeiras/small/Alemanha.png" style="position: absolute; right: 185px; top:35px; width: 24px;">
-            <select name="" id="selectPais" style="width: 200px; padding-left: 35px; padding-top: 5px; padding-bottom: 5px;" onchange="trocarPais(this)">
-                <option value="Todos">Todos os Times</option>
-                <option value="Alemanha">Alemanha</option>
-                <option value="Brasil">Brasil</option>
-                <option value="Espanha">Espanha</option>
-                <option value="França">França</option>
-                <option value="Inglaterra">Inglaterra</option>
-                <option value="Itália">Itália</option>
-            </select>
+            <a href="gerenciamento.html">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.559.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.894.149c-.424.07-.764.383-.929.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.398.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.272-.806.108-1.204-.165-.397-.506-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.108-1.204l-.526-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              </svg>
+            </a>
+            </div> 
         </div>
     </header>
     <main id="main" class="pt-[85px]">
-        <a href="./gerenciamento.html" class="mt-2">Gerenciar</button>
         <!-- <section id="listaDeTimes"></section> -->
     </main>
 
-
-    <!-- <dialog>
-        <div>
-            <h1 id="textoDialog"></h1>
-            <button onclick="fecharDialogAdd()">x</button>
-        </div>
-    </dialog> -->
-    <script src="../clients/times.js"></script>
+    <script src="../clients/timesIndex.js"></script>
+    <script src="../clients/timesShow.js"></script>
 
     <script>
         let paisEscolhido = sessionStorage.getItem('paisEscolhido') ? sessionStorage.getItem('paisEscolhido') : 'Alemanha';
