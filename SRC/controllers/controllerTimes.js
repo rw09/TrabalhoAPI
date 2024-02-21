@@ -22,7 +22,8 @@ server.get('/times/proximoID', (req, res) => {
         }
     })
 
-    return res.json({ proximoID: maiorId + 1 })
+    maiorId += 1
+    return res.json({ proximoID: maiorId })
 });
 
 server.get('/times/Todos', (req, res) => {
@@ -298,8 +299,9 @@ server.put('/times/:id', function(req, res)  {
     
     const timeId = parseInt(req.params.id)
 
-    let times = dados.TimesAlemanha.concat(dados.TimesBrasil, dados.TimesEspanha, dados.TimesFrança, dados.TimesInglaterra, dados.TimesItalia);
-    let time = times.find(t => t.id === timeId);
+    let times = dados.TimesAlemanha.concat(dados.TimesBrasil, dados.TimesEspanha, dados.TimesFrança, dados.TimesInglaterra, dados.TimesItalia)
+
+    let time = times.find(t => t.id == timeId);
        
     const novoTime = req.body
 
@@ -530,10 +532,12 @@ server.put('/times/:id', function(req, res)  {
     time.website = novoTime.website
     time.email = novoTime.email
     time.escudo = novoTime.escudo
+    time.cores = novoTime.cores
     time.cidade = novoTime.cidade
     time.estado = novoTime.estado
     time.pais = novoTime.pais
     time.liga = novoTime.liga
+    time.resumo = novoTime.resumo
     time.estadio = novoTime.estadio
     time.uniformes = novoTime.uniformes
     time.marca_uniforme = novoTime.marca_uniforme
