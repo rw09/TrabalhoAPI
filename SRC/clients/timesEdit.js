@@ -475,7 +475,7 @@ function criarDialogEdicao(time) {
 
     let fotoEscudo = document.createElement('img')
     fotoEscudo.className = 'border border-gray-200 w-52 h-52'
-    fotoEscudo.src = time.escudo.replace('small', 'big')
+    fotoEscudo.src = time.escudo ? time.escudo.replace('small', 'big') : '../img/SemImagem.png'
     fotoEscudo.id = 'imagem-fotoEscudo'
 
     fotoEscudo.addEventListener("error", function() {
