@@ -5,7 +5,7 @@
             "continente": "Europa",
             "nome": "Alemanha",
             "bandeira": "../img/bandeiras/big/de.png",
-            "campeonatos": [ "Bundesliga", "2. Bundesliga", "3 Liga" ],
+            "campeonatos": [ "Bundesliga", "2. Bundesliga", "3. Liga" ],
             "copas": [ "DFB-Pokal", "DFL-Supercup" ]
         },
         {

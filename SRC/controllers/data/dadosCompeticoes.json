@@ -10,15 +10,15 @@
         {
             "id": "2",
             "nome": "2. Bundesliga",
-            "logo": "../img/competicoes/Alemanha/2-Bundesliga.png",
-            "trofeu": "../img/trofeus/Alemanha/2-Bundesliga.png",
+            "logo": "../img/competicoes/Alemanha/2. Bundesliga.png",
+            "trofeu": "../img/trofeus/Alemanha/2. Bundesliga.png",
             "nivel": "Nacional"
         },
         {
             "id": "3",
             "nome": "3 Liga",
-            "logo": "../img/competicoes/Alemanha/3-Liga.png",
-            "trofeu": "../img/trofeus/Alemanha/3-Liga.png",
+            "logo": "../img/competicoes/Alemanha/3. Liga.png",
+            "trofeu": "../img/trofeus/Alemanha/3. Liga.png",
             "nivel": "Nacional"
         },
         {
@@ -38,15 +38,15 @@
         {
             "id": "6",
             "nome": "La Liga",
-            "logo": "../img/competicoes/Espanha/LaLiga.png",
-            "trofeu": "../img/trofeus/Espanha/LaLiga.png",
+            "logo": "../img/competicoes/Espanha/La Liga.png",
+            "trofeu": "../img/trofeus/Espanha/La Liga.png",
             "nivel": "Nacional"
         },
         {
             "id": "7",
             "nome": "La Liga 2",
-            "logo": "../img/competicoes/Espanha/LaLiga-2.png",
-            "trofeu": "../img/trofeus/Espanha/LaLiga-2.png",
+            "logo": "../img/competicoes/Espanha/La Liga 2.png",
+            "trofeu": "../img/trofeus/Espanha/La Liga 2.png",
             "nivel": "Nacional"
         },
         {
@@ -101,29 +101,29 @@
         {
             "id": "15",
             "nome": "Premier League",
-            "logo": "../img/competicoes/Inglaterra/PremierLeague.png",
-            "trofeu": "../img/trofeus/Inglaterra/PremierLeague.png",
+            "logo": "../img/competicoes/Inglaterra/Premier League.png",
+            "trofeu": "../img/trofeus/Inglaterra/Premier League.png",
             "nivel": "Nacional"
         },
         {
             "id": "16",
             "nome": "EFL Championship",
-            "logo": "../img/competicoes/Inglaterra/EFLChampionship.png",
-            "trofeu": "../img/trofeus/Inglaterra/EFLChampionship.png",
+            "logo": "../img/competicoes/Inglaterra/EFL Championship.png",
+            "trofeu": "../img/trofeus/Inglaterra/EFL Championship.png",
             "nivel": "Nacional"
         },
         {
             "id": "17",
             "nome": "EFL League One",
-            "logo": "../img/competicoes/Inglaterra/EFLLeagueOne.png",
-            "trofeu": "../img/trofeus/Inglaterra/EFLLeagueOne.png",
+            "logo": "../img/competicoes/Inglaterra/EFL League One.png",
+            "trofeu": "../img/trofeus/Inglaterra/EFL League One.png",
             "nivel": "Nacional"
         },
         {
             "id": "18",
             "nome": "EFL League Two",
-            "logo": "../img/competicoes/Inglaterra/EFLLeagueTwo.png",
-            "trofeu": "../img/trofeus/Inglaterra/EFLLeagueTwo.png",
+            "logo": "../img/competicoes/Inglaterra/EFL League Two.png",
+            "trofeu": "../img/trofeus/Inglaterra/EFL League Two.png",
             "nivel": "Nacional"
         },
         {
@@ -150,15 +150,15 @@
         {
             "id": "22",
             "nome": "Serie A",
-            "logo": "../img/competicoes/Itália/SerieA.png",
-            "trofeu": "../img/trofeus/Itália/SerieA.png",
+            "logo": "../img/competicoes/Itália/Serie A.png",
+            "trofeu": "../img/trofeus/Itália/Serie A.png",
             "nivel": "Nacional"
         },
         {
             "id": "23",
             "nome": "Serie B",
-            "logo": "../img/competicoes/Itália/SerieB.png",
-            "trofeu": "../img/trofeus/Itália/SerieB.png",
+            "logo": "../img/competicoes/Itália/Serie B.png",
+            "trofeu": "../img/trofeus/Itália/Serie B.png",
             "nivel": "Nacional"
         },
         {
@@ -178,29 +178,29 @@
         {
             "id": "26",
             "nome": "Brasileirão Série A",
-            "logo": "../img/competicoes/Brasil/BrasileirãoSérieA.png",
-            "trofeu": "../img/trofeus/Brasil/BrasileirãoSérieA.png",
+            "logo": "../img/competicoes/Brasil/Brasileirão Série A.png",
+            "trofeu": "../img/trofeus/Brasil/Brasileirão Série A.png",
             "nivel": "Nacional"
         },
         {
             "id": "27",
             "nome": "Brasileirão Série B",
-            "logo": "../img/competicoes/Brasil/BrasileirãoSérieB.png",
-            "trofeu": "../img/trofeus/Brasil/BrasileirãoSérieB.png",
+            "logo": "../img/competicoes/Brasil/Brasileirão Série B.png",
+            "trofeu": "../img/trofeus/Brasil/Brasileirão Série B.png",
             "nivel": "Nacional"
         },
         {
             "id": "28",
             "nome": "Brasileirão Série C",
-            "logo": "../img/competicoes/Brasil/BrasileirãoSérieC.png",
-            "trofeu": "../img/trofeus/Brasil/BrasileirãoSérieC.png",
+            "logo": "../img/competicoes/Brasil/Brasileirão Série C.png",
+            "trofeu": "../img/trofeus/Brasil/Brasileirão Série C.png",
             "nivel": "Nacional"
         },
         {
             "id": "29",
             "nome": "Brasileirão Série D",
-            "logo": "../img/competicoes/Brasil/BrasileirãoSérieD.png",
-            "trofeu": "../img/trofeus/Brasil/BrasileirãoSérieD.png",
+            "logo": "../img/competicoes/Brasil/Brasileirão Série D.png",
+            "trofeu": "../img/trofeus/Brasil/Brasileirão Série D.png",
             "nivel": "Nacional"
         },
         {
@@ -241,15 +241,15 @@
         {
             "id": "35",
             "nome": "Ligue 1",
-            "logo": "../img/competicoes/França/Ligue1.png",
-            "trofeu": "../img/trofeus/França/Ligue1.png",
+            "logo": "../img/competicoes/França/Ligue 1.png",
+            "trofeu": "../img/trofeus/França/Ligue 1.png",
             "nivel": "Nacional"
         },
         {
             "id": "36",
             "nome": "Ligue 2",
-            "logo": "../img/competicoes/França/Ligue2.png",
-            "trofeu": "../img/trofeus/França/Ligue2.png",
+            "logo": "../img/competicoes/França/Ligue 2.png",
+            "trofeu": "../img/trofeus/França/Ligue 2.png",
             "nivel": "Nacional"
         },
         {
