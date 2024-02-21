@@ -619,7 +619,7 @@ function criarDialogEdicao(time) {
 
     let fotoEstadio = document.createElement('img')
     fotoEstadio.className = 'border border-gray-200 w-96 h-64'
-    fotoEstadio.src = time.estadio.foto
+    fotoEstadio.src = time.estadio.foto ? time.estadio.foto : '../img/SemImagem.png'
     fotoEstadio.id = 'imagem-fotoEstadio'
 
     fotoEstadio.addEventListener("error", function() {
@@ -814,7 +814,7 @@ function criarDialogEdicao(time) {
     inputURLUniformeAway.type = 'text'
     inputURLUniformeAway.id = 'url-fotoUniformeAway'
     inputURLUniformeAway.setAttribute("placeholder", "Escolha um arquivo ou cole aqui a URL da imagem")
-    inputURLUniformeAway.value = time.uniformes.find(uniforme => uniforme.modelo === 'Away').img
+    inputURLUniformeAway.value = time.uniformes.find(uniforme => uniforme.modelo === 'Away') ? time.uniformes.find(uniforme => uniforme.modelo === 'Away').img : '../img/SemImagem.png'
     divInputURLUniformeAway.appendChild(inputURLUniformeAway)
 
     let botaoCarregarURLUniformeAway = document.createElement('button')
