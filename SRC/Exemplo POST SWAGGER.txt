@@ -1,0 +1,49 @@
+{
+    "id": 1000,
+    "nome": "Napoli 2",
+    "nome_completo": "Società Sportiva Calcio Napoli",
+    "fundacao": "25/08/1926",
+    "cor1": "#12A0D7",
+    "cor2": "#ffffff",
+    "fotoEscudo": "../img/escudos/Itália/small/Napoli.png",
+    "apelido": "Gli Azzurri",
+    "presidente": "Aurelio De Laurentiis",
+    "fotoUniformeHome": "../img/uniformes/Itália/Napoli/1.png",
+    "fotoUniformeAway": "../img/uniformes/Itália/Napoli/2.png",
+    "fotoUniformeThird": "../img/uniformes/Itália/Napoli/3.png",
+    "fotoUniformeGK": "../img/uniformes/Itália/Napoli/gk.png",
+    "marca_uniforme": "EA7",
+    "pais": "Itália",
+    "liga": "Serie A",
+    "cidade": "Nápoles",
+    "estado": "Campânia",
+    "website": "www.sscnapoli.it",
+    "email": "infocalcio@sscn.it",
+    "resumo": "O clube foi fundado em 1926 com o nome Associazione Calcio Napoli graças à iniciativa de empresários ricos da região. O clube conquistou o campeonato nacional 3 vezes e também tem 6 títulos da copa do país. Com o apelido de 'Partenopei' ('Napolitanos'), o Napoli ganhou se segundo título da liga em 1989-90 e após um período de declínio nos anos 90, voltou à primeira divisão em 2007. O clube conquistou o primeiro troféu europeu em 1989, ao vencer o Stuttgart na final da UEFA Europa League.",
+        "nomeEstadio": "Stadio Diego Armando Maradona",
+        "inauguracaoEstadio": "1959",
+        "capacidadeEstadio": "54726",
+        "fotoEstadio": "../img/estadios/Itália/StadioDiegoArmandoMaradona.jpg",
+"titulos": [
+              {
+                  "competicao": "Serie A",
+                  "edicoes": [ "1986-87", "1989-90", "2022-23" ]
+              },
+              {
+                  "competicao": "Serie B",
+                  "edicoes": [ "1949-50" ]
+              },
+              {
+                  "competicao": "Coppa Italia",
+                  "edicoes": [ "1961-62", "1975-76", "1986-87", "2011-12", "2013-14", "2019-20" ]
+              },
+              {
+                  "competicao": "Supercoppa Italiana",
+                  "edicoes": [ "1990", "2014" ]
+              },
+              {
+                  "competicao": "UEFA Europa League",
+                  "edicoes": [ "1988-89" ]
+              }
+          ]
+}

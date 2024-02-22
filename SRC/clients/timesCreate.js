@@ -156,13 +156,21 @@ function adicionarTime() {
                 "competicao": child.children[0].innerText.replace(":", ""),
                 "edicoes": anosTituloFiltrado
             }
-            titulos.push(JSON.stringify(titulo))
+            // titulos.push(JSON.stringify(titulo))
+            titulos.push(titulo)
+            // console.log(titulos)
+           
             // console.log(JSON.stringify(titulo))
             // formData.append(`titulo-${i}`, JSON.stringify(titulo))
         }
     }
-
-    formData.append('titulos', JSON.stringify(titulos))
+    // return
+    if(titulos.length) {
+        // console.log('tem titulos')
+        formData.append('titulos', JSON.stringify(titulos))
+        // formData.append('titulos', titulos)
+    }
+    // formData.append('titulos', JSON.stringify(titulos))
     
     fetch('http://localhost:3000/api/times', {
         method: 'POST',
@@ -535,7 +543,7 @@ function criarDialogCadastro() {
     inputCor1.type = 'color'
     inputCor1.id = 'cor1'
     inputCor1.value = '#ffffff'
-    inputCor1.setAttribute('required', true)
+    // inputCor1.setAttribute('required', true)
     divInputsCores.appendChild(inputCor1)
 
     let inputCor2 = document.createElement('input')
@@ -543,15 +551,15 @@ function criarDialogCadastro() {
     inputCor2.type = 'color'
     inputCor2.id = 'cor2'
     inputCor2.value = '#000000'
-    inputCor2.setAttribute('required', true)
+    // inputCor2.setAttribute('required', true)
     divInputsCores.appendChild(inputCor2)
 
     let inputCor3 = document.createElement('input')
     inputCor3.className = 'border border-gray-400 p-2 h-12'
     inputCor3.type = 'color'
     inputCor3.id = 'cor3'
-    inputCor3.value = '#F3F4F6'
-    inputCor3.setAttribute('required', true)
+    inputCor3.value = '#f3f4f6'
+    // inputCor3.setAttribute('required', true)
     divInputsCores.appendChild(inputCor3)
 
     divCores.appendChild(divInputsCores)

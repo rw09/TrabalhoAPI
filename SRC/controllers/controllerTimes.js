@@ -26,7 +26,8 @@ server.get('/times/proximoID', (req, res) => {
     return res.json({ proximoID: maiorId })
 });
 
-server.get('/times/Todos', (req, res) => {
+
+server.get('/times', (req, res) => {
     
     const times = [];
     
@@ -39,6 +40,7 @@ server.get('/times/Todos', (req, res) => {
     return res.json(times);
 }) 
 
+
 server.get('/times/:pais', (req, res) => {
 
     const paisEscolhido = req.params.pais
@@ -49,16 +51,14 @@ server.get('/times/:pais', (req, res) => {
 })
 
 
-server.get('/times/:pais/:id', (req, res) => {
+server.get('/times/detalhes/:id', (req, res) => {
     
-    const paisEscolhido = req.params.pais
-
-    const dadosTimesDoPaisEscolhido = dados[`Times${paisEscolhido}`]
-
     const timeId = parseInt(req.params.id)
 
-    const time = dadosTimesDoPaisEscolhido.find(c => parseInt(c.id) === timeId)
+    let times = dados.TimesAlemanha.concat(dados.TimesBrasil, dados.TimesEspanha, dados.TimesFrança, dados.TimesInglaterra, dados.TimesItália)
 
+    let time = times.find(t => t.id == timeId);
+    
     if (!time) {
         return res.status(404).json({mensagem: "Time não encontrado :/"})
     }
@@ -71,17 +71,28 @@ server.post('/times', function(req, res)  {
     
     const novoTime = req.body;
 
-    novoTime.titulos = JSON.parse(novoTime.titulos)
-    
-    let novoTitulos = []
-    novoTime.titulos.forEach(titulo => {
-        titulo = JSON.parse(titulo)    
-        novoTitulos.push(titulo)
-    });
+    // console.log(novoTime.titulos)
+    // return
+    /*  tirei por causa do swagger!!!! 
+    if(novoTime.titulos) {
 
-    delete novoTime.titulos
+        novoTime.titulos = JSON.parse(novoTime.titulos)
 
-    novoTime.titulos = novoTitulos
+        let novoTitulos = []
+
+        novoTime.titulos.forEach(titulo => {
+            titulo = JSON.parse(titulo)    
+            novoTitulos.push(titulo)
+        });
+
+        delete novoTime.titulos
+
+        novoTime.titulos = novoTitulos
+    }*/
+
+    // console.log(novoTime)
+
+    // return
 
     let fotoEstadio = req.body.fotoEstadio;
     let fotoEscudo = req.body.fotoEscudo;
@@ -247,7 +258,7 @@ server.post('/times', function(req, res)  {
 
     let cores = [novoTime.cor1, novoTime.cor2]
 
-    if(novoTime.cor3 != '#f3f4f6') {
+    if(novoTime.cor3 != '#f3f4f6' && novoTime.cor3 != null) {
         cores.push(novoTime.cor3)
     }
 
@@ -299,12 +310,13 @@ server.put('/times/:id', function(req, res)  {
     
     const timeId = parseInt(req.params.id)
 
-    let times = dados.TimesAlemanha.concat(dados.TimesBrasil, dados.TimesEspanha, dados.TimesFrança, dados.TimesInglaterra, dados.TimesItalia)
+    let times = dados.TimesAlemanha.concat(dados.TimesBrasil, dados.TimesEspanha, dados.TimesFrança, dados.TimesInglaterra, dados.TimesItália)
 
     let time = times.find(t => t.id == timeId);
        
     const novoTime = req.body
 
+    /*
     novoTime.titulos = JSON.parse(novoTime.titulos)
     
     let novoTitulos = []
@@ -316,6 +328,7 @@ server.put('/times/:id', function(req, res)  {
     delete novoTime.titulos
 
     novoTime.titulos = novoTitulos
+    */
 
     let fotoEstadio = req.body.fotoEstadio;
     let fotoEscudo = req.body.fotoEscudo;
@@ -482,7 +495,7 @@ server.put('/times/:id', function(req, res)  {
 
     let cores = [novoTime.cor1, novoTime.cor2]
 
-    if(novoTime.cor3 != '#f3f4f6') {
+    if(novoTime.cor3 != '#f3f4f6' && novoTime.cor3 != null) {
         cores.push(novoTime.cor3)
     }
 
@@ -548,18 +561,39 @@ server.put('/times/:id', function(req, res)  {
 })
 
 
-server.delete("/times/:pais/:id", (req, res) => {
+server.delete("/times/:id", (req, res) => {
  
     const timeId = parseInt(req.params.id)
 
-    const paisTime = req.params.pais
-
-    dados[`Times${paisTime}`] = dados[`Times${paisTime}`].filter(t => t.id !== timeId)
+    for(const pais in dados) {
+        // console.log(pais)
+        let i = 0
+        for(const time of dados[pais]) {
+            // console.log(time.nome)
+            if(parseInt(time.id) === timeId) {
+                //console.log('o time foi o ' + time.nome)
+                dados[pais].splice(i, 1)
+                break
+            }
+            i++
+        }
+    }
  
     salvarDados(dados)
 
     return res.status(200).json({mensagem: "Time excluido com sucesso"})
 })
+
+
+//old
+server.delete("/times/:pais/:id", (req, res) => {
+    const timeId = parseInt(req.params.id)
+    const paisTime = req.params.pais
+    dados[`Times${paisTime}`] = dados[`Times${paisTime}`].filter(t => t.id !== timeId)
+    salvarDados(dados)
+    return res.status(200).json({mensagem: "Time excluido com sucesso"})
+})
+
 
 function salvarDados(){
     fs.writeFileSync(__dirname + '/data/dadosTimes.json', JSON.stringify(dados, null, 2))

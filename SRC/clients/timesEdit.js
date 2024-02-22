@@ -158,11 +158,17 @@ function editarTime() {
                 "competicao": child.children[0].innerText.replace(":", ""),
                 "edicoes": anosTituloFiltrado
             }
-            titulos.push(JSON.stringify(titulo))
+            // titulos.push(JSON.stringify(titulo))
+            titulos.push(titulo)
         }
     }
 
-    formData.append('titulos', JSON.stringify(titulos))
+    //acho que nao precisa verificar, pq eu passo vazio para pegar a info, sem titulos, depois ver
+    if(titulos.length) {
+        // console.log('tem titulos')
+        formData.append('titulos', JSON.stringify(titulos))
+        // formData.append('titulos', titulos)
+    }
     
     fetch(`http://localhost:3000/api/times/${id}`, {
         method: 'PUT',
@@ -174,8 +180,8 @@ function editarTime() {
     .catch(error => console.error("Erro:", error))
 }
 
-function carregarDadosDoTime(pais, id) {
-    fetch(`http://localhost:3000/api/times/${pais}/${id}`)
+function carregarDadosDoTime(id) {
+    fetch(`http://localhost:3000/api/times/detalhes/${id}`)
     .then(response => response.json())
     .then(function(data) {
         console.log(data)
@@ -989,8 +995,22 @@ function criarDialogEdicao(time) {
                 option.innerText = liga
                 selectLiga.appendChild(option)
             });
-            //selectLiga.value = time.liga
+            
+            let isLigaMenor = false
+
+            for (const option of selectLiga.options) {
+
+                if (option.value == time.liga) {
+                    selectLiga.value = time.liga
+                    isLigaMenor = true
+                }
+            }
+
+            if(!isLigaMenor) {
+                selectLiga.value = selectLiga.options[0].value
+            }
         })
+        
         .then(function () {
             carregarCompeticoesEdicao(pais)
         })

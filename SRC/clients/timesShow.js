@@ -1,6 +1,6 @@
-function carregarDetalhesTime(id, pais) {
+function carregarDetalhesTime(id) {
 
-    fetch(`http://localhost:3000/api/times/${pais}/${id}`)
+    fetch(`http://localhost:3000/api/times/detalhes/${id}`)
         .then(response => response.json())
         .then(function(data) {
             criarDialog(data)
@@ -273,9 +273,17 @@ function criarDialog(time) {
     }
 
     if(time.titulos && time.titulos.length) {
-        // let titulos = JSON.parse(time.titulos)
+        let titulos = time.titulos
 
-        time.titulos.forEach(titulo => {
+        if(!Array.isArray(time.titulos)) {
+            titulos = JSON.parse(time.titulos)
+        }
+        
+        // console.log(Array.isArray(titulos))
+        // console.log(titulos)
+        // return
+
+        titulos.forEach(titulo => {
             let divTitulo = document.createElement('div')
             divTitulo.className = 'pt-4 pb-6 border-b border-gray-300'
 

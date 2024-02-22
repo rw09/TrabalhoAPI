@@ -30,7 +30,7 @@
         document.onload = carregarTimes();
 
         function carregarTimes() {
-            fetch('http://localhost:3000/api/times/Todos')
+            fetch('http://localhost:3000/api/times')
             .then(response => response.json())
             .then(data => {
                 criarTabela(data);
@@ -103,12 +103,12 @@
                 let botaoEditar = document.createElement('button')
                 botaoEditar.className = 'py-1.5 px-4 border  border-gray-300 bg-gray-200 hover:bg-gray-100 hover:border-gray-400'
                 botaoEditar.innerText = 'Editar'
-                botaoEditar.addEventListener('click', () => carregarDadosDoTime(time.pais, time.id))
+                botaoEditar.addEventListener('click', () => carregarDadosDoTime(time.id))
                 acoes.appendChild(botaoEditar)
                 let botaoDeletar = document.createElement('button')
                 botaoDeletar.className = 'py-1.5 px-4 border border-gray-300 bg-gray-200 hover:bg-gray-100 hover:border-gray-400'
                 botaoDeletar.innerText = 'Deletar'
-                botaoDeletar.addEventListener('click', () => deletarTime(time.pais, time.id))
+                botaoDeletar.addEventListener('click', () => deletarTime(time.id))
                 acoes.appendChild(botaoDeletar)
                 div.appendChild(acoes)
 
@@ -116,9 +116,8 @@
             });
         }
 
-        function deletarTime(pais, id) {
-            console.log('deletando ' + pais + ' ' + id)
-            fetch(`http://localhost:3000/api/times/${pais}/${id}`, {
+        function deletarTime(id) {
+            fetch(`http://localhost:3000/api/times/${id}`, {
                 method: 'DELETE',
             })
             .then(() => console.log('deletado'))

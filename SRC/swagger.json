@@ -1,0 +1,226 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Usuários e Cursos",
+      "version": "1.0.0",
+      "description": "API sobre Clubes de Futebol"
+    },
+    "paths": {
+        "/api/times": {
+            "get": {
+                "summary": "Obter a lista de todos os Times cadastrados",
+                "responses": {
+                    "200": {
+                        "description": "Lista de Times retornada com sucesso"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Cadastrar um novo Time",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Time"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/times/detalhes/{id}": {
+            "get": {
+                "summary": "Obter detalhes de um Time pelo ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Dados do Time retornados com sucesso"
+                    },
+                    "404": {
+                        "description": "Time não encontrado"
+                    }
+                }
+            }
+        },
+        "/api/times/{id}": {
+            "put": {
+                "summary": "Atualizar dados de um Time pelo ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Time"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Time atualizado com sucesso"
+                    },
+                    "404": {
+                        "description": "Time não encontrado"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Excluir um Time pelo ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Time excluído com sucesso"
+                    },
+                    "404": {
+                        "description": "Time não encontrado"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Time": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "number"
+                    },
+                    "nome": {
+                        "type": "string"
+                    },
+                    "nome_completo": {
+                        "type": "string"
+                    },
+                    "apelido": {
+                        "type": "string"
+                    },
+                    "fundacao": {
+                        "type": "string"
+                    },
+                    "presidente": {
+                        "type": "string"
+                    },
+                    "webiste": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "cidade": {
+                        "type": "string"
+                    },
+                    "estado": {
+                        "type": "string"
+                    },
+                    "pais": {
+                        "type": "string"
+                    },
+                    "liga": {
+                        "type": "string"
+                    },
+                    "fotoEscudo": {
+                        "type": "string"
+                    },
+                    "cor1": {
+                        "type": "string"
+                    },
+                    "cor2": {
+                        "type": "string"
+                    },
+                    "cor3": {
+                        "type": "string"
+                    },
+                    "resumo": {
+                        "type": "string"
+                    },
+                    "nomeEstadio": {
+                        "type": "string"
+                    },
+                    "inauguracaoEstadio": {
+                        "type": "string"
+                    },
+                    "capacidadeEstadio": {
+                        "type": "string"
+                    },
+                    "fotoEstadio": {
+                        "type": "string"
+                    },
+                    "fotoUniformeHome": {
+                        "type": "string"
+                    },
+                    
+                    "fotoUniformeAway": {
+                        "type": "string"
+                    },
+                    
+                    "fotoUniformeThird": {
+                        "type": "string"
+                    },
+                    
+                    "fotoUniformeGK": {
+                        "type": "string"
+                    },
+                    "marca_uniforme": {
+                        "type": "string"
+                    },
+                    "titulos": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "$ref": "#/components/schemas/Titulo"
+                        }
+                    }
+                }
+            },
+            "Titulo": {
+                "type": "object",            
+                "properties": {
+                    "competicao": {
+                        "type": "string"
+                    },
+                    "edicoes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "example": ["string", "string", "string", "..."]
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+

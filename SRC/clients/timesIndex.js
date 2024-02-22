@@ -5,9 +5,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //com todos os times
 function carregarListaTimes() {
+
+    if(paisEscolhido === 'Todos') {
+        paisEscolhido = ''
+    }
+
     fetch(`http://localhost:3000/api/times/${paisEscolhido}`)
         .then(response => response.json())
-        .then(data => paisEscolhido === 'Todos' ? mostrarListaTodosTimes(data) : mostrarListaTimes(data))
+        .then(data => paisEscolhido === '' ? mostrarListaTodosTimes(data) : mostrarListaTimes(data))
         .catch(error => console.error("Erro:", error))
 }
 
@@ -35,7 +40,12 @@ function mostrarListaTimes(data) {
         cardTime.appendChild(cardTimeConteudo)
 
         let divLogoLiga = document.createElement('div')
-        divLogoLiga.className = 'grid grid-cols-2 items-center gap-1'
+        divLogoLiga.className = 'grid items-center'
+        // let imgLiga = document.createElement('img')
+        // let nomeLiga = time.liga
+        // imgLiga.src = `../img/competicoes/${time.pais}/${nomeLiga}.png`
+        // imgLiga.className = 'h-7'
+        // divLogoLiga.appendChild(imgLiga)
 
         cardTimeConteudo.appendChild(divLogoLiga)
 
@@ -50,7 +60,7 @@ function mostrarListaTimes(data) {
         cardTimeConteudo.appendChild(nome)
         
         cardTime.addEventListener('click', function() {
-            carregarDetalhesTime(time.id, time.pais)
+            carregarDetalhesTime(time.id)
         })
 
         listaDeTimes.appendChild(cardTime)
@@ -113,7 +123,7 @@ function mostrarListaTodosTimes(data) {
         cardTimeConteudo.appendChild(nome)
         
         cardTime.addEventListener('click', function() {
-            carregarDetalhesTime(time.id, time.pais)
+            carregarDetalhesTime(time.id)
         })
 
         listaDeTimes.appendChild(cardTime)
