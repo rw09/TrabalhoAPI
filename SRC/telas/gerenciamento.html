@@ -16,6 +16,7 @@
 </head>
 <body>
     <header class="flex justify-between items-center fixed w-full bg-[#edb141] py-2.5 px-3.5 z-10 border-b-2 border-[#a77d15] text-[#06203F] shadow-md">
+        <!-- <header class="flex justify-between items-center fixed w-full bg-[#06203F] py-2.5 px-3.5 z-10 border-b-2 border-[#041529] text-[#edb141] shadow-md"> -->
         <div class="flex items-center gap-2.5">
             <a href="./index.html"><img src="../img/logo4.png" alt="Logo do Site" width="60px"></a>
             <h1 class="font-bold text-3xl">API Futebol Clube - Gerenciamento dos Times</h1>
@@ -50,7 +51,7 @@
 
             times.forEach(time => {
                 let div = document.createElement('div')
-                // div.className = `group grid grid-cols-6 py-1 px-5 bg-gray-100 border-2 border-gray-200 items-center hover:bg-gray-200 hover:border-gray-300 hover:bg-gradient-to-r from-[${time.cores[0]}] to-[${time.cores[1]}]`
+                // div.className = `group grid grid-cols-6 py-1 px-5 bg-gray-100 border-2 border-gray-200 items-center hover:bg-gray-200 hover:border-gray-300 hover:bg-gradient-to-r from-[${time.cores[0]}] to-[${time.cores[1]}] hover:text-[${time.cores[1]}]`
                 div.className = `group grid grid-cols-6 py-1 px-5 bg-gray-100 border-2 border-gray-200 items-center hover:border-gray-300 hover:bg-gradient-to-r from-gray-200 from-10% to-gray-100`
                 
                 // let id = document.createElement('h2')

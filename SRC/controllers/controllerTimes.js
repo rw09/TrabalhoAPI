@@ -41,6 +41,36 @@ server.get('/times', (req, res) => {
 }) 
 
 
+server.get('/times/filtrar/:nome/', (req, res) => {
+    
+    const nome = req.params.nome.toLowerCase()
+
+    if(nome == '') {
+        const times = [];
+    
+        for(const pais in dados) {
+            for(const time of dados[pais]) {
+                times.push(time)
+            }
+        }
+
+        return res.json(times);
+    }
+
+    const timesFiltrados = [];
+
+    let times = dados.TimesAlemanha.concat(dados.TimesBrasil, dados.TimesEspanha, dados.TimesFrança, dados.TimesInglaterra, dados.TimesItália)
+  
+    for (const time of times) {
+        if(time.nome.toLowerCase().includes(nome)) {
+            timesFiltrados.push(time)
+        }
+    }
+    
+    return res.json(timesFiltrados);
+}) 
+
+
 server.get('/times/:pais', (req, res) => {
 
     const paisEscolhido = req.params.pais
@@ -50,6 +80,35 @@ server.get('/times/:pais', (req, res) => {
     return res.json(dadosTimesDoPaisEscolhido)
 })
 
+
+
+server.get('/times/filtrar/:pais/:nome', (req, res) => {
+console.log('veio')
+    const nome = req.params.nome.toLowerCase()
+
+    const paisEscolhido = req.params.pais
+
+
+    if(nome == '') {
+
+        const dadosTimesDoPaisEscolhido = dados[`Times${paisEscolhido}`]
+
+        return res.json(dadosTimesDoPaisEscolhido)
+    }
+
+    const timesFiltrados = [];
+
+    let times = dados[`Times${paisEscolhido}`]
+  
+    for (const time of times) {
+        if(time.nome.toLowerCase().includes(nome)) {
+            timesFiltrados.push(time)
+        }
+    }
+    
+    return res.json(timesFiltrados);
+  
+})
 
 server.get('/times/detalhes/:id', (req, res) => {
     

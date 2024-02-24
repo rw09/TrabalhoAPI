@@ -21,9 +21,15 @@ function mostrarListaTimes(data) {
     
     data.sort((a,b) => (a.nome > b.nome) ? 1 : ((b.nome > a.nome) ? -1 : 0))
 
-    let listaDeTimes = document.createElement('section')
+    let listaDeTimes = document.getElementById('listaDeTimes')
+        if(listaDeTimes) {
+            listaDeTimes.innerHTML = ''
+        } else {
+            listaDeTimes = document.createElement('section')    
+        }
+    // let listaDeTimes = document.createElement('section')
     listaDeTimes.id = 'listaDeTimes'
-    listaDeTimes.className = 'grid sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 gap-y-10 p-8 bg-gray-50'
+    listaDeTimes.className = 'grid sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 gap-y-10 p-8 bg-gray-50 min-[1500px]:grid-cols-6 min-[1900px]:grid-cols-7'
 
     let main = document.getElementById('main')
 
@@ -76,9 +82,15 @@ function mostrarListaTodosTimes(data) {
     
     data.sort((a,b) => (a.nome > b.nome) ? 1 : ((b.nome > a.nome) ? -1 : 0))
 
-    let listaDeTimes = document.createElement('section')
+    let listaDeTimes = document.getElementById('listaDeTimes')
+        if(listaDeTimes) {
+            listaDeTimes.innerHTML = ''
+        } else {
+            listaDeTimes = document.createElement('section')    
+        }
+    // let listaDeTimes = document.createElement('section')
     listaDeTimes.id = 'listaDeTimes'
-    listaDeTimes.className = 'grid sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 gap-y-10 p-8 bg-gray-50'
+    listaDeTimes.className = 'grid sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 gap-y-10 p-8 bg-gray-50 min-[1500px]:grid-cols-6 min-[1900px]:grid-cols-7'
 
     let main = document.getElementById('main')
 
@@ -482,3 +494,32 @@ function criarDialog(time) {
 
 
 */
+
+
+function filtrarPorNome(e) {
+    let nome = e.value
+
+    if(nome.length == 0) {
+        nome = ''
+        carregarListaTimes()
+    } else {
+
+        if(paisEscolhido != 'Todos' && paisEscolhido != '') {
+            
+            fetch(`http://localhost:3000/api/times/filtrar/${paisEscolhido}/${nome}`)
+            .then(response => response.json())
+            .then(function(data) {
+                paisEscolhido === '' ? mostrarListaTodosTimes(data) : mostrarListaTimes(data)
+            })
+            .catch(error => console.error("Erro:", error))
+
+        } else {
+            fetch(`http://localhost:3000/api/times/filtrar/${nome}`)
+            .then(response => response.json())
+            .then(function(data) {
+                paisEscolhido === '' ? mostrarListaTodosTimes(data) : mostrarListaTimes(data)
+            })
+            .catch(error => console.error("Erro:", error))
+        }
+    }
+}

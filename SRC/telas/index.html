@@ -13,14 +13,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
 
 
-        header div:first-child {
+        header  {
             font-family: "Squada One", sans-serif;
         }
     </style>
 </head>
 <body class="bg-gray-50">
     <!-- <header class="flex justify-between items-center fixed w-full bg-[goldenrod] py-2.5 px-3.5 z-10 border-b-2 border-[#a77d15] text-[#06203F]"> -->
-        <header class="flex justify-between items-center fixed w-full bg-[#edb141] py-2.5 px-3.5 z-10 border-b-2 border-[#a77d15] text-[#06203F] shadow-md">
+        <!-- <header class="flex justify-between items-center fixed w-full bg-[#06203F] py-2.5 px-3.5 z-10 border-b-2 border-[#a77d15] text-[#edb141] shadow-md"> -->
+            <header class="flex justify-between items-center fixed w-full bg-[#edb141] py-2.5 px-3.5 z-10 border-b-2 border-[#a77d15] text-[#06203F] shadow-md">
             <!-- <header class="flex justify-between items-center fixed w-full bg-[#edb141] py-2.5 px-3.5 z-10 text-[#06203F] shadow-md"> -->
         <div class="flex items-center gap-2.5">
             <a href="../img/logo4.png" target="_blank"><img src="../img/logo4.png" alt="Logo do Site" width="60px"></a>
@@ -28,10 +29,13 @@
         </div>
         <div class="flex gap-6 items-center pr-1">
             <div>
+                <input type="search" name="nomeTime" id="filtroNomeTime" placeholder="Pesquisar por nome" class="w-[250px] px-2 py-[4px] h-[30px] border border-gray-400 text-sm" onkeyup="filtrarPorNome(this)" onsearch="limparPesquisa(this)">
+            </div>
+            <div>
                 <!-- <img id="bandeira" src="../img/bandeiras/small/Alemanha.png" style="position: absolute; right: 235px; top:35px; width: 24px;"> -->
                 <img id="bandeira" src="../img/bandeiras/small/Alemanha.png" class="absolute right-[235px] top-[35px] w-6">
                 <!-- <select name="" id="selectPais" style="width: 200px; padding-left: 35px; padding-top: 5px; padding-bottom: 5px;" onchange="trocarPais(this)"> -->
-                    <select name="" id="selectPais" class="w-[200px] pl-[35px] pt-[5px] pb-[5px] border border-gray-400" onchange="trocarPais(this)">
+                    <select name="" id="selectPais" class="w-[200px] pl-[35px] pt-[5px] pb-[5px] h-[30px] border border-gray-400" onchange="trocarPais(this)">
                     <option value="Todos">Todos os Times</option>
                     <option value="Alemanha">Alemanha</option>
                     <option value="Brasil">Brasil</option>
@@ -91,6 +95,11 @@
             // window.refresh
         }
        
+        function limparPesquisa(e) {
+            if(e.value == '') {
+                carregarListaTimes()
+            }
+        }
     </script>
 </body>
 </html>
