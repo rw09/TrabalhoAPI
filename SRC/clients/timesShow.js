@@ -40,7 +40,7 @@ function criarDialog(time) {
 
     let apelido = document.createElement('h2')
     time.cores.length > 2 ? apelido.className = `text-2xl font-bold text-[${time.cores[2]}]` : apelido.className = `text-2xl font-bold text-[${time.cores[1]}]` 
-    apelido.innerText = `"${time.apelido}"`
+    time.apelido != '' ? apelido.innerText = `"${time.apelido}"` : null
 
     divNomeApelido.appendChild(apelido)
 

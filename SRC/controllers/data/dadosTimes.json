@@ -143,6 +143,10 @@
             },
             "titulos": [
                 {
+                    "competicao": "2. Bundesliga",
+                    "edicoes": [ "1978-79" ]
+                },
+                {
                     "competicao": "DFB-Pokal",
                     "edicoes": [ "1992-93" ]
                 },
@@ -203,7 +207,7 @@
         {
             "id": 19,
             "nome": "Werder Bremen",
-            "nome_completo": "Sportverein Werder Bremen von 1899 e.V.",
+            "nome_completo": "Sportverein Werder Bremen von 1899 e. V.",
             "fundacao": "04/02/1899",
             "cores": [ "#008149", "#ffffff" ],
             "escudo": "../img/escudos/Alemanha/small/Werder Bremen.png",
@@ -222,7 +226,7 @@
             "estado": "Bremen",
             "website": "www.werder.de",
             "email": "info@werder.de",
-            "resumo": "Resumo do Werder",
+            "resumo": "O clube foi fundado em 1899 com o nome FV Werder Bremen depois de uma iniciativa de um grupo de estudantes que receberam uma bola de futebol como prêmio em uma competição no mesmo ano. O clube conquistou o campeonato nacional 4 vezes e também tem 6 títulos da copa do país. O nome Werder significa, literalmente, 'uma ilha ou elevação de terra em um rio ou brejo'.",
             "estadio": {
                 "nome": "wohninvest WESERSTADION",
                 "inauguracao": 1947,
@@ -251,624 +255,506 @@
        {
            "id": 20,
            "nome": "Wolfsburg",
-           "nome_completo": "Sportverein Werder Bremen von 1899 e.V.",
-           "fundacao": "04/02/1899",
+           "nome_completo": "Verein für Leibesübungen Wolfsburg-Fußball GmbH",
+           "fundacao": "12/09/1945",
            "cores": [ "#41a639", "#ffffff" ],
            "escudo": "../img/escudos/Alemanha/small/Wolfsburg.png",
-           "apelido": "Die Grün-Weißen",
-           "presidente": "Marco Bode",
+           "apelido": "Die Wölfe",
+           "presidente": "Francisco Garcia Sanz",
            "uniformes": [
                { "modelo": "Home", "img": "../img/uniformes/Alemanha/Wolfsburg/1.png" },
                { "modelo": "Away", "img": "../img/uniformes/Alemanha/Wolfsburg/2.png" },
                { "modelo": "Third", "img": "../img/uniformes/Alemanha/Wolfsburg/3.png" },
                { "modelo": "GK", "img": "../img/uniformes/Alemanha/Wolfsburg/gk.png" }
            ],
-           "marca_uniforme": "Umbro",
+           "marca_uniforme": "Nike",
            "pais": "Alemanha",
            "liga": "Bundesliga",
-           "cidade": "Bremen",
-           "estado": "Bremen",
-           "website": "www.werder.de",
-           "email": "info@werder.de",
-           "resumo": "Resumo do Werder",
+           "cidade": "Wolfsburg",
+           "estado": "Baixa Saxônia",
+           "website": "www.vfl-wolfsburg.de",
+           "email": "service@vfl-wolfsburg.de",
+           "resumo": "Fundado em 1945, o clube adotou suas cores verde e branca por coincidência, pois somente camisas verdes estavam disponíveis, e os calções brancos foram feitos com lençóis doados pelos moradores da região. O clube conquistou o campeonato nacional 1 vez e também tem 1 título da copa do país. Ao vencer a Bundesliga em 2009, o Wolfsburg se tornou apenas o 12º time na história a ter ganhado a competição.",
            "estadio": {
-               "nome": "wohninvest WESERSTADION",
-               "inauguracao": 1947,
-               "capacidade": 42100,
-               "foto": "../img/estadios/Alemanha/wohninvest WESERSTADION.jpg"
+               "nome": "Volkswagen Arena",
+               "inauguracao": 2002,
+               "capacidade": 30000,
+               "foto": "../img/estadios/Alemanha/Volkswagen Arena.jpg"
            },
            "titulos": [
                {
                    "competicao": "Bundesliga",
-                   "edicoes": [ "1964-65", "1987-88", "1992-93", "2003-04" ]
-               },
-               {
-                   "competicao": "2. Bundesliga",
-                   "edicoes": [ "1980-81" ]
+                   "edicoes": [ "2008-09" ]
                },
                {
                    "competicao": "DFB-Pokal",
-                   "edicoes": [ "1960-61", "1990-91", "1993-94", "1998-99", "2003-04", "2008-09" ]
+                   "edicoes": [ "2014-15" ]
                },
                {
                    "competicao": "DFL-Supercup",
-                   "edicoes": [ "1988", "1993", "1994" ]
+                   "edicoes": [ "2015" ]
                }
            ]
       },
       {
           "id": 21,
           "nome": "Stuttgart",
-          "nome_completo": "Sportverein Werder Bremen von 1899 e.V.",
-          "fundacao": "04/02/1899",
+          "nome_completo": "Verein für Bewegungsspiele Stuttgart 1893 e. V.",
+          "fundacao": "09/09/1893",
           "cores": [ "#ffffff", "#d30029" ],
           "escudo": "../img/escudos/Alemanha/small/Stuttgart.png",
-          "apelido": "Die Grün-Weißen",
-          "presidente": "Marco Bode",
+          "apelido": "Die Schwaben",
+          "presidente": "Erwin Staudt",
           "uniformes": [
               { "modelo": "Home", "img": "../img/uniformes/Alemanha/Stuttgart/1.png" },
               { "modelo": "Away", "img": "../img/uniformes/Alemanha/Stuttgart/2.png" },
               { "modelo": "Third", "img": "../img/uniformes/Alemanha/Stuttgart/3.png" },
               { "modelo": "GK", "img": "../img/uniformes/Alemanha/Stuttgart/gk.png" }
           ],
-          "marca_uniforme": "Umbro",
+          "marca_uniforme": "Jako",
           "pais": "Alemanha",
           "liga": "Bundesliga",
-          "cidade": "Bremen",
-          "estado": "Bremen",
-          "website": "www.werder.de",
-          "email": "info@werder.de",
-          "resumo": "Resumo do Werder",
+          "cidade": "Estugarda",
+          "estado": "Bade-Vurtemberga",
+          "website": "www.vfb.de",
+          "email": "service@vfb-stuttgart.de",
+          "resumo": "A base do Stuttgart, construída em 1980, foi uma das primeiras na Alemanha, e o clube tem orgulho de sua tradição de formar bons jogadores. O clube conquistou o campeonato nacional 5 vezes e também tem 3 títulos da copa do país. Após seus três títulos da Bundesliga em 1984, 1992 e 2007, o clube nunca conseguiu terminar acima da sexta colocação na temporada seguinte.",
           "estadio": {
-              "nome": "wohninvest WESERSTADION",
-              "inauguracao": 1947,
-              "capacidade": 42100,
-              "foto": "../img/estadios/Alemanha/wohninvest WESERSTADION.jpg"
+              "nome": "MHPArena",
+              "inauguracao": 1933,
+              "capacidade": 60449,
+              "foto": "../img/estadios/Alemanha/MHPArena.jpg"
           },
           "titulos": [
               {
                   "competicao": "Bundesliga",
-                  "edicoes": [ "1964-65", "1987-88", "1992-93", "2003-04" ]
+                  "edicoes": [ "1950", "1952", "1983-84", "1991-92", "2006-07" ]
               },
               {
                   "competicao": "2. Bundesliga",
-                  "edicoes": [ "1980-81" ]
+                  "edicoes": [ "1976-77", "2016-17" ]
               },
               {
                   "competicao": "DFB-Pokal",
-                  "edicoes": [ "1960-61", "1990-91", "1993-94", "1998-99", "2003-04", "2008-09" ]
+                  "edicoes": [ "1953-54", "1957-58", "1996-97" ]
               },
               {
                   "competicao": "DFL-Supercup",
-                  "edicoes": [ "1988", "1993", "1994" ]
+                  "edicoes": [ "1992" ]
               }
           ]
         },
         {
             "id": 22,
             "nome": "RB Leipzig",
-            "nome_completo": "Sportverein Werder Bremen von 1899 e.V.",
-            "fundacao": "04/02/1899",
+            "nome_completo": "RasenBallsport Leipzig GmbH",
+            "fundacao": "19/05/2009",
             "cores": [ "#ffffff", "#dd0741" ],
             "escudo": "../img/escudos/Alemanha/small/RB Leipzig.png",
-            "apelido": "Die Grün-Weißen",
-            "presidente": "Marco Bode",
+            "apelido": "Die Roten Bullen",
+            "presidente": "Oliver Mintzlaff",
             "uniformes": [
                 { "modelo": "Home", "img": "../img/uniformes/Alemanha/RB Leipzig/1.png" },
                 { "modelo": "Away", "img": "../img/uniformes/Alemanha/RB Leipzig/2.png" },
                 { "modelo": "Third", "img": "../img/uniformes/Alemanha/RB Leipzig/3.png" },
                 { "modelo": "GK", "img": "../img/uniformes/Alemanha/RB Leipzig/gk.png" }
             ],
-            "marca_uniforme": "Umbro",
+            "marca_uniforme": "Nike",
             "pais": "Alemanha",
             "liga": "Bundesliga",
-            "cidade": "Bremen",
-            "estado": "Bremen",
-            "website": "www.werder.de",
-            "email": "info@werder.de",
-            "resumo": "Resumo do Werder",
+            "cidade": "Leipzig",
+            "estado": "Saxônia",
+            "website": "www.rbleipzig.com",
+            "email": "service.rbleipzig@redbulls.com",
+            "resumo": "O clube foi fundado em 2009, e comprou a licença do SSV Markranstädt para começar na quinta divisão. Disputa atualmente a Bundesliga, nível mais alto do futebol no país. O RB Leipzig chegou à Bundesliga 2 apenas cinco anos depois de sua fundação e conseguiu o acesso à Bundesliga principal após mais dois anos. O clube possui 2 títulos da copa do país.",
             "estadio": {
-                "nome": "wohninvest WESERSTADION",
+                "nome": "Red Bull Arena",
                 "inauguracao": 1947,
-                "capacidade": 42100,
-                "foto": "../img/estadios/Alemanha/wohninvest WESERSTADION.jpg"
+                "capacidade": 42558,
+                "foto": "../img/estadios/Alemanha/Red Bull Arena.jpg"
             },
             "titulos": [
                 {
-                    "competicao": "Bundesliga",
-                    "edicoes": [ "1964-65", "1987-88", "1992-93", "2003-04" ]
-                },
-                {
-                    "competicao": "2. Bundesliga",
-                    "edicoes": [ "1980-81" ]
-                },
-                {
                     "competicao": "DFB-Pokal",
-                    "edicoes": [ "1960-61", "1990-91", "1993-94", "1998-99", "2003-04", "2008-09" ]
+                    "edicoes": [ "2021-22", "2022-23" ]
                 },
                 {
                     "competicao": "DFL-Supercup",
-                    "edicoes": [ "1988", "1993", "1994" ]
+                    "edicoes": [ "2023" ]
                 }
             ]
         },
         {
             "id": 23,
             "nome": "Union Berlin",
-            "nome_completo": "Sportverein Werder Bremen von 1899 e.V.",
-            "fundacao": "04/02/1899",
+            "nome_completo": "1. Fußballclub Union Berlin e. V.",
+            "fundacao": "20/01/1966",
             "cores": [ "#e30613", "#ffffff" ],
             "escudo": "../img/escudos/Alemanha/small/Union Berlin.png",
-            "apelido": "Die Grün-Weißen",
-            "presidente": "Marco Bode",
+            "apelido": "Die Eisernen",
+            "presidente": "Dirk Zingler",
             "uniformes": [
                 { "modelo": "Home", "img": "../img/uniformes/Alemanha/Union Berlin/1.png" },
                 { "modelo": "Away", "img": "../img/uniformes/Alemanha/Union Berlin/2.png" },
                 { "modelo": "Third", "img": "../img/uniformes/Alemanha/Union Berlin/3.png" },
                 { "modelo": "GK", "img": "../img/uniformes/Alemanha/Union Berlin/gk.png" }
             ],
-            "marca_uniforme": "Umbro",
+            "marca_uniforme": "Adidas",
             "pais": "Alemanha",
             "liga": "Bundesliga",
-            "cidade": "Bremen",
-            "estado": "Bremen",
-            "website": "www.werder.de",
-            "email": "info@werder.de",
-            "resumo": "Resumo do Werder",
+            "cidade": "Berlim",
+            "estado": "Berlim",
+            "website": "www.fc-union-berlin.de",
+            "email": "verein@fc-union-berlin.de",
+            "resumo": "O 1. FC Union Berlin foi fundado em 1966, oriundo do FC Olympia Oberschöneweide. Disputa atualmente a Bundesliga, nível mais alto do futebol no país. O clube de Köpenick, em Berlim, teve uma sequência extraordinária na DFB-Pokal de 2001. Apesar de ter sido derrotado na final pelo Schalke 04, o Union Berlin conseguiu se classificar para a UEFA Europa League, tornando-se assim o primeiro time da terceira divisão da Alemanha a se classificar para a competição.",
             "estadio": {
-                "nome": "wohninvest WESERSTADION",
-                "inauguracao": 1947,
-                "capacidade": 42100,
-                "foto": "../img/estadios/Alemanha/wohninvest WESERSTADION.jpg"
+                "nome": "Stadion An der Alten Försterei",
+                "inauguracao": 1920,
+                "capacidade": 22012,
+                "foto": "../img/estadios/Alemanha/Stadion An der Alten Forsterei.jpg"
             },
             "titulos": [
                 {
-                    "competicao": "Bundesliga",
-                    "edicoes": [ "1964-65", "1987-88", "1992-93", "2003-04" ]
-                },
-                {
-                    "competicao": "2. Bundesliga",
-                    "edicoes": [ "1980-81" ]
-                },
-                {
-                    "competicao": "DFB-Pokal",
-                    "edicoes": [ "1960-61", "1990-91", "1993-94", "1998-99", "2003-04", "2008-09" ]
-                },
-                {
-                    "competicao": "DFL-Supercup",
-                    "edicoes": [ "1988", "1993", "1994" ]
+                    "competicao": "3. Liga",
+                    "edicoes": [ "2008-09" ]
                 }
             ]
         },
         {
             "id": 24,
             "nome": "Freiburg",
-            "nome_completo": "Sportverein Werder Bremen von 1899 e.V.",
-            "fundacao": "04/02/1899",
-            "cores": [ "#e4002b", "#000000" ],
+            "nome_completo": "Sport-Club Freiburg e. V.",
+            "fundacao": "03/05/1904",
+            "cores": [ "#e4002b", "#000000", "#ffffff" ],
             "escudo": "../img/escudos/Alemanha/small/Freiburg.png",
-            "apelido": "Die Grün-Weißen",
-            "presidente": "Marco Bode",
+            "apelido": "Breisgau-Brasilianer",
+            "presidente": "Fritz Keller",
             "uniformes": [
                 { "modelo": "Home", "img": "../img/uniformes/Alemanha/Freiburg/1.png" },
                 { "modelo": "Away", "img": "../img/uniformes/Alemanha/Freiburg/2.png" },
                 { "modelo": "Third", "img": "../img/uniformes/Alemanha/Freiburg/3.png" },
                 { "modelo": "GK", "img": "../img/uniformes/Alemanha/Freiburg/gk.png" }
             ],
-            "marca_uniforme": "Umbro",
+            "marca_uniforme": "Nike",
             "pais": "Alemanha",
             "liga": "Bundesliga",
-            "cidade": "Bremen",
-            "estado": "Bremen",
-            "website": "www.werder.de",
-            "email": "info@werder.de",
-            "resumo": "Resumo do Werder",
+            "cidade": "Friburgo",
+            "estado": "Bade-Vurtemberga",
+            "website": "www.scfreiburg.com",
+            "email": "scf@scfreiburg.com",
+            "resumo": "A origem do clube remete a dois clubes que existiam em 1904: Freiburger Fußballverein 04 e FC Schwalbe Freiburg. Disputa atualmente a Bundesliga, nível mais alto do futebol no país. Tradicionalmente apenas o segundo maior clube de Freiburg, o SC superou o FFC após obter o acesso à Bundesliga 2, em 1978.",
             "estadio": {
-                "nome": "wohninvest WESERSTADION",
-                "inauguracao": 1947,
-                "capacidade": 42100,
-                "foto": "../img/estadios/Alemanha/wohninvest WESERSTADION.jpg"
+                "nome": "Europa-Park Stadion",
+                "inauguracao": 2021,
+                "capacidade": 34700,
+                "foto": "../img/estadios/Alemanha/Europa-Park Stadion.jpg"
             },
             "titulos": [
                 {
-                    "competicao": "Bundesliga",
-                    "edicoes": [ "1964-65", "1987-88", "1992-93", "2003-04" ]
-                },
-                {
                     "competicao": "2. Bundesliga",
-                    "edicoes": [ "1980-81" ]
-                },
-                {
-                    "competicao": "DFB-Pokal",
-                    "edicoes": [ "1960-61", "1990-91", "1993-94", "1998-99", "2003-04", "2008-09" ]
-                },
-                {
-                    "competicao": "DFL-Supercup",
-                    "edicoes": [ "1988", "1993", "1994" ]
+                    "edicoes": [ "1992-93", "2002-03", "2008-09", "2015-16" ]
                 }
             ]
         },
         {
             "id": 25,
             "nome": "Mainz 05",
-            "nome_completo": "Sportverein Werder Bremen von 1899 e.V.",
-            "fundacao": "04/02/1899",
+            "nome_completo": "1. Fußball- und Sportverein Mainz 05 e.V.",
+            "fundacao": "27/03/1905",
             "cores": [ "#e30613", "#ffffff" ],
             "escudo": "../img/escudos/Alemanha/small/Mainz 05.png",
-            "apelido": "Die Grün-Weißen",
-            "presidente": "Marco Bode",
+            "apelido": "Die Nullfünfer",
+            "presidente": "Harald Strutz",
             "uniformes": [
                 { "modelo": "Home", "img": "../img/uniformes/Alemanha/Mainz 05/1.png" },
                 { "modelo": "Away", "img": "../img/uniformes/Alemanha/Mainz 05/2.png" },
                 { "modelo": "Third", "img": "../img/uniformes/Alemanha/Mainz 05/3.png" },
                 { "modelo": "GK", "img": "../img/uniformes/Alemanha/Mainz 05/gk.png" }
             ],
-            "marca_uniforme": "Umbro",
+            "marca_uniforme": "Jako",
             "pais": "Alemanha",
             "liga": "Bundesliga",
-            "cidade": "Bremen",
-            "estado": "Bremen",
-            "website": "www.werder.de",
-            "email": "info@werder.de",
-            "resumo": "Resumo do Werder",
+            "cidade": "Mainz",
+            "estado": "Renânia-Palatinado",
+            "website": "www.mainz05.de",
+            "email": "info@mainz05.de",
+            "resumo": "O Mainz foi um dos membros fundadores da Bundesliga 2 em 1974, que naquela época ainda consistia de dois grupos de vinte times. Disputa atualmente a Bundesliga, nível mais alto do futebol no país. Antes da sua primeira temporada na Bundesliga em 2004-05, o 1. FSV Mainz 05 perdeu o acesso por um ponto em 2002 e por um gol em 2003.",
             "estadio": {
-                "nome": "wohninvest WESERSTADION",
-                "inauguracao": 1947,
-                "capacidade": 42100,
-                "foto": "../img/estadios/Alemanha/wohninvest WESERSTADION.jpg"
+                "nome": "MEWA ARENA",
+                "inauguracao": 2011,
+                "capacidade": 33305,
+                "foto": "../img/estadios/Alemanha/MEWA ARENA.jpg"
             },
             "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "edicoes": [ "1964-65", "1987-88", "1992-93", "2003-04" ]
-                },
-                {
-                    "competicao": "2. Bundesliga",
-                    "edicoes": [ "1980-81" ]
-                },
-                {
-                    "competicao": "DFB-Pokal",
-                    "edicoes": [ "1960-61", "1990-91", "1993-94", "1998-99", "2003-04", "2008-09" ]
-                },
-                {
-                    "competicao": "DFL-Supercup",
-                    "edicoes": [ "1988", "1993", "1994" ]
-                }
             ]
         },
         {
             "id": 26,
             "nome": "Borussia Mönchengladbach",
-            "nome_completo": "Sportverein Werder Bremen von 1899 e.V.",
-            "fundacao": "04/02/1899",
+            "nome_completo": "Borussia Verein für Leibesübungen 1900 e.V. Mönchengladbach",
+            "fundacao": "01/08/1900",
             "cores": [ "#000000", "#ffffff", "#1d7c59" ],
             "escudo": "../img/escudos/Alemanha/small/Borussia Monchengladbach.png",
-            "apelido": "Die Grün-Weißen",
-            "presidente": "Marco Bode",
+            "apelido": "Die Fohlen",
+            "presidente": "Rolf Königs",
             "uniformes": [
                 { "modelo": "Home", "img": "../img/uniformes/Alemanha/Monchengladbach/1.png" },
                 { "modelo": "Away", "img": "../img/uniformes/Alemanha/Monchengladbach/2.png" },
                 { "modelo": "Third", "img": "../img/uniformes/Alemanha/Monchengladbach/3.png" },
                 { "modelo": "GK", "img": "../img/uniformes/Alemanha/Monchengladbach/gk.png" }
             ],
-            "marca_uniforme": "Umbro",
+            "marca_uniforme": "Puma",
             "pais": "Alemanha",
             "liga": "Bundesliga",
-            "cidade": "Bremen",
-            "estado": "Bremen",
-            "website": "www.werder.de",
-            "email": "info@werder.de",
-            "resumo": "Resumo do Werder",
+            "cidade": "Mönchengladbach",
+            "estado": "Renânia do Norte-Vestfália",
+            "website": "www.borussia.de",
+            "email": "info@borussia.de",
+            "resumo": "O clube foi criado em 1900, mas adotou a versão atual do nome em 1921, depois da seoaração com uma entidade com a qual tinha se incorporado dois anos antes. O clube conquistou o campeonato nacional 5 vezes e também tem 3 títulos da copa do país. O lendário 'Fohlenelf' foi o segundo clube, depois do Bayern de Munique, a vencer três títulos consecutivos da Bundesliga, entre 1975 e 1977. Nos anos 70, o time também ganhou dois títulos da UEFA Europa League para a sua coleção de troféus.",
             "estadio": {
-                "nome": "wohninvest WESERSTADION",
-                "inauguracao": 1947,
-                "capacidade": 42100,
-                "foto": "../img/estadios/Alemanha/wohninvest WESERSTADION.jpg"
+                "nome": "BORUSSIA-PARK",
+                "inauguracao": 2004,
+                "capacidade": 54022,
+                "foto": "../img/estadios/Alemanha/BORUSSIA-PARK.jpg"
             },
             "titulos": [
                 {
                     "competicao": "Bundesliga",
-                    "edicoes": [ "1964-65", "1987-88", "1992-93", "2003-04" ]
+                    "edicoes": [ "1969-70", "1970-71", "1974-75", "1975-76", "1976-77" ]
                 },
                 {
                     "competicao": "2. Bundesliga",
-                    "edicoes": [ "1980-81" ]
+                    "edicoes": [ "2007-08" ]
                 },
                 {
                     "competicao": "DFB-Pokal",
-                    "edicoes": [ "1960-61", "1990-91", "1993-94", "1998-99", "2003-04", "2008-09" ]
+                    "edicoes": [ "1959-60", "1972-73", "1994-95" ]
                 },
                 {
-                    "competicao": "DFL-Supercup",
-                    "edicoes": [ "1988", "1993", "1994" ]
+                    "competicao": "UEFA Europa League",
+                    "edicoes": [ "1974-75", "1978-79" ]
                 }
             ]
         },
         {
             "id": 27,
             "nome": "Köln",
-            "nome_completo": "Sportverein Werder Bremen von 1899 e.V.",
-            "fundacao": "04/02/1899",
+            "nome_completo": "1. Fußball-Club Köln 01/07 e. V.",
+            "fundacao": "13/02/1948",
             "cores": [ "#ff0000", "#ffffff" ],
             "escudo": "../img/escudos/Alemanha/small/Koln.png",
-            "apelido": "Die Grün-Weißen",
-            "presidente": "Marco Bode",
+            "apelido": "Die Geißböcke",
+            "presidente": "Werner Wolf",
             "uniformes": [
                 { "modelo": "Home", "img": "../img/uniformes/Alemanha/Koln/1.png" },
                 { "modelo": "Away", "img": "../img/uniformes/Alemanha/Koln/2.png" },
                 { "modelo": "Third", "img": "../img/uniformes/Alemanha/Koln/3.png" },
                 { "modelo": "GK", "img": "../img/uniformes/Alemanha/Koln/gk.png" }
             ],
-            "marca_uniforme": "Umbro",
+            "marca_uniforme": "Uhlsport",
             "pais": "Alemanha",
             "liga": "Bundesliga",
-            "cidade": "Bremen",
-            "estado": "Bremen",
-            "website": "www.werder.de",
-            "email": "info@werder.de",
-            "resumo": "Resumo do Werder",
+            "cidade": "Colônia",
+            "estado": "Renânia do Norte-Vestfália",
+            "website": "www.fc.de",
+            "email": "service@fc-koeln.de",
+            "resumo": "O clube foi fundado em 1948 depois da fusão do Kölner BC 01 e do SpVgg Sülz 07. O clube conquistou o campeonato navional 3 vezes e também tem 4 títulos da copa do país. O mascote do 1. FC Köln, um bode, foi incluído em 1950, depois que um circo presenteou o clube com um bode vivo durante o famoso carnaval de Colônia.",
             "estadio": {
-                "nome": "wohninvest WESERSTADION",
-                "inauguracao": 1947,
-                "capacidade": 42100,
-                "foto": "../img/estadios/Alemanha/wohninvest WESERSTADION.jpg"
+                "nome": "RheinEnergieSTADION",
+                "inauguracao": 1923,
+                "capacidade": 50000,
+                "foto": "../img/estadios/Alemanha/RheinEnergieSTADION.jpg"
             },
             "titulos": [
                 {
                     "competicao": "Bundesliga",
-                    "edicoes": [ "1964-65", "1987-88", "1992-93", "2003-04" ]
+                    "edicoes": [ "1961-62","1963-64", "1977-78" ]
                 },
                 {
                     "competicao": "2. Bundesliga",
-                    "edicoes": [ "1980-81" ]
+                    "edicoes": [ "1999-00", "2004-05", "2013-14", "2018-19" ]
                 },
                 {
                     "competicao": "DFB-Pokal",
-                    "edicoes": [ "1960-61", "1990-91", "1993-94", "1998-99", "2003-04", "2008-09" ]
-                },
-                {
-                    "competicao": "DFL-Supercup",
-                    "edicoes": [ "1988", "1993", "1994" ]
+                    "edicoes": [ "1967-68", "1976-77", "1977-78", "1982-83" ]
                 }
             ]
         },
         {
             "id": 28,
             "nome": "Hoffenheim",
-            "nome_completo": "Sportverein Werder Bremen von 1899 e.V.",
-            "fundacao": "04/02/1899",
+            "nome_completo": "Turn- und Sportgemeinschaft 1899 Hoffenheim e.V.",
+            "fundacao": "01/07/1899",
             "cores": [ "#1f5da6", "#ffffff" ],
             "escudo": "../img/escudos/Alemanha/small/Hoffenheim.png",
-            "apelido": "Die Grün-Weißen",
-            "presidente": "Marco Bode",
+            "apelido": "Die Hoffe",
+            "presidente": "Kristian Baumgärtner",
             "uniformes": [
                 { "modelo": "Home", "img": "../img/uniformes/Alemanha/Hoffenheim/1.png" },
                 { "modelo": "Away", "img": "../img/uniformes/Alemanha/Hoffenheim/2.png" },
                 { "modelo": "Third", "img": "../img/uniformes/Alemanha/Hoffenheim/3.png" },
                 { "modelo": "GK", "img": "../img/uniformes/Alemanha/Hoffenheim/gk.png" }
             ],
-            "marca_uniforme": "Umbro",
+            "marca_uniforme": "Joma",
             "pais": "Alemanha",
             "liga": "Bundesliga",
-            "cidade": "Bremen",
-            "estado": "Bremen",
-            "website": "www.werder.de",
-            "email": "info@werder.de",
-            "resumo": "Resumo do Werder",
+            "cidade": "Sinsheim",
+            "estado": "Bade-Vurtemberga",
+            "website": "www.tsg-hoffenheim.de",
+            "email": "info@tsg-hoffenheim.de",
+            "resumo": "Com base na cidade de Sinsheim, o clube foi fundado em 1899, inicialmente com foco na ginática. Foi só em 1945 que os deportamentos de ginástica e futebol se mesclaram para dar ao clube seu nome atual. Disputa atualmente a Bundesliga, nível mais alto do futebol no país. Em 2007-08, quando conseguiu o acesso à Bundesliga, o Hoffenheim gastou mais dinheiro em transferências do que os outros 17 times da Bundesliga 2 somados. ",
             "estadio": {
-                "nome": "wohninvest WESERSTADION",
-                "inauguracao": 1947,
-                "capacidade": 42100,
-                "foto": "../img/estadios/Alemanha/wohninvest WESERSTADION.jpg"
+                "nome": "PreZero Arena",
+                "inauguracao": 2009,
+                "capacidade": 30150,
+                "foto": "../img/estadios/Alemanha/PreZero Arena.jpg"
             },
             "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "edicoes": [ "1964-65", "1987-88", "1992-93", "2003-04" ]
-                },
-                {
-                    "competicao": "2. Bundesliga",
-                    "edicoes": [ "1980-81" ]
-                },
-                {
-                    "competicao": "DFB-Pokal",
-                    "edicoes": [ "1960-61", "1990-91", "1993-94", "1998-99", "2003-04", "2008-09" ]
-                },
-                {
-                    "competicao": "DFL-Supercup",
-                    "edicoes": [ "1988", "1993", "1994" ]
-                }
+
             ]
         },
         {
             "id": 29,
             "nome": "Bochum",
-            "nome_completo": "Sportverein Werder Bremen von 1899 e.V.",
-            "fundacao": "04/02/1899",
+            "nome_completo": "Verein für Leibesübungen Bochum 1848 Fußballgemeinschaft e.V.",
+            "fundacao": "14/04/1938",
             "cores": [ "#1456a2", "#ffffff" ],
             "escudo": "../img/escudos/Alemanha/small/Bochum.png",
-            "apelido": "Die Grün-Weißen",
-            "presidente": "Marco Bode",
+            "apelido": "Die Blauen",
+            "presidente": "Hans-Peter Villis",
             "uniformes": [
                 { "modelo": "Home", "img": "../img/uniformes/Alemanha/Bochum/1.png" },
                 { "modelo": "Away", "img": "../img/uniformes/Alemanha/Bochum/2.png" },
                 { "modelo": "Third", "img": "../img/uniformes/Alemanha/Bochum/3.png" },
                 { "modelo": "GK", "img": "../img/uniformes/Alemanha/Bochum/gk.png" }
             ],
-            "marca_uniforme": "Umbro",
+            "marca_uniforme": "Nike",
             "pais": "Alemanha",
             "liga": "Bundesliga",
-            "cidade": "Bremen",
-            "estado": "Bremen",
-            "website": "www.werder.de",
-            "email": "info@werder.de",
-            "resumo": "Resumo do Werder",
+            "cidade": "Bochum",
+            "estado": "Renânia do Norte-Vestfália",
+            "website": "www.vfl-bochum.de",
+            "email": "info@vfl-bochum.de",
+            "resumo": "Em 1938, três clubes da cidade se fundiram para a criação do VfL Bochum 1848. O ano no novo nome faz alusão ao mais antigo dos clubes fundadores. Disputa atualmente a Bundesliga, nível mais alto do futebol no país. O Bochum chegou à divisão principal da Bundesliga pela primeira vez em 1971 e ficou conhecido nos anos seguintes como 'Unabsteigbaren' (os 'incaíveis'). O clube permaneceu na divisão de elite por 22 anos consecutivos, apesar de ter conseguido terminar na metade de cima da tabela apenas 5 vezes nesse período.",
             "estadio": {
-                "nome": "wohninvest WESERSTADION",
-                "inauguracao": 1947,
-                "capacidade": 42100,
-                "foto": "../img/estadios/Alemanha/wohninvest WESERSTADION.jpg"
+                "nome": "Vonovia Ruhrstadion",
+                "inauguracao": 1979,
+                "capacidade": 27599,
+                "foto": "../img/estadios/Alemanha/Vonovia Ruhrstadion.jpg"
             },
             "titulos": [
                 {
-                    "competicao": "Bundesliga",
-                    "edicoes": [ "1964-65", "1987-88", "1992-93", "2003-04" ]
-                },
-                {
                     "competicao": "2. Bundesliga",
-                    "edicoes": [ "1980-81" ]
-                },
-                {
-                    "competicao": "DFB-Pokal",
-                    "edicoes": [ "1960-61", "1990-91", "1993-94", "1998-99", "2003-04", "2008-09" ]
-                },
-                {
-                    "competicao": "DFL-Supercup",
-                    "edicoes": [ "1988", "1993", "1994" ]
+                    "edicoes": [ "1993-94", "1995-96", "2005-06", "2020-21" ]
                 }
             ]
         },
         {
             "id": 30,
             "nome": "Augsburg",
-            "nome_completo": "Sportverein Werder Bremen von 1899 e.V.",
-            "fundacao": "04/02/1899",
+            "nome_completo": "Fußball-Club Augsburg 1907 e. V.",
+            "fundacao": "08/08/1907",
             "cores": [ "#cd1719", "#006139", "#ffffff" ],
             "escudo": "../img/escudos/Alemanha/small/Augsburg.png",
-            "apelido": "Die Grün-Weißen",
-            "presidente": "Marco Bode",
+            "apelido": "Fuggerstädter",
+            "presidente": "Markus Krapf",
             "uniformes": [
                 { "modelo": "Home", "img": "../img/uniformes/Alemanha/Augsburg/1.png" },
                 { "modelo": "Away", "img": "../img/uniformes/Alemanha/Augsburg/2.png" },
                 { "modelo": "Third", "img": "../img/uniformes/Alemanha/Augsburg/3.png" },
                 { "modelo": "GK", "img": "../img/uniformes/Alemanha/Augsburg/gk.png" }
             ],
-            "marca_uniforme": "Umbro",
+            "marca_uniforme": "Mizuno",
             "pais": "Alemanha",
             "liga": "Bundesliga",
-            "cidade": "Bremen",
-            "estado": "Bremen",
-            "website": "www.werder.de",
-            "email": "info@werder.de",
-            "resumo": "Resumo do Werder",
+            "cidade": "Augsburg",
+            "estado": "Baviera",
+            "website": "www.fcaugsburg.de",
+            "email": "info@fcaugsburg.de",
+            "resumo": "O clube foi criado em 1907 e começou a usar o nome atual de FC Augsburg em 1969, com a fusão de dois clubes da cidade. Disputa atualmente a Bundesliga, nível mais alto do futebol no país. O Augsburg nunca havia disputado a Bundesliga antes de 2011, mas jogadores formados em suas categorias de base integraram a seleção alemã campeã do mundo em 1954 e em 1990.",
             "estadio": {
-                "nome": "wohninvest WESERSTADION",
-                "inauguracao": 1947,
-                "capacidade": 42100,
-                "foto": "../img/estadios/Alemanha/wohninvest WESERSTADION.jpg"
+                "nome": "WWK ARENA",
+                "inauguracao": 2009,
+                "capacidade": 30660,
+                "foto": "../img/estadios/Alemanha/WWK ARENA.jpg"
             },
             "titulos": [
-                {
-                    "competicao": "Bundesliga",
-                    "edicoes": [ "1964-65", "1987-88", "1992-93", "2003-04" ]
-                },
-                {
-                    "competicao": "2. Bundesliga",
-                    "edicoes": [ "1980-81" ]
-                },
-                {
-                    "competicao": "DFB-Pokal",
-                    "edicoes": [ "1960-61", "1990-91", "1993-94", "1998-99", "2003-04", "2008-09" ]
-                },
-                {
-                    "competicao": "DFL-Supercup",
-                    "edicoes": [ "1988", "1993", "1994" ]
-                }
+                
             ]
         },
         {
             "id": 31,
             "nome": "Darmstadt 98",
-            "nome_completo": "Sportverein Werder Bremen von 1899 e.V.",
-            "fundacao": "04/02/1899",
+            "nome_completo": "Sportverein Darmstadt 1898 e.V.",
+            "fundacao": "22/05/1898",
             "cores": [ "#004e9e", "#ffffff" ],
             "escudo": "../img/escudos/Alemanha/small/Darmstadt 98.png",
-            "apelido": "Die Grün-Weißen",
-            "presidente": "Marco Bode",
+            "apelido": "Die Lilien",
+            "presidente": "Klaus Rüdiger Fritsch",
             "uniformes": [
                 { "modelo": "Home", "img": "../img/uniformes/Alemanha/Darmstadt 98/1.png" },
                 { "modelo": "Away", "img": "../img/uniformes/Alemanha/Darmstadt 98/2.png" },
                 { "modelo": "Third", "img": "../img/uniformes/Alemanha/Darmstadt 98/3.png" },
                 { "modelo": "GK", "img": "../img/uniformes/Alemanha/Darmstadt 98/gk.png" }
             ],
-            "marca_uniforme": "Umbro",
+            "marca_uniforme": "Craft",
             "pais": "Alemanha",
             "liga": "Bundesliga",
-            "cidade": "Bremen",
-            "estado": "Bremen",
-            "website": "www.werder.de",
-            "email": "info@werder.de",
-            "resumo": "Resumo do Werder",
+            "cidade": "Darmstadt",
+            "estado": "Hesse",
+            "website": "www.sv98.de",
+            "email": "info@sv98.de",
+            "resumo": "Fundado em 1898 com o nome FK Olympia 1898 Darmstadt, o clube adotou o nome atual depois da fusão com o SC Darmstadt em 1919. Disputa atualmente a Bundesliga, nível mais alto do futebol no país. Apesar de só ter jogado na Bundesliga pela primeira vez em 1978, os 'Lírios' são um dos clubes mais antigos da Alemanha.",
             "estadio": {
-                "nome": "wohninvest WESERSTADION",
-                "inauguracao": 1947,
-                "capacidade": 42100,
-                "foto": "../img/estadios/Alemanha/wohninvest WESERSTADION.jpg"
+                "nome": "Merck-Stadion am Böllenfalltor",
+                "inauguracao": 1921,
+                "capacidade": 17400,
+                "foto": "../img/estadios/Alemanha/Merck-Stadion am Bollenfalltor.jpg"
             },
             "titulos": [
                 {
-                    "competicao": "Bundesliga",
-                    "edicoes": [ "1964-65", "1987-88", "1992-93", "2003-04" ]
-                },
-                {
                     "competicao": "2. Bundesliga",
-                    "edicoes": [ "1980-81" ]
-                },
-                {
-                    "competicao": "DFB-Pokal",
-                    "edicoes": [ "1960-61", "1990-91", "1993-94", "1998-99", "2003-04", "2008-09" ]
-                },
-                {
-                    "competicao": "DFL-Supercup",
-                    "edicoes": [ "1988", "1993", "1994" ]
+                    "edicoes": [ "1977-78", "1980-81" ]
                 }
             ]
         },
         {
             "id": 32,
             "nome": "Heidenheim",
-            "nome_completo": "Sportverein Werder Bremen von 1899 e.V.",
-            "fundacao": "04/02/1899",
+            "nome_completo": "1. Fussballclub Heidenheim 1846 e.V.",
+            "fundacao": "15/06/2007",
             "cores": [ "#dc0812", "#1d3c72" ],
             "escudo": "../img/escudos/Alemanha/small/Heidenheim.png",
-            "apelido": "Die Grün-Weißen",
-            "presidente": "Marco Bode",
+            "apelido": "",
+            "presidente": "Holger Sanwald",
             "uniformes": [
                 { "modelo": "Home", "img": "../img/uniformes/Alemanha/Heidenheim/1.png" },
                 { "modelo": "Away", "img": "../img/uniformes/Alemanha/Heidenheim/2.png" },
                 { "modelo": "Third", "img": "../img/uniformes/Alemanha/Heidenheim/3.png" },
                 { "modelo": "GK", "img": "../img/uniformes/Alemanha/Heidenheim/gk.png" }
             ],
-            "marca_uniforme": "Umbro",
+            "marca_uniforme": "Puma",
             "pais": "Alemanha",
             "liga": "Bundesliga",
-            "cidade": "Bremen",
-            "estado": "Bremen",
-            "website": "www.werder.de",
-            "email": "info@werder.de",
-            "resumo": "Resumo do Werder",
+            "cidade": "Heidenheim",
+            "estado": "Bade-Vurtemberga",
+            "website": "www.fc-heidenheim.de",
+            "email": "info@fc-heidenheim.de",
+            "resumo": "O Heidenheim é um clube de futebol alemão sediado em Heidenheim an der Brenz, no estado de Baden-Württemberg. O clube foi fundado em 14 de agosto de 1846 como 'Turnverein 1846 Heidenheim' e, ao longo dos anos, passou por várias mudanças de nome até adotar o nome atual, '1. FC Heidenheim 1846', em 2007. O clube atualmente disputa a Bundesliga, o nível mais alto do futebol no país. O Heidenheim tem uma história relativamente curta no futebol profissional, mas tem experimentado um sucesso crescente nas últimas décadas. O clube alcançou a promoção para a 2. Bundesliga pela primeira vez em 2014, após vencer o playoff de promoção contra o RB Leipzig.",
             "estadio": {
-                "nome": "wohninvest WESERSTADION",
-                "inauguracao": 1947,
-                "capacidade": 42100,
-                "foto": "../img/estadios/Alemanha/wohninvest WESERSTADION.jpg"
+                "nome": "Voith-Arena",
+                "inauguracao": 1972,
+                "capacidade": 15000,
+                "foto": "../img/estadios/Alemanha/Voith-Arena.jpg"
             },
             "titulos": [
                 {
-                    "competicao": "Bundesliga",
-                    "edicoes": [ "1964-65", "1987-88", "1992-93", "2003-04" ]
-                },
-                {
                     "competicao": "2. Bundesliga",
-                    "edicoes": [ "1980-81" ]
+                    "edicoes": [ "2022-23" ]
                 },
                 {
-                    "competicao": "DFB-Pokal",
-                    "edicoes": [ "1960-61", "1990-91", "1993-94", "1998-99", "2003-04", "2008-09" ]
-                },
-                {
-                    "competicao": "DFL-Supercup",
-                    "edicoes": [ "1988", "1993", "1994" ]
+                    "competicao": "3. Liga",
+                    "edicoes": [ "2013-14" ]
                 }
             ]
         }
@@ -1417,143 +1303,7 @@
                       "edicoes": [ "1999", "2008" ]
                   }
               ]
-          },
-          {
-               "id": 17,
-               "nome": "Aston Villa",
-               "nome_completo": "Manchester United Football Club",
-               "fundacao": "05/03/1878",
-               "cores": [ "#DA020E", "#ffffff", "#000000" ],
-               "escudo": "../img/escudos/Inglaterra/small/Aston Villa.png",
-               "apelido": "Red Devils",
-               "presidente": "Joel Glazer",
-               "uniformes": [
-                   { "modelo": "Home", "img": "../img/uniformes/Inglaterra/Manchester United/1.png" },
-                   { "modelo": "Away", "img": "../img/uniformes/Inglaterra/Manchester United/2.png" },
-                   { "modelo": "Third", "img": "../img/uniformes/Inglaterra/Manchester United/3.png" },
-                   { "modelo": "GK", "img": "../img/uniformes/Inglaterra/Manchester United/gk.png" }
-               ],
-               "marca_uniforme": "Adidas",
-               "pais": "Inglaterra",
-               "liga": "Premier League",
-               "cidade": "Manchester",
-               "estado": "-",
-               "website": "www.manutd.com",
-               "email": "enquiries@manutd.co.uk",
-               "resumo": "O Newton Heath LYR foi formado em 1878 e depois renomeado Manchester United em 1902. O clube conquistou o campeonato nacional 20 vezes e também tem 12 títulos da copa do país. Em 1999, o Manchester United conseguiu a tríplice coroa e se tornou o primeiro time inglês a conquistar esse marco. A final da UEFA Champions League em 1999 foi palco de uma das reviravoltas mais impressionantes da história do esporte, com dois gols decisivos nos acréscimos.",
-               "estadio": {
-                   "nome": "Old Trafford",
-                   "inauguracao": 1910,
-                   "capacidade": 74310,
-                   "foto": "../img/estadios/Inglaterra/OldTrafford.jpg"
-               },
-               "titulos": [
-                 {
-                       "competicao": "Premier League",
-                       "edicoes": [ "1907-08", "1910-11", "1951-52", "1955-56", "1956-57", "1964-65", "1966-67", "1992-93", "1993-94", "1995-96", "1996-97", "1998-99", "1999-2000", "2000-01", "2002-03", "2006-07", "2007-08", "2008-09", "2010-11", "2012-13" ]
-                   },
-                   {
-                       "competicao": "EFL Championship",
-                       "edicoes": [ "1935-36", "1974-75" ]
-                   },
-                   {
-                       "competicao": "FA Cup",
-                       "edicoes": [ "1908-09", "1947-48", "1962-63", "1976-77", "1982-83", "1984-85", "1989-90", "1993-94", "1995-96", "1998-99", "2003-04", "2015-16" ]
-                   },
-                   {
-                       "competicao": "EFL Cup",
-                       "edicoes": [ "1991-92", "2005-06", "2008-09", "2009-10", "2016-17", "2022-23" ]
-                   },
-                   {
-                       "competicao": "FA Community Shield",
-                       "edicoes": [ "1908", "1911", "1952", "1956", "1957", "1965*", "1967*", "1977*", "1983", "1990*", "1993", "1994", "1996", "1997", "2003", "2007", "2008", "2010", "2011", "2013", "2016" ]
-                   },
-                     {
-                      "competicao": "UEFA Champions League",
-                      "edicoes": [ "1967-68", "1998-99", "2007-08" ]
-                  },
-                   {
-                       "competicao": "UEFA Europa League",
-                       "edicoes": [ "2016-17" ]
-                   },
-                   {
-                       "competicao": "UEFA Super Cup",
-                       "edicoes": [ "1991" ]
-                   },
-                   {
-                       "competicao": "FIFA Club World Cup",
-                       "edicoes": [ "1999", "2008" ]
-                   }
-               ]
-           },
-           {
-                "id": 18,
-                "nome": "Nottingham Forest",
-                "nome_completo": "Manchester United Football Club",
-                "fundacao": "05/03/1878",
-                "cores": [ "#DA020E", "#ffffff", "#000000" ],
-                "escudo": "../img/escudos/Inglaterra/small/Nottingham Forest.png",
-                "apelido": "Red Devils",
-                "presidente": "Joel Glazer",
-                "uniformes": [
-                    { "modelo": "Home", "img": "../img/uniformes/Inglaterra/Manchester United/1.png" },
-                    { "modelo": "Away", "img": "../img/uniformes/Inglaterra/Manchester United/2.png" },
-                    { "modelo": "Third", "img": "../img/uniformes/Inglaterra/Manchester United/3.png" },
-                    { "modelo": "GK", "img": "../img/uniformes/Inglaterra/Manchester United/gk.png" }
-                ],
-                "marca_uniforme": "Adidas",
-                "pais": "Inglaterra",
-                "liga": "Premier League",
-                "cidade": "Manchester",
-                "estado": "-",
-                "website": "www.manutd.com",
-                "email": "enquiries@manutd.co.uk",
-                "resumo": "O Newton Heath LYR foi formado em 1878 e depois renomeado Manchester United em 1902. O clube conquistou o campeonato nacional 20 vezes e também tem 12 títulos da copa do país. Em 1999, o Manchester United conseguiu a tríplice coroa e se tornou o primeiro time inglês a conquistar esse marco. A final da UEFA Champions League em 1999 foi palco de uma das reviravoltas mais impressionantes da história do esporte, com dois gols decisivos nos acréscimos.",
-                "estadio": {
-                    "nome": "Old Trafford",
-                    "inauguracao": 1910,
-                    "capacidade": 74310,
-                    "foto": "../img/estadios/Inglaterra/OldTrafford.jpg"
-                },
-                "titulos": [
-                  {
-                        "competicao": "Premier League",
-                        "edicoes": [ "1907-08", "1910-11", "1951-52", "1955-56", "1956-57", "1964-65", "1966-67", "1992-93", "1993-94", "1995-96", "1996-97", "1998-99", "1999-2000", "2000-01", "2002-03", "2006-07", "2007-08", "2008-09", "2010-11", "2012-13" ]
-                    },
-                    {
-                        "competicao": "EFL Championship",
-                        "edicoes": [ "1935-36", "1974-75" ]
-                    },
-                    {
-                        "competicao": "FA Cup",
-                        "edicoes": [ "1908-09", "1947-48", "1962-63", "1976-77", "1982-83", "1984-85", "1989-90", "1993-94", "1995-96", "1998-99", "2003-04", "2015-16" ]
-                    },
-                    {
-                        "competicao": "EFL Cup",
-                        "edicoes": [ "1991-92", "2005-06", "2008-09", "2009-10", "2016-17", "2022-23" ]
-                    },
-                    {
-                        "competicao": "FA Community Shield",
-                        "edicoes": [ "1908", "1911", "1952", "1956", "1957", "1965*", "1967*", "1977*", "1983", "1990*", "1993", "1994", "1996", "1997", "2003", "2007", "2008", "2010", "2011", "2013", "2016" ]
-                    },
-                      {
-                       "competicao": "UEFA Champions League",
-                       "edicoes": [ "1967-68", "1998-99", "2007-08" ]
-                   },
-                    {
-                        "competicao": "UEFA Europa League",
-                        "edicoes": [ "2016-17" ]
-                    },
-                    {
-                        "competicao": "UEFA Super Cup",
-                        "edicoes": [ "1991" ]
-                    },
-                    {
-                        "competicao": "FIFA Club World Cup",
-                        "edicoes": [ "1999", "2008" ]
-                    }
-                ]
-            }
+          }
     ],
     "TimesItália": [
         {
