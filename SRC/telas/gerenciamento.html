@@ -9,17 +9,46 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
 
-        header div:first-child {
+        header div {
             font-family: "Squada One", sans-serif;
         }
     </style>
 </head>
 <body>
+    <!-- 
     <header class="flex justify-between items-center fixed w-full bg-[#edb141] py-2.5 px-3.5 z-10 border-b-2 border-[#a77d15] text-[#06203F] shadow-md">
-        <!-- <header class="flex justify-between items-center fixed w-full bg-[#06203F] py-2.5 px-3.5 z-10 border-b-2 border-[#041529] text-[#edb141] shadow-md"> -->
+   
         <div class="flex items-center gap-2.5">
             <a href="./index.html"><img src="../img/logo4.png" alt="Logo do Site" width="60px"></a>
             <h1 class="font-bold text-3xl">API Futebol Clube - Gerenciamento dos Times</h1>
+        </div>
+    </header>
+-->
+
+    <header class="flex justify-between items-center fixed w-full bg-[#edb141] py-2.5 px-3.5 z-10 border-b-2 border-[#a77d15] text-[#06203F] shadow-md">
+        <!-- <header class="flex justify-between items-center fixed w-full bg-[#edb141] py-2.5 px-3.5 z-10 text-[#06203F] shadow-md"> -->
+        <div class="flex items-center gap-2.5">
+            <a href="./index.html"><img src="../img/logo4.png" alt="Logo do Site" width="60px"></a>
+            <h1 class="font-bold text-3xl">API Futebol Clube - Gerenciamento dos Times</h1>
+        </div>
+        <div class="flex gap-6 items-center pr-1">
+            <div>
+                <input type="search" name="nomeTime" id="filtroNomeTime" placeholder="Pesquisar por nome" class="w-[250px] px-2 py-[4px] h-[30px] border border-gray-400 text-sm" onkeyup="filtrarPorNome(this)" onsearch="limparPesquisa(this)">
+            </div>
+            <div>
+                <!-- <img id="bandeira" src="../img/bandeiras/small/Alemanha.png" style="position: absolute; right: 235px; top:35px; width: 24px;"> -->
+                <img id="bandeira" src="../img/bandeiras/small/Alemanha.png" class="absolute right-[235px] top-[35px] w-6">
+                <!-- <select name="" id="selectPais" style="width: 200px; padding-left: 35px; padding-top: 5px; padding-bottom: 5px;" onchange="trocarPais(this)"> -->
+                <select name="" id="selectPais" class="w-[200px] pl-[35px] pt-[5px] pb-[5px] mr-[48px] h-[30px] border border-gray-400" onchange="trocarPais(this)">
+                    <option value="Todos">Todos os Times</option>
+                    <option value="Alemanha">Alemanha</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Espanha">Espanha</option>
+                    <option value="França">França</option>
+                    <option value="Inglaterra">Inglaterra</option>
+                    <option value="Itália">Itália</option>
+                </select>
+            </div> 
         </div>
     </header>
 
@@ -28,10 +57,54 @@
     </main>
 
     <script>
+        let paisEscolhido = sessionStorage.getItem('paisEscolhido') ? sessionStorage.getItem('paisEscolhido') : 'Alemanha';
+        let bandeira = document.getElementById('bandeira')
+
+
+        document.onload = carregarPais()
+
+
+        function carregarPais() {
+
+            let selectPais = document.getElementById('selectPais')
+        
+            selectPais.value = paisEscolhido
+            bandeira.src=`../img/bandeiras/small/${paisEscolhido}.png`
+
+        }
+
+        function trocarPais(event) {
+
+            bandeira.src=`../img/bandeiras/small/${event.value}.png`
+
+            paisEscolhido = event.value
+
+            sessionStorage.setItem('paisEscolhido', paisEscolhido)
+            console.log(sessionStorage.getItem('paisEscolhido'))
+
+            let listaDeTimes = document.getElementById('listaDeTimes')
+            listaDeTimes.remove()
+
+            carregarTimes()
+            // window.refresh
+        }
+       
+        function limparPesquisa(e) {
+            if(e.value == '') {
+                carregarTimes()
+            }
+        }
+
+        
         document.onload = carregarTimes();
 
         function carregarTimes() {
-            fetch('http://localhost:3000/api/times')
+
+            if(paisEscolhido === 'Todos') {
+                paisEscolhido = ''
+            }
+
+            fetch(`http://localhost:3000/api/times/${paisEscolhido}`)
             .then(response => response.json())
             .then(data => {
                 criarTabela(data);
@@ -44,7 +117,15 @@
 
             let main = document.getElementById('main')
 
-            let listaDeTimes = document.createElement('section')
+            let listaDeTimes = document.getElementById('listaDeTimes')
+
+            if(listaDeTimes) {
+                listaDeTimes.innerHTML = ''
+            } else {
+                listaDeTimes = document.createElement('section')    
+            }
+
+            // let listaDeTimes = document.createElement('section')
             listaDeTimes.id = 'listaDeTimes'
             listaDeTimes.className = 'grid gap-y-1.5 p-8'
             main.appendChild(listaDeTimes)
@@ -124,6 +205,35 @@
             .then(() => console.log('deletado'))
             .catch(error => console.error('Erro:', error))
         }
+
+        function filtrarPorNome(e) {
+           
+            let nome = e.value
+            
+            if(nome.length == 0) {
+                nome = ''
+                carregarTimes()
+            } else {
+
+            if(paisEscolhido != 'Todos' && paisEscolhido != '') {
+                
+                fetch(`http://localhost:3000/api/times/filtrar/${paisEscolhido}/${nome}`)
+                .then(response => response.json())
+                .then(function(data) {
+                    criarTabela(data)
+                })
+                .catch(error => console.error("Erro:", error))
+
+            } else {
+                fetch(`http://localhost:3000/api/times/filtrar/${nome}`)
+                .then(response => response.json())
+                .then(function(data) {
+                    criarTabela(data)
+                })
+                .catch(error => console.error("Erro:", error))
+            }
+        }
+    }
     </script>
 
     <script src="../clients/timesCreate.js"></script>

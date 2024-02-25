@@ -44,7 +44,7 @@ server.get('/times', (req, res) => {
 server.get('/times/filtrar/:nome/', (req, res) => {
     
     const nome = req.params.nome.toLowerCase()
-
+    
     if(nome == '') {
         const times = [];
     
