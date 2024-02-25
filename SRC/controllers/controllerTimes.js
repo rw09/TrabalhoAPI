@@ -11,7 +11,6 @@ server.use(express.json())
 
 
 server.get('/times/proximoID', (req, res) => {
-
     let times = dados.TimesAlemanha.concat(dados.TimesBrasil, dados.TimesEspanha, dados.TimesFrança, dados.TimesInglaterra, dados.TimesItália)
 
     let maiorId = 0;
@@ -28,7 +27,6 @@ server.get('/times/proximoID', (req, res) => {
 
 
 server.get('/times', (req, res) => {
-    
     const times = [];
     
     for(const pais in dados) {
@@ -42,7 +40,6 @@ server.get('/times', (req, res) => {
 
 
 server.get('/times/filtrar/:nome/', (req, res) => {
-    
     const nome = req.params.nome.toLowerCase()
     
     if(nome == '') {
@@ -72,7 +69,6 @@ server.get('/times/filtrar/:nome/', (req, res) => {
 
 
 server.get('/times/:pais', (req, res) => {
-
     const paisEscolhido = req.params.pais
 
     const dadosTimesDoPaisEscolhido = dados[`Times${paisEscolhido}`]
@@ -83,11 +79,9 @@ server.get('/times/:pais', (req, res) => {
 
 
 server.get('/times/filtrar/:pais/:nome', (req, res) => {
-console.log('veio')
     const nome = req.params.nome.toLowerCase()
 
     const paisEscolhido = req.params.pais
-
 
     if(nome == '') {
 
@@ -111,7 +105,6 @@ console.log('veio')
 })
 
 server.get('/times/detalhes/:id', (req, res) => {
-    
     const timeId = parseInt(req.params.id)
 
     let times = dados.TimesAlemanha.concat(dados.TimesBrasil, dados.TimesEspanha, dados.TimesFrança, dados.TimesInglaterra, dados.TimesItália)
@@ -173,7 +166,7 @@ server.post('/times', function(req, res)  {
                 fs.mkdirSync(`src/img/escudos/${paisDoTime}/big`, { recursive: true });
             }
 
-            //temp
+            //temp depois implementar thumbs, tem alguma função pra dar o resize da imagem como fiz no tche food?
             if (!fs.existsSync(`src/img/escudos/${paisDoTime}/small`)) {
                 fs.mkdirSync(`src/img/escudos/${paisDoTime}/small`, { recursive: true });
             }
@@ -621,17 +614,14 @@ server.put('/times/:id', function(req, res)  {
 
 
 server.delete("/times/:id", (req, res) => {
- 
-    const timeId = parseInt(req.params.id)
+     const timeId = parseInt(req.params.id)
 
     for(const pais in dados) {
-        // console.log(pais)
         let i = 0
+        
         for(const time of dados[pais]) {
-            // console.log(time.nome)
-            if(parseInt(time.id) === timeId) {
-                //console.log('o time foi o ' + time.nome)
-                dados[pais].splice(i, 1)
+             if(parseInt(time.id) === timeId) {
+                 dados[pais].splice(i, 1)
                 break
             }
             i++
@@ -645,13 +635,13 @@ server.delete("/times/:id", (req, res) => {
 
 
 //old
-server.delete("/times/:pais/:id", (req, res) => {
-    const timeId = parseInt(req.params.id)
-    const paisTime = req.params.pais
-    dados[`Times${paisTime}`] = dados[`Times${paisTime}`].filter(t => t.id !== timeId)
-    salvarDados(dados)
-    return res.status(200).json({mensagem: "Time excluido com sucesso"})
-})
+// server.delete("/times/:pais/:id", (req, res) => {
+//     const timeId = parseInt(req.params.id)
+//     const paisTime = req.params.pais
+//     dados[`Times${paisTime}`] = dados[`Times${paisTime}`].filter(t => t.id !== timeId)
+//     salvarDados(dados)
+//     return res.status(200).json({mensagem: "Time excluido com sucesso"})
+// })
 
 
 function salvarDados(){

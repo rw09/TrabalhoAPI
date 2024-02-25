@@ -29,12 +29,6 @@ function adicionarTime() {
     const cor2 = document.getElementById('cor2').value
     const cor3 = document.getElementById('cor3').value
 
-    // let cores = [ cor1, cor2 ]
-
-    // if(cor3 !== '#F3F4F6') {
-    //     cores.push(cor3)
-    // }
-
     const resumo = document.getElementById('resumo').value
 
     const nomeEstadio = document.getElementById('nomeEstadio').value
@@ -119,7 +113,6 @@ function adicionarTime() {
 
     formData.append('fotoEscudo', fotoEscudo);
 
-    // formData.append('cores', cores);
     formData.append('cor1', cor1);
     formData.append('cor2', cor2);
     formData.append('cor3', cor3);
@@ -156,21 +149,13 @@ function adicionarTime() {
                 "competicao": child.children[0].innerText.replace(":", ""),
                 "edicoes": anosTituloFiltrado
             }
-            // titulos.push(JSON.stringify(titulo))
             titulos.push(titulo)
-            // console.log(titulos)
-           
-            // console.log(JSON.stringify(titulo))
-            // formData.append(`titulo-${i}`, JSON.stringify(titulo))
         }
     }
-    // return
+
     if(titulos.length) {
-        // console.log('tem titulos')
         formData.append('titulos', JSON.stringify(titulos))
-        // formData.append('titulos', titulos)
     }
-    // formData.append('titulos', JSON.stringify(titulos))
     
     fetch('http://localhost:3000/api/times', {
         method: 'POST',
@@ -543,7 +528,6 @@ function criarDialogCadastro() {
     inputCor1.type = 'color'
     inputCor1.id = 'cor1'
     inputCor1.value = '#ffffff'
-    // inputCor1.setAttribute('required', true)
     divInputsCores.appendChild(inputCor1)
 
     let inputCor2 = document.createElement('input')
@@ -551,7 +535,6 @@ function criarDialogCadastro() {
     inputCor2.type = 'color'
     inputCor2.id = 'cor2'
     inputCor2.value = '#000000'
-    // inputCor2.setAttribute('required', true)
     divInputsCores.appendChild(inputCor2)
 
     let inputCor3 = document.createElement('input')
@@ -559,7 +542,6 @@ function criarDialogCadastro() {
     inputCor3.type = 'color'
     inputCor3.id = 'cor3'
     inputCor3.value = '#f3f4f6'
-    // inputCor3.setAttribute('required', true)
     divInputsCores.appendChild(inputCor3)
 
     divCores.appendChild(divInputsCores)
@@ -650,7 +632,6 @@ function criarDialogCadastro() {
     inputURLEstadio.type = 'text'
     inputURLEstadio.id = 'url-fotoEstadio'
     inputURLEstadio.setAttribute("placeholder", "Escolha um arquivo ou cole aqui a URL da imagem")
-    // inputURLEstadio.setAttribute('required', true)
     divInputURL.appendChild(inputURLEstadio)
 
     let botaoCarregarURL = document.createElement('button')
@@ -1000,151 +981,146 @@ function criarDialogCadastro() {
 
 
     function carregarURLFoto(e) {
+        let url = document.getElementById(e.id)
+        let foto = document.getElementById(`imagem-${e.id.replace("url-", "")}`)
+        foto.src = url.value
 
-    let url = document.getElementById(e.id)
-    let foto = document.getElementById(`imagem-${e.id.replace("url-", "")}`)
-    foto.src = url.value
-
-    let inputFoto = document.getElementById(`input-${e.id.replace("url-", "")}`)
-    inputFoto.value = []
+        let inputFoto = document.getElementById(`input-${e.id.replace("url-", "")}`)
+        inputFoto.value = []
     }
 
     function erroImagem (e) {
-    alert('Não Foi Possivel Carregar a Imagem')
-    e.src = '../img/SemImagem.png'
-    // e.src = 'https://media.internacional.groundsportech.com/wp-content/uploads/2022/04/24142703/RaioX_GuriasColoradasVsFlamengo_BrasileiraoA12022_7Rodada_Palco_CristoRei_FotoFernandoCampos_Aimore_2404.jpg'
-    let url = document.getElementById(`url-${e.id.replace("imagem-", "")}`)
-    url.value = null
+        alert('Não Foi Possivel Carregar a Imagem')
+        e.src = '../img/SemImagem.png'
+        let url = document.getElementById(`url-${e.id.replace("imagem-", "")}`)
+        url.value = null
     }
 
     function carregarCompeticoes(pais, form) {
+        let divTituloAntiga = document.getElementById('tituloTitulos')
+        let divTituloConteudoAntiga = document.getElementById('divTitulosCadastro')
 
-    let divTituloAntiga = document.getElementById('tituloTitulos')
-    let divTituloConteudoAntiga = document.getElementById('divTitulosCadastro')
+        if(divTituloAntiga) {
+            divTituloAntiga.remove()
+        }
+        if(divTituloConteudoAntiga) {
+            divTituloConteudoAntiga.remove()
+        }
 
-    if(divTituloAntiga) {
-        divTituloAntiga.remove()
-    }
-    if(divTituloConteudoAntiga) {
-        divTituloConteudoAntiga.remove()
-    }
+        let botao = document.getElementById('botaoCadastrar')
 
-    let botao = document.getElementById('botaoCadastrar')
+        if(botao) {
+            botao.remove()
+        }
 
-    if(botao) {
-        botao.remove()
-    }
+        //Títulos
+        let tituloTitulos = document.createElement('h3')
+        tituloTitulos.className = 'text-lg border-2 border-gray-300 font-medium bg-gray-200 pl-4 py-3 mt-10'
+        tituloTitulos.innerText = 'Títulos:'
+        tituloTitulos.id = 'tituloTitulos'
 
-    //Títulos
-    let tituloTitulos = document.createElement('h3')
-    tituloTitulos.className = 'text-lg border-2 border-gray-300 font-medium bg-gray-200 pl-4 py-3 mt-10'
-    tituloTitulos.innerText = 'Títulos:'
-    tituloTitulos.id = 'tituloTitulos'
+        if(!form) {
+            form = document.getElementById('formCadastroTime')
+        }
 
-    if(!form) {
-        form = document.getElementById('formCadastroTime')
-    }
+        form.appendChild(tituloTitulos)
 
-    form.appendChild(tituloTitulos)
+        //TITULOS
+        let divTitulos = document.createElement('div')
+        divTitulos.className = 'grid grid-cols-2 gap-y-0 gap-x-0 px-8 pt-4 pb-8 bg-gray-100 shadow-md border-l-2 border-r-2 border-b-2 border-gray-200'
+        divTitulos.id = 'divTitulosCadastro'
+        form.appendChild(divTitulos)
 
-    //TITULOS
-    let divTitulos = document.createElement('div')
-    divTitulos.className = 'grid grid-cols-2 gap-y-0 gap-x-0 px-8 pt-4 pb-8 bg-gray-100 shadow-md border-l-2 border-r-2 border-b-2 border-gray-200'
-    divTitulos.id = 'divTitulosCadastro'
-    form.appendChild(divTitulos)
-
-    //BOTAO CADASTRAR
-    let botaoCadastrar = document.createElement('button')
-    botaoCadastrar.setAttribute("type", "submit")
-    botaoCadastrar.className = 'px-10 py-3 bg-gray-200 hover:bg-gray-100 border-2 border-gray-300 text-2xl font-bold mt-10 w-1/2 mx-auto mb-5'
-    botaoCadastrar.innerHTML = 'Cadastrar'
-    botaoCadastrar.id = 'botaoCadastrar'
-    
-    form.appendChild(botaoCadastrar)
-
-
-    fetch(`http://localhost:3000/api/paises/${pais}`)
-    .then(response => response.json())
-    .then(function(data) {
+        //BOTAO CADASTRAR
+        let botaoCadastrar = document.createElement('button')
+        botaoCadastrar.setAttribute("type", "submit")
+        botaoCadastrar.className = 'px-10 py-3 bg-gray-200 hover:bg-gray-100 border-2 border-gray-300 text-2xl font-bold mt-10 w-1/2 mx-auto mb-5'
+        botaoCadastrar.innerHTML = 'Cadastrar'
+        botaoCadastrar.id = 'botaoCadastrar'
         
-        let campeonatos = data.campeonatos
-        let copas = data.copas
+        form.appendChild(botaoCadastrar)
 
-        campeonatos.forEach(campeonato => {
-            let divCampeonato = document.createElement('div')
-            divCampeonato.className = 'py-3 px-5 grid col-span-2 mt-5'
 
-            let labelCampeonato = document.createElement('label')
-            labelCampeonato.innerText = `${campeonato}:`
-            labelCampeonato.className = 'font-semibold'
-            divCampeonato.appendChild(labelCampeonato)
-
-            let textAreaCampeonato = document.createElement('textarea')
-            textAreaCampeonato.className = 'border border-gray-400 p-2 h-32'
-            textAreaCampeonato.id = `campeonato-${campeonato}`
-            textAreaCampeonato.setAttribute('placeholder', 'Ex: 2001-02, 2005-08, 2010-11, 2021-22')
-            divCampeonato.appendChild(textAreaCampeonato)
-
-            divTitulos.appendChild(divCampeonato)    
-        });
-
-        copas.forEach(copa => {
-            let divCopa = document.createElement('div')
-            divCopa.className = 'py-3 px-5 grid col-span-2 mt-5'
-
-            let labelCopa = document.createElement('label')
-            labelCopa.innerText = `${copa}:`
-            labelCopa.className = 'font-semibold'
-            divCopa.appendChild(labelCopa)
-
-            let textAreaCopa = document.createElement('textarea')
-            textAreaCopa.className = 'border border-gray-400 p-2 h-32'
-            textAreaCopa.id = `copa-${copa}`
-            textAreaCopa.setAttribute('placeholder', 'Ex: 2001-02, 2005-08, 2010-11, 2021-22')
-            divCopa.appendChild(textAreaCopa)
-
-            divTitulos.appendChild(divCopa)    
-        });
-        
-
-        fetch(`http://localhost:3000/api/competicoes/continental/${data.continente}`)
+        fetch(`http://localhost:3000/api/paises/${pais}`)
         .then(response => response.json())
         .then(function(data) {
+            let campeonatos = data.campeonatos
+            let copas = data.copas
 
-            data.forEach(campeonato => {
+            campeonatos.forEach(campeonato => {
                 let divCampeonato = document.createElement('div')
                 divCampeonato.className = 'py-3 px-5 grid col-span-2 mt-5'
-        
+
                 let labelCampeonato = document.createElement('label')
-                labelCampeonato.innerText = `${campeonato.nome}:`
+                labelCampeonato.innerText = `${campeonato}:`
                 labelCampeonato.className = 'font-semibold'
                 divCampeonato.appendChild(labelCampeonato)
-        
+
                 let textAreaCampeonato = document.createElement('textarea')
                 textAreaCampeonato.className = 'border border-gray-400 p-2 h-32'
-                textAreaCampeonato.id = campeonato.nome
+                textAreaCampeonato.id = `campeonato-${campeonato}`
                 textAreaCampeonato.setAttribute('placeholder', 'Ex: 2001-02, 2005-08, 2010-11, 2021-22')
                 divCampeonato.appendChild(textAreaCampeonato)
-        
+
                 divTitulos.appendChild(divCampeonato)    
             });
+
+            copas.forEach(copa => {
+                let divCopa = document.createElement('div')
+                divCopa.className = 'py-3 px-5 grid col-span-2 mt-5'
+
+                let labelCopa = document.createElement('label')
+                labelCopa.innerText = `${copa}:`
+                labelCopa.className = 'font-semibold'
+                divCopa.appendChild(labelCopa)
+
+                let textAreaCopa = document.createElement('textarea')
+                textAreaCopa.className = 'border border-gray-400 p-2 h-32'
+                textAreaCopa.id = `copa-${copa}`
+                textAreaCopa.setAttribute('placeholder', 'Ex: 2001-02, 2005-08, 2010-11, 2021-22')
+                divCopa.appendChild(textAreaCopa)
+
+                divTitulos.appendChild(divCopa)    
+            });
+            
+
+            fetch(`http://localhost:3000/api/competicoes/continental/${data.continente}`)
+            .then(response => response.json())
+            .then(function(data) {
+                data.forEach(campeonato => {
+                    let divCampeonato = document.createElement('div')
+                    divCampeonato.className = 'py-3 px-5 grid col-span-2 mt-5'
+            
+                    let labelCampeonato = document.createElement('label')
+                    labelCampeonato.innerText = `${campeonato.nome}:`
+                    labelCampeonato.className = 'font-semibold'
+                    divCampeonato.appendChild(labelCampeonato)
+            
+                    let textAreaCampeonato = document.createElement('textarea')
+                    textAreaCampeonato.className = 'border border-gray-400 p-2 h-32'
+                    textAreaCampeonato.id = campeonato.nome
+                    textAreaCampeonato.setAttribute('placeholder', 'Ex: 2001-02, 2005-08, 2010-11, 2021-22')
+                    divCampeonato.appendChild(textAreaCampeonato)
+            
+                    divTitulos.appendChild(divCampeonato)    
+                });
+            })
+            .then(function() {
+                let divCampeonato = document.createElement('div')
+                divCampeonato.className = 'py-3 px-5 grid col-span-2 mt-5'
+
+                let labelCampeonato = document.createElement('label')
+                labelCampeonato.innerText = 'FIFA Club World Cup:'
+                labelCampeonato.className = 'font-semibold'
+                divCampeonato.appendChild(labelCampeonato)
+
+                let textAreaCampeonato = document.createElement('textarea')
+                textAreaCampeonato.className = 'border border-gray-400 p-2 h-32'
+                textAreaCampeonato.id = 'FIFA Club World Cup'
+                textAreaCampeonato.setAttribute('placeholder', 'Ex: 2001-02, 2005-08, 2010-11, 2021-22')
+                divCampeonato.appendChild(textAreaCampeonato)
+
+                divTitulos.appendChild(divCampeonato)   
+            })
         })
-        .then(function() {
-            let divCampeonato = document.createElement('div')
-            divCampeonato.className = 'py-3 px-5 grid col-span-2 mt-5'
-
-            let labelCampeonato = document.createElement('label')
-            labelCampeonato.innerText = 'FIFA Club World Cup:'
-            labelCampeonato.className = 'font-semibold'
-            divCampeonato.appendChild(labelCampeonato)
-
-            let textAreaCampeonato = document.createElement('textarea')
-            textAreaCampeonato.className = 'border border-gray-400 p-2 h-32'
-            textAreaCampeonato.id = 'FIFA Club World Cup'
-            textAreaCampeonato.setAttribute('placeholder', 'Ex: 2001-02, 2005-08, 2010-11, 2021-22')
-            divCampeonato.appendChild(textAreaCampeonato)
-
-            divTitulos.appendChild(divCampeonato)   
-        })
-    })
-}
+    }

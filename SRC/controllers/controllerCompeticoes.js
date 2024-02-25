@@ -12,9 +12,7 @@ server.get('/competicoes', (req, res) => {
 })
 
 
-//depois trocar para id
 server.get('/competicoes/:nome', (req, res) => {
-    
     const competicaoNome = req.params.nome
 
     const competicao = dados.Competicao.find(c => c.nome === competicaoNome)
@@ -28,12 +26,9 @@ server.get('/competicoes/:nome', (req, res) => {
 
 //pegar competições pelo nivel
 server.get('/competicoes/continental/:continente', (req, res) => {
-    
     let continente = req.params.continente
-    console.log('params ' + req.params.continente)
 
     const competicaoNivel = `Continental - ${continente}`
-    console.log('comp + ' + competicaoNivel)
 
     const competicao = dados.Competicao.filter(c => c.nivel === competicaoNivel)
 
@@ -42,7 +37,6 @@ server.get('/competicoes/continental/:continente', (req, res) => {
     }
     
     return res.json(competicao);
-    // return res.json({ola})
 })
 
 module.exports = {server}

@@ -1,5 +1,4 @@
 function carregarDetalhesTime(id) {
-
     fetch(`http://localhost:3000/api/times/detalhes/${id}`)
         .then(response => response.json())
         .then(function(data) {
@@ -11,7 +10,6 @@ function carregarDetalhesTime(id) {
 
 
 function criarDialog(time) {
-    
     let dialog = document.createElement('dialog')
     dialog.className = 'w-5/6'
         
@@ -55,7 +53,6 @@ function criarDialog(time) {
     dialog.appendChild(divConteudos)
 
     if(time.resumo) {
-
         let divResumo = document.createElement('div')
         divResumo.className = 'my-4 px-12 pt-8 pb-12 border-2 border-gray-200 bg-gray-100 shadow-md'
 
@@ -172,7 +169,6 @@ function criarDialog(time) {
 
 
     if(time.uniformes && time.uniformes.length) {
-    
         let divUniformes = document.createElement('div')
         divUniformes.className = 'my-4 px-12 pt-8 pb-14 border-2 border-gray-200 bg-gray-100 shadow-md'
 
@@ -195,7 +191,6 @@ function criarDialog(time) {
             div.appendChild(img)
 
             divImagensUniformes.appendChild(div)
-            
         });
 
         divUniformes.appendChild(tituloUniformes)
@@ -260,12 +255,7 @@ function criarDialog(time) {
     let listaTitulos = document.createElement('div')
     listaTitulos.className = 'grid items-center gap-3'
 
-    //deixar assim?
     if(time.titulos && time.titulos.length === 0) {
-        // let loading = document.createElement('img')
-        // loading.src = '../img/loading.gif'
-        // loading.className = 'text-center w-20'
-        // listaTitulos.appendChild(loading)
         let semTitulos = document.createElement('h2')
         semTitulos.className = ''
         semTitulos.innerText = 'Não possui título nacional, continental ou mundial'
@@ -279,10 +269,6 @@ function criarDialog(time) {
             titulos = JSON.parse(time.titulos)
         }
         
-        // console.log(Array.isArray(titulos))
-        // console.log(titulos)
-        // return
-
         titulos.forEach(titulo => {
             let divTitulo = document.createElement('div')
             divTitulo.className = 'pt-4 pb-6 border-b border-gray-300'
@@ -290,7 +276,6 @@ function criarDialog(time) {
             fetch(`http://localhost:3000/api/competicoes/${titulo.competicao}`)
             .then(response => response.json())
             .then(function(data) {
-
                 let divTituloImagensNome = document.createElement('div')
                 divTituloImagensNome.className = 'flex gap-2 h-16 pb-2'
 
@@ -327,7 +312,6 @@ function criarDialog(time) {
     
     
     dialog.addEventListener("scroll", function() {
-
         let cabecalho = dialog.children[0]
 
         if (dialog.scrollTop > 20) {

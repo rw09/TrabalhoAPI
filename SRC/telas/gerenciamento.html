@@ -15,16 +15,6 @@
     </style>
 </head>
 <body>
-    <!-- 
-    <header class="flex justify-between items-center fixed w-full bg-[#edb141] py-2.5 px-3.5 z-10 border-b-2 border-[#a77d15] text-[#06203F] shadow-md">
-   
-        <div class="flex items-center gap-2.5">
-            <a href="./index.html"><img src="../img/logo4.png" alt="Logo do Site" width="60px"></a>
-            <h1 class="font-bold text-3xl">API Futebol Clube - Gerenciamento dos Times</h1>
-        </div>
-    </header>
--->
-
     <header class="flex justify-between items-center fixed w-full bg-[#edb141] py-2.5 px-3.5 z-10 border-b-2 border-[#a77d15] text-[#06203F] shadow-md">
         <!-- <header class="flex justify-between items-center fixed w-full bg-[#edb141] py-2.5 px-3.5 z-10 text-[#06203F] shadow-md"> -->
         <div class="flex items-center gap-2.5">
@@ -36,9 +26,7 @@
                 <input type="search" name="nomeTime" id="filtroNomeTime" placeholder="Pesquisar por nome" class="w-[250px] px-2 py-[4px] h-[30px] border border-gray-400 text-sm" onkeyup="filtrarPorNome(this)" onsearch="limparPesquisa(this)">
             </div>
             <div>
-                <!-- <img id="bandeira" src="../img/bandeiras/small/Alemanha.png" style="position: absolute; right: 235px; top:35px; width: 24px;"> -->
                 <img id="bandeira" src="../img/bandeiras/small/Alemanha.png" class="absolute right-[235px] top-[35px] w-6">
-                <!-- <select name="" id="selectPais" style="width: 200px; padding-left: 35px; padding-top: 5px; padding-bottom: 5px;" onchange="trocarPais(this)"> -->
                 <select name="" id="selectPais" class="w-[200px] pl-[35px] pt-[5px] pb-[5px] mr-[48px] h-[30px] border border-gray-400" onchange="trocarPais(this)">
                     <option value="Todos">Todos os Times</option>
                     <option value="Alemanha">Alemanha</option>
@@ -60,33 +48,26 @@
         let paisEscolhido = sessionStorage.getItem('paisEscolhido') ? sessionStorage.getItem('paisEscolhido') : 'Alemanha';
         let bandeira = document.getElementById('bandeira')
 
-
         document.onload = carregarPais()
 
-
         function carregarPais() {
-
             let selectPais = document.getElementById('selectPais')
-        
             selectPais.value = paisEscolhido
             bandeira.src=`../img/bandeiras/small/${paisEscolhido}.png`
-
         }
 
         function trocarPais(event) {
-
             bandeira.src=`../img/bandeiras/small/${event.value}.png`
-
             paisEscolhido = event.value
-
             sessionStorage.setItem('paisEscolhido', paisEscolhido)
-            console.log(sessionStorage.getItem('paisEscolhido'))
 
             let listaDeTimes = document.getElementById('listaDeTimes')
             listaDeTimes.remove()
 
+            let inputFiltroNome = document.getElementById('filtroNomeTime')
+            inputFiltroNome.value = ''
+            
             carregarTimes()
-            // window.refresh
         }
        
         function limparPesquisa(e) {
@@ -95,11 +76,9 @@
             }
         }
 
-        
         document.onload = carregarTimes();
 
         function carregarTimes() {
-
             if(paisEscolhido === 'Todos') {
                 paisEscolhido = ''
             }
@@ -112,7 +91,6 @@
         }
 
         function criarTabela(times) {
-
             times.sort((a,b) => (a.nome > b.nome) ? 1 : ((b.nome > a.nome) ? -1 : 0))
 
             let main = document.getElementById('main')
@@ -125,24 +103,15 @@
                 listaDeTimes = document.createElement('section')    
             }
 
-            // let listaDeTimes = document.createElement('section')
             listaDeTimes.id = 'listaDeTimes'
             listaDeTimes.className = 'grid gap-y-1.5 p-8'
             main.appendChild(listaDeTimes)
 
             times.forEach(time => {
                 let div = document.createElement('div')
-                // div.className = `group grid grid-cols-6 py-1 px-5 bg-gray-100 border-2 border-gray-200 items-center hover:bg-gray-200 hover:border-gray-300 hover:bg-gradient-to-r from-[${time.cores[0]}] to-[${time.cores[1]}] hover:text-[${time.cores[1]}]`
                 div.className = `group grid grid-cols-6 py-1 px-5 bg-gray-100 border-2 border-gray-200 items-center hover:border-gray-300 hover:bg-gradient-to-r from-gray-200 from-10% to-gray-100`
                 
-                // let id = document.createElement('h2')
-                // id.innerHTML = time.id
-                // div.appendChild(id)
-
                 let escudo = document.createElement('img')
-                // escudo.className = 'h-3/4 pl-12'
-                // escudo.className = 'h-24 pl-12 my-3 py-0'
-                // escudo.className = 'h-24 pl-12 my-1 py-1'
                 escudo.className = 'h-24 pl-12 my-4 py-0 hover:cursor-pointer group-hover:opacity-75'
                 escudo.src = time.escudo
 
@@ -159,9 +128,11 @@
 
                 let pais = document.createElement('div')
                 pais.className = 'flex gap-2 items-center'
+
                 let bandeira = document.createElement('img')
                 bandeira.src = `../img/bandeiras/small/${time.pais}.png`
                 pais.appendChild(bandeira)
+
                 let nomePais = document.createElement('h2')
                 nomePais.innerText = time.pais
                 pais.appendChild(nomePais)
@@ -170,10 +141,12 @@
 
                 let liga = document.createElement('div')
                 liga.className = 'flex gap-2 items-center'
+
                 let logo = document.createElement('img')
                 logo.className = 'h-10'
                 logo.src = `../img/competicoes/${time.pais}/${time.liga}.png`
                 liga.appendChild(logo)
+
                 let nomeLiga = document.createElement('h2')
                 nomeLiga.innerText = time.liga
                 liga.appendChild(nomeLiga)
@@ -181,19 +154,20 @@
 
                 let acoes = document.createElement('div')
                 acoes.className = 'grid grid-cols-2 col-span-2 gap-4 items-center w-1/2 justify-self-end'
-                // acoes.className = 'grid grid-cols-2 col-span-2 gap-4 items-center w-1/2 justify-self-end mr-5'
+
                 let botaoEditar = document.createElement('button')
                 botaoEditar.className = 'py-1.5 px-4 border  border-gray-300 bg-gray-200 hover:bg-gray-100 hover:border-gray-400'
                 botaoEditar.innerText = 'Editar'
                 botaoEditar.addEventListener('click', () => carregarDadosDoTime(time.id))
                 acoes.appendChild(botaoEditar)
+
                 let botaoDeletar = document.createElement('button')
                 botaoDeletar.className = 'py-1.5 px-4 border border-gray-300 bg-gray-200 hover:bg-gray-100 hover:border-gray-400'
                 botaoDeletar.innerText = 'Deletar'
                 botaoDeletar.addEventListener('click', () => deletarTime(time.id))
                 acoes.appendChild(botaoDeletar)
-                div.appendChild(acoes)
 
+                div.appendChild(acoes)
                 listaDeTimes.appendChild(div)
             });
         }
@@ -207,33 +181,30 @@
         }
 
         function filtrarPorNome(e) {
-           
             let nome = e.value
             
             if(nome.length == 0) {
                 nome = ''
                 carregarTimes()
             } else {
+                if(paisEscolhido != 'Todos' && paisEscolhido != '') {
+                    fetch(`http://localhost:3000/api/times/filtrar/${paisEscolhido}/${nome}`)
+                    .then(response => response.json())
+                    .then(function(data) {
+                        criarTabela(data)
+                    })
+                    .catch(error => console.error("Erro:", error))
 
-            if(paisEscolhido != 'Todos' && paisEscolhido != '') {
-                
-                fetch(`http://localhost:3000/api/times/filtrar/${paisEscolhido}/${nome}`)
-                .then(response => response.json())
-                .then(function(data) {
-                    criarTabela(data)
-                })
-                .catch(error => console.error("Erro:", error))
-
-            } else {
-                fetch(`http://localhost:3000/api/times/filtrar/${nome}`)
-                .then(response => response.json())
-                .then(function(data) {
-                    criarTabela(data)
-                })
-                .catch(error => console.error("Erro:", error))
+                } else {
+                    fetch(`http://localhost:3000/api/times/filtrar/${nome}`)
+                    .then(response => response.json())
+                    .then(function(data) {
+                        criarTabela(data)
+                    })
+                    .catch(error => console.error("Erro:", error))
+                }
             }
         }
-    }
     </script>
 
     <script src="../clients/timesCreate.js"></script>

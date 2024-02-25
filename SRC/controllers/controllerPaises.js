@@ -13,7 +13,6 @@ server.get('/paises', (req, res) => {
 
 
 server.get('/paises/:pais', (req, res) => {
-
     const nomePais = req.params.pais
 
     const dadosPais = dadosPaises.Pais.find(p => p.nome === nomePais)
@@ -23,21 +22,17 @@ server.get('/paises/:pais', (req, res) => {
 
 //Pegar todas as ligas do País
 server.get('/paises/ligas/:pais', (req, res) => {
-
     const nomePais = req.params.pais
 
     const dadosPais = dadosPaises.Pais.find(p => p.nome === nomePais)
 
     const dadosLigas = dadosPais.campeonatos
 
-    console.log('aueeefsdfsdf')
-    console.log(dadosLigas)
     return res.json(dadosLigas)
 })
 
 //Pegar a liga do time
 server.get('/paises/:pais/:liga', (req, res) => {
-
     const nomePais = req.params.pais
 
     const nomeLiga = req.params.liga
@@ -50,29 +45,7 @@ server.get('/paises/:pais/:liga', (req, res) => {
 })
 
 
-//Pegar todas as competições de um país
-// server.get('/paises/:pais/', (req, res) => {
-
-//     const nomePais = req.params.pais
-
-//     const nomeCompeticao = req.params.competicao
-
-//     const dadosPais = dadosPaises.Pais.find(p => p.nome === nomePais)
-
-//     const dadosCompeticao = dadosPais.campeonatos.find(c => c.nome === nomeCompeticao)
-
-//     const competicoesEncontradas = dadosPais.campeonatos.concat(dadosPais.copas).filter(c => c.nome === nomeCompeticao);
-
-//     if(!dadosCompeticao) {
-//         dadosCompeticao = dadosPais.copas.find(c => c.nome === nomeCompeticao)
-//     }
-
-//     return res.json(competicoesEncontradas)
-// })
-
-
 server.get('/times/:pais/:id', (req, res) => {
-    
     const paisEscolhido = req.params.pais
 
     const dadosTimesDoPaisEscolhido = dados[`Times${paisEscolhido}`]
