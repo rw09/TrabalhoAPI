@@ -190,17 +190,22 @@ function criarDialogCadastro() {
     .catch(error => console.error("Erro:", error))
 
     let dialogCadastro = document.createElement('dialog')
-    dialogCadastro.className = 'h-full w-5/6'
+    dialogCadastro.className = 'h-full w-5/6 shadow-lg border border-gray-500'
     dialogCadastro.id = 'dialogCadastro'
 
+    let divTituloCadastro = document.createElement('div')
+    divTituloCadastro.className = 'mx-12 px-5'
+    dialogCadastro.appendChild(divTituloCadastro)
+
     let tituloCadastro = document.createElement('h1')
-    tituloCadastro.className = 'text-2xl font-bold text-center p-5 mt-8'
+    // tituloCadastro.className = 'text-3xl font-bold text-center border-b mt-5 border-gray-200 bg-[#06203F] text-[#edb141] p-5'
+    tituloCadastro.className = 'text-2xl font-bold text-center mt-5 border-2 border-gray-300 bg-gray-200 p-8 shadow-md'
     tituloCadastro.innerText = 'Cadastrar Time'
 
-    dialogCadastro.appendChild(tituloCadastro)
+    divTituloCadastro.appendChild(tituloCadastro)
 
     let form = document.createElement('form')
-    form.className = 'mt-5 mx-12 grid grid p-5'
+    form.className = 'mt-4 mx-12 grid grid p-5'
     form.id = 'formCadastroTime'
 
     form.addEventListener('submit', function (event){
