@@ -12,7 +12,7 @@
 <p align="left">Completei os times da Bundesliga, os outros vou completando conforme puder.</p>  
   
     
-<p align="left">Também falta fazer: paginação, Debounce/Throtte no input de pesquisa por nome.</p>
+<p align="left">Também falta fazer: paginação, Debounce/Throttle no input de pesquisa por nome.</p>
   
     
 <p align="left">Alguns prints do trabalho:</p>
