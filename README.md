@@ -18,7 +18,7 @@
 <p align="left">Alguns prints do trabalho:</p>
 
 <img src="/SRC/img/prints-readme/1.png" alt="Print Screen do trabalho">
-
+<hr>
 <img src="/SRC/img/prints-readme/2.png" alt="Print Screen do trabalho">
 
 <img src="/SRC/img/prints-readme/3.png" alt="Print Screen do trabalho">
