@@ -3,28 +3,34 @@
 <div align="center">
     <img src="/SRC/img/logo4.png" alt="Logo API Futebol Clube">
 
-<p align="left">Trabalho de API sobre catálogo de imagens usando Node.js e Express do Curso Técnico em Desenvolvimento de Sistemas do SENAC - São Leopoldo.  
+<p align="left">Trabalho de API sobre catálogo de imagens usando Node.js e Express do Curso Técnico em Desenvolvimento de Sistemas do SENAC - São Leopoldo.</p>  
   
     
-Utilizei: HTML, JavaScript e TailwindCSS    
+<p align="left">Utilizei: HTML, JavaScript e TailwindCSS</p>    
   
   
-Completei os times da Bundesliga, os outros vou completando conforme puder.  
-  
-    
-Também falta fazer: paginação, Debounce/Throtte no input de pesquisa por nome.  
+<p align="left">Completei os times da Bundesliga, os outros vou completando conforme puder.</p>  
   
     
-Alguns prints do trabalho:
-</p>
+<p align="left">Também falta fazer: paginação, Debounce/Throtte no input de pesquisa por nome.</p>
+  
+    
+<p align="left">Alguns prints do trabalho:</p>
 
 <img src="/SRC/img/prints-readme/1.png" alt="Print Screen do trabalho">
+
 <img src="/SRC/img/prints-readme/2.png" alt="Print Screen do trabalho">
+
 <img src="/SRC/img/prints-readme/3.png" alt="Print Screen do trabalho">
+
 <img src="/SRC/img/prints-readme/4.png" alt="Print Screen do trabalho">
+
 <img src="/SRC/img/prints-readme/5.png" alt="Print Screen do trabalho">
+
 <img src="/SRC/img/prints-readme/6.png" alt="Print Screen do trabalho">
+
 <img src="/SRC/img/prints-readme/7.png" alt="Print Screen do trabalho">
+
 <img src="/SRC/img/prints-readme/8.png" alt="Print Screen do trabalho">
 <img src="/SRC/img/prints-readme/9.png" alt="Print Screen do trabalho">
 <img src="/SRC/img/prints-readme/10.png" alt="Print Screen do trabalho">
