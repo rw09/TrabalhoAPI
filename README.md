@@ -1,3 +1,3 @@
 # TrabalhoAPI
 
-<img src="/src/img/logo4.png" alt="Texto Alternativo">
+<img src="/SRC/img/logo4.png" alt="Texto Alternativo">
