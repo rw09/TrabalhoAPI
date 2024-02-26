@@ -3,7 +3,7 @@
 <div align="center">
     <img src="/SRC/img/logo4.png" alt="Logo API Futebol Clube">
 
-Trabalho de API sobre catálogo de imagens usando Node.js e Express do Curso Técnico em Desenvolvimento de Sistemas do SENAC - São Leopoldo.  
+<p align="left">Trabalho de API sobre catálogo de imagens usando Node.js e Express do Curso Técnico em Desenvolvimento de Sistemas do SENAC - São Leopoldo.  
   
     
 Utilizei: HTML, JavaScript e TailwindCSS    
@@ -16,6 +16,7 @@ Também falta fazer: paginação, Debounce/Throtte no input de pesquisa por nome
   
     
 Alguns prints do trabalho:
+</p>
 
 <img src="/SRC/img/prints-readme/1.png" alt="Print Screen do trabalho">
 <img src="/SRC/img/prints-readme/2.png" alt="Print Screen do trabalho">
